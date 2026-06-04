@@ -1,0 +1,92 @@
+<section class="fig" id="fig03">
+  <div class="fig-head">
+    <span class="fig-num">Figure 3</span>
+    <h2 class="fig-title">RI(굴절률) 센서의 응용</h2>
+    <span class="fig-kind">3D 모식도 + 데이터 그래프</span>
+  </div>
+  <div class="caption"><b>원문 캡션.</b> RI-based sensing applications. (a) 순환 엑소좀-결합 아밀로이드 β
+  아형 분석으로 뇌 플라크 침착 반영 [50]. (b) 라벨-프리 면역분석 부스팅 [62]. (c) 단일세포 분비물의
+  고처리량 시공간 모니터링 [83]. (d) 단분자·비침습 도파민 검출 [89]. (1) 도파민 로딩 (2) 나노입자에 결합
+  (3) 결합에 의한 주파수 이동.</div>
+
+  <p class="lead">모든 패널의 공통 센서 원리는 Fig 2(a)의 <span class="term" data-k="RI">굴절률 센싱</span>입니다 —
+  표적이 표면에 결합하면 국소 굴절률이 변해 <span class="term" data-k="LSPR">플라즈몬 공명</span>의 파장·세기가
+  이동합니다. 네 패널은 이 원리를 각각 알츠하이머 진단, 감염병 진단, 단일세포 분석, 신경전달물질 검출에 적용합니다.</p>
+
+  <div class="figfull"><img class="zoom" src="@fig03" alt="Figure 3 전체"><div class="imgcap">(a) 엑소좀-Aβ · (b) SARS-CoV-2 · (c) 단일세포 분비 · (d) 도파민</div></div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig03a" alt="APEX 엑소좀"><div class="imgcap">(a) <span class="term" data-k="APEX">APEX</span> 엑소좀 아형 분석</div></div>
+    <div class="ptext">
+      <h4><span class="pl">a</span> 엑소좀-결합 아밀로이드 β 검출 (알츠하이머)</h4>
+      <p><span class="tag d3">모식도</span> 위쪽은 AD(알츠하이머) 뇌의 아밀로이드 플라크와 혈중 순환 성분
+      (자유 Aβ, <span class="term" data-k="exosome">엑소좀</span>-결합 Aβ, 당지질 등)을 보여줍니다. 아래쪽은
+      "증폭 전(Before)→증폭 후(After)" 비교로, 효소 반응으로 센서 표면에 광학 침착물(optical deposit)이 쌓이는
+      <span class="term" data-k="APEX">APEX</span> 과정을 묘사합니다.</p>
+      <p><span class="tag graph">그래프</span> ① <i>Transmission vs Wavelength</i>: 센서·엑소좀(증폭 전)·광학침착(증폭 후)
+      곡선이 결합 후 <b>공명 적색이동 Δλ</b>를 보입니다(변수=결합/증폭 단계). ② <i>Normalized response vs 엑소좀 수</i>:
+      Before(파랑)·After(빨강) 곡선으로, <b>증폭 후 곡선이 훨씬 낮은 엑소좀 수에서 반응</b>(검출한계↓)함을 보여 줍니다.
+      의도: 광학 증폭이 감도를 끌어올려 약 200개 엑소좀 수준까지 검출하고, 혈중에서 Aβ-결합/비결합 엑소좀을 구별함을 입증.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 이중층 플라즈모닉 나노구조(<span class="term" data-k="nPLEX">나노홀 SPR</span> 기반 <span class="term" data-k="APEX">APEX</span>)</span>
+        <span class="row"><span class="k">센서 역할</span> 표면 플라즈몬 공명(엑소좀 결합에 따른 RI 변화 감지)</span>
+        <span class="row"><span class="k">감지 기전</span> 결합→RI↑→공명 이동, in situ 효소 광학침착으로 신호 증폭 → <span class="term" data-k="amyloid-beta">아밀로이드 β</span> 부하 비침습 평가</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig03b" alt="SARS-CoV-2 메타표면"><div class="imgcap">(b) 변이 구별 면역분석</div></div>
+    <div class="ptext">
+      <h4><span class="pl">b</span> 라벨-프리 면역분석 부스팅 (SARS-CoV-2 변이)</h4>
+      <p><span class="tag d3">모식도</span> 숙주세포·ACE2·바이러스 스파이크(S) 단백질·RBD와 변이(WT/Alpha/Beta/Gamma/
+      Delta/Omicron)를 보여 주고, 그 아래 금 <span class="term" data-k="metasurface">플라즈모닉 메타표면</span>에 항체가
+      고정된 모습을 그립니다. 우하단 SEM은 실제 나노구조입니다.</p>
+      <p><span class="tag graph">그래프</span> <i>Reflectance vs Wavelength(nm)</i>에서 각 변이(및 Bare PM)별 공명 골이
+      서로 다른 위치에 나타납니다. 변수는 "결합한 RBD 변이의 종류"이고, 변이별 결합량/굴절률 차이가
+      <b>반사 공명 이동량의 차이</b>로 나타납니다. 의도: 라벨 없이도 변이를 구별하며 <span class="term" data-k="ELISA">ELISA</span>를
+      대체할 수 있음을 보임.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 항체 기능화 플라즈모닉 메타표면</span>
+        <span class="row"><span class="k">센서 역할</span> 메타표면의 반사 공명(국소 RI 민감)</span>
+        <span class="row"><span class="k">감지 기전</span> 항원–항체 결합→RI 변화→<span class="term" data-k="label-free">라벨-프리</span> 공명 이동(변이 식별)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig03c" alt="단일세포 분비 모니터링"><div class="imgcap">(c) 마이크로웰 나노플라즈모닉 영상</div></div>
+    <div class="ptext">
+      <h4><span class="pl">c</span> 단일세포 분비물의 고처리량 시공간 모니터링</h4>
+      <p><span class="tag d3">모식도</span> 광원(Light source) 조명 아래, 금 나노홀 어레이가 깔린 마이크로웰
+      어레이에서 각 웰의 세포가 분비하는 분자(Receptor/analyte)를 포착합니다. 분광기 없이 카메라로
+      각 픽셀의 세기를 읽는 <span class="term" data-k="spatial-multiplexing-metasurface">무분광기 영상</span> 방식입니다.</p>
+      <p><span class="tag graph">그래프</span> ① <i>Pixel intensity vs Wavelength</i>: 첫·둘째 analyte 결합 시 공명 봉우리가
+      이동. ② <i>Pixel intensity vs Time</i>: 시간에 따른 결합량 증가를 S자 곡선으로 추적. 변수는 "시간·분자 결합량"이며,
+      각 웰(픽셀)에서 실시간 세기 변화로 분비를 정량합니다. 의도: 수백 개 세포의 분비를 병렬·실시간으로 매핑.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 금 나노홀 어레이 + <span class="term" data-k="CMOS">CMOS</span> 카메라(마이크로웰 어레이)</span>
+        <span class="row"><span class="k">센서 역할</span> 나노홀의 표면 플라즈몬 공명(결합 시 세기/파장 변화)</span>
+        <span class="row"><span class="k">감지 기전</span> 분자 부착→공명 세기 변화→픽셀별 강도 영상 + 머신러닝 영상분석</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig03d" alt="도파민 광 마이크로파이버"><div class="imgcap">(d) 압타머-플라즈모닉 마이크로파이버</div></div>
+    <div class="ptext">
+      <h4><span class="pl">d</span> 단분자·비침습 도파민 검출</h4>
+      <p><span class="tag d3">모식도</span> "Coupling" 단계 그림과 광 마이크로파이버(중앙, 붉게 빛나는 sensing region),
+      그리고 우측의 나노인터페이스(MoS₂, Au 나노입자, Cu 화합물, 도파민 DA, <span class="term" data-k="aptamer">압타머</span>)를
+      보여 줍니다. 캡션의 3단계: (1) 도파민 로딩 → (2) 도파민이 나노입자에 결합 → (3) 결합으로 인한 공명(주파수) 이동.</p>
+      <p><span class="tag graph">그래프</span> 우측의 "Wavelength shift" 표시는 결합 전후의 <b>공명 파장 이동</b>을 나타냅니다.
+      변수는 "도파민 결합 여부/농도"이며, 압타머의 구조 변환 + 플라즈모닉 이중증폭으로 미세 결합도 큰 파장 이동으로
+      변환됩니다. 의도: 압타머 서열만 바꾸면 다른 분자에도 적용 가능한 attomolar급 단분자 검출 플랫폼임을 보임.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> <span class="term" data-k="plasmonic-microfiber">플라즈모닉 광 마이크로파이버</span> + 압타머 나노인터페이스</span>
+        <span class="row"><span class="k">센서 역할</span> 파이버 표면의 <span class="term" data-k="evanescent-field">소산장</span>을 증폭한 <span class="term" data-k="LSPR">LSPR</span></span>
+        <span class="row"><span class="k">감지 기전</span> 압타머 구조 변환 + 플라즈모닉 이중증폭 → 파장 이동(<span class="term" data-k="dopamine-sensor">도파민 ~0.5–1.5 aM</span>)</span>
+      </div>
+    </div>
+  </div>
+</section>

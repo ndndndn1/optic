@@ -1,0 +1,9 @@
+# Netlify configuration — serve the figure-walkthrough page at the site root.
+[build]
+  publish = "."
+
+# Serve the (self-contained) figures HTML at "/" without changing the URL.
+[[redirects]]
+  from = "/"
+  to = "/optic_review1_figures.html"
+  status = 200

@@ -1,0 +1,59 @@
+<section class="fig" id="fig09">
+  <div class="fig-head">
+    <span class="fig-num">Figure 9</span>
+    <h2 class="fig-title">PIC 기반 센서 — AI 광자코 & 온칩 처리</h2>
+    <span class="fig-kind">3D 모식도 + 스펙트럼 + 혼동행렬</span>
+  </div>
+  <div class="caption"><b>원문 캡션.</b> Photonic integrated circuit-based sensors. (a) 가스 혼합물 검출용 AI 증강
+  중적외선 광자 도파관 센서 [221]. 인간 후각처럼 엣지의 "광자코"가 흡수 스펙트럼을 얻고 클라우드 ML이 성분·농도를 추론.
+  (b) 도파관 통합 중적외선 광전 처리유닛 [222]. 중적외선을 여러 도파관 채널로 나누고, 바이어스 가변 그래핀 검출기가
+  이 광신호를 곱한 뒤 합산해 전자 후처리로 분류. (i) 처리유닛 모식도, (ii) 그래핀 검출기 광학 이미지, (iii) 가스 혼합물 측정
+  스펙트럼, (iv) 분류 혼동행렬.</div>
+
+  <p class="lead">앞의 센서들이 신호를 "내보내" 외부에서 처리했다면, Fig 9는 <span class="term" data-k="PIC">광자 집적회로</span> 자체가
+  센싱과 <b>연산(특징추출·추론)</b>을 함께 수행하는 <span class="term" data-k="in-sensor-computing">인-센서 컴퓨팅</span>으로 넘어갑니다.</p>
+
+  <div class="figfull"><img class="zoom" src="@fig09" alt="Figure 9 전체"><div class="imgcap">(a) AI 광자코 · (b) 도파관 통합 그래핀 광전 처리유닛</div></div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig09a" alt="AI 광자코"><div class="imgcap">(a) <span class="term" data-k="photonic-nose">광자코</span> + 클라우드 AI</div></div>
+    <div class="ptext">
+      <h4><span class="pl">a</span> AI 증강 중적외선 광자코 (가스 혼합물)</h4>
+      <p><span class="tag d3">모식도</span> 왼쪽은 <b>인간 후각</b> 비유(냄새의 종류·강도 인지, 학습 후 가스 종류·심각도 파악,
+      미지의 농도·혼합비). 가운데는 "Edge-based Waveguide <span class="term" data-k="photonic-nose">Photonic Nose</span>" —
+      MIR 광 입·출력 사이의 부유 도파관에서 IPA·아세톤 분자가 <span class="term" data-k="evanescent-field">소산장</span>과
+      상호작용합니다. 오른쪽은 클라우드 AI(뇌 아이콘)로 보내는 흐름.</p>
+      <p><span class="tag graph">그래프</span> ① <i>중적외선 흡수 스펙트럼</i>(정규화 신호 vs 파장 µm, IPA/Acetone/Mixture):
+      변수는 "가스 혼합비"이며, 흡수 패턴이 성분비에 따라 변합니다. ② 우측 <b>"19 mixture labels"</b>를
+      <span class="term" data-k="CNN">CNN</span>이 분류(미지 데이터 93.6%), <b>Reconstructed spectrum</b>(25 vol%/75 vol%)을
+      <span class="term" data-k="MLP">MLP</span>가 회귀로 분해(평균 RMSE 2.44 vol%). 의도: 엣지 센서가 스펙트럼을 얻고 ML이
+      혼합비·단일가스 스펙트럼·농도를 풀어냄을 보임.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> <span class="term" data-k="SOI">SOI</span> MIR 부유 도파관 + <span class="term" data-k="SWG">부파장 격자</span> 지지(광자코)</span>
+        <span class="row"><span class="k">센서 역할</span> 코어 밖 소산장(가스 흡수 결합), 외부 가둠인자 ↑(최대 85.9%)</span>
+        <span class="row"><span class="k">감지 기전</span> 소산장 가스 흡수 → MIR 스펙트럼 → CNN 분류 + MLP 농도 회귀</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig09b" alt="그래핀 광전 처리유닛"><div class="imgcap">(b) <span class="term" data-k="graphene-photodetector">그래핀 검출기</span> 처리유닛</div></div>
+    <div class="ptext">
+      <h4><span class="pl">b</span> 도파관 통합 중적외선 광전 처리유닛 (온칩 연산)</h4>
+      <p><span class="tag d3">모식도(i)</span> "On-device AI Processing": 여러 종류의 센서 신호(이미지·제스처·가스 혼합물)가
+      광학 프론트엔드로 들어가, <span class="term" data-k="MRR">마이크로링</span>/<span class="term" data-k="MZI">MZI</span>를 거쳐
+      바이어스 가변 <span class="term" data-k="graphene-photodetector">그래핀 광검출기</span>로 향합니다(Mid-IR 3.65–3.8 µm).
+      그래핀의 광응답률(바이어스로 16단계=4비트 조정)이 곧 <b>가중치</b>가 되어 광신호를 곱·합합니다.</p>
+      <p><span class="tag d3">이미지(ii)</span> 실제 PIC 소자와 그래핀 검출기 광학 사진.</p>
+      <p><span class="tag graph">그래프(iii·iv)</span> (iii) <i>Transmission vs Wavelength(µm)</i>에 여러 가스 혼합물(라벨/측정군)
+      스펙트럼이 겹쳐 있습니다(변수=가스 혼합 라벨). (iv) <b>혼동행렬</b>(Target vs Output class)은 "With On-chip Processing:
+      87.14%" 정확도로 대각선이 진하게 나타나 분류 성능을 보입니다. 의도: 검출과 가중(곱셈)이 광학 프론트엔드에서 동시에
+      일어나는 <span class="term" data-k="in-sensor-computing">인-센서 컴퓨팅</span> 구현을 입증.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 부유 Si 도파관 + 바이어스 가변 그래핀 광검출기</span>
+        <span class="row"><span class="k">센서 역할</span> 그래핀 광응답률 = 조정 가능한 광학 가중치(4비트)</span>
+        <span class="row"><span class="k">감지 기전</span> 소산장 분자 흡수(센싱) + 바이어스 가중 곱·합(연산) → 온칩 분류</span>
+      </div>
+    </div>
+  </div>
+</section>

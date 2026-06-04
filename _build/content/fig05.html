@@ -1,0 +1,122 @@
+<section class="fig" id="fig05">
+  <div class="fig-head">
+    <span class="fig-num">Figure 5</span>
+    <h2 class="fig-title">SERS(표면증강 라만) 센서의 응용</h2>
+    <span class="fig-kind">3D 모식도 + 라만 스펙트럼</span>
+  </div>
+  <div class="caption"><b>원문 캡션.</b> SERS-based sensing applications. (a) 리튬 음극의 고체-전해질 계면
+  나노구조·화학 분석 [154]. (b) 비침습·현장형 SERS 호기 분석기 [155]. (c) 와인 향 다중 프로파일링 [156].
+  (d) 웨어러블 플라즈모닉-메타표면 센서 [157]. (e) 고차원 지문용 SERS 코 [158]. (f) 식물 스트레스 신호분자
+  실시간 모니터링 [159].</div>
+
+  <p class="lead">공통 원리는 Fig 2(c)의 <span class="term" data-k="SERS">SERS</span> — 은/금 나노구조
+  <span class="term" data-k="hot-spot">핫스팟</span>이 약한 라만(비탄성 산란) 신호를 수 자릿수 증폭해
+  <b>분자별 진동 지문</b>을 줍니다. 물이 강하게 흡수하는 환경(체액·조직)에서도 작동해 IR이 어려운 곳에서 강점을 가집니다.</p>
+
+  <div class="figfull"><img class="zoom" src="@fig05" alt="Figure 5 전체"><div class="imgcap">(a) SEI · (b) 호기 분석 · (c) SERS 미각 · (d) 웨어러블 · (e) SERS 코 · (f) 식물</div></div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig05a" alt="SEI SERS"><div class="imgcap">(a) <span class="term" data-k="SEI">SEI</span> 분석 (<span class="term" data-k="SHIN">SHIN</span>)</div></div>
+    <div class="ptext">
+      <h4><span class="pl">a</span> 리튬 음극 고체-전해질 계면(SEI) 분석</h4>
+      <p><span class="tag d3">모식도</span> 구리(Cu) 위 <span class="term" data-k="SHIN">Ag SHIN</span>(쉘 격리 은 나노입자)을
+      두고 레이저로 <span class="term" data-k="hot-spot">핫스팟</span>을 만들어, SEI <b>형성→성장→재구성</b> 4단계를
+      깊이 분해(depth-sensitive) 라만으로 관찰합니다. 하단의 컬러맵과 결정립 도식은 내부/외부 신호(by I&II) 분포를 표시.</p>
+      <p><span class="tag graph">그래프/맵</span> 깊이·단계에 따른 라만 신호 분포를 보여, 변수("SEI 성장 단계")에 따른
+      나노구조·화학 조성 변화를 동적으로 추적합니다. 의도: SEI 형성 기전을 분자 수준에서 규명해 차세대 배터리 설계에 기여.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> Ag SHIN 기반 깊이분해 플라즈마증강 라만</span>
+        <span class="row"><span class="k">센서 역할</span> SHIN 핫스팟(고감도·깊이 선택 라만)</span>
+        <span class="row"><span class="k">감지 기전</span> SERS로 SEI 화학·나노구조의 시간적 변화 매핑</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig05b" alt="SERS 호기 분석기"><div class="imgcap">(b) <span class="term" data-k="breathalyzer-SERS">SERS 호기 분석기</span></div></div>
+    <div class="ptext">
+      <h4><span class="pl">b</span> COVID-19 호기(숨) 분석기</h4>
+      <p><span class="tag d3">모식도</span> 사람의 호기 휘발성유기화합물(BVOC)이 서로 다른 프로브 분자
+      (Ag-MBA, Ag-MPY, Ag-ATP)와 <b>특이적으로 상호작용</b>합니다. "1. SERS 슈퍼프로파일로 BVOC 변화 검출 →
+      2. 화학정량(chemometrics) 분석으로 COVID 양성/음성 판정".</p>
+      <p><span class="tag graph">그래프</span> 붉은 <i>라만 스펙트럼</i>의 봉우리 패턴(슈퍼프로파일)이 분석 대상입니다.
+      변수는 "호기 분자 조성"이며, 다중 프로브의 SERS 패턴 차이를 ML이 학습해 분류합니다(민감도 96.2%, 특이도 99.9%).
+      의도: 비침습·현장형 스크리닝 가능성 입증.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 프로브 기능화 Ag 나노구조(MBA/MPY/ATP)</span>
+        <span class="row"><span class="k">센서 역할</span> 핫스팟 + 특이적 프로브-분석물 상호작용</span>
+        <span class="row"><span class="k">감지 기전</span> SERS 슈퍼프로파일 + 화학정량 ML → 질병 분류</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig05c" alt="SERS 미각센서"><div class="imgcap">(c) <span class="term" data-k="SERS-taster">SERS 미각센서</span></div></div>
+    <div class="ptext">
+      <h4><span class="pl">c</span> 와인 향 다중 프로파일링 (<span class="term" data-k="photonic-tongue">광자 혀</span>)</h4>
+      <p><span class="tag d3">모식도</span> "인간 감각수용체 → 뇌 처리 → 미각 인식"의 생물학적 흐름을 모방합니다.
+      아래의 "Multi-Receptor SERS Taster"는 여러 비공유 수용체 화학을 SERS에 통합하고, <b>Super-Profiles → Machine
+      Learning → Multiplexing</b>으로 향을 분석합니다.</p>
+      <p><span class="tag graph">그래프</span> 여러 색의 <i>라만 슈퍼프로파일</i> 스펙트럼과 농도 막대그래프가 분석 대상입니다.
+      변수는 "시료(와인) 향 성분"이며, 다중수용체 SERS 신호를 화학정량 모델이 향 프로파일로 변환합니다. 의도: 특정 표적
+      수용체 없이도(receptor-agnostic) 복합 향을 정량.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 다중수용체 SERS 기판(SERS taster)</span>
+        <span class="row"><span class="k">센서 역할</span> 다양한 수용체 화학으로 다중화된 핫스팟</span>
+        <span class="row"><span class="k">감지 기전</span> SERS 슈퍼프로파일 + 화학정량 ML → 향 다중 분석</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig05d" alt="웨어러블 SERS"><div class="imgcap">(d) <span class="term" data-k="wearable-SERS">웨어러블 SERS</span></div></div>
+    <div class="ptext">
+      <h4><span class="pl">d</span> 웨어러블 플라즈모닉-메타표면 센서 (땀)</h4>
+      <p><span class="tag d3">모식도</span> 피부 위에 플라즈모닉 메타필름·하이드로겔막(발한 유도 약물 포함)·유연 전극·
+      통기성 고분자막이 적층된 신축 패치를 보여 줍니다. 하단 SEM은 실제 신축성 메타표면 구조입니다.</p>
+      <p><span class="tag graph">데이터</span> SEM 이미지가 신축 상태에서의 나노구조(핫스팟 유지)를 입증합니다.
+      변수는 "피부에서 채취한 땀 속 분자"이며, 메타표면 핫스팟의 SERS로 분자별 지문을 실시간 측정합니다. 의도: 부드럽고
+      움직이는 생체 표면에서도 연속 분자 프로파일링이 가능함을 보임.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 신축성 SERS-활성 플라즈모닉 메타표면 + 마이크로유체</span>
+        <span class="row"><span class="k">센서 역할</span> 신축 메타필름의 핫스팟</span>
+        <span class="row"><span class="k">감지 기전</span> 땀 연속 채취 → SERS 지문 → 비침습 실시간 모니터링</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig05e" alt="SERS 코"><div class="imgcap">(e) <span class="term" data-k="SAM">SAM</span> 기능화 SERS 코</div></div>
+    <div class="ptext">
+      <h4><span class="pl">e</span> 고차원 지문용 SERS 코 (8종 SAM)</h4>
+      <p><span class="tag d3">모식도</span> Au(111) 나노필러 기판 위에 서로 다른 <span class="term" data-k="SAM">자기조립 단분자막</span>
+      (SAM 1~8)을 기능화한 어레이입니다. 각 SAM이 다른 친화성을 가져 "수용체 무관" 다면적 신호를 만듭니다.</p>
+      <p><span class="tag graph">그래프</span> 각 SAM별 <i>라만 스펙트럼</i>과 다변량 분석(multivariate)이 분석 대상입니다.
+      변수는 "분석물 종류 × SAM 종류"이며, 8개 채널의 SERS 패턴을 합쳐 고차원 지문을 만들고 ML로 분류합니다.
+      의도: 표적별 수용체 없이도 복합 시료를 고정확도로 구별.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 8종 SAM 기능화 Au 나노필러 SERS 어레이</span>
+        <span class="row"><span class="k">센서 역할</span> SAM별로 화학적 선택성이 다른 핫스팟 어레이</span>
+        <span class="row"><span class="k">감지 기전</span> 다채널 SERS 지문 + 다변량 분석 → 고차원 식별</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig05f" alt="식물 SERS 나노프로브"><div class="imgcap">(f) <span class="term" data-k="SERS-nanoprobe-plant">식물 SERS 나노프로브</span></div></div>
+    <div class="ptext">
+      <h4><span class="pl">f</span> 식물 스트레스 신호분자 실시간 모니터링</h4>
+      <p><span class="tag d3">모식도</span> 실리카 나노입자·AgNS@PDDA로 만든 SERS 나노프로브를 식물 잎의 세포외 공간
+      (아포플라스트)에 도입하고 785 nm 레이저로 측정합니다. "insect biting wound", "cold 4℃" 등 스트레스 자극과
+      식물 신호분자(살리실산 등)를 표시.</p>
+      <p><span class="tag graph">그래프</span> <i>라만 스펙트럼</i> 비교(감염 보리 / SA 10 g/L 주입 / 대조 보리)로
+      스트레스에 따른 신호분자 변화를 보여 줍니다. 변수는 "식물 스트레스 상태"이며, SERS 봉우리 변화로 내인성 신호분자를
+      비침습 추적합니다. 의도: 정밀 농업을 위한 실시간 식물 생리 모니터링 가능성 입증.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 아포플라스트 도입형 SERS 나노프로브(AgNS)</span>
+        <span class="row"><span class="k">센서 역할</span> 나노프로브 핫스팟(생체 내 SERS)</span>
+        <span class="row"><span class="k">감지 기전</span> 신호분자 흡착 → SERS 지문 변화 → 스트레스 마커 in situ 추적</span>
+      </div>
+    </div>
+  </div>
+</section>

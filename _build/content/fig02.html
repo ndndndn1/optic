@@ -1,0 +1,119 @@
+<section class="fig" id="fig02">
+  <div class="fig-head">
+    <span class="fig-num">Figure 2</span>
+    <h2 class="fig-title">광 센싱의 5대 기전 (RI·SEIRA·SERS·키랄·SEF)</h2>
+    <span class="fig-kind">패널마다 모식도 + 그래프</span>
+  </div>
+  <div class="caption"><b>원문 캡션.</b> Mechanisms of photonic sensing. (a) RI-based, (b) SEIRA-based,
+  (c) SERS-based, (d) Chiral, (e) SEF-based sensing mechanism.</div>
+
+  <p class="lead">이 그림은 논문이 다루는 <b>다섯 가지 기본 광 센싱 원리</b>를 각각 "작은 3D 모식도 + 작은
+  그래프" 한 쌍으로 보여줍니다. 모식도는 <b>무엇이 센서이고 어떻게 신호가 생기는지</b>를, 그래프는
+  <b>측정량(세기·CD)이 어떤 변수에 따라 어떻게 변하는지</b>를 나타냅니다. 다섯 기전 모두 공통적으로
+  <span class="term" data-k="LSPR">금속 나노구조의 플라즈몬 공명</span>을 활용해 약한 신호를 증폭한다는 점이 핵심입니다.</p>
+
+  <div class="figfull">
+    <img class="zoom" src="@fig02" alt="Figure 2 전체">
+    <div class="imgcap">(a) RI · (b) SEIRA · (c) SERS · (d) Chiral · (e) SEF — 각 패널은 모식도와 그래프로 구성</div>
+  </div>
+
+  <!-- a -->
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig02a" alt="RI sensing 패널"><div class="imgcap">(a) RI sensing</div></div>
+    <div class="ptext">
+      <h4><span class="pl">a</span> <span class="term" data-k="RI">굴절률(RI) 센싱</span></h4>
+      <p><span class="tag d3">모식도</span> 노란 막대(금 나노구조)가 기판 위에 놓여 있고, 왼쪽은 굴절률 <i>n</i>,
+      오른쪽은 <i>n+Δn</i>인 매질에 잠겨 있습니다. 표적 분자가 표면에 결합하면 그 자리의 굴절률이 <i>n→n+Δn</i>으로
+      바뀝니다.</p>
+      <p><span class="tag graph">그래프</span> x축은 파장 λ, y축은 세기(Intensity). 검은 곡선(<i>n</i>)과 붉은
+      곡선(<i>n+Δn</i>)은 <b>같은 공명 봉우리이지만 Δλ만큼 떨어져</b> 있습니다. 즉 저자가 변화시킨 변수는
+      <b>국소 굴절률</b>이고, 그 결과 <b>공명 파장이 적색이동(Δλ)</b>합니다. 의도는 "굴절률 변화가 곧 측정 가능한
+      파장 이동으로 변환된다"는 RI 센싱의 핵심을 보여주는 것입니다.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 플라즈모닉 금속 나노구조(나노디스크 등) 어레이</span>
+        <span class="row"><span class="k">센서 역할</span> 표면의 <span class="term" data-k="LSPR">국소 표면 플라즈몬 공명</span>(공명 파장이 굴절률에 민감)</span>
+        <span class="row"><span class="k">감지 기전</span> 결합→국소 RI 상승→공명 적색이동 Δλ. 감도 <span class="term" data-k="Sensitivity">S=Δλ/Δn</span>, 성능지수 <span class="term" data-k="FoM">FoM=S/<span class="term" data-k="FWHM">FWHM</span></span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- b -->
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig02b" alt="SEIRA 패널"><div class="imgcap">(b) SEIRA</div></div>
+    <div class="ptext">
+      <h4><span class="pl">b</span> <span class="term" data-k="SEIRA">표면증강 적외선 흡수(SEIRA)</span></h4>
+      <p><span class="tag d3">모식도</span> 오른쪽 위 작은 그림은 금 <span class="term" data-k="nanoantenna">나노안테나</span> 위에
+      얹힌 단백질(Protein)을 나타냅니다. 안테나가 입사 적외선을 나노 영역 <span class="term" data-k="hot-spot">핫스팟</span>에
+      모아 분자의 진동 흡수를 강하게 키웁니다.</p>
+      <p><span class="tag graph">그래프</span> x축 파장 λ, y축 세기. 넓고 완만한 붉은 곡선이 <b>"with antennas"</b>의
+      플라즈몬 공명 배경이고, 그 위에 좁은 특징(회색 "protein fingerprint")으로 <b>Amide I·Amide II</b> 두 진동 밴드가
+      찍혀 있습니다. 변수는 "안테나 증강의 유무"이며, 안테나가 있을 때 비로소 약한 amide 지문이 배경 위에 또렷이
+      나타납니다. 의도는 "넓은 플라즈몬 공명이 분자의 좁은 진동 지문을 들어 올려 검출 가능하게 한다"는 점을 보이는 것.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 플라즈모닉 IR 나노안테나/<span class="term" data-k="metasurface">메타표면</span></span>
+        <span class="row"><span class="k">센서 역할</span> 안테나 주변 <span class="term" data-k="hot-spot">핫스팟</span>의 강한 근접장</span>
+        <span class="row"><span class="k">감지 기전</span> 핫스팟이 분자 진동 흡수를 증폭(증강인자 <span class="term" data-k="EF">EF</span>), Amide I/II 등 <span class="term" data-k="MIR">중적외선</span> 지문 검출</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- c -->
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig02c" alt="SERS 패널"><div class="imgcap">(c) SERS</div></div>
+    <div class="ptext">
+      <h4><span class="pl">c</span> <span class="term" data-k="SERS">표면증강 라만 분광(SERS)</span></h4>
+      <p><span class="tag d3">모식도</span> 초록 물결(Incident laser)이 "Metal sphere"(금속 구) 위의 분자를 때리고,
+      주황 물결(Raman scattering)이 산란되어 나옵니다. 금속 나노구가 입사·산란 양쪽 전기장을 동시에 증폭합니다.</p>
+      <p><span class="tag graph">그래프</span> x축이 <b>라만 시프트(cm⁻¹)</b>, y축이 세기. 날카로운 봉우리들이 분자의
+      진동 모드(지문)입니다. 여기서 변하는 변수는 "분자별 진동 주파수(라만 시프트)"이고, 봉우리 위치·세기가
+      분자 종류를 특정합니다. 의도는 "본래 매우 약한 라만 산란이 금속 핫스팟에서 수 자릿수 증폭되어 단분자
+      수준의 화학 지문을 준다"는 SERS의 강점을 보이는 것.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> Ag/Au 나노구조 SERS 기판(핫스팟)</span>
+        <span class="row"><span class="k">센서 역할</span> 비탄성(라만) 산란광을 증폭하는 플라즈모닉 근접장</span>
+        <span class="row"><span class="k">감지 기전</span> 전자기적·화학적 증강으로 <span class="term" data-k="SERS">I_SERS∝|E·E|²</span>, 진동 지문 봉우리 측정</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- d -->
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig02d" alt="Chiral sensing 패널"><div class="imgcap">(d) Chiral sensing</div></div>
+    <div class="ptext">
+      <h4><span class="pl">d</span> 키랄 센싱 (<span class="term" data-k="CD">원편광 이색성</span>)</h4>
+      <p><span class="tag d3">모식도</span> 좌원편광(<span class="term" data-k="LCP-RCP">LCP</span>)과 우원편광(RCP)이
+      <span class="term" data-k="chirality">키랄</span> 분자(C·H·Br 등 사면체)와 그 아래 금 나노입자에 입사합니다.
+      나노입자가 키랄 근접장을 만들어 약한 키랄 신호를 키웁니다.</p>
+      <p><span class="tag graph">그래프</span> x축 파장 λ, y축 CD(좌·우 원편광 흡광차). <b>파란 곡선=우선성(right-handed)
+      분자</b>는 양(+)의 봉우리, <b>붉은 곡선=좌선성(left-handed) 분자</b>는 음(−)의 봉우리로 <b>서로 거울상</b>을
+      이루고, 점선("chiral sample alone")은 거의 0(증강이 없으면 신호가 미약). 변하는 변수는 분자의 손지기
+      (<span class="term" data-k="enantiomer">거울상 이성질체</span>)이며, CD의 <b>부호(±)가 손지기를 구별</b>합니다.
+      의도는 "플라즈모닉 구조가 천연 CD를 수 자릿수 증폭해 거울상 분자를 분간한다"는 것.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 키랄 플라즈모닉 <span class="term" data-k="metasurface">메타표면</span>/나노입자</span>
+        <span class="row"><span class="k">센서 역할</span> 좌/우 원편광을 다르게 다루는 키랄 근접장(초키랄장)</span>
+        <span class="row"><span class="k">감지 기전</span> LCP·RCP 흡광차(CD)의 부호·세기로 키랄성 판별, 신호 최대 6자릿수 증강</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- e -->
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig02e" alt="SEF 패널"><div class="imgcap">(e) SEF</div></div>
+    <div class="ptext">
+      <h4><span class="pl">e</span> <span class="term" data-k="SEF">표면증강 형광(SEF)</span></h4>
+      <p><span class="tag d3">모식도</span> 금 나노입자(Nanoparticle)에 청록 물결(Incident laser)이 입사하고,
+      초록 물결(Fluorescence)이 방출됩니다. 나노입자의 <span class="term" data-k="LSPR">LSPR</span> 근접장이
+      <span class="term" data-k="fluorophore">형광단</span>의 여기율과 방출을 키웁니다.</p>
+      <p><span class="tag graph">그래프</span> x축 파장 λ, y축 형광세기(FL Intensity). <b>검은 곡선("with Plasmons")이
+      큰 봉우리</b>, <b>붉은 곡선("without Plasmons")이 작은 봉우리</b>. 변수는 "플라즈몬의 유무"이며, 플라즈몬이
+      있을 때 형광이 크게 증폭됩니다. 의도는 "복잡한 장비 없이도 플라즈모닉 근접장만으로 형광을 증대시켜
+      저농도 분석물을 검출한다"는 SEF의 이점을 보이는 것.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 귀금속 나노입자(구·막대·<span class="term" data-k="bowtie-antenna">보타이</span> 등)</span>
+        <span class="row"><span class="k">센서 역할</span> 형광단 근처의 플라즈모닉 근접장 + 광학상태밀도 증가</span>
+        <span class="row"><span class="k">감지 기전</span> 여기율↑·<span class="term" data-k="quantum-yield">양자수율</span>↑로 형광 방출 증폭(최대 수천 배)</span>
+      </div>
+    </div>
+  </div>
+</section>

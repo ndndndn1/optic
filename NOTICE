@@ -1,0 +1,49 @@
+# NOTICE — Licensing and Attribution
+
+This repository mixes two kinds of material under two different licenses.
+Read this before redistributing.
+
+---
+
+## 1. Original work — MIT License
+
+Copyright (c) 2026 datahj. Licensed under the MIT License (see `LICENSE`).
+
+This covers only the material authored here:
+
+- Viewer / build code: `_build/assets/app.js`, `_build/build_html.py`,
+  `_build/build_terminology.py`, `_build/detect.py`, `_build/crop.py`,
+  `_build/grid_preview.py`, `_build/assets/style.css`, `_build/assets/shell.html`
+- Author-written text: the Korean explanations and terminology entries in
+  `terminology_optical_sensor.md` / `.json`, the pedagogy materials
+  (`optic_sensor_pedagogy_6week.md`, `..._ko.md`, `optic_sensor_worksheets.md`),
+  the figure-commentary prose in `optic_review1_figures.html`, and the
+  session logs (`prompt.md`, `yet_prompt.md`).
+
+## 2. Source-derived material — CC BY 4.0 (NOT MIT)
+
+The following are adaptations or reproductions of a third-party open-access
+article and remain under its original license, **Creative Commons Attribution
+4.0 International (CC BY 4.0)**:
+
+- `optic_review1.pdf`, `KR;optic_review1.pdf` (original PDF and its translation)
+- All figures and panels reproduced or cropped from the article:
+  `build/fig/*`, `build/figures/*`, `_build/crops/*`, `_build/panels/*`,
+  `_build/pages/*`, and the figures embedded in `optic_review1_figures.html`
+- Extracted article text: `build/en.txt`, `_build/optic_review1.txt`
+- Any figure captions and quoted passages reproduced from the article
+
+### Required attribution
+
+> Zhou, H.; Li, D.; Lee, C. *Technology Landscape Review of In-Sensor Photonic
+> Intelligence: From Optical Sensors to Smart Devices.* AI Sensors 2025, 1, 5.
+> https://doi.org/10.3390/aisens1010005
+> © 2025 by the authors. Licensee MDPI, Basel, Switzerland.
+> Licensed under CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+
+Changes made in this repository: translation to Korean, cropping of figures
+into sub-panels, and addition of explanatory commentary and terminology.
+
+CC BY 4.0 permits redistribution and adaptation of the above material provided
+the original authors are credited, the license is indicated, and changes are
+noted. The MIT license in section 1 does **not** override these terms.

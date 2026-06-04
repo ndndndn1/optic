@@ -1,0 +1,109 @@
+<section class="fig" id="fig04">
+  <div class="fig-head">
+    <span class="fig-num">Figure 4</span>
+    <h2 class="fig-title">SEIRA(표면증강 적외선 흡수) 센서의 응용</h2>
+    <span class="fig-kind">3D 모식도 + 스펙트럼/PCA</span>
+  </div>
+  <div class="caption"><b>원문 캡션.</b> SEIRA-based sensing applications. (a) 지질막 검출용 다중공명 SEIRA [104].
+  (b) 모든 주요 생체분자 군의 동역학 모니터링 [125]. (c) 온칩 온실가스 동시 센싱 [141]. (d) 파장다중 후크
+  나노안테나(WMHNA) 기반 SEIRA [129]. (e) 강하게 디튜닝된 과결합 플라즈모닉 나노안테나를 이용한 초고감도
+  분자 지문 검출 [128].</div>
+
+  <p class="lead">공통 원리는 Fig 2(b)의 <span class="term" data-k="SEIRA">SEIRA</span> — 플라즈모닉
+  <span class="term" data-k="nanoantenna">나노안테나</span>/<span class="term" data-k="metasurface">메타표면</span>의
+  <span class="term" data-k="hot-spot">핫스팟</span>이 약한 분자 진동 흡수를 증폭합니다. 최근 흐름은 (i) <b>다중·광대역
+  공명</b>으로 더 넓은 지문을 얻고, (ii) <b>머신러닝</b>으로 겹친 스펙트럼을 분해하는 것입니다.</p>
+
+  <div class="figfull"><img class="zoom" src="@fig04" alt="Figure 4 전체"><div class="imgcap">(a) 지질막 · (b) 생체분자 동역학 · (c) 온실가스 · (d) WMHNA · (e) 과결합 나노안테나</div></div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig04a" alt="다중공명 SEIRA 지질막"><div class="imgcap">(a) 다중공명 IR 메타표면</div></div>
+    <div class="ptext">
+      <h4><span class="pl">a</span> 지질막 동적 과정 검출 (다중공명)</h4>
+      <p><span class="tag d3">모식도</span> 나노안테나 위에 지질 소포(구체)와 막 분자가 배치된 그림. 안테나가
+      <b>여러 파장에 동시에 공명</b>하도록 설계되어 단백질·지질을 함께 감지합니다.</p>
+      <p><span class="tag graph">그래프</span> <i>IR reflection vs Wavenumber(cm⁻¹)</i>에서 <b>Amide I·II</b>(단백질)와
+      <b>CH₂·CH₃</b>(지질 탄화수소) 흡수 특징이 각각의 공명 대역에 나타납니다. 변수는 막 과정에 따른 분자 조성이며,
+      다중공명 덕분에 한 측정으로 단백질·지질 신호를 동시에 추적합니다. 의도: 분자 특이적 막 동역학을 실시간 관측.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 다중공명 플라즈모닉 IR 메타표면</span>
+        <span class="row"><span class="k">센서 역할</span> 여러 파장에 동조된 핫스팟(광대역 SEIRA)</span>
+        <span class="row"><span class="k">감지 기전</span> 진동 흡수 증강으로 Amide/CH 지문 동시 검출</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig04b" alt="SEIRA + 신경망"><div class="imgcap">(b) IR 메타표면 + 신경망</div></div>
+    <div class="ptext">
+      <h4><span class="pl">b</span> 생체분자 군의 동역학 모니터링 (딥러닝 결합)</h4>
+      <p><span class="tag d3">모식도</span> 나노구조 위 소포/막 + 완전연결 <b>신경망</b> 다이어그램(은닉층→출력:
+      Nucleotides, Sucrose, Lipids, Melittin).</p>
+      <p><span class="tag graph">그래프</span> <i>DNN 출력 가중치 vs 시간(min)</i>: 색깔 선이 네 분자군의 검출량을 나타내고,
+      배경의 색띠가 실험 이벤트(<b>카고 분자 소포 주입 → 멜리틴 주입 → 버퍼 세척</b>)를 표시합니다. 변수는 "시간/주입
+      이벤트"이며, 신경망이 겹친 SEIRA 스펙트럼을 분해해 각 분자군의 시간 변화를 출력합니다. 의도: ML이 복잡한 혼합물의
+      동역학을 정량 분해함을 입증.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 나노플라즈모닉 IR 메타표면 + 인공신경망</span>
+        <span class="row"><span class="k">센서 역할</span> SEIRA 핫스팟(분광 입력 생성)</span>
+        <span class="row"><span class="k">감지 기전</span> 진동 지문 증강 → <span class="term" data-k="AI">신경망</span>이 다분자 스펙트럼 분해·정량</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig04c" alt="MOF 온실가스 SEIRA"><div class="imgcap">(c) <span class="term" data-k="MOF">MOF</span> 코팅 가스 센싱</div></div>
+    <div class="ptext">
+      <h4><span class="pl">c</span> 온칩 온실가스(CO₂·CH₄) 동시 센싱</h4>
+      <p><span class="tag d3">모식도</span> "As antenna"(안테나) 위에 <span class="term" data-k="ZIF-8">ZIF-8</span>
+      (<span class="term" data-k="MOF">금속-유기 골격체</span>) 코팅을 입혀 CO₂/CH₄ 분자를 농축합니다. Zinc·Nitrogen·
+      Carbon·기공 크기로 MOF 구조를 표시. 하단에 가스셀(Gas cell) 모식도.</p>
+      <p><span class="tag graph">그래프</span> ① <i>IR absorption vs Wavelength(µm)</i>: CO₂/CH₄ 진동 흡수 피크. ② 두 개의
+      <b>시간-분해 컬러맵</b>(Time vs 파장)으로 진공/주입 사이클에서 CO₂·CH₄ 신호의 출현·소멸(흡착·탈착 동역학)을
+      보여 줍니다. 변수는 "시간/가스 사이클"이며, MOF 농축으로 신호가 크게 강화됩니다. 의도: MOF 농축이 검출한계를
+      ppm 미만으로 낮춤을 입증.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> MOF(ZIF-8) 코팅 플라즈모닉 IR 나노안테나</span>
+        <span class="row"><span class="k">센서 역할</span> 핫스팟 + <span class="term" data-k="hot-spot enrichment">분자 농축 코팅</span></span>
+        <span class="row"><span class="k">감지 기전</span> MOF가 가스 농축→핫스팟에서 SEIRA 증강→CO₂/CH₄ 지문 검출</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig04d" alt="WMHNA"><div class="imgcap">(d) <span class="term" data-k="nanoantenna">후크 나노안테나</span> 어레이</div></div>
+    <div class="ptext">
+      <h4><span class="pl">d</span> 파장다중 후크 나노안테나(WMHNA) — VOC 분류</h4>
+      <p><span class="tag d3">모식도</span> CaF₂/PDMS 위 금 후크형 나노안테나 어레이에 MIR 광이 입사(SEM 삽입,
+      2 µm). 후크 치수를 점진적으로 바꿔 <b>광대역 연속 공명</b>을 만듭니다.</p>
+      <p><span class="tag graph">그래프</span> ① <b>3D 곡면</b> <i>Reflection(%) vs Wavelength(µm) vs Cycles</i>:
+      여러 사이클에 걸친 반사 스펙트럼(센싱 데이터). ② <i>PCA</i> <b>주성분2 vs 주성분1</b> 산점도: 메탄올·에탄올·
+      이소프로판올 및 혼합물 클러스터가 분리됩니다. 변수는 "분석물 종류/혼합비"이며, ML이 광대역 SEIRA 스펙트럼으로
+      이들을 구별합니다. 의도: 안테나 결합을 억제한 광대역 설계가 ML 기반 VOC 분류를 가능케 함을 보임.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 파장다중 후크 나노안테나 어레이(WMHNA)</span>
+        <span class="row"><span class="k">센서 역할</span> 광대역 연속 SEIRA 공명</span>
+        <span class="row"><span class="k">감지 기전</span> 광대역 진동 지문 → <span class="term" data-k="AI">PCA/ML</span> 분류(알코올 혼합물)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig04e" alt="과결합 나노안테나"><div class="imgcap">(e) 과결합(UC/OC) 나노안테나</div></div>
+    <div class="ptext">
+      <h4><span class="pl">e</span> 과결합 나노안테나로 13종 지문 동시 검출</h4>
+      <p><span class="tag d3">모식도</span> Au/MgF₂ 위 십자형 금 안테나에 IR이 입사하고, "UC(undercoupled)/OC(overcoupled)"
+      결합 상태를 비교합니다. <span class="term" data-k="coupled-mode-theory">결합모드 이론</span>으로 과결합 흡수기를
+      설계해 6–14 µm에서 균일한 증강을 얻습니다.</p>
+      <p><span class="tag graph">그래프</span> <i>PCA</i> <b>PC2 vs PC1</b> 산점도에 다수의 분석물(CPF, Cr, TC, MB,
+      ZIF-8, o-phen, ST, VC, R6G 등)이 서로 다른 군집으로 분리됩니다. 변수는 "분석물 종류"이며, 균일·광대역
+      과결합 덕분에 한 메타표면으로 13종 지문을 구별합니다. 의도: 단일 어레이로 다중 분석물 지문 검출이 처음
+      가능함을 입증.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 센서</span> 강하게 디튜닝된 과결합 플라즈모닉 나노안테나</span>
+        <span class="row"><span class="k">센서 역할</span> 6–14 µm 균일 증강의 과결합 공명</span>
+        <span class="row"><span class="k">감지 기전</span> 광대역 SEIRA 지문 → PCA로 13종 분석물 동시 식별</span>
+      </div>
+    </div>
+  </div>
+</section>

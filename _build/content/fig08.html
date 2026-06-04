@@ -1,0 +1,125 @@
+<section class="fig" id="fig08">
+  <div class="fig-head">
+    <span class="fig-num">Figure 8</span>
+    <h2 class="fig-title">집적 플라즈모닉 회로 (광 컴퓨팅 부품)</h2>
+    <span class="fig-kind">소자 3D + TEM/SEM + PL영상 + 스펙트럼</span>
+  </div>
+  <div class="caption"><b>원문 캡션.</b> Integrated plasmonic circuits. (a) 작은 웨이퍼 면적에 고기능을 집적한 PIC 부품 개요 [220].
+  (b) 디지털 회로의 기본 소자인 플라즈모닉 논리 게이트 [214]: (I) TEM, (II) SEM, (III–VI) 편광 입력별 PL 현미경 영상
+  (산란 SPP 세기로 1/0 할당), (VII,VIII) 2입력 1출력 게이트와 진리표·임계값 T1/T2. (c) 나노광원 플라즈모닉 레이저 [215]:
+  (I) 구조, (II) 동작기전. (d) 플라즈모닉 변조기 [217]: (I) 구조, (II) 집중소자 모델. (e) 전기회로 인터페이스로서의 플라즈모닉
+  검출기 [218]: (I) 구조, (II) 파장별 응답. (f) 플라즈모닉 스위처 [219]: (I) 구조, (II) 온-오프 컨투어, (III) TEM.</div>
+
+  <p class="lead">여기서부터는 "센싱"이 아니라 <b>빛으로 연산하는 광 컴퓨팅 부품</b>들입니다. 모두
+  <span class="term" data-k="SPP">표면 플라즈몬 폴라리톤</span>을 이용해 <span class="term" data-k="diffraction-limit">회절 한계</span>
+  이하로 빛을 가둬 소자를 극소형화합니다. <span class="term" data-k="PIC">PIC</span>의 광원·논리·변조·검출·스위치를 차례로 보여 줍니다.</p>
+
+  <div class="figfull"><img class="zoom" src="@fig08" alt="Figure 8 전체"><div class="imgcap">(a) PIC 개요 · (b) 논리 게이트 · (c) 레이저 · (d) 변조기 · (e) 검출기 · (f) 스위처</div></div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig08a" alt="PIC 개요"><div class="imgcap">(a) 플라즈모닉 PIC 개요</div></div>
+    <div class="ptext">
+      <h4><span class="pl">a</span> 플라즈모닉 집적회로 개요</h4>
+      <p><span class="tag d3">모식도</span> 한 웨이퍼 위에 <b>Laser(광원)·Filter·Modulator(변조기)·Passive Waveguide
+      (수동 도파관)·Photodetector(검출기)·CMOS Circuitry</b>가 통합된 모습을 보여 줍니다. 전자 IC의 미세화 한계를
+      빛으로 돌파하려는 올-옵티컬 신호처리의 청사진입니다.</p>
+      <p>이 패널은 데이터가 아닌 <b>개요 그림</b>으로, (b)–(f)에서 다룰 개별 부품들이 한 칩에 어떻게 모이는지를 제시합니다.</p>
+      <div class="kv">
+        <span class="row"><span class="k">의의</span> <span class="term" data-k="silicon-photonics">실리콘 포토닉스</span>+플라즈모닉으로 속도·대역·집적도 향상</span>
+        <span class="row"><span class="k">핵심</span> 회절 한계 우회를 위한 <span class="term" data-k="SPP">SPP</span> 기반 부품 통합</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig08b" alt="플라즈모닉 논리 게이트"><div class="imgcap">(b) <span class="term" data-k="plasmonic-logic-gate">플라즈모닉 논리 게이트</span></div></div>
+    <div class="ptext">
+      <h4><span class="pl">b</span> 플라즈모닉 논리 게이트 (OR/AND)</h4>
+      <p><span class="tag d3">이미지(I·II)</span> (I) TEM은 단일 나노와이어([010] 방향, 회절패턴 020·202 삽입),
+      (II) SEM은 유기/금속 나노와이어 이종접합(0.24 nm 격자, [111]/[011])을 보여 줍니다 — 실제 소자 형상.</p>
+      <p><span class="tag d3">영상(III–VI)</span> 두 입사 레이저의 편광(입력 I1·I2)에 따른 PL 현미경 영상으로, O(1,1)·O(1,0)·
+      O(0,1)·O(0,0)의 네 조합에서 출력단(O)의 <b>산란 SPP 세기</b>로 1 또는 0을 할당합니다.</p>
+      <p><span class="tag graph">그래프(VII·VIII)</span> (VII) 2입력 1출력 게이트 기호, 아래 <i>Scattering spectra vs Wavelength</i>에
+      임계값 <b>T1(AND), T2(OR)</b>가 표시됩니다(곡선 O(1,1)>O(1,0)≈O(0,1)>O(0,0)). (VIII) 초록 진리표가 I1,I2에 대한 AND/OR
+      출력을 정리. 변수는 "두 입력 레이저의 편광(1/0)"이며, 출력 SPP 세기가 임계값을 넘느냐로 논리가 결정됩니다(0.4 a.u. 기준).</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 소자</span> 유기/금속 나노와이어 이종접합 플라즈모닉 게이트</span>
+        <span class="row"><span class="k">동작 요소</span> 엑시톤 폴라리톤–<span class="term" data-k="SPP">SPP</span> 결합</span>
+        <span class="row"><span class="k">기전</span> 입력 편광→유기 흡수계수 변화→출력 SPP 세기 변조→임계값으로 AND/OR</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig08c" alt="플라즈모닉 레이저"><div class="imgcap">(c) <span class="term" data-k="plasmonic-laser">플라즈모닉 레이저</span></div></div>
+    <div class="ptext">
+      <h4><span class="pl">c</span> 플라즈모닉 레이저 (나노광원)</h4>
+      <p><span class="tag d3">모식도(I)</span> CdS 나노와이어를 SiO₂ 박막/Au(60 nm)/Silicon 위에 올린 하이브리드 구조.
+      여기 레이저로 펌핑하면 <span class="term" data-k="SPP">SPP</span> 모드로 발광(Emission)합니다. SiO₂ 두께(d/h)로
+      플라즈몬–엑시톤 결합 세기를 조절.</p>
+      <p><span class="tag graph">밴드다이어그램(II)</span> 전도대(CB)·가전자대(VB) 도식에 <b>E_g + Δ_BM′ (SPP enhanced)</b>로
+      표시된 <span class="term" data-k="BM">버스타인-모스(BM) 시프트</span>가 핵심입니다. 변수는 "SiO₂ 두께(=플라즈몬 결합)"이며,
+      플라즈몬으로 증강된 BM 효과가 캐리어 농도/겉보기 밴드갭을 바꿔 <b>발진 파장을 504→483 nm로 튜닝</b>합니다. 의도:
+      단일 나노와이어 레이저의 파장 가변과 양자효율 향상을 보임.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 소자</span> CdS 나노와이어 + Au/SiO₂ 하이브리드 플라즈모닉 레이저</span>
+        <span class="row"><span class="k">동작 요소</span> 플라즈몬–엑시톤 결합, BM 효과</span>
+        <span class="row"><span class="k">기전</span> 플라즈몬 증강 BM 시프트로 발진 파장 가변(504→483 nm)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig08d" alt="플라즈모닉 변조기"><div class="imgcap">(d) <span class="term" data-k="PPM">플라즈모닉 위상 변조기</span></div></div>
+    <div class="ptext">
+      <h4><span class="pl">d</span> 플라즈모닉 변조기 (PPM)</h4>
+      <p><span class="tag d3">모식도(I)</span> 두 금속 테이퍼(15° 각도)로 실리콘 광 ↔ 플라즈몬 모드를 변환하고, 그 사이
+      나노스케일 슬롯에 비선형 유기 폴리머를 채운 위상 변조부(길이 29 µm)를 둡니다.</p>
+      <p><span class="tag graph">집중소자 모델(II)</span> 50 Ω·2.2 fF·G/S/G·7 fF·5.7 kΩ로 구성된 등가회로로, 고주파 동작 특성을
+      나타냅니다. 변수는 "인가 전압 U"이며, <span class="term" data-k="Pockels-effect">포켈스 효과</span>로 슬롯 굴절률
+      n(∝U/w_gap)을 바꿔 SPP <b>위상에 40 Gbit/s</b> 정보를 싣습니다(1550 nm 중심, 120 nm 대역, 65 GHz, 85 ℃ 안정).
+      의도: 초소형·고속 변조기 구현을 보임.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 소자</span> 비선형 폴리머 슬롯 플라즈모닉 위상 변조기(29 µm)</span>
+        <span class="row"><span class="k">동작 요소</span> 금속 슬롯의 SPP + 비선형 폴리머</span>
+        <span class="row"><span class="k">기전</span> <span class="term" data-k="Pockels-effect">포켈스 효과</span>로 굴절률 변조 → SPP 위상 인코딩(40 Gbit/s)</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig08e" alt="플라즈모닉 검출기"><div class="imgcap">(e) 플라즈모닉 검출기 (<span class="term" data-k="MSM">MSM</span>)</div></div>
+    <div class="ptext">
+      <h4><span class="pl">e</span> 플라즈모닉 검출기 (전기회로 인터페이스)</h4>
+      <p><span class="tag d3">모식도(I)</span> Au/HSQ/Au/GaAs 적층의 <span class="term" data-k="MSM">금속-반도체-금속(MSM)</span>
+      검출기로, 금속 접점이 플라즈몬의 <b>접점이자 커플러</b> 역할을 합니다(광생성 h⁺/e⁻ 표시).
+      <span class="term" data-k="MIM">MIM</span> 도파관과 통합됩니다.</p>
+      <p><span class="tag graph">그래프(II)</span> <i>Normalized photocurrent vs Wavelength(nm)</i>에 3 µm·6 µm·9 µm 세 곡선이
+      있습니다. 변수는 "검출기 길이(=플라즈몬 감쇠 거리)와 파장"이며, 660 nm에서 e⁻¹ 감쇠길이 3.5 µm, 870 nm에서 9.5 µm로
+      파장에 따라 응답이 달라집니다. 의도: 빠른 광응답·높은 SNR의 고대역 검출기임을 보임.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 소자</span> MIM 도파관 + MSM 플라즈모닉 검출기</span>
+        <span class="row"><span class="k">동작 요소</span> 접점 겸 커플러인 MSM 구조</span>
+        <span class="row"><span class="k">기전</span> 플라즈몬→광전류 변환(파장별 감쇠길이), 빠른 응답·고 SNR</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <div class="pimg"><img class="zoom" src="@fig08f" alt="플라즈모닉 스위처"><div class="imgcap">(f) <span class="term" data-k="plasmonic-switcher">플라즈모닉 스위처</span></div></div>
+    <div class="ptext">
+      <h4><span class="pl">f</span> 플라즈모닉 스위처</h4>
+      <p><span class="tag d3">모식도(I)</span> 유리 위 단일 금 나노로드를 광크롬(photochromic) 분자 함유 실리카 박막으로 덮어,
+      UV 레이저와 백색광으로 산란광을 읽습니다.</p>
+      <p><span class="tag graph">컨투어(II)·이미지(III)</span> (II) <i>Time vs Wavelength</i> 컨투어가 <b>온-오프 스위칭</b>을 보여 주고,
+      (III) TEM은 금 나노로드(309 nm)입니다. 변수는 "UV 조사(광크롬 상태 전환)"이며, 광크롬 분자–나노로드 플라즈몬 공명
+      결합이 가역적으로 바뀌어 산란 세기가 스위칭됩니다(변조 깊이 7.2 dB). 단일 나노로드 동작에 ~13 pW, ~39 pJ만 소모.
+      의도: 초저전력·서브파장 광 스위치 실현.</p>
+      <div class="kv">
+        <span class="row"><span class="k">광 소자</span> 광크롬 코팅 단일 금 나노로드 스위처</span>
+        <span class="row"><span class="k">동작 요소</span> 플라즈몬–광크롬 분자 공명 결합</span>
+        <span class="row"><span class="k">기전</span> UV로 광크롬 가역 전환 → 플라즈몬 공명 변조 → 산란 온-오프</span>
+      </div>
+    </div>
+  </div>
+</section>
