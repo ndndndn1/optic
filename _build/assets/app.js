@@ -197,7 +197,7 @@
     var popInner = pop.querySelector(".pop-inner");
     var presentBtn = document.getElementById("present-btn");
 
-    var slides = null, idx = 0, deckOpen = false, popOpen = false;
+    var slides = null, idx = 0, deckOpen = false, popOpen = false, popPanels = null, popIdx = 0;
     var NAV = { "ArrowRight": 1, "PageDown": 1, " ": 1, "ArrowLeft": -1, "PageUp": -1 };
     function navDelta(k) { return Object.prototype.hasOwnProperty.call(NAV, k) ? NAV[k] : 0; }
 
@@ -224,7 +224,7 @@
     function renderDetail(s) {
       var c = document.createElement("div"); c.className = "card";
       var grid = document.createElement("div"); grid.className = "deck-panels";
-      s.panels.forEach(function (panel) {
+      s.panels.forEach(function (panel, pi) {
         var thumb = document.createElement("button"); thumb.type = "button"; thumb.className = "deck-thumb";
         var img = panel.querySelector(".pimg img");
         if (img) { var im = img.cloneNode(true); im.classList.remove("zoom"); im.removeAttribute("loading"); thumb.appendChild(im); }
@@ -237,7 +237,7 @@
         }
         var hint = document.createElement("div"); hint.className = "hintclick"; hint.textContent = "클릭하면 상세 해설";
         thumb.appendChild(hint);
-        thumb.addEventListener("click", function () { openPop(panel); });
+        thumb.addEventListener("click", function () { openPopAt(s.panels, pi); });
         grid.appendChild(thumb);
       });
       c.appendChild(grid);
@@ -267,11 +267,34 @@
       return 0;
     }
 
-    function openPop(panel) {
+    function openPopAt(panels, i) {
+      popPanels = panels;
+      popIdx = Math.min(panels.length - 1, Math.max(0, i));
+      renderPanel();
+      pop.classList.add("show"); pop.setAttribute("aria-hidden", "false"); popOpen = true;
+    }
+    function renderPanel() {
+      var panel = popPanels[popIdx];
       popInner.innerHTML = "";
+      var head = document.createElement("div"); head.className = "pop-head";
+      var h4 = panel.querySelector(".ptext h4");
+      var pl = h4 ? h4.querySelector(".pl") : null;
+      var label = pl ? pl.textContent : "";
+      head.innerHTML = '<span class="pop-badge">' + (label ? "패널 (" + esc(label) + ")" : "상세") +
+        '</span><span class="pop-count">' + (popIdx + 1) + " / " + popPanels.length + "</span>";
+      popInner.appendChild(head);
       var pimg = panel.querySelector(".pimg"); if (pimg) popInner.appendChild(pimg.cloneNode(true));
       var ptext = panel.querySelector(".ptext"); if (ptext) popInner.appendChild(ptext.cloneNode(true));
-      pop.classList.add("show"); pop.setAttribute("aria-hidden", "false"); popOpen = true; pop.scrollTop = 0;
+      pop.scrollTop = 0;
+    }
+    // ←/→ within the detail popup: flip between panel cards of the figure;
+    // past the last panel → next figure, before the first → back to the thumbnail grid
+    function popGo(d) {
+      if (!popOpen) return;
+      var ni = popIdx + d;
+      if (ni < 0) { closePop(); }
+      else if (ni > popPanels.length - 1) { closePop(); go(1); }
+      else { popIdx = ni; renderPanel(); }
     }
     function closePop() { if (!popOpen) return; pop.classList.remove("show"); pop.setAttribute("aria-hidden", "true"); popInner.innerHTML = ""; popOpen = false; }
 
@@ -301,6 +324,8 @@
     deck.querySelector(".deck-fs").addEventListener("click", toggleFs);
     pop.addEventListener("click", function (e) { if (e.target === pop) closePop(); });
     var popClose = pop.querySelector(".pop-close"); if (popClose) popClose.addEventListener("click", closePop);
+    var popPrev = pop.querySelector(".pop-nav.prev"); if (popPrev) popPrev.addEventListener("click", function () { popGo(-1); });
+    var popNext = pop.querySelector(".pop-nav.next"); if (popNext) popNext.addEventListener("click", function () { popGo(1); });
 
     // capture-phase keys: only act in presentation mode, so reading-mode handlers stay intact
     document.addEventListener("keydown", function (e) {
@@ -314,7 +339,7 @@
         return;
       }
       if (e.key === "Escape") { e.preventDefault(); e.stopImmediatePropagation(); if (popOpen) closePop(); else exitDeck(); return; }
-      if (popOpen) { if (navDelta(e.key)) e.preventDefault(); return; }
+      if (popOpen) { var pd = navDelta(e.key); if (pd) { e.preventDefault(); e.stopImmediatePropagation(); popGo(pd); } return; }
       var d = navDelta(e.key);
       if (d) { e.preventDefault(); e.stopImmediatePropagation(); go(d); return; }
       if (e.key === "Home") { e.preventDefault(); e.stopImmediatePropagation(); gotoIdx(0); return; }
