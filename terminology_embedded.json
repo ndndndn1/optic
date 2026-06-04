@@ -1,0 +1,1012 @@
+{
+  "_meta": {
+    "purpose": "메인 terminology_optical_sensor.json 의 각 KEY에 대응되는 자체완결형 풀이. description 안에 등장한 기술 용어를 그 엔트리 안에서 즉시 풀이하여, 더 이상의 외부 참조가 필요 없게 만든다.",
+    "merge_target": "terminology_optical_sensor.json#terms[KEY]",
+    "fields": {
+      "embedded_terms": "description 에 등장하는 하위 용어들의 영한 병기 키 → 한 줄 풀이",
+      "desc_full": "(선택) 자체완결적으로 확장된 한글 설명"
+    }
+  },
+  "PIC": {
+    "embedded_terms": {
+      "광원 (light source)": "빛을 만들어내는 소자. 칩 위에서는 보통 반도체 레이저나 발광 다이오드를 사용한다.",
+      "도파관 (waveguide)": "빛을 원하는 경로로 안내하는 가느다란 광학 통로. 전기 회로의 '전선'에 해당한다.",
+      "변조기 (modulator)": "빛의 세기·위상·편광을 전기 신호로 조절하는 소자. 빛에 정보를 실어 보낼 때 사용한다.",
+      "광검출기 (photodetector)": "빛을 전기 신호로 변환하는 소자.",
+      "벌크 광학 (bulk optics)": "렌즈·거울·프리즘 같은 큰 부피의 광학 부품을 책상 위 광학대(optical bench)에 배치해 실험하는 전통적 방식.",
+      "정렬 복잡도 (alignment complexity)": "여러 광학 부품을 정밀하게 일직선·각도로 맞추는 데 드는 어려움. 벌크 광학의 큰 단점.",
+      "웨어러블 (wearable)": "신체에 부착·착용하는 전자·광학 기기. 크기·전력·유연성 제약이 크다.",
+      "스마트 광자 센서 (smart photonic sensor)": "광 센서에 AI 추론을 결합해 데이터 해석까지 칩 위에서 수행하는 차세대 센서."
+    },
+    "desc_full": "한 장의 작은 칩(보통 수 mm) 위에 빛을 만들고(광원), 전달하고(도파관), 세기·위상·편광을 바꾸고(변조기), 다시 전기 신호로 받아들이는(광검출기) 광학 부품들을 한꺼번에 집적한 회로. 기존 책상 위 광학 실험 장비를 칩 한 장으로 축소한 것에 해당하며, 부피·전력·정렬 복잡도·비용을 크게 줄여 휴대용 진단기, 웨어러블 센서, 자율주행 라이다 등에 쓰인다. 본 리뷰의 핵심 주장은 이 PIC 위에 AI 연산을 직접 얹어 '스마트 광자 센서'를 만든다는 것이다."
+  },
+  "AI": {
+    "embedded_terms": {
+      "스펙트럼 (spectrum)": "빛의 세기를 파장 또는 주파수에 따라 늘어놓은 분포. 분자의 광학적 지문.",
+      "머신러닝 (machine learning)": "데이터로부터 규칙을 학습해 새 입력에 대해 예측·분류하는 알고리즘 총칭.",
+      "신호 처리 (signal processing)": "원시 측정 데이터에서 잡음을 줄이고 정보를 추출·변환하는 과정.",
+      "패턴 인식 (pattern recognition)": "데이터 안의 특정 패턴을 자동으로 식별·분류하는 기법.",
+      "엣지 (edge)": "데이터가 생성되는 장치 또는 그 근처. 원격 클라우드의 반대 개념.",
+      "클라우드 (cloud)": "인터넷으로 연결된 원격 데이터 센터의 컴퓨팅 자원. 대용량 연산은 가능하나 지연·통신 비용·개인정보 문제가 있다."
+    }
+  },
+  "RI": {
+    "embedded_terms": {
+      "굴절률 (refractive index, n)": "진공 대비 매질 안에서 빛이 얼마나 느려지는지의 비. 공기 1.0, 물 1.33, 유리 ~1.5.",
+      "금속-유전체 계면 (metal-dielectric interface)": "금속과 절연체가 만나는 면. 표면 플라즈몬이 존재할 수 있는 조건.",
+      "표면 플라즈몬 (surface plasmon)": "금속 표면 자유 전자가 빛과 함께 집단적으로 흔들리는 진동. 빛을 표면 근방에 강하게 가둔다.",
+      "생체수용체 (bioreceptor)": "표적 분자에 특이적으로 결합하도록 표면에 고정한 분자(항체·압타머·분자 임프린트 등).",
+      "항체 (antibody)": "면역계가 만드는 단백질로 특정 항원에 결합. 센서 표면 기능화에 쓰인다.",
+      "압타머 (aptamer)": "표적에 자물쇠-열쇠처럼 결합하도록 SELEX로 선별된 짧은 DNA/RNA 단편.",
+      "공명 파장 (resonance wavelength, λ)": "광학 구조가 가장 강하게 반응하는 파장. 굴절률 변화에 따라 이동한다.",
+      "라벨-프리 (label-free)": "형광·효소 표지 없이 표적을 직접 검출하는 방식.",
+      "비침습 (noninvasive)": "조직을 자르거나 침습하지 않고 외부 시료(체액 등)만으로 측정하는 방식."
+    }
+  },
+  "SEIRA": {
+    "embedded_terms": {
+      "적외선 (infrared, IR)": "가시광보다 파장이 긴 전자기파(약 0.7 µm~1 mm). 분자 결합 진동 주파수에 해당.",
+      "진동 지문 (vibrational fingerprint)": "각 화학 결합이 흡수하는 적외선 파장이 분자별 고유 패턴을 만들어 분자를 식별 가능하게 하는 흡수 스펙트럼.",
+      "플라즈모닉 (plasmonic)": "금속 자유 전자의 집단 진동(플라즈몬)을 이용해 빛을 좁은 영역에 가두거나 증폭하는 광학 기법.",
+      "나노안테나 (nanoantenna)": "수십~수백 nm 크기의 금속 구조로, 라디오 안테나가 전파를 모으듯 빛을 좁은 영역에 모은다.",
+      "핫스팟 (hot spot)": "나노안테나의 좁은 갭이나 첨두에서 전기장이 수십~수백 배 강해지는 나노영역.",
+      "메타표면 (metasurface)": "파장 이하 크기의 인공 단위셀을 평면에 주기적으로 배열해 빛을 임의로 제어하는 2차원 구조.",
+      "MOF 코팅 (Metal-Organic Framework coating)": "금속-유기 다공성 결정을 박막으로 안테나에 입혀 표적 가스를 핫스팟 근처로 농축하는 기능층.",
+      "나노받침대 (nanopedestal)": "유전체 기판을 식각해 안테나를 공기 중으로 들어올린 구조. 분자의 핫스팟 접근성을 높인다.",
+      "증강 인자 (Enhancement Factor, EF)": "증강된 신호를 증강 없는 기준 신호로 나누고 분자 수로 정규화한 무차원 값."
+    }
+  },
+  "SERS": {
+    "embedded_terms": {
+      "라만 산란 (Raman scattering)": "분자에 입사한 단색광이 분자 진동·회전 에너지의 양만큼 파장이 바뀌어 산란되는 비탄성 산란. 약 100만 분의 1 광자만 일어남.",
+      "비탄성 산란 (inelastic scattering)": "입사광과 산란광의 에너지가 다른 산란. 라만 산란이 대표.",
+      "레일리 산란 (Rayleigh scattering)": "입사광과 같은 파장으로 다시 튀어나오는 탄성 산란. 라만보다 훨씬 강해 측정을 방해한다.",
+      "표면 플라즈몬 (surface plasmon)": "금속 표면 자유 전자의 집단 진동. 빛 에너지를 나노스케일 영역에 가둬 국소 전기장을 극대화한다.",
+      "전자기적 증강 (electromagnetic enhancement)": "플라즈몬으로 국소 전기장 E가 커져 라만 신호가 |E|⁴에 비례해 증폭되는 메커니즘. SERS 증폭의 대부분.",
+      "화학적 증강 (chemical enhancement)": "분자-금속 전하 이동으로 분자의 라만 단면적 자체가 커지는 메커니즘. 10~100배 기여.",
+      "단색광 (monochromatic light)": "한 가지 파장만 가지는 빛. 라만 측정엔 보통 레이저를 사용.",
+      "Fleischmann 1974": "거친 은 전극 위 피리딘에서 라만 신호 비정상 증폭을 처음 보고한 실험. SERS의 출발점."
+    }
+  },
+  "SEF": {
+    "embedded_terms": {
+      "형광 (fluorescence)": "분자가 빛을 흡수해 들뜬 뒤 짧은 시간(나노초) 안에 더 긴 파장의 빛을 내며 바닥 상태로 돌아가는 현상.",
+      "형광단 (fluorophore)": "형광을 내는 분자 또는 부분 구조(로다민·FITC·양자점 등).",
+      "광학상태밀도 (Local Density of Optical States, LDOS)": "특정 위치·주파수에서 빛이 존재할 수 있는 '자리'의 밀도. LDOS가 크면 형광체 방출 확률이 비례해 커진다.",
+      "양자 수율 (quantum yield)": "흡수한 광자 수 대비 실제로 형광으로 방출된 광자 수의 비율(0~1).",
+      "Drexhage 1960s": "은 박막-형광 분자 거리에 따른 형광 수명 변화를 처음 정량화한 실험.",
+      "fM (femtomolar)": "10⁻¹⁵ mol/L. 극저농도 단위.",
+      "ag/mL (attogram per mL)": "10⁻¹⁸ g/mL. 단일 분자 검출 수준.",
+      "알루미늄 나노입자 (aluminum nanoparticle)": "자외선 영역에서 강한 플라즈몬 공명을 갖는 Al 나노입자. 아미노산 형광 증강에 사용."
+    }
+  },
+  "CD": {
+    "embedded_terms": {
+      "키랄성 (chirality)": "거울상과 자신을 회전·평행이동으로 겹칠 수 없는 비대칭 성질.",
+      "거울상 이성질체 (enantiomer)": "원자 조성·결합은 같지만 3차원 배열이 거울상인 두 분자.",
+      "우원편광 (RCP, Right-Circularly Polarized)": "전기장 벡터가 시계 방향으로 회전하는 빛.",
+      "좌원편광 (LCP, Left-Circularly Polarized)": "전기장 벡터가 반시계 방향으로 회전하는 빛.",
+      "흡광도 (absorbance)": "시료가 빛을 흡수하는 정도를 로그 스케일로 나타낸 값.",
+      "키랄 플라즈모닉 메타표면 (chiral plasmonic metasurface)": "감마·수리검 등 비대칭 금속 나노패턴 어레이. LCP·RCP에 다르게 반응해 약한 키랄 신호를 증폭."
+    }
+  },
+  "VCD": {
+    "embedded_terms": {
+      "중적외선 (Mid-Infrared, MIR)": "파장 약 2.5~25 µm(파수 4000~400 cm⁻¹). 분자 결합 진동 기본 모드의 영역.",
+      "진동 모드 (vibrational mode)": "분자 안 원자들이 결합을 통해 정해진 패턴으로 흔들리는 운동.",
+      "단백질 2차 구조 (protein secondary structure)": "알파 나선, 베타 병풍 같은 단백질 사슬의 국부적 규칙 접힘 구조.",
+      "비키랄 플라즈몬 기판 (achiral plasmonic substrate)": "그 자체로는 거울 대칭인 평범한 플라즈모닉 기판. 키랄 분자와 결합 시 응답을 크게 증폭.",
+      "전자 CD (electronic CD)": "자외~가시광에서 분자 전자 전이를 측정하는 기존 CD. VCD보다 강하지만 구조 분해능이 낮다."
+    }
+  },
+  "ORD": {
+    "embedded_terms": {
+      "직선 편광 (linear polarization)": "전기장이 한 평면 안에서만 진동하는 빛.",
+      "회전각 (rotation angle)": "키랄 매질을 통과한 뒤 편광면이 돌아간 각도.",
+      "나선 피치 (helical pitch)": "DNA·단백질 같은 나선 구조에서 한 바퀴 도는 데 필요한 길이(수 Å~수 nm). 가시광 파장(수백 nm)보다 훨씬 작다.",
+      "키랄 분자 (chiral molecule)": "거울상 두 형태가 서로 겹쳐지지 않는 비대칭 분자."
+    }
+  },
+  "ROA": {
+    "embedded_terms": {
+      "라만 산란 (Raman scattering)": "분자에 부딪친 빛이 진동 에너지만큼 파장이 바뀌어 산란되는 비탄성 산란.",
+      "수용액 (aqueous solution)": "물을 용매로 한 용액. 생체 분자 분석의 기본 환경.",
+      "플라즈모닉 도파관 (plasmonic waveguide)": "금속 표면 플라즈몬 모드로 빛을 전파시키는 도파관. 회절 한계 이하 가둠 가능.",
+      "은 키랄 나노와이어 (silver chiral nanowire)": "나선 모양으로 꼬인 은 나노선. 좌·우 원편광에 다르게 반응해 ROA를 증폭.",
+      "Efrima 1983": "표면 증강 ROA의 이론적 토대를 처음 마련한 연구."
+    }
+  },
+  "TCD": {
+    "embedded_terms": {
+      "테라헤르츠 (THz)": "0.1~10 THz(파장 30 µm~3 mm)의 전자기파. 마이크로파와 적외선 사이.",
+      "생체 거대 분자 (biomacromolecule)": "단백질·핵산·다당류 같은 큰 생체 분자.",
+      "키리가미 (kirigami)": "종이를 자르고 접어 3차원 구조를 만드는 일본식 공예 기법.",
+      "판차라트남-베리 위상 (Pancharatnam-Berry phase)": "빛의 편광 상태가 기하학적 경로를 따라 변할 때 추가로 얻는 위상.",
+      "비선형 메타표면 (nonlinear metasurface)": "입사광 세기에 따라 응답이 비선형으로 변하는 메타표면. 광대역 THz 발생에 사용.",
+      "광대역 THz 방출기 (broadband THz emitter)": "넓은 주파수 범위의 THz 파를 동시에 방출하는 소자."
+    }
+  },
+  "LSPR": {
+    "embedded_terms": {
+      "나노입자 (nanoparticle, NP)": "지름 1~100 nm의 미세 입자. 금속 NP는 LSPR로 강한 색과 광응답을 보인다.",
+      "자유 전자 (free electron)": "금속 안에서 격자에 묶이지 않고 자유롭게 움직이는 전도 전자.",
+      "집단 진동 (collective oscillation)": "여러 전자가 위상을 맞춰 함께 흔들리는 운동.",
+      "공명 (resonance)": "입력 진동수가 시스템의 고유 진동수와 일치할 때 응답이 극대화되는 현상.",
+      "공명 파장 (resonance wavelength)": "LSPR이 최대인 빛의 파장. 입자 크기·모양·매질 굴절률로 결정.",
+      "흡수·산란 단면적 (absorption/scattering cross-section)": "입자가 입사광에서 얼마나 빛을 흡수/산란하는지를 면적으로 환산한 값."
+    }
+  },
+  "SPP": {
+    "embedded_terms": {
+      "유전체 (dielectric)": "전기를 거의 통하지 않는 절연성 물질(공기·유리·SiO₂ 등).",
+      "폴라리톤 (polariton)": "빛(광자)과 물질 진동(플라즈몬·포논·엑시톤)이 강하게 결합한 혼합 입자.",
+      "회절 한계 (diffraction limit)": "유전체 매질에서 빛을 약 파장의 절반보다 작은 영역에 가둘 수 없다는 광학의 근본 제약.",
+      "전파 모드 (propagating mode)": "에너지가 한 방향으로 계속 흘러갈 수 있는 파동 상태.",
+      "광 집적 (photonic integration)": "여러 광 부품을 작은 칩에 한꺼번에 모으는 기술."
+    }
+  },
+  "SPhP": {
+    "embedded_terms": {
+      "포논 (phonon)": "결정 격자에서 원자들이 함께 진동하는 양자화된 모드. 격자 진동의 입자.",
+      "극성 결정 (polar crystal)": "양·음 이온이 교차 배열된 결정(SiC, h-BN 등). 이온 진동이 강한 전기쌍극자를 만들어 적외선과 결합.",
+      "광학 포논 (optical phonon)": "이웃 원자들이 반대 방향으로 진동하는 포논 모드. 적외선과 결합한다.",
+      "Reststrahlen 대역 (Reststrahlen band)": "극성 결정에서 종방향/횡방향 광학 포논 주파수 사이의 영역. 굴절률 실수부가 음수가 되어 SPhP가 지지된다.",
+      "초분광 영상 (hyperspectral imaging)": "각 화소가 연속 스펙트럼을 갖는 영상.",
+      "수직 적층 적외선 나노안테나 (vertically stacked IR nanoantenna)": "여러 층의 적외선 안테나를 수직으로 쌓아 SPP와 SPhP를 혼성화한 구조."
+    }
+  },
+  "Reststrahlen-band": {
+    "embedded_terms": {
+      "종방향 광학 포논 (LO phonon)": "원자 변위가 파동 진행 방향과 같은 포논 모드.",
+      "횡방향 광학 포논 (TO phonon)": "원자 변위가 파동 진행 방향과 수직인 포논 모드.",
+      "굴절률 실수부 (real part of refractive index)": "복소 굴절률 n = n' + i n'' 에서 빛의 위상 속도와 관련된 부분. 음수가 되면 매질 안에서 빛이 전파될 수 없다.",
+      "극성 결정 (polar crystal)": "이온 결합 결정. 격자 진동이 강한 전기쌍극자 모멘트를 만들어 적외선과 결합."
+    }
+  },
+  "FWHM": {
+    "embedded_terms": {
+      "공명 곡선 (resonance curve)": "주파수·파장에 따른 시스템 응답 강도 곡선. 공명에서 봉우리.",
+      "분광 분해능 (spectral resolution)": "인접한 두 스펙트럼 피크를 별개로 구분할 수 있는 능력.",
+      "선택도 (selectivity)": "원하는 주파수만 골라내는 능력. FWHM이 좁을수록 높다."
+    }
+  },
+  "FoM": {
+    "embedded_terms": {
+      "감도 (sensitivity, S_RI)": "단위 굴절률 변화당 공명 파장이 얼마나 이동하는지의 값(nm/RIU).",
+      "FWHM (Full Width at Half Maximum)": "공명 봉우리 최댓값 절반 높이에서 잰 가로폭. 좁을수록 분해능이 높다.",
+      "무차원 (dimensionless)": "단위가 없는 양. 분자·분모 단위가 같아 상쇄된 결과."
+    }
+  },
+  "EF": {
+    "embedded_terms": {
+      "I_SEIRA": "플라즈몬 증강 후 측정된 분자 진동 흡수 강도.",
+      "I_ref": "증강 없이 측정된 같은 분자의 흡수 강도.",
+      "N_SEIRA": "안테나 핫스팟 안에 위치한 분자 수.",
+      "N_ref": "참조 측정에 사용된 전체 분자 수.",
+      "정규화 (normalization)": "측정 조건의 차이(분자 수 등)를 보정해 같은 기준으로 비교하기 위한 나눔 연산.",
+      "광학적 이득 (optical gain)": "안테나가 입사광에 비해 핫스팟에서 만들어내는 전기장 증폭률."
+    }
+  },
+  "LOD": {
+    "embedded_terms": {
+      "분석물 (analyte)": "센서가 검출·정량하려는 표적 물질.",
+      "잡음 표준편차 (noise standard deviation)": "측정값의 무작위 변동 크기. LOD는 보통 잡음 표준편차의 3배 신호에 해당하는 농도.",
+      "attomolar (aM)": "10⁻¹⁸ mol/L. 1 리터에 약 600개 분자.",
+      "도파민 (dopamine)": "보상·운동 회로를 매개하는 신경전달물질. 결핍은 파킨슨병과 관련.",
+      "뇌척수액 (cerebrospinal fluid, CSF)": "뇌·척수를 둘러싼 액체. 신경계 진단 시료."
+    }
+  },
+  "Sensitivity": {
+    "embedded_terms": {
+      "단위 굴절률 변화 (Δn)": "주변 매질의 굴절률이 얼마만큼 변했는지의 값.",
+      "공명 파장 이동 (Δλ)": "굴절률 변화에 따라 공명 봉우리가 이동한 파장(nm)량.",
+      "금 나노디스크 어레이 (gold nanodisc array)": "기판 위에 금 원판형 나노입자를 주기적으로 배열한 LSPR 센서 구조.",
+      "실리콘 질화물 마이크로링 (silicon nitride microring)": "Si₃N₄ 박막으로 만든 반지 모양 광 공진기. RI 변화에 매우 민감."
+    }
+  },
+  "RIU": {
+    "embedded_terms": {
+      "무차원수 (dimensionless quantity)": "단위가 없는 비율 또는 비교 값. 굴절률은 두 매질에서 빛 속도의 비라 단위가 없다.",
+      "감도 표기 (sensitivity notation)": "RI 센서 감도를 nm/RIU 단위로 표기. '굴절률 1.0 변화 시 공명 파장이 몇 nm 이동하는가'를 의미."
+    }
+  },
+  "hot-spot": {
+    "embedded_terms": {
+      "전자기장 (electromagnetic field)": "전기장과 자기장이 함께 이루는 장. 빛은 진동하는 전자기장.",
+      "갭 (gap)": "두 나노입자 또는 안테나 팔 사이의 좁은 공간. 좁을수록 전기장이 집중된다.",
+      "첨두 (tip)": "안테나의 뾰족한 끝. 곡률 반경이 작아 전기장이 집중된다.",
+      "분자 농축 코팅 (molecular enrichment coating)": "ZIF-8 등 다공성 박막으로 표적 분자를 핫스팟 근처로 모으는 기능층.",
+      "광-물질 상호작용 (light-matter interaction)": "빛과 분자·고체 사이의 흡수·산란·발광 등 모든 반응."
+    }
+  },
+  "nanoantenna": {
+    "embedded_terms": {
+      "광-물질 상호작용 (light-matter interaction)": "빛이 분자·고체와 만나 일으키는 흡수·산란·발광 등 모든 반응.",
+      "보타이 (bowtie)": "두 삼각형을 좁은 갭을 사이에 두고 꼭짓점을 마주 본 나비넥타이 모양. 갭에서 전기장이 극단적으로 강해진다.",
+      "후크형 (hook-shaped)": "갈고리 모양의 비대칭 안테나. 여러 크기를 한 단위셀에 모으면 광대역 공명을 만든다.",
+      "슈퍼셀 (supercell)": "여러 안테나(예: 16개 후크)를 한 주기 단위로 묶어 안테나 간 결합을 억제하면서 연속 공명을 만드는 배열.",
+      "분할 링 공진기 (split-ring resonator, SRR)": "링의 일부를 잘라낸 마이크로파~적외선 메타원자.",
+      "WMHNA (Wavelength-Multiplexed Hook Nanoantenna Array)": "파장별로 다른 후크 안테나를 배열해 광대역 SEIRA를 가능케 한 구조.",
+      "공명 파장 (resonance wavelength)": "안테나가 가장 강하게 응답하는 빛의 파장. 크기·모양으로 조정."
+    }
+  },
+  "metasurface": {
+    "embedded_terms": {
+      "메타원자 (meta-atom)": "메타표면의 단위 구조(나노 막대·디스크·SRR 등). 각각이 빛의 한 픽셀처럼 위상·진폭을 조절.",
+      "단위셀 (unit cell)": "메타표면에서 주기적으로 반복되는 가장 작은 구조 블록.",
+      "위상 (phase)": "파동의 시간적 진동 단계. 메타표면은 픽셀별로 임의 위상을 설계할 수 있다.",
+      "진폭 (amplitude)": "파동의 세기 크기.",
+      "편광 (polarization)": "빛의 전기장이 진동하는 방향(직선·원·타원).",
+      "그라디언트 메타표면 (gradient metasurface)": "메타원자 크기·각도가 위치에 따라 점진적으로 변하는 메타표면.",
+      "무분광기 검출 (spectrometer-free detection)": "값비싼 분광기 없이 단순 카메라만으로 분광 정보를 얻는 방식."
+    }
+  },
+  "nanopedestal": {
+    "embedded_terms": {
+      "유전체 기판 (dielectric substrate)": "안테나가 올라가 있는 절연성 받침대(SiO₂·CaF₂ 등).",
+      "식각 (etching)": "화학·물리적 방법으로 재료 일부를 깎아내는 가공 공정.",
+      "근접장 (near field)": "광원에서 한 파장 이내의 영역. 전기장이 매우 강하고 빠르게 감쇠.",
+      "패시브 트래핑 (passive trapping)": "별도 구동 없이 표면 형상만으로 분자를 핫스팟 근처에 가두어 모으는 효과."
+    }
+  },
+  "SRR": {
+    "embedded_terms": {
+      "메타원자 (meta-atom)": "메타재료의 단위 구조. SRR은 대표적 메타원자.",
+      "공진형 (resonant)": "특정 주파수에서 응답이 극대화되도록 설계된. SRR의 끊긴 부분이 캐패시터, 링이 인덕터 역할.",
+      "단일 분자 단층 (single molecular monolayer)": "한 분자 두께의 박막. SRR 적외선 센서로 검출 가능."
+    }
+  },
+  "supercell": {
+    "embedded_terms": {
+      "후크형 서브셀 (hook sub-cell)": "갈고리 모양의 단위 안테나. 슈퍼셀은 16개의 서로 다른 크기 후크를 한 묶음으로.",
+      "안테나 간 결합 (inter-antenna coupling)": "이웃 안테나 사이의 전자기 결합. 결합이 강하면 공명 분리·변형이 일어남.",
+      "연속 공명 (continuous resonance)": "광대역에 걸쳐 끊김 없이 이어지는 공명. SEIRA 광대역 측정의 핵심."
+    }
+  },
+  "waveguide": {
+    "embedded_terms": {
+      "코어 (core)": "도파관 중심의 고굴절률 영역. 빛 에너지가 주로 이곳에 집중된다.",
+      "클래딩 (cladding)": "코어를 감싸는 저굴절률 영역. 빛이 밖으로 새지 않도록 막는다.",
+      "전반사 (total internal reflection)": "고굴절률→저굴절률로 가는 빛이 임계각 이상에서 100% 반사되는 현상.",
+      "모드 가둠 (mode confinement)": "전반사 외에도 광결정·부파장 격자로 특정 모드만 도파관에 가두는 방식.",
+      "소산장 (evanescent field)": "도파관 외부로 새어 나가며 지수 감쇠하는 광. 외부 굴절률 변화 감지의 통로."
+    }
+  },
+  "evanescent-field": {
+    "embedded_terms": {
+      "비전파성 (non-propagating)": "에너지를 멀리 운반하지 않고 한 위치 주변에 갇힌 광장. 자유 공간으로 방사되지 못한다.",
+      "지수 감쇠 (exponential decay)": "거리 z 가 늘어남에 따라 강도가 exp(−z/δ) 꼴로 빠르게 줄어드는 양상.",
+      "침투 깊이 (penetration depth, δ)": "강도가 1/e ≈ 37%로 떨어지는 거리. 보통 수십~수백 nm.",
+      "유효 굴절률 (effective index, n_eff)": "도파관 가이드 모드가 느끼는 평균 굴절률. 코어와 클래딩의 가중 평균."
+    }
+  },
+  "SWG": {
+    "embedded_terms": {
+      "격자 (grating)": "주기적인 골과 산이 반복되는 광학 구조. 회절·간섭으로 빛 방향·분광 특성 제어.",
+      "외부 가둠 인자 (external confinement factor)": "도파관 밖에 존재하는 광 에너지 비율. 클수록 분석물 감지 성능 우수.",
+      "산화막 (oxide layer)": "SOI 웨이퍼에서 실리콘 도파관 아래에 깔린 SiO₂ 박막. 보통 광 손실 원인.",
+      "광자 코 (photonic nose)": "여러 가스의 적외선 흡수 스펙트럼을 측정해 후각처럼 식별하는 광 센서.",
+      "FoM (Figure of Merit)": "가둠 인자 대 손실비. SWG 최적화의 기준."
+    }
+  },
+  "SOI": {
+    "embedded_terms": {
+      "웨이퍼 (wafer)": "반도체 소자를 위해 단결정 실리콘을 얇게 자른 원판(직경 200/300 mm).",
+      "BOX (Buried Oxide)": "SOI 웨이퍼 중간의 매립 SiO₂ 층. 보통 수 µm.",
+      "근적외선 (near-infrared, NIR)": "파장 0.78~3 µm. 1.3/1.55 µm는 광통신 표준.",
+      "실리콘 포토닉스 (silicon photonics)": "실리콘 기반으로 광 부품을 집적하는 기술. CMOS 공정 호환."
+    }
+  },
+  "silicon-photonics": {
+    "embedded_terms": {
+      "CMOS 공정 (Complementary Metal-Oxide-Semiconductor process)": "현대 디지털 반도체 표준 공정. 노광·식각·증착·이온 주입 단계.",
+      "III-V 화합물 (III-V compound semiconductor)": "주기율표 13족·15족 원소 반도체(InP, GaAs). 직접 천이형이라 발광이 효율적.",
+      "이종 집적 (heterogeneous integration)": "성질이 다른 재료(Si + III-V 등)를 한 칩에 결합하는 공정.",
+      "직접 발광 (direct emission)": "전류로 효율적 발광 가능. 실리콘은 간접 천이형이라 어려움.",
+      "그래핀 (graphene)": "탄소 원자 한 층의 2차원 재료. 가변 광응답 검출기에 사용.",
+      "리튬 니오베이트 (LiNbO₃)": "강한 Pockels 효과를 가진 강유전체 결정. 고속 변조에 사용.",
+      "압전 박막 (piezoelectric film)": "기계적 응력과 전기장이 결합되는 박막(AlN, PZT 등)."
+    }
+  },
+  "MRR": {
+    "embedded_terms": {
+      "노치 (notch)": "필터 출력 스펙트럼에서 좁고 깊게 떨어지는 골. 공명 파장에서 빛이 링으로 빨려 들어가 만들어진다.",
+      "AlN (Aluminum Nitride)": "강한 Pockels 효과를 가진 압전·전기광학 재료. CMOS 호환.",
+      "Pockels 효과 (Pockels effect)": "전기장에 비례해 굴절률이 선형으로 변하는 전기광학 효과.",
+      "DC 튜닝 효율 (DC tuning efficiency)": "직류 전압 1 V 인가당 공명 파장 이동량(pm/V).",
+      "Q (Quality Factor)": "공진기가 에너지를 얼마나 오래 가두는지의 지표.",
+      "copy/µL": "마이크로리터당 핵산 분자 카피 수.",
+      "라벨-프리 (label-free)": "표지 없이 분자를 직접 검출하는 방식."
+    }
+  },
+  "MZI": {
+    "embedded_terms": {
+      "간섭 (interference)": "두 빛이 겹쳤을 때 위상 차에 따라 보강·상쇄되는 현상.",
+      "열광학 히터 (thermo-optic heater)": "도파관 위 금속 저항. 전류로 가열하면 굴절률이 변해 위상을 조절.",
+      "변조 깊이 (modulation depth)": "출력 광 세기를 얼마나 크게 켜고 끌 수 있는지의 dB 값. 30 dB는 1000:1.",
+      "Vπ": "위상을 π(180°) 이동시키는 데 필요한 전압. 작을수록 효율적.",
+      "행렬-벡터 곱셈 (matrix-vector multiplication, MVM)": "신경망 선형층 연산. 광 도메인에서는 MZI 격자가 빛의 속도로 수행.",
+      "TiN 마이크로히터 (TiN microheater)": "질화티탄 박막 저항. 안정적이고 호환성이 좋은 열광학 히터 재료."
+    }
+  },
+  "PPM": {
+    "embedded_terms": {
+      "금속 테이퍼 (metal taper)": "도파관-플라즈모닉 영역 간 임피던스를 점진적으로 맞춰 모드 변환 손실을 줄이는 깔때기 구조. 본 PPM은 15° 각도.",
+      "표면 플라즈몬 폴라리톤 (SPP)": "금속-유전체 경계를 따라 전파되는 빛-전자 결합 모드.",
+      "비선형 유기 폴리머 (nonlinear organic polymer)": "강한 Pockels 효과를 가진 유기 분자 사슬. 슬롯에 채워 작은 전압으로 큰 굴절률 변화 유도.",
+      "Pockels 효과 (Pockels effect)": "전기장 E에 비례해 굴절률이 선형 변하는 효과 (Δn = −½ r₃₃ n³ E).",
+      "Gbit/s": "초당 10억 비트의 전송 속도.",
+      "1550 nm": "광통신 표준 파장. 실리콘 도파관 손실이 낮은 영역."
+    }
+  },
+  "MIM": {
+    "embedded_terms": {
+      "절연체 (insulator)": "전기를 통하지 않는 물질. 도파관 코어 역할.",
+      "회절 한계 (diffraction limit)": "유전체 도파관에서 빛이 갇힐 수 있는 최소 폭(~λ/2n)의 한계. MIM은 이를 넘어선다.",
+      "신호 대 잡음비 (Signal-to-Noise Ratio, SNR)": "참된 신호 크기를 잡음 크기로 나눈 비율. 클수록 좋은 측정.",
+      "MSM (Metal-Semiconductor-Metal photodetector)": "두 금속 전극 사이에 반도체를 둔 평면형 광검출기."
+    }
+  },
+  "MSM": {
+    "embedded_terms": {
+      "전극 (electrode)": "반도체에 전류를 흘리는 금속 단자. MSM에서는 빗 모양으로 교차 배치.",
+      "커플러 (coupler)": "두 종류의 광 모드(도파관 ↔ 플라즈몬 등)를 효율적으로 변환·연결하는 부품.",
+      "정전용량 (capacitance)": "두 전극이 전하를 저장하는 능력. 작을수록 검출기 응답이 빠르다.",
+      "e⁻¹ 감쇠 길이 (1/e decay length)": "광 세기가 1/e ≈ 37%로 줄어드는 거리.",
+      "자유공간 파장 (free-space wavelength)": "진공/공기에서의 빛 파장. 도파관 내에서는 유효 굴절률에 따라 짧아진다."
+    }
+  },
+  "Pockels-effect": {
+    "embedded_terms": {
+      "전기광학 계수 (electro-optic coefficient, r)": "Pockels 효과 세기를 나타내는 재료 상수(pm/V). LiNbO₃ r₃₃ ≈ 30, AlN ≈ 1.",
+      "반전 대칭성 (inversion symmetry)": "결정 구조가 원점에 대해 좌우 대칭인 성질. 이 대칭이 깨져야 Pockels 효과가 생긴다(실리콘은 대칭이라 없음).",
+      "강유전체 (ferroelectric)": "외부 전기장 없이도 자체 분극을 가진 결정(LiNbO₃·BaTiO₃ 등). 큰 Pockels 효과를 가짐.",
+      "비선형 폴리머 (nonlinear polymer)": "강한 전기광학 응답을 가진 유기 분자 사슬.",
+      "피코초 (picosecond, ps)": "10⁻¹² 초. Pockels 응답 시간 단위.",
+      "TENG (Triboelectric Nanogenerator)": "마찰전기로 자가 발전하는 압력·힘 센서."
+    }
+  },
+  "BM": {
+    "embedded_terms": {
+      "캐리어 (carrier)": "반도체 안에서 전하를 운반하는 전자(음) 또는 정공(양).",
+      "전도대 (conduction band)": "반도체에서 전자가 자유롭게 이동할 수 있는 에너지 띠.",
+      "흡수단 (absorption edge)": "반도체가 빛을 흡수하기 시작하는 임계 광 에너지(파장). 보통 밴드갭에 해당.",
+      "밴드갭 (band gap)": "가전자대와 전도대 사이의 에너지 간격. 결정의 광 특성을 결정.",
+      "CdS 나노와이어 (Cadmium Sulfide nanowire)": "황화카드뮴 1차원 나노 결정. 직접 천이형이라 효율적 발광.",
+      "발진 파장 (lasing wavelength)": "레이저가 실제로 빛을 내는 파장."
+    }
+  },
+  "plasmonic-laser": {
+    "embedded_terms": {
+      "이득 매질 (gain medium)": "외부 펌프 에너지를 받아 광을 증폭하는 재료. 레이저의 심장부.",
+      "엑시톤 (exciton)": "반도체에서 전자와 정공이 쿨롱 인력으로 결합한 준입자. 발광 과정의 매개체.",
+      "플라즈몬-엑시톤 결합 (plasmon-exciton coupling)": "금속 표면 플라즈몬과 반도체 엑시톤의 강한 상호작용.",
+      "Au 박막 (gold thin film)": "가시광~NIR에서 손실이 비교적 작은 플라즈모닉 금속막.",
+      "광발광 (photoluminescence, PL)": "빛으로 들떠 다시 빛을 내는 발광 과정."
+    }
+  },
+  "plasmonic-logic-gate": {
+    "embedded_terms": {
+      "엑시톤 폴라리톤 (exciton polariton)": "엑시톤과 광자가 강하게 결합한 준입자. 유기 반도체 내 전파.",
+      "유기/금속 나노와이어 이종접합 (organic/metal nanowire heterojunction)": "유기 나노와이어 끝에 은 나노와이어가 결합된 구조. 폴라리톤→플라즈몬 변환.",
+      "이종접합 (heterojunction)": "성질이 다른 두 반도체(또는 반도체-금속)의 계면.",
+      "OR/AND 게이트 (OR/AND gate)": "디지털 논리 기본 단위. OR은 하나라도 1이면 1, AND는 둘 다 1이어야 1.",
+      "임계값 (threshold)": "출력이 0과 1을 구분하는 기준치. 본문에서는 산란 강도 0.4 au.",
+      "물리적 기상 수송 (physical vapor transport, PVT)": "기체 상태 분자를 표면에 응축시켜 결정을 성장시키는 공정."
+    }
+  },
+  "plasmonic-switcher": {
+    "embedded_terms": {
+      "광크롬 (photochromic)": "빛에 의해 가역적으로 분자 구조가 변하는 분자(스피로피란·디아릴에텐 등).",
+      "이성화 (isomerization)": "원자 조성을 그대로 두고 결합 배열만 바뀌어 다른 모양이 되는 과정.",
+      "메조다공성 실리카 (mesoporous silica)": "2~50 nm 균일 기공을 가진 SiO₂. 염료 분자를 담는 호스트.",
+      "단일 나노로드 (single nanorod)": "한 개의 금 막대 나노입자. 개별 입자 수준 스위칭.",
+      "pW (picowatt)": "10⁻¹² W.",
+      "pJ (picojoule)": "10⁻¹² J.",
+      "변조 깊이 (modulation depth)": "출력 신호를 켜고 끌 때 강도 변화의 dB. 7.2 dB는 약 5:1 비."
+    }
+  },
+  "in-sensor-computing": {
+    "embedded_terms": {
+      "아날로그 신호 (analog signal)": "값이 연속적으로 변하는 신호. 광 강도·전압 등.",
+      "디지털 (digital)": "값을 0과 1의 이진수로 표현한 신호.",
+      "CPU/GPU (Central/Graphics Processing Unit)": "범용·병렬 그래픽 연산 칩. 신경망 학습·추론에 쓰임.",
+      "특징 추출 (feature extraction)": "원시 데이터에서 분류·예측에 유용한 핵심 정보를 뽑아내는 과정.",
+      "신경망 추론 (neural network inference)": "학습된 신경망에 새 입력을 넣어 출력을 얻는 과정.",
+      "병목 (bottleneck)": "전체 처리 속도를 가장 느리게 만드는 단계. 보통 데이터 전송에서 발생.",
+      "광-전 도메인 (optical/electrical domain)": "광 신호 vs 전기 신호로 처리되는 영역. 광 도메인은 빛의 속도로 행렬 연산 가능."
+    }
+  },
+  "NSEC": {
+    "embedded_terms": {
+      "AlN/Si 이중층 도파관 (AlN/Si dual-layer waveguide)": "8인치 SOI 위에 SiO₂ 평탄화 후 AlN을 추가 증착한 이중층 구조.",
+      "TENG (Triboelectric Nanogenerator)": "두 재료의 접촉·분리로 자가 발전하는 압력/힘 센서.",
+      "MRR (Microring Resonator)": "반지 모양 광 공진기. 특징 추출에 사용.",
+      "MZI 격자 (MZI mesh)": "여러 마하-젠더 간섭계를 격자로 묶어 행렬 곱셈을 수행하는 광 네트워크.",
+      "Si MZI": "실리콘 도파관 기반 MZI. TiN 히터로 가중치 조정.",
+      "ASL (American Sign Language)": "미국 수화. 13가지 제스처 100% 정확도 분류.",
+      "보행 사이클 (gait cycle)": "한 발이 땅에 닿고 다시 닿을 때까지의 한 주기. 7단계로 분류.",
+      "4비트 양자화 (4-bit quantization)": "가중치를 16단계 이산값으로 표현하는 정밀도. 잡음 평균 위 분리."
+    }
+  },
+  "edge-intelligence": {
+    "embedded_terms": {
+      "지연 (latency)": "신호 발생부터 결정까지의 시간. 자율주행은 수 ms 이내 요구.",
+      "개인정보 (privacy)": "의료 영상·생체 신호 같은 민감 데이터. 엣지 처리로 유출 위험 감소.",
+      "엣지 디바이스 (edge device)": "사용자 가까이에 위치한 처리·센싱 장치(휴대폰·웨어러블·센서 노드)."
+    }
+  },
+  "PNN": {
+    "embedded_terms": {
+      "선형층 (linear layer)": "신경망에서 입력 벡터에 가중치 행렬을 곱하고 편향을 더하는 가장 기본 층. 연산량의 대부분.",
+      "광 컴퓨팅 가속기 (photonic accelerator)": "특정 연산(주로 행렬 곱셈)을 빛으로 빠르게 처리하는 보조 프로세서.",
+      "VR/AR (Virtual/Augmented Reality)": "가상현실·증강현실. 실시간 동작·영상 처리가 필요.",
+      "추론 (inference)": "학습된 신경망으로 새 데이터를 처리해 출력을 얻는 과정.",
+      "양자화 (quantization)": "연속적인 가중치 값을 이산 단계(예: 4-bit)로 근사하는 과정.",
+      "ns (nanosecond)": "10⁻⁹ 초."
+    }
+  },
+  "CNN": {
+    "embedded_terms": {
+      "합성곱 (convolution)": "학습 가능한 필터(가중치)를 입력 위로 미끄러뜨리며 곱·합을 누적하는 연산.",
+      "1D-CNN": "1차원 데이터(스펙트럼·음성 등)에 합성곱을 적용하는 CNN 변형.",
+      "MIR (Mid-Infrared)": "파장 2.5~25 µm 의 중적외선. 분자 진동 지문 영역.",
+      "IPA (Isopropyl Alcohol)": "이소프로필 알코올. 휘발성 유기화합물의 대표 분석물.",
+      "아세톤 (acetone)": "(CH₃)₂CO. 또 다른 대표 VOC.",
+      "혼합비 (mixing ratio)": "두 성분이 섞인 비율. IPA/아세톤 19가지 혼합 조합으로 학습.",
+      "MNIST": "0~9 손글씨 숫자 이미지 데이터셋. 영상 분류 벤치마크."
+    }
+  },
+  "MLP": {
+    "embedded_terms": {
+      "완전 연결 (fully connected)": "한 층의 모든 뉴런이 다음 층의 모든 뉴런에 가중치로 연결된 구조.",
+      "은닉층 (hidden layer)": "입력층과 출력층 사이의 모든 중간 층. 추상 표현 학습.",
+      "회귀 (regression)": "입력으로부터 연속 수치 출력을 예측하는 학습 과제.",
+      "RMSE (Root Mean Square Error)": "예측-실제값 차이 제곱 평균의 제곱근. 회귀 성능 지표.",
+      "vol% (volume percent)": "부피 비율 백분율."
+    }
+  },
+  "photonic-nose": {
+    "embedded_terms": {
+      "후각 (olfaction)": "냄새를 감지하는 인간 감각. 후각 수용체가 가스 분자에 결합하면 뇌가 종류·강도를 해석.",
+      "MIR 도파관 (MIR waveguide)": "중적외선 안내 도파관. 분자 진동 지문 영역에서 가스 식별에 유리.",
+      "폭발 하한 (Lower Explosion Limit, LEL)": "공기 중 가연성 가스의 최소 발화 농도.",
+      "ppm (parts per million)": "백만 분의 일. 미량 가스 농도 단위.",
+      "검출한계 (LOD, Limit of Detection)": "신뢰성 있게 검출 가능한 최소 농도.",
+      "SWG 지지대 (SWG support)": "부파장 격자 형태로 도파관을 받치는 구조. 하부 산화막 손실 제거.",
+      "응답 시간 (response time)": "센서가 분석물 변화에 반응하는 데 걸리는 시간."
+    }
+  },
+  "photonic-tongue": {
+    "embedded_terms": {
+      "기능화 (functionalization)": "센서 표면에 특정 분자(SAM·항체·압타머)를 결합해 표적 선택성을 부여.",
+      "화학정량 (chemometrics)": "주성분 분석·부분 최소제곱 등 통계 기법으로 화학 데이터 패턴을 추출하는 분석.",
+      "SAM (Self-Assembled Monolayer)": "기판 위에 분자가 자발적으로 정렬해 만든 한 분자 두께 박막.",
+      "수용체 무관 (receptor-agnostic)": "특정 표적에만 결합하는 수용체 없이도 다중 신호 패턴을 학습해 식별하는 전략.",
+      "와인 향 (wine aroma)": "와인의 휘발성 향 성분 다중 분석 대상."
+    }
+  },
+  "TENG": {
+    "embedded_terms": {
+      "마찰전기 (triboelectric effect)": "두 재료가 마찰·접촉했다 떨어질 때 한쪽이 양·다른 쪽이 음전하로 대전되는 현상.",
+      "자가 전원 (self-powered)": "외부 배터리 없이 작동에 필요한 전기를 스스로 만드는 방식.",
+      "스파이크 출력 (spike output)": "짧고 날카로운 펄스 형태의 전압. TENG는 인가력에 비례한 진폭으로 스파이크를 생성.",
+      "광 적분기 (optical integrator)": "시간에 따라 들어오는 신호를 누적하는 광 회로. AlN MRR의 공명 이동이 시간 누적과 동등.",
+      "Pockels 효과 (Pockels effect)": "전기장에 비례해 굴절률이 선형으로 변하는 효과. TENG 전압으로 광 변조.",
+      "실리콘 고무 (silicone rubber)": "TENG의 마찰 접촉면 재료."
+    }
+  },
+  "MIR": {
+    "embedded_terms": {
+      "파수 (wavenumber, cm⁻¹)": "1 cm에 들어가는 파동 수. 파장의 역수×100. 분자 분광 표준 단위.",
+      "기본 모드 (fundamental mode)": "분자 진동 중 가장 낮은 에너지 모드. 가장 강한 흡수.",
+      "분자 지문 영역 (fingerprint region)": "약 400~1500 cm⁻¹ MIR 영역. 분자마다 고유 패턴.",
+      "C-H/O-H/N-H 진동 (C-H, O-H, N-H stretch)": "각각 탄소-수소, 산소-수소, 질소-수소 결합의 신축 진동. 분자 식별에 핵심.",
+      "칼코제나이드 유리 (chalcogenide glass)": "S·Se·Te 기반 비정질 유리. MIR(~12 µm)까지 투명.",
+      "게르마늄 (germanium)": "MIR에서 투명한 반도체."
+    }
+  },
+  "VOC": {
+    "embedded_terms": {
+      "기화 (volatilization)": "액체·고체가 기체 상태로 변하는 과정.",
+      "BTEX": "벤젠·톨루엔·에틸벤젠·자일렌. 대표적 휘발성 방향족 오염물질.",
+      "실내공기질 (Indoor Air Quality, IAQ)": "건물 내부 공기 중 유해 가스 농도 수준.",
+      "호기 진단 (breath analysis)": "내쉰 숨 속 휘발성 분자로 질병·음주를 판단."
+    }
+  },
+  "IPA": {
+    "embedded_terms": {
+      "소독제 (disinfectant)": "미생물을 죽이거나 활성을 떨어뜨리는 화학물질.",
+      "휘발성 (volatility)": "상온에서 쉽게 증발하는 성질.",
+      "아세톤 (acetone)": "(CH₃)₂CO. IPA와 함께 광자 코의 대표 분석 대상."
+    }
+  },
+  "CMOS": {
+    "embedded_terms": {
+      "NMOS/PMOS (n-type/p-type MOS transistor)": "전자(NMOS)·정공(PMOS) 운반자를 쓰는 MOS 트랜지스터.",
+      "트랜지스터 (transistor)": "전기 신호를 켜고 끄거나 증폭하는 반도체 소자. 디지털 회로의 기본 소자.",
+      "deep-UV 리소그래피 (deep-UV lithography)": "약 193 nm 자외선으로 회로 패턴을 새기는 공정. 수십 nm 해상도.",
+      "증착 (deposition)": "CVD·스퍼터링 등으로 박막을 기판에 입히는 공정.",
+      "평탄화 (planarization)": "표면을 평평하게 가는 공정(보통 화학적 기계연마 CMP)."
+    }
+  },
+  "Q-factor": {
+    "embedded_terms": {
+      "공진기 (resonator)": "특정 주파수에서 에너지를 가두고 증폭하는 구조(마이크로링·마이크로보틀 등).",
+      "AlN (Aluminum Nitride, 질화알루미늄)": "강한 Pockels 효과를 가진 압전·전기광학 재료.",
+      "마이크로링 공진기 (microring resonator, MRR)": "반지 모양 광 공진기. 빛이 링을 돌며 공명.",
+      "선폭 (linewidth)": "공명 곡선의 폭. 좁을수록 Q가 크다."
+    }
+  },
+  "hot-spot enrichment": {
+    "embedded_terms": {
+      "ZIF-8": "Zn²⁺와 2-메틸이미다졸로 만든 대표적 MOF. 가스 농축 코팅에 자주 쓰임.",
+      "MOF/폴리머 하이브리드 (MOF/polymer hybrid)": "MOF 입자를 폴리머에 분산시킨 복합 박막. 가공성과 흡착성을 동시에 확보.",
+      "CO₂ 검출 한계 (CO₂ LOD)": "본 코팅으로 sub-ppm(백만 분의 일 미만) 영역 달성.",
+      "Li 등 (Li et al.)": "본 코팅을 SEIRA에 도입해 가스 검출 감도를 크게 끌어올린 연구진."
+    }
+  },
+  "MOF": {
+    "embedded_terms": {
+      "다공성 (porous)": "내부에 균일한 미세 구멍이 많은 구조. 가스를 담거나 흡착하는 데 유리.",
+      "결정성 (crystalline)": "원자·분자가 규칙적으로 배열된 상태. 회절로 구조 분석 가능.",
+      "유기 링커 (organic linker)": "금속 마디들을 잇는 유기 분자(카르복실레이트·이미다졸 등).",
+      "ZIF-8": "Zn²⁺ + 2-메틸이미다졸 MOF. 대표적 다공성 박막.",
+      "SPR 센시타이저 (SPR sensitizer)": "표면 플라즈몬 공명 신호를 강화하는 매개층 역할.",
+      "광섬유 센서 코팅 (fiber optic sensor coating)": "광섬유 표면에 MOF를 코팅해 가스·VOC 흡착 감도를 높이는 응용."
+    }
+  },
+  "ZIF-8": {
+    "embedded_terms": {
+      "Zn²⁺": "아연 이온. ZIF-8의 금속 마디.",
+      "이미다졸 (imidazole)": "C·N·H로 이루어진 5각 헤테로 고리 화합물. 본 ZIF의 유기 링커.",
+      "2-메틸이미다졸 (2-methylimidazole)": "이미다졸의 2번 위치에 메틸기가 붙은 변형. ZIF-8 합성 표준 링커.",
+      "Å (옹스트롬)": "10⁻¹⁰ m. 원자·분자 크기 단위.",
+      "기공 (pore)": "MOF 내부의 균일한 미세 구멍. ZIF-8은 약 11 Å."
+    }
+  },
+  "SAM": {
+    "embedded_terms": {
+      "친화기 (anchor group)": "분자가 기판에 결합하는 머리 부분. 금-티올 SAM은 황(-SH).",
+      "스페이서 (spacer)": "친화기와 말단기를 잇는 사슬. 보통 알케인 사슬.",
+      "말단기 (terminal group)": "표면 바깥 쪽을 향하는 머리. -COOH, -NH₂, -CH₃ 등으로 표면 특성 결정.",
+      "알케인티올 (alkanethiol)": "CH₃-(CH₂)n-SH 형태 분자. SAM의 대표 빌딩 블록.",
+      "E. coli (Escherichia coli)": "대장균. 식품 안전·임상 진단 표적 박테리아.",
+      "장거리 표면 플라즈몬 (long-range surface plasmon)": "두 유전체에 끼인 얇은 금속막을 따라 멀리 전파되는 SPP. 손실이 작아 박테리아 검출에 유리."
+    }
+  },
+  "aptamer": {
+    "embedded_terms": {
+      "SELEX (Systematic Evolution of Ligands by EXponential enrichment)": "무작위 핵산 라이브러리에서 표적 결합 능력이 좋은 서열을 반복 농축·증폭으로 선별하는 기법.",
+      "구조 변환 (conformational switch)": "표적이 결합하면 압타머가 다른 3차원 모양으로 접히는 현상. 광학 검출 신호 증폭에 활용.",
+      "염기 (base)": "DNA/RNA를 이루는 A·T(U)·G·C 단위.",
+      "PSA (Prostate-Specific Antigen)": "전립선 특이 항원. 전립선암 선별 표준 바이오마커.",
+      "ng/mL": "10⁻⁹ g/mL. 단백질 바이오마커 농도 단위.",
+      "도파민 (dopamine)": "신경전달물질. 압타머 단분자 검출 표적 예."
+    }
+  },
+  "bioreceptor": {
+    "embedded_terms": {
+      "특이성 (specificity)": "표적 분자에만 선택적으로 결합하는 성질.",
+      "분자 임프린트 (molecular imprinting)": "표적을 주형으로 폴리머를 합성한 뒤 주형을 제거해 표적 모양의 빈 자리를 남기는 '인공 항체' 기법.",
+      "렉틴 (lectin)": "당 사슬에 특이 결합하는 단백질. 박테리아·바이러스 표면 당 검출.",
+      "항체 (antibody)": "면역계가 만드는 단백질로 특정 항원에 결합.",
+      "압타머 (aptamer)": "표적에 특이 결합하는 짧은 DNA/RNA."
+    }
+  },
+  "ELISA": {
+    "embedded_terms": {
+      "효소 (enzyme)": "특정 화학반응을 가속하는 단백질 촉매(HRP·AP 등).",
+      "표지 (label)": "검출 신호를 만들기 위해 표적·항체에 인위로 붙이는 분자(형광·효소·방사성).",
+      "기질 (substrate)": "효소가 작용해 산물(보통 색 분자)로 바꾸는 반응 원료.",
+      "발색 (chromogenic reaction)": "기질이 효소에 의해 색을 띤 산물로 변하는 반응.",
+      "라벨-프리 (label-free)": "표지 없이 분자를 직접 검출하는 방식. RI 센서가 ELISA 대체 후보."
+    }
+  },
+  "PCR": {
+    "embedded_terms": {
+      "변성 (denaturation)": "이중 가닥 DNA를 약 95 °C로 가열해 단일 가닥으로 분리.",
+      "결합 (annealing)": "프라이머가 표적 단일 가닥에 결합하는 단계(~55 °C).",
+      "신장 (extension)": "DNA 중합효소가 프라이머에서 출발해 새 가닥을 합성(~72 °C).",
+      "프라이머 (primer)": "표적 서열 양 끝에 결합해 합성의 시작점이 되는 짧은 DNA 조각.",
+      "중합효소 (DNA polymerase)": "DNA 합성을 촉매하는 효소(Taq polymerase 등)."
+    }
+  },
+  "PSA": {
+    "embedded_terms": {
+      "전립선암 (prostate cancer)": "전립선에서 발생하는 악성 종양. 남성에서 발병률 높음.",
+      "동적 영역 (dynamic range)": "센서가 신뢰성 있게 정량할 수 있는 농도의 최저~최고 범위.",
+      "선별 검사 (screening test)": "증상 없는 집단에서 질병 위험군을 추려내기 위한 검사.",
+      "DNA 압타머 (DNA aptamer)": "DNA로 만든 압타머. PSA 결합용으로 SELEX 선별.",
+      "PDMS/Pd-WO₃": "수소 감응 박막. 본 PSA 응용과는 별개로 마이크로보틀 수소 센서 사례에 언급됨."
+    }
+  },
+  "exosome": {
+    "embedded_terms": {
+      "세포외 소포 (extracellular vesicle, EV)": "세포가 외부로 방출하는 막 주머니 입자의 총칭. 엑소좀·미소포·아폽토시스 소체.",
+      "분자 화물 (molecular cargo)": "EV 내부에 담긴 단백질·mRNA·miRNA·지질. 모세포의 상태 정보 운반.",
+      "액체 생검 (liquid biopsy)": "조직 절개 없이 혈액 같은 체액에서 종양 정보를 얻는 진단법.",
+      "악성 종양 (malignancy)": "주변 조직 침범·전이 능력을 가진 암 세포.",
+      "세포간 통신 (intercellular communication)": "세포끼리 신호 분자·소포로 정보를 주고받는 현상."
+    }
+  },
+  "nPLEX": {
+    "embedded_terms": {
+      "나노홀 어레이 (nanohole array)": "금속 박막에 파장 이하 지름 구멍을 주기적으로 뚫은 구조. 비정상 광 투과(EOT)로 강한 플라즈몬 공명을 보임.",
+      "표면 플라즈몬 공명 (surface plasmon resonance, SPR)": "금속 박막 표면 자유 전자의 집단 진동 공명.",
+      "면역분석 (immunoassay)": "항원-항체 결합으로 표적을 정량하는 분석.",
+      "위상/강도 신호 (phase/intensity signal)": "분자 결합 시 변화하는 두 측정 채널. 위상이 더 민감하나 위상 검출은 복잡.",
+      "Im 등 (Im et al., Nat. Biotechnol. 2014)": "nPLEX를 처음 도입한 연구."
+    }
+  },
+  "APEX": {
+    "embedded_terms": {
+      "이중층 플라즈모닉 나노구조 (bilayer plasmonic nanostructure)": "두 층의 플라즈모닉 메타구조가 수직 결합되어 더 강한 핫스팟·다중 공명을 만드는 구조.",
+      "국소 광 증착 (localized optical deposition)": "특정 위치에 광에너지로 국소적 금속·산화물 박막을 형성하는 공정.",
+      "in situ 효소 변환 (in situ enzymatic transformation)": "센서 위에서 효소 반응으로 산물을 만들어 신호를 증폭하는 단계.",
+      "amyloid β (Aβ)": "알츠하이머병 뇌 플라크의 주성분 펩타이드.",
+      "비침습 (noninvasive)": "조직을 자르지 않고 외부 시료만으로 진단하는 방식.",
+      "다중 프로파일링 (multiplexed profiling)": "여러 종류 표적을 한 번에 측정하는 분석."
+    }
+  },
+  "enantiomer": {
+    "embedded_terms": {
+      "키랄성 (chirality)": "거울상과 자신을 회전·평행이동으로 겹칠 수 없는 비대칭 성질.",
+      "탈리도마이드 (thalidomide)": "1950년대 입덧 약. 거울상 한쪽이 기형 유발해 키랄 의약 분석의 중요성을 부각.",
+      "약리 활성 (pharmacological activity)": "약물이 생체 내에서 일으키는 효과. 거울상별로 다를 수 있다.",
+      "농약 (agrochemical)": "농작물에 사용하는 화학 약품. 한쪽 거울상이 활성을, 다른 쪽이 독성을 낼 수 있다."
+    }
+  },
+  "chirality": {
+    "embedded_terms": {
+      "거울상 이성질체 (enantiomer)": "거울상 관계인 두 분자. 화학식·결합은 같지만 3차원 배치가 거울상.",
+      "글리신 (glycine)": "유일하게 키랄하지 않은 아미노산. 중심 탄소에 수소가 두 개.",
+      "아미노산 (amino acid)": "단백질을 이루는 분자(20종). 글리신 외 모두 키랄.",
+      "핵산 (nucleic acid)": "DNA·RNA의 분자. 당-인산 골격이 키랄.",
+      "당 (sugar)": "단당류·다당류. 대부분 키랄."
+    }
+  },
+  "LCP-RCP": {
+    "embedded_terms": {
+      "편광 (polarization)": "빛의 전기장이 진동하는 방향(직선·원·타원).",
+      "헬리시티 (helicity)": "원편광이 시계/반시계 어느 방향으로 회전하는지의 부호.",
+      "위상차 (phase difference)": "두 파동이 시간적으로 얼마나 어긋나 있는지의 각도.",
+      "타원 편광 (elliptical polarization)": "전기장 끝점이 진행 방향에 수직 평면에서 타원을 그리는 빛. 직선·원의 중간."
+    }
+  },
+  "Pancharatnam-Berry-phase": {
+    "embedded_terms": {
+      "푸앵카레 구 (Poincaré sphere)": "모든 편광 상태를 구 표면 위 점으로 표현한 그림. 적도는 직선편광, 극은 원편광.",
+      "동적 위상 (dynamic phase)": "광 경로 길이·시간에 따라 자연스럽게 쌓이는 일반 위상.",
+      "기하 위상 (geometric phase)": "변수 공간 경로의 기하학적 성질만으로 결정되는 위상.",
+      "닫힌 경로 (closed loop)": "푸앵카레 구 위에서 시작점으로 돌아오는 경로. 둘러싼 입체각이 PB 위상에 비례.",
+      "메타표면 단위셀 방향각 (meta-atom orientation)": "메타원자를 평면 내에서 얼마나 회전시켰는지의 각. PB 위상을 픽셀별로 새기는 자유도."
+    }
+  },
+  "microbottle-resonator": {
+    "embedded_terms": {
+      "광섬유 (optical fiber)": "전반사로 빛을 안내하는 가느다란 유리·폴리머 섬유.",
+      "속삭임 회랑 모드 (Whispering Gallery Mode, WGM)": "원형 공진기 내부 표면을 따라 전반사하며 도는 광 모드. 손실이 매우 작아 Q가 크다.",
+      "PDMS (Polydimethylsiloxane)": "투명·유연한 실리콘계 폴리머. 마이크로유체·센서 코팅에 흔히 사용.",
+      "Pd-WO₃ (Palladium-Tungsten Oxide)": "팔라듐을 텅스텐 산화물에 분산시킨 수소 감응 박막. 수소를 만나면 부피·굴절률이 변한다.",
+      "자기조립 (self-assembly)": "외부 형틀 없이 분자·입자가 자발적으로 정렬해 구조를 만드는 과정.",
+      "%H₂": "기체 중 수소 부피 백분율."
+    }
+  },
+  "plasmonic-microfiber": {
+    "embedded_terms": {
+      "광섬유 (optical fiber)": "코어-클래딩 구조로 빛을 안내하는 가는 유리 섬유.",
+      "EMI 면역 (EMI immunity)": "전자기 잡음에도 신호가 흔들리지 않는 특성. 빛을 매개로 하는 광섬유의 장점.",
+      "LSPR (Localized Surface Plasmon Resonance)": "금속 나노구조의 전자 공명. 강한 국소장으로 검출 감도 향상.",
+      "도파민 (dopamine)": "신경전달물질. 본 마이크로파이버 + 압타머로 attomolar 검출.",
+      "이중증폭 인터페이스 (dual-amplification interface)": "압타머 구조 변환과 플라즈모닉 증강을 동시에 이용한 신호 이중 증폭 설계."
+    }
+  },
+  "SEI": {
+    "embedded_terms": {
+      "리튬 금속 음극 (lithium metal anode)": "흑연을 대체할 차세대 이차전지 음극. 용량은 크지만 SEI 불안정성이 문제.",
+      "전해질 (electrolyte)": "양극과 음극 사이에서 이온을 운반하는 매질(액체·고체·폴리머).",
+      "부동태 박막 (passivation film)": "더 이상의 부식·반응을 막는 보호층 역할의 표면 박막.",
+      "plasma-enhanced Raman": "글로 방전 등으로 플라즈모닉 핫스팟 환경을 강화한 라만 분광. SERS의 한 형태.",
+      "depth-sensitive": "표면뿐 아니라 일정 깊이까지의 분포를 분해해 측정하는 능력."
+    }
+  },
+  "SERS-taster": {
+    "embedded_terms": {
+      "다중 수용체 (multi-receptor)": "한 가지 표적이 아닌 여러 화학 그룹과 결합하는 수용체들의 집합.",
+      "SAM (Self-Assembled Monolayer)": "자기조립 단분자막. SERS 기판마다 다른 SAM 기능화로 신호 다양화.",
+      "비공유 결합 (non-covalent interaction)": "수소결합·π-π·반데르발스 같은 약한 결합. 화학정량적 다중 검출에 활용.",
+      "와인 향 (wine aroma)": "와인의 휘발성 향 성분. 다중 분석 대상.",
+      "화학정량 모델링 (chemometric modeling)": "통계·머신러닝으로 복잡한 화학 데이터에서 예측 모델을 학습."
+    }
+  },
+  "fluorophore": {
+    "embedded_terms": {
+      "FITC (Fluorescein Isothiocyanate)": "녹색 형광 염료. 항체에 결합시켜 면역분석에 사용.",
+      "양자점 (quantum dot)": "수 nm 반도체 결정. 크기로 발광 색 조절, 양자수율이 높다.",
+      "GFP (Green Fluorescent Protein)": "해파리 유래 녹색 형광 단백질. 분자 생물학의 표준 표지.",
+      "수직 정렬 (perpendicular alignment)": "형광체 쌍극자가 금속 표면에 수직으로 정렬된 상태. SEF가 최대.",
+      "트립토판/티로신 (tryptophan/tyrosine)": "고유 형광을 가진 아미노산. 표지 없이 단백질 검출 가능."
+    }
+  },
+  "quantum-yield": {
+    "embedded_terms": {
+      "비방사 경로 (non-radiative pathway)": "들뜬 분자가 빛을 내지 않고 진동·열로 에너지를 잃는 과정.",
+      "방사 천이 (radiative transition)": "들뜬 분자가 광자를 방출하며 바닥 상태로 떨어지는 과정.",
+      "광학상태밀도 (Local Density of Optical States, LDOS)": "특정 위치·주파수에서 빛이 존재할 수 있는 자리의 밀도. 크면 방사 천이 속도가 빨라짐.",
+      "들뜸 (excitation)": "광자를 흡수해 분자가 높은 에너지 상태로 가는 과정."
+    }
+  },
+  "bowtie-antenna": {
+    "embedded_terms": {
+      "전자빔 리소그래피 (electron-beam lithography, EBL)": "전자빔으로 레지스트에 나노 패턴을 직접 그리는 정밀 가공. ~10 nm 해상도.",
+      "꼭짓점 (apex)": "보타이 삼각형이 가장 뾰족하게 모이는 점. 전기장 집중의 핵심.",
+      "나노갭 (nanogap)": "두 나노구조 사이의 매우 좁은 공간(<10 nm).",
+      "Kinkhabwala": "14 nm 갭 금 보타이로 형광 1340배 증강을 보고한 연구진."
+    }
+  },
+  "eFMIA": {
+    "embedded_terms": {
+      "마이크로어레이 (microarray)": "수백~수만 종의 항체·핵산을 칩 위 격자에 배열해 한 번에 다중 분석하는 플랫폼.",
+      "금 나노섬 (gold nanoisland)": "박막을 얇게 증착 후 열처리하면 자발적으로 형성되는 불연속 금 입자 무리.",
+      "IRDye78": "근적외선 영역에서 형광을 내는 상업용 염료. 깊은 조직·면역분석에 사용.",
+      "면역분석 (immunoassay)": "항원-항체 결합으로 표적을 정량하는 분석."
+    }
+  },
+  "SHIN": {
+    "embedded_terms": {
+      "SHINERS (Shell-Isolated Nanoparticle Enhanced Raman Spectroscopy)": "SHIN 입자를 임의 표면에 뿌려 SERS를 가능케 한 기법.",
+      "절연체 쉘 (insulator shell)": "Au·Ag 코어를 ~2 nm SiO₂로 감싼 보호층. 코어의 SERS 활성은 유지하면서 직접 접촉을 차단.",
+      "깊이 민감 라만 (depth-sensitive Raman)": "공초점 광학으로 측정 깊이를 조절해 표면 안쪽까지 분석하는 라만.",
+      "코어-쉘 (core-shell)": "두 다른 재료가 동심원 구조로 결합된 나노입자 형태."
+    }
+  },
+  "photonic-crystal-cavity": {
+    "embedded_terms": {
+      "광결정 (photonic crystal)": "주기적 굴절률 구조(예: 슬래브의 구멍 어레이)로 광 밴드갭을 만드는 인공 결정.",
+      "광자 밴드갭 (photonic band gap)": "광결정이 통과시키지 않는 파장 영역. 전자 반도체 밴드갭의 광학 대응.",
+      "결함 (defect)": "광결정의 주기성을 의도적으로 깨뜨려 만든 자리. 그 안에 특정 파장 빛을 강하게 가둠.",
+      "깜빡임 (blinking)": "단일 양자점이 형광 방출/비방출 상태를 무작위 오가며 신호가 끊기는 현상.",
+      "신호 대 잡음비 (SNR)": "신호 강도를 잡음 강도로 나눈 비. 클수록 측정 정밀도 ↑."
+    }
+  },
+  "quantum-dot": {
+    "embedded_terms": {
+      "양자 가둠 (quantum confinement)": "입자가 매우 작아져 전자가 갇히면 에너지 준위가 양자화되는 효과.",
+      "광표백 (photobleaching)": "강한 빛 아래서 형광 분자가 화학 분해되어 형광이 사라지는 현상.",
+      "발광 파장 (emission wavelength)": "양자점이 내는 형광의 파장. 입자 크기로 조절 가능.",
+      "직접 천이형 (direct band gap)": "전도대 최저점과 가전자대 최고점이 같은 운동량에 있는 반도체. 효율적 발광."
+    }
+  },
+  "photonic-nanocavity": {
+    "embedded_terms": {
+      "모드 부피 (mode volume, V_eff)": "광 공진기에 갇힌 광 모드의 유효 체적. 작을수록 분자-광 상호작용 강함.",
+      "RITC (Rhodamine B Isothiocyanate)": "로다민 B에 이소티오시아네이트 작용기를 붙인 형광·라만 활성 분자.",
+      "상관 분광 (correlative spectroscopy)": "형광·라만 등 여러 분광을 같은 분자에 동시 측정해 정보를 결합하는 방식.",
+      "광화학적 절단 (photochemical cleavage)": "광에너지로 분자 결합이 끊어지는 반응. 본 나노공동에서 단일 분자 수준 추적."
+    }
+  },
+  "spatial-multiplexing-metasurface": {
+    "embedded_terms": {
+      "원거리장 (far field)": "광원에서 한 파장 이상 떨어진 영역. 회절·간섭 패턴이 일반 카메라로 측정 가능.",
+      "협대역 광원 (narrowband source)": "좁은 파장 폭의 광원(레이저 다이오드 등). 메타표면 응답 변화를 강도 변화로 변환하기 적합.",
+      "위치 의존 산란 (position-dependent scattering)": "메타표면의 위치마다 다른 공명 파장 때문에 광 산란 패턴이 위치별로 다른 현상.",
+      "결합 사건 (binding event)": "표적 분자가 표면 수용체에 결합하는 사건. 강도 변화로 실시간 추적."
+    }
+  },
+  "hyperspectral-imaging": {
+    "embedded_terms": {
+      "RGB (Red Green Blue)": "적·녹·청 3채널 색 표현. 일반 카메라가 사용.",
+      "화학 매핑 (chemical mapping)": "공간 위치별 화학 성분 분포를 영상으로 시각화.",
+      "공간-스펙트럼 데이터큐브 (spatial-spectral datacube)": "x, y 공간 좌표 + 파장 축의 3차원 데이터."
+    }
+  },
+  "coupled-mode-theory": {
+    "embedded_terms": {
+      "결합 상수 (coupling constant, κ)": "두 모드가 단위 시간당 에너지를 얼마나 주고받는지의 비율.",
+      "과결합 (overcoupled)": "외부와의 결합 손실이 내부 손실보다 큰 상태. 광대역 응답에 유리.",
+      "디튜닝 (detuning)": "두 공진 주파수의 차이. 결합 효과 양상이 달라진다.",
+      "광대역 흡수기 (broadband absorber)": "넓은 파장 범위에서 거의 모든 빛을 흡수하도록 설계된 메타재료."
+    }
+  },
+  "finite-difference-time-domain": {
+    "embedded_terms": {
+      "맥스웰 방정식 (Maxwell's equations)": "전자기장 거동을 기술하는 4개의 미분방정식. 모든 광학 시뮬레이션의 출발점.",
+      "이산화 (discretization)": "연속적 공간·시간을 유한한 격자로 나누는 수치 해석 과정.",
+      "Yee 격자 (Yee grid)": "FDTD에서 전기장과 자기장을 서로 어긋난 격자점에 배치하는 표준 방식.",
+      "듀티 사이클 (duty cycle)": "주기적 구조에서 한 주기 중 패턴이 차지하는 비율."
+    }
+  },
+  "VR-AR": {
+    "embedded_terms": {
+      "지연 (latency)": "사용자 동작이 시각 피드백으로 돌아올 때까지의 시간. 너무 길면 멀미 유발.",
+      "pJ/inference (picojoule per inference)": "1회 추론에 드는 에너지. 배터리 구동 장치의 핵심 지표.",
+      "낙상 감지 (fall detection)": "사용자가 넘어졌는지를 가속도·자세 신호로 자동 감지.",
+      "메타버스 (metaverse)": "온라인 가상 공간에서 사용자가 아바타로 상호작용하는 환경."
+    }
+  },
+  "label-free": {
+    "embedded_terms": {
+      "결합 동역학 (binding kinetics)": "표적-수용체 결합의 시간적 변화(결합·해리 속도 상수). 라벨-프리는 실시간 추적 가능.",
+      "전처리 (sample preparation)": "측정 전 시료를 정제·희석·표지하는 단계. 시간·비용·오차의 원인.",
+      "RI 센서 (refractive index sensor)": "굴절률 변화로 표적을 정량하는 라벨-프리 광 센서.",
+      "마이크로링 PIC (microring PIC)": "마이크로링 공진기를 핵심 부품으로 하는 광집적회로 센서."
+    }
+  },
+  "POC": {
+    "embedded_terms": {
+      "자원 제한 환경 (resource-limited setting)": "전력·냉장·숙련 인력·고가 장비가 부족한 상황(개발도상국·재난 현장).",
+      "검체 (specimen)": "분석 대상이 되는 시료(혈액·소변·타액 등).",
+      "신속 진단 (rapid diagnostics)": "수 분~수십 분 내 결과를 얻는 진단 형식."
+    }
+  },
+  "SARS-CoV-2-sensor": {
+    "embedded_terms": {
+      "스파이크 단백질 (spike protein)": "코로나바이러스 표면 돌기 단백질로 ACE2 수용체에 결합. 진단 항원·항체 검사의 표적.",
+      "옵토플루이딕 (optofluidic)": "광학과 마이크로유체를 결합해 액상 시료를 광 센서에 자동 공급하는 플랫폼.",
+      "pM (picomolar)": "10⁻¹² mol/L.",
+      "copy/µL (copies per microliter)": "마이크로리터당 핵산 사본 수. 분자 진단의 농도 단위.",
+      "ACE2 수용체 (ACE2 receptor)": "코로나바이러스가 결합하는 인체 세포 표면 단백질.",
+      "RNA 프라이머 (RNA primer)": "표적 RNA에 결합하는 짧은 서열. 마이크로링 표면 기능화에 사용."
+    }
+  },
+  "breathalyzer-SERS": {
+    "embedded_terms": {
+      "SERS 슈퍼 프로파일 (SERS super-profile)": "여러 종류 SERS 기판으로 동시에 측정한 다차원 신호 패턴.",
+      "민감도 (clinical sensitivity)": "실제 환자를 양성으로 옳게 분류하는 비율(임상 통계).",
+      "특이도 (specificity)": "실제 비환자를 음성으로 옳게 분류하는 비율.",
+      "BVOC (Breath VOC)": "호기 안 휘발성 유기화합물. 질병 마커.",
+      "MBA/MPY/ATP (Mercaptobenzoic acid 등)": "SERS 기판 기능화에 쓰이는 비공유 결합 수용체 분자들."
+    }
+  },
+  "wearable-SERS": {
+    "embedded_terms": {
+      "신축성 (stretchable)": "기계적으로 늘려도 기능을 유지하는 특성. 피부 부착형 센서의 필수 요건.",
+      "마이크로유체 (microfluidics)": "수십~수백 µm 채널로 미세량 액체를 정밀히 흘려보내는 기술.",
+      "요산 (uric acid)": "퓨린 대사 산물. 통풍·신장 질환 바이오마커.",
+      "플라즈모닉 페이퍼 (plasmonic paper)": "종이에 금속 나노입자를 입혀 휘는·접히는 SERS 기판.",
+      "땀 부피·속도 (sweat volume/rate)": "땀이 분비되는 양과 속도. 운동·건강 모니터링 지표."
+    }
+  },
+  "SERS-nanoprobe-plant": {
+    "embedded_terms": {
+      "아포플라스트 (apoplast)": "식물 세포벽 바깥 공간. 수분·이온·신호 분자가 이동하는 통로.",
+      "살리실산 (salicylic acid)": "식물 방어 신호 분자.",
+      "세포외 ATP (extracellular ATP)": "세포 외부로 분비되어 스트레스 신호 역할을 하는 ATP.",
+      "피토알렉신 (phytoalexin)": "병원체 침입에 반응해 식물이 합성하는 방어 화합물.",
+      "글루타티온 (glutathione)": "산화 스트레스 조절에 핵심적인 트리펩타이드.",
+      "비침습 (noninvasive)": "조직 절단·파괴 없이 측정.",
+      "곰팡이 독소 (mycotoxin)": "곰팡이가 생산하는 독성 화합물(아플라톡신 등)."
+    }
+  },
+  "amyloid-beta": {
+    "embedded_terms": {
+      "펩타이드 (peptide)": "수~수십 개 아미노산이 결합한 짧은 단백질 사슬.",
+      "노인성 플라크 (senile plaque)": "알츠하이머병 뇌에서 발견되는 Aβ 응집체. 뇌세포 손상의 표지.",
+      "Aβ40 / Aβ42": "각각 40·42개 아미노산의 Aβ 변형. Aβ42가 더 잘 응집해 병리에 핵심.",
+      "응집 (aggregation)": "단백질이 정상 접힘에서 벗어나 서로 엉겨붙는 현상. 신경퇴행성 질환의 공통 특징."
+    }
+  },
+  "dopamine-sensor": {
+    "embedded_terms": {
+      "도파민 (dopamine)": "뇌의 보상·운동 회로를 매개하는 신경전달물질. 결핍은 파킨슨, 과잉은 정신질환과 관련.",
+      "광 마이크로파이버 (optical microfiber)": "지름 수 µm의 가는 광섬유. 외부 표면 소산장이 강해 분자 검출에 유리.",
+      "이중증폭 인터페이스 (dual-amplification interface)": "압타머 구조 변환과 플라즈모닉 증강을 결합해 신호를 두 번 증폭.",
+      "attomolar (aM)": "10⁻¹⁸ mol/L.",
+      "인공 땀 (artificial sweat)": "분석을 위해 표준 조성으로 만든 모사 땀."
+    }
+  },
+  "E-coli-SEF": {
+    "embedded_terms": {
+      "E. coli (Escherichia coli)": "대장균. 식품 안전·임상 진단 표적 박테리아.",
+      "포러스 금속 새김 표면 (porous metal-engraved surface)": "Ag·Al·Au·Cu에 미세 구멍을 새긴 SEF 기판.",
+      "장거리 표면 플라즈몬 (long-range surface plasmon)": "두 유전체에 끼인 얇은 금속막을 따라 멀리 전파되는 SPP. 손실이 작아 박테리아 검출에 유리.",
+      "CFU/mL (Colony Forming Units per mL)": "1 mL 시료가 만드는 세균 집락 수. 박테리아 농도 단위."
+    }
+  },
+  "eFMIA-SARS": {
+    "embedded_terms": {
+      "다중 항체 프로파일링 (multiplexed antibody profiling)": "한 시료에서 여러 종류 항체를 동시 측정.",
+      "N단백질 (Nucleocapsid protein)": "SARS-CoV-2의 RNA를 감싸는 단백질. 항원 진단의 주요 표적.",
+      "ag/mL (attogram per mL)": "10⁻¹⁸ g/mL. 단분자 검출 수준.",
+      "단분자 카운팅 (single-molecule counting)": "디지털식으로 분자 하나하나를 세어 정량하는 방법.",
+      "마이크로플레이트 리더 (microplate reader)": "96/384 웰 마이크로플레이트의 광학 신호를 일괄 측정하는 표준 장비."
+    }
+  },
+  "diffraction-limit": {
+    "embedded_terms": {
+      "아베의 회절 한계 (Abbe's diffraction limit)": "1873년 Ernst Abbe가 정량화한 현미경 분해능 근본 한계.",
+      "λ (lambda)": "빛의 파장. 색·에너지를 결정.",
+      "n (refractive index)": "매질의 굴절률.",
+      "플라즈모닉 우회 (plasmonic bypass)": "표면 플라즈몬으로 광-전자 결합 모드를 만들어 회절 한계 이하 가둠을 실현하는 전략."
+    }
+  },
+  "heterogeneous-integration": {
+    "embedded_terms": {
+      "본딩 (bonding)": "두 웨이퍼 표면을 활성화 후 압착·열처리로 영구 접합.",
+      "전사 (transfer)": "한 기판에서 박막을 떼어내 다른 기판으로 옮겨 붙이는 공정.",
+      "직접 성장 (direct growth)": "한 기판 위에 다른 재료를 화학기상 등으로 직접 합성.",
+      "InP/GaAs": "인듐 인화물·갈륨 비소. 직접 발광이 가능한 III-V 화합물 반도체.",
+      "그래핀 (graphene)": "탄소 한 층의 2차원 재료. 가변 광응답 검출에 사용.",
+      "리튬 니오베이트 박막 (thin-film LiNbO₃)": "강유전체 박막. 고속 전기광학 변조기 재료."
+    }
+  },
+  "chalcogenide-glass": {
+    "embedded_terms": {
+      "칼코겐 (chalcogen)": "주기율표 16족 원소(O, S, Se, Te, Po). 그 중 S·Se·Te가 유리 형성에 주로 사용.",
+      "비정질 (amorphous)": "결정처럼 원자가 규칙적으로 배열되지 않은 무질서 고체.",
+      "As₂S₃ / GeSbSe": "대표적 칼코제나이드 유리 조성. MIR 영역까지 투명.",
+      "MIR PIC (Mid-IR Photonic Integrated Circuit)": "중적외선 광집적회로. 가스·생체 분자 진동 지문 영역에서 작동."
+    }
+  },
+  "silicon-nitride": {
+    "embedded_terms": {
+      "Si₃N₄": "실리콘 질화물의 화학식. 4 N : 3 Si 비율.",
+      "광 손실 (optical loss)": "도파관에서 빛이 흡수·산란·결합 손실로 줄어드는 정도(보통 dB/cm).",
+      "투명 (transparent)": "특정 파장에서 빛을 거의 흡수하지 않는 성질.",
+      "프라이머 기능화 (primer-functionalized)": "표면에 표적 핵산용 프라이머를 화학 결합시켜 특이 검출 가능하게 한 상태."
+    }
+  },
+  "lithium-niobate": {
+    "embedded_terms": {
+      "r₃₃ (electro-optic coefficient r33)": "LiNbO₃의 주요 전기광학 텐서 성분(~30 pm/V).",
+      "박막 LN (thin-film LN, TFLN)": "수 µm LN 박막을 실리콘에 본딩한 플랫폼. 강한 광 가둠 + 큰 Pockels.",
+      "광열 가스 센서 (photothermal gas sensor)": "가스가 흡수한 빛이 열로 변환되는 효과로 농도를 측정.",
+      "비선형성 (nonlinearity)": "큰 광 세기에서 응답이 입력에 비례하지 않는 특성. 2차 고조파 생성 등에 활용."
+    }
+  },
+  "graphene-photodetector": {
+    "embedded_terms": {
+      "그래핀 (graphene)": "탄소 원자 한 층이 벌집 격자로 배열된 2차원 재료. 광 흡수율은 2.3%지만 응답 속도가 매우 빠름.",
+      "바이어스 전압 (bias voltage)": "소자에 인가하는 직류 전압. 그래핀 페르미 준위와 광응답을 결정.",
+      "광응답률 (responsivity)": "입사 광 전력 대비 출력 전류의 비(A/W).",
+      "4비트 (4-bit)": "16단계의 이산 값. 신경망 가중치 양자화 정밀도.",
+      "부유 실리콘 도파관 (suspended silicon waveguide)": "하부 산화막을 식각해 자유 공간 위에 떠 있는 실리콘 도파관.",
+      "광전도 이득 (photoconductive gain)": "광생성 전자/정공이 외부 회로로 빠져나가는 동안 여러 번 순환해 전류 이득이 1보다 커지는 현상."
+    }
+  },
+  "memristor": {
+    "embedded_terms": {
+      "저항 (resistance)": "전류의 흐름을 방해하는 정도(Ω). 멤리스터는 이를 가변·비휘발으로 저장.",
+      "시냅스 (synapse)": "신경세포 사이 연결점. 신경망에서는 학습 가능한 가중치에 해당.",
+      "곱셈-누적 (Multiply-Accumulate, MAC)": "신경망 기본 연산. 입력에 가중치를 곱한 결과를 모두 더함.",
+      "인-메모리 컴퓨팅 (in-memory computing)": "데이터 저장과 연산을 같은 소자에서 수행해 데이터 이동 비용을 없애는 패러다임.",
+      "비휘발 (non-volatile)": "전원을 꺼도 저장된 상태가 유지되는 성질."
+    }
+  },
+  "photodetector-array": {
+    "embedded_terms": {
+      "이미지 센서 (image sensor)": "픽셀별 광검출기로 영상을 디지털화하는 칩(CMOS/CCD).",
+      "분광 센서 (spectral sensor)": "픽셀마다 다른 파장에 반응해 스펙트럼 정보를 얻는 검출기.",
+      "편광 센서 (polarization sensor)": "픽셀마다 다른 편광 필터를 두어 편광 정보를 영상화.",
+      "광전 변환 (photoelectric conversion)": "광을 흡수해 전자-정공 쌍을 만들어 전류를 발생시키는 과정."
+    }
+  },
+  "LiDAR-sensor": {
+    "embedded_terms": {
+      "측거 (ranging)": "거리를 측정하는 일. LiDAR는 빛의 비행시간(ToF) 또는 위상으로 측정.",
+      "ToF (Time-of-Flight)": "광 펄스가 표적까지 갔다 오는 시간으로 거리 산출.",
+      "자율주행 (autonomous driving)": "차량이 스스로 주변을 인식·판단해 운행. LiDAR가 핵심 감지 수단의 하나.",
+      "양자 센서 (quantum sensor)": "양자 상태(중첩·얽힘)를 이용해 고감도 측정을 수행하는 센서."
+    }
+  },
+  "energy-harvesting": {
+    "embedded_terms": {
+      "태양광 (solar)": "광기전 효과로 태양광을 전기로 변환.",
+      "RF 하베스팅 (RF energy harvesting)": "주변 무선 신호(Wi-Fi·셀룰러)에서 전력을 추출.",
+      "광 전력 전송 (photonic power delivery)": "광섬유로 빛을 보내고 끝단의 광기전 셀로 전기를 만드는 방식.",
+      "센서 노드 (sensor node)": "독립적으로 동작하는 센서+처리+통신 단위. 무선 네트워크의 기본 요소."
+    }
+  },
+  "smart-pixel": {
+    "embedded_terms": {
+      "스마트 픽셀 (smart pixel)": "측정과 동시에 신경망식 처리(예: 가중 합)를 수행하는 픽셀.",
+      "스마트 도파관 (smart waveguide)": "전파 중 광에 대해 행렬 곱셈 등 연산을 수행하는 도파관.",
+      "센싱-컴퓨팅 경계 (sensing-computing boundary)": "감지와 계산을 분리하던 전통 패러다임의 경계가 사라지는 추세를 일컫는 표현.",
+      "디바이스 클래스 (device class)": "센서이자 컴퓨터인 융합형 장치 부류."
+    }
+  },
+  "INDEX": {
+    "embedded_terms": {}
+  }
+}

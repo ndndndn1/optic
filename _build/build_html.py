@@ -15,6 +15,25 @@ style = (ASSETS / "style.css").read_text(encoding="utf-8")
 app = (ASSETS / "app.js").read_text(encoding="utf-8")
 term = json.loads((ROOT / "terminology_optical_sensor.json").read_text(encoding="utf-8"))
 
+# merge sidecar: embedded_terms (self-contained sub-glossary) + optional desc_full
+sidecar_path = ROOT / "terminology_embedded.json"
+if sidecar_path.exists():
+    sidecar = json.loads(sidecar_path.read_text(encoding="utf-8"))
+    merged = 0
+    for k, extra in sidecar.items():
+        if k.startswith("_"):
+            continue
+        if k not in term["terms"]:
+            print("WARN sidecar key not in main:", k); continue
+        if "embedded_terms" in extra:
+            term["terms"][k]["embedded_terms"] = extra["embedded_terms"]
+        if "desc_full" in extra:
+            term["terms"][k]["desc_full"] = extra["desc_full"]
+        merged += 1
+    print("sidecar merged:", merged, "/", len(term["terms"]))
+else:
+    print("NOTE: no terminology_embedded.json sidecar found")
+
 # concatenate figure content partials in order
 parts = []
 for n in range(1, 12):

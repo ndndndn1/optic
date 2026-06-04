@@ -128,24 +128,50 @@
 
 ---
 
-## 산출물 인벤토리
+## Q7. Hover ↔ Click 이중 툴팁 + 자체완결형 통합
+
+**User**: `용어에 마우스 over하면 기존의 용어 툴팁 / 용어를 클릭하면 자체 완결형 용어집 툴팁`
+
+**채택 방향**: Q3의 옵션 (b) 변형 — 사이드카 파일 분리로 두 목적 통합.
+- `terminology_optical_sensor.json`(툴팁 조회용)은 **구조 그대로 유지**.
+- **신규 사이드카** `terminology_embedded.json`(자체완결형 풀이)을 도입.
+- `build_html.py`가 빌드 시 두 JSON을 머지해 인라인 TERMS 객체의 각 `terms[KEY]`에 `embedded_terms`/`desc_full?` 필드를 더해 단일 HTML에 임베드.
+
+**Assistant 작업 요약**:
+- **신규**: `./terminology_embedded.json` — 111/111 키 모두 작성 (110개 채움, `INDEX`만 의도적 비움). 각 키 평균 5~9개 하위 용어를 영한 병기 키 → 한 줄 풀이로 인라인.
+- **`_build/build_html.py`**: 사이드카 자동 로드·머지 로직 추가. 사이드카 없어도 빌드 정상 동작.
+- **`_build/assets/shell.html`**: 모달 컨테이너 `#tf`(닫기 버튼 포함) 추가, 사용법 문구를 hover/click 2단계로 갱신.
+- **`_build/assets/style.css`**: `#tf` 모달 카드/닫기 버튼/`tf-emb` 하위용어 리스트/관련어 점프 스타일 추가. `.term { cursor:pointer }`로 클릭 가능 표시.
+- **`_build/assets/app.js`**:
+  - **hover/focus** → 기존 `buildTip`(짧은 desc) 유지. "↻ 클릭하면 자체완결형 상세 풀이" 안내 한 줄 추가.
+  - **click** → 새 `buildTipFull` 모달: 설명(`desc_full` 우선, 없으면 `desc`) / 수식 / **설명 내 용어 풀이(자체완결)** / 관련 용어.
+  - 관련 용어는 `data-jump` 앵커로 모달 안에서 즉시 점프(재오픈).
+  - ESC 우선순위: 모달 → 라이트박스 → 툴팁.
+  - 모달 열린 동안 그림 라이트박스 트리거 비활성.
+- **검증**:
+  - 빌드 로그: `sidecar merged: 111/111`, `data-k check: OK (all term references resolve)`, 8.98 MB.
+  - 인라인 TERMS 파싱: 111개 키 중 110개에 `embedded_terms` 비어있지 않음(INDEX 1개만 비어 있음 — 메타 엔트리).
+  - 모달 자산 확인: `#tf` 컨테이너 / `tf-card` CSS / `buildTipFull` / `showFull(` / `data-jump` 연계 / UI 힌트 텍스트 — 모두 존재.
+
+---
+
+## 산출물 인벤토리 (갱신)
 
 | 파일 | 경로 | 상태 |
 |------|------|------|
 | 원본 PDF | `./optic_review1.pdf` | 읽기 전용 (실제 36쪽) |
 | 1차 용어집 (Markdown) | `./terminology_optical_sensor.md` | 완료 (111 엔트리) |
-| 용어집 (JSON, **툴팁 조회용**) | `./terminology_optical_sensor.json` | 완료 (Q5) — `{terms, alias}` 구조. ⚠️ Q3의 `embedded_terms` 자체완결형과 **다름** |
-| **Figure 해설 문서** | `./optic_review1_figures.html` | **완료 (Q5)** — 단일 자가완결 HTML(≈8.9 MB) |
-| 빌드 작업물 | `./_build\` | 재현용 스크립트·크롭 이미지(`build_terminology.py`,`detect.py`,`crop.py`,`build_html.py`,`assets/`,`content/`,`panels/`,`pages/`) |
+| 용어집 (JSON, **툴팁 조회용**) | `./terminology_optical_sensor.json` | 완료 — `{terms, alias}` 구조 그대로 |
+| **자체완결형 사이드카 (JSON)** | `./terminology_embedded.json` | **신규(Q7)** — `{KEY: {embedded_terms, desc_full?}}` 111키 |
+| **Figure 해설 HTML** | `./optic_review1_figures.html` | **재빌드(Q7)** — hover 짧은 툴팁 + click 자체완결형 모달, ≈8.98 MB |
+| 빌드 작업물 | `./_build/` | `build_html.py`가 사이드카 자동 머지. 스크립트·이미지·콘텐츠 일체 |
 | 세션 로그 | `./prompt.md` | 본 파일 |
 
 ---
 
 ## 다음 작업 (Pending)
 
-- [x] (Q5) Figure 1–11 해설 단일 HTML `optic_review1_figures.html` 생성 — 완료.
-- [ ] **Q3 목표 미해결**: `embedded_terms`(설명 내 미정의 용어 0) **자체완결형 JSON**은 아직 없음.
-  - ⚠️ 파일명 `terminology_optical_sensor.json`이 이미 **툴팁 조회용**(Q5)으로 점유됨.
-  - 결정 필요: (a) Q3용은 다른 이름(예: `terminology_self_contained.json`)으로 생성, 또는 (b) 현 JSON의 각 `terms[KEY]`에 `embedded_terms` 필드를 추가해 두 목적 통합.
-- [ ] (옵션) `terminology_optical_sensor.md` ↔ `.json` ↔ HTML 임베드 간 동기화 정책 결정
-  (현재: `.md` 수정 → `_build`에서 `build_terminology.py` → `crop.py` → `build_html.py` 순 재빌드).
+- [x] (Q3/Q7) `embedded_terms` 자체완결형 통합 — 완료 (사이드카 + 클릭 모달).
+- [x] (Q5) Figure 1–11 해설 단일 HTML — 완료 / Q7에서 재빌드.
+- [ ] (옵션) `.md` ↔ `.json` ↔ `.embedded.json` ↔ HTML 동기화 정책 문서화
+  (현재 흐름: `.md` 수정 → `build_terminology.py` → `.json` 갱신 → `build_html.py`가 사이드카 자동 머지 후 HTML 재빌드).

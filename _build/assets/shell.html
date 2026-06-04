@@ -13,6 +13,7 @@
 <nav id="toc">
   <h1>Figure 해설</h1>
   <div class="sub">Zhou, Li &amp; Lee — <i>In-Sensor Photonic Intelligence</i> (AI Sens. 2025)</div>
+  <button id="present-btn" type="button" title="발표 모드 시작 (P)">▶ 발표 모드</button>
   <ol>
     <li><a class="figlink" href="#fig01"><b>Fig 1</b> · 전체 개관: 광 센서→AI 디바이스</a></li>
     <li><a class="figlink" href="#fig02"><b>Fig 2</b> · 5대 광 센싱 기전</a></li>
@@ -28,8 +29,9 @@
   </ol>
   <div class="leg">
     <b style="color:#e7edf3">사용법</b><br>
-    · <span class="term" data-k="LSPR">밑줄 친 용어</span>에 마우스를 올리면 정의가 뜹니다(클릭/탭도 가능).<br>
-    · 그림을 클릭하면 크게 확대됩니다(ESC로 닫기).<br>
+    · <span class="term" data-k="LSPR">밑줄 친 용어</span>에 <b style="color:#ffd479">마우스를 올리면</b> 짧은 정의 툴팁이 뜹니다.<br>
+    · 같은 용어를 <b style="color:#5fe0bd">클릭/탭</b>하면 자체완결형 상세 풀이(설명 내 하위 용어까지 즉시 풀이)가 모달로 열립니다.<br>
+    · 그림을 클릭하면 크게 확대됩니다(ESC로 모달·확대 모두 닫기).<br>
     · <span class="tag graph">그래프</span> = 데이터 그래프, <span class="tag d3">모식도</span> = 3D/개념도.
   </div>
 </nav>
@@ -46,8 +48,8 @@
 <div class="howto">
   💡 본문의 노란 밑줄 용어(예: <span class="term" data-k="evanescent-field">소산장</span>,
   <span class="term" data-k="hot-spot">핫스팟</span>,
-  <span class="term" data-k="Pockels-effect">포켈스 효과</span>)에 마우스를 올리면
-  용어 사전(<b>terminology_optical_sensor</b>)의 정의가 즉시 표시됩니다. 그림은 클릭하면 확대됩니다.
+  <span class="term" data-k="Pockels-effect">포켈스 효과</span>)에 <b style="color:#ffd479">마우스를 올리면</b> 짧은 정의(<b>terminology_optical_sensor.json</b>)가 뜨고,
+  <b style="color:#5fe0bd">클릭하면</b> <b>설명 안에 등장하는 하위 용어까지 모두 풀이된 자체완결형 모달</b>(<b>terminology_embedded.json</b>)이 열립니다. 그림은 클릭하면 확대됩니다.
 </div>
 
 {{CONTENT}}
@@ -55,8 +57,31 @@
 </main>
 </div>
 
+<div id="deck" aria-hidden="true">
+  <div class="deck-bar">
+    <span class="deck-fig"></span>
+    <span class="deck-kind"></span>
+    <span class="deck-count"></span>
+    <span class="deck-spacer"></span>
+    <button class="deck-btn deck-fs" type="button" title="전체화면 (F)">⛶</button>
+    <button class="deck-btn deck-exit" type="button" title="종료 (Esc)">✕ 종료</button>
+  </div>
+  <div class="deck-stage"></div>
+  <button class="deck-nav prev" type="button" aria-label="이전 카드">‹</button>
+  <button class="deck-nav next" type="button" aria-label="다음 카드">›</button>
+  <div class="deck-progress"><div class="deck-progress-fill"></div></div>
+  <div class="deck-hint">← → 카드 넘김 · 썸네일 클릭 = 상세 해설 · F 전체화면 · Esc 종료</div>
+</div>
+<div id="pop" aria-hidden="true"><button class="pop-close" type="button" aria-label="닫기">×</button><div class="pop-inner"></div></div>
+
 <div id="tip" role="tooltip"></div>
 <div id="lb"><img id="lbimg" alt="확대 이미지"><div class="hint">아무 곳이나 클릭하거나 ESC를 누르면 닫힙니다</div></div>
+<div id="tf" role="dialog" aria-modal="true" aria-label="자체완결형 용어 풀이">
+  <div class="tf-card">
+    <button class="tf-close" type="button" aria-label="닫기">×</button>
+    <div class="tf-body"></div>
+  </div>
+</div>
 
 <script>
 {{TERMS}}
