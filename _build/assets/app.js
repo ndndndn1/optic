@@ -348,4 +348,22 @@
     }, true);
   }
   // =================== END PRESENTATION MODE ===================
+
+  // ===================== AUTHORS / JOURNAL MODAL =====================
+  var authorsBtn = document.getElementById("authors-btn");
+  var authorsModal = document.getElementById("authors");
+  if (authorsBtn && authorsModal) {
+    var authorsClose = authorsModal.querySelector(".au-close");
+    function openAuthors() { authorsModal.classList.add("show"); authorsModal.setAttribute("aria-hidden", "false"); }
+    function closeAuthors() { authorsModal.classList.remove("show"); authorsModal.setAttribute("aria-hidden", "true"); }
+    authorsBtn.addEventListener("click", function (e) { e.preventDefault(); openAuthors(); });
+    authorsModal.addEventListener("click", function (e) { if (e.target === authorsModal) closeAuthors(); });
+    if (authorsClose) authorsClose.addEventListener("click", closeAuthors);
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && authorsModal.classList.contains("show")) {
+        e.preventDefault(); e.stopImmediatePropagation(); closeAuthors();
+      }
+    }, true);
+  }
+  // =================== END AUTHORS MODAL ===================
 })();

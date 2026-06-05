@@ -245,3 +245,45 @@ body.deck-open{overflow:hidden}
   .deck-fig{font-size:14px}
   #pop .pop-nav{width:40px;height:40px;font-size:24px;line-height:36px}
 }
+
+/* ===================== AUTHORS / JOURNAL INFO ===================== */
+header.doc{position:relative;padding-right:56px}
+#authors-btn{position:absolute;top:0;right:0;width:42px;height:42px;border-radius:50%;
+  background:var(--card);border:1px solid var(--line);color:var(--muted);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;transition:all .12s}
+#authors-btn:hover{background:#222c38;color:#fff;border-color:var(--accent)}
+#authors{position:fixed;inset:0;z-index:10002;background:rgba(3,7,12,.8);display:none;
+  align-items:flex-start;justify-content:center;padding:6vh 24px;overflow-y:auto}
+#authors.show{display:flex}
+#authors .au-card{position:relative;background:#0c1219;border:1px solid #36506e;border-radius:16px;
+  max-width:720px;width:100%;padding:26px 30px 24px;box-shadow:0 24px 70px rgba(0,0,0,.65);
+  color:var(--ink);font-size:14px;line-height:1.7;margin-bottom:6vh}
+#authors .au-close{position:absolute;top:10px;right:14px;background:transparent;border:none;color:#9fb0c0;
+  font-size:28px;line-height:1;cursor:pointer;padding:6px 10px;border-radius:8px}
+#authors .au-close:hover{background:#1b232d;color:#fff}
+#authors .au-h{margin:0 28px 4px 0;font-size:20px;color:#fff}
+#authors .au-sec{border-top:1px solid #1f2c39;margin-top:14px;padding-top:12px}
+#authors .au-sec h5{margin:0 0 8px;font-size:12.5px;letter-spacing:.04em;color:#9fb0c0;
+  text-transform:uppercase;font-weight:700}
+#authors .au-sec p{margin:0 0 8px}
+#authors .au-sec p:last-child{margin-bottom:0}
+#authors .au-authors{font-size:16px;color:#fff;font-weight:600}
+#authors .au-authors sup{color:var(--accent2);font-size:11px}
+#authors .au-aff{margin:0;padding-left:20px;font-size:13.5px;color:#dbe6f0}
+#authors .au-aff li{margin:5px 0}
+#authors .au-aff sup{color:var(--accent2);font-weight:700}
+#authors .au-corr{font-size:13px;color:#cfe4ff;margin-top:8px}
+#authors .au-badges{display:flex;flex-wrap:wrap;gap:8px}
+#authors .au-badge{display:inline-block;font-size:11px;color:#9fb0c0;border:1px solid var(--line);
+  border-radius:6px;padding:3px 9px}
+#authors .au-badge.ok{color:#5fe0bd;border-color:#235}
+#authors .au-cite{font-size:12.5px;color:#9fb0c0;background:#10171f;border:1px solid var(--line);
+  border-radius:8px;padding:9px 12px;margin-top:8px;line-height:1.6}
+#authors a{color:#7fc4ff;text-decoration:none;border-bottom:1px dotted #36506e}
+#authors a:hover{color:#ffd479;border-bottom-color:#b98a3c}
+
+@media(max-width:700px){
+  #authors{padding:3vh 12px}
+  #authors .au-card{padding:22px 18px 18px}
+  #authors .au-h{font-size:18px}
+}
