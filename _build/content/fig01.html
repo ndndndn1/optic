@@ -17,8 +17,31 @@
     <img class="zoom" src="@fig01" alt="Figure 1 전체 개념도">
     <div class="imgcap">클릭하면 확대됩니다 · 좌(파랑) Optical Microsystems → 우(주황) AI-Driven Smart Devices</div>
   </div>
-
-  <div class="panel rev">
+  <div class="evidence-note qa-note" data-qa-source="fig01_overview">
+    <h5>Figure 전체 예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 그림은 데이터 그래프인가요, 아니면 개념도인가요?</dt><dd>데이터 그래프가 아니라 논문 전체를 압축한 원형 개념도입니다. x축, y축, 범례, 수치 스케일은 없고, 색과 위치가 의미를 나눕니다. 왼쪽 파란 영역은 `Optical Microsystems`, 오른쪽 노란/주황 영역은 `AI-Driven Smart Devices`를 나타냅니다.<br>근거: Figure 1 caption, DOI https://doi.org/10.3390/aisens1010005</dd>
+          <dt>가운데의 뇌 이미지는 무엇을 뜻하나요?</dt><dd>가운데 뇌는 실제 뇌 센서라기보다 `Artificial intelligence`를 상징하는 시각 요소로 보는 것이 자연스럽습니다. 주변의 `Photonic sensors`가 AI와 결합해 단순 측정 장치를 넘어 판단·처리 기능을 갖는 방향을 나타냅니다. 다만 이 그림만으로 뇌 영상 처리나 신경모방 회로를 직접 다룬다고 확정할 수는 없습니다.<br>근거: Figure 1 caption 및 제공된 본문 문맥</dd>
+          <dt>`Photonic sensors`와 `Optical Microsystems`는 같은 말인가요?</dt><dd>완전히 같은 말은 아닙니다. 그림에서는 `Photonic sensors`가 중앙의 큰 범주이고, 그 바깥쪽 왼쪽 고리에는 `Optical Microsystems`가 배치되어 있습니다. 즉 광자/광학 센서가 더 넓은 개념이고, 그중 미세구조·마이크로시스템 기반 센서들이 한 축을 이룬다고 볼 수 있습니다.<br>근거: Figure 1 caption/DOI 문맥</dd>
+          <dt>왼쪽 파란 영역의 RI-based sensors는 무엇을 감지하나요?</dt><dd>`RI`는 refractive index, 즉 굴절률입니다. RI 기반 센서는 주변 매질의 굴절률 변화로 광학 공진, 반사, 투과, 위상 등이 바뀌는 원리를 이용합니다. 예를 들어 분자가 센서 표면에 붙으면 국소 굴절률이 달라지고, 그 변화가 광 신호로 읽힙니다.<br>근거: Figure 1 caption에서 RI 약어 정의</dd>
+          <dt>SEIRA-based sensors와 SERS-based sensors는 왜 둘 다 “surface-enhanced”인가요?</dt><dd>둘 다 표면 근처에서 빛과 분자의 상호작용을 강하게 만들어 신호를 키우는 방식입니다. `SEIRA`는 적외선 흡수 신호를, `SERS`는 라만 산란 신호를 증강합니다. 초보자가 헷갈리기 쉬운 점은 둘 다 분자 진동 정보를 다루지만, SEIRA는 흡수 기반, SERS는 산란 기반이라는 차이가 있다는 점입니다.<br>근거: Figure 1 caption의 SEIRA, SERS 약어 정의 및 DOI 문맥</dd>
+          <dt>SERS-based sensors와 SEF-based sensors는 어떻게 다르나요?</dt><dd>SERS는 Raman spectroscopy, 즉 라만 산란을 증강하는 센서이고, SEF는 fluorescence, 즉 형광을 증강하는 센서입니다. 둘 다 표면 구조가 신호 증폭에 중요하지만, 검출되는 광 신호의 종류가 다릅니다. 그림에서는 왼쪽 하단에 `SEF-based sensors`, 왼쪽 중간에 `SERS-based sensors`가 따로 표시되어 있어 서로 다른 광학 검출 계열임을 보여줍니다.<br>근거: Figure 1 caption</dd>
+          <dt>`Chiral sensors`는 왜 따로 표시되어 있나요?</dt><dd>`Chiral sensors`는 분자의 손잡이성, 즉 좌우 비대칭 구조를 구분하는 센서 계열을 뜻합니다. 일반 농도 검출뿐 아니라 enantiomer 구분처럼 구조적 비대칭을 읽는 기능이 중요하기 때문에 별도 항목으로 배치된 것으로 볼 수 있습니다. 다만 그림만으로 원편광 이색성, 플라즈모닉 키랄 구조, 메타표면 중 어느 방식을 쓰는지는 확정할 수 없습니다.<br>근거: Figure 1 시각 레이블 및 DOI 문맥</dd>
+          <dt>오른쪽의 `Near-sensor edge computing sensors`는 무슨 뜻인가요?</dt><dd>센서가 데이터를 만든 뒤, 그 근처의 edge computing 장치에서 AI 추론이나 전처리를 수행하는 구조를 뜻합니다. 즉 센서 자체가 모든 계산을 하는 것은 아니고, 센서 가까이에 있는 하드웨어가 데이터를 빠르게 처리하는 개념입니다. 그림 오른쪽 위에 이 항목이 따로 있는 것은 광센서가 AI 시스템과 물리적으로 가까워지는 흐름을 보여줍니다.<br>근거: Figure 1 caption/DOI 문맥</dd>
+          <dt>`In-sensor computing`은 near-sensor edge computing과 어떻게 다른가요?</dt><dd>`Near-sensor`는 계산이 센서 근처에서 일어나는 것이고, `In-sensor computing`은 감지 소자 자체 또는 센서 어레이 안에서 일부 계산 기능이 수행되는 개념입니다. 초보자는 둘을 모두 “AI 센서”로 뭉뚱그릴 수 있지만, 계산 위치가 다릅니다. 그림에서는 두 항목을 오른쪽 영역에 따로 배치해 이 차이를 암시합니다.<br>근거: Figure 1의 오른쪽 레이블 및 DOI 문맥</dd>
+          <dt>`PIC-based sensors`에서 PIC는 무엇인가요?</dt><dd>그림의 `PIC-based sensors`는 photonic integrated circuit 기반 센서를 뜻하는 것으로 해석됩니다. 빛을 칩 위의 도파로, 공진기, 간섭계 같은 구조에서 다루는 센서입니다. 다만 제공된 캡션에는 PIC 약어 풀이가 없으므로, 이 그림 하나만으로 PIC의 구체적 구조나 재료 플랫폼까지는 확정할 수 없습니다.<br>근거: Figure 1 시각 레이블 및 DOI 문맥</dd>
+          <dt>바깥쪽 원이 왼쪽은 파란색, 오른쪽은 노란색인 이유는 무엇인가요?</dt><dd>색은 두 기술 축을 구분하는 장치로 보입니다. 왼쪽 파란색은 전통적 광학 마이크로시스템 계열, 오른쪽 노란색은 AI 기반 스마트 디바이스 계열을 나타냅니다. 정량적 비율을 뜻하는 파이차트는 아닙니다.<br>근거: Figure 1 image caption 및 DOI 문맥</dd>
+          <dt>가운데 주황색 고리의 `AI-Driven Smart Devices`는 무엇을 강조하나요?</dt><dd>광센서가 단순히 빛 신호를 측정하는 장치에서 끝나는 것이 아니라, AI와 결합해 데이터 처리, 판단, 분류, 의사결정까지 포함하는 스마트 디바이스로 확장된다는 점을 강조합니다. 주황색 고리가 오른쪽을 크게 감싸는 형태라서 AI 구동 장치가 센서 시스템의 핵심 축으로 들어오는 흐름을 보여줍니다.<br>근거: Figure 1 caption 및 제공된 본문 문맥</dd>
+          <dt>어두운 청록색 고리와 주황색 고리 사이의 화살표는 어떤 흐름을 나타내나요?</dt><dd>화살표는 `Optical Microsystems`에서 `AI-Driven Smart Devices`로의 전환 또는 결합을 나타내는 시각적 장치입니다. 다만 이 그림만으로 연구 개발의 시간 순서, 공정 순서, 데이터 흐름 방향이 엄밀히 정의된다고 보기는 어렵습니다.<br>근거: Figure 1 시각 요소 및 DOI 문맥</dd>
+          <dt>이 그림에서 빛, 전기, 분자의 흐름이 직접 표시되어 있나요?</dt><dd>직접적인 광 경로, 전기 배선, 분자 확산 방향은 표시되어 있지 않습니다. 대신 각 소그림이 특정 센서 구조나 디바이스 형태를 상징합니다. 따라서 “분자가 표면에 결합하고, 빛이 산란/흡수/형광 신호로 바뀌며, 그 신호가 AI로 처리된다”는 큰 흐름은 추론할 수 있지만, 구체적 신호 경로는 이 그림 하나만으로 확정할 수 없습니다.<br>근거: Figure 1 caption/DOI 문맥</dd>
+          <dt>이 그림에서 가장 핵심 용어는 무엇인가요?</dt><dd>핵심 용어는 `Photonic sensors`, `Artificial intelligence`, `Optical Microsystems`, `AI-Driven Smart Devices`입니다. 세부 기술 용어로는 `RI`, `SEIRA`, `SERS`, `SEF`, `Chiral sensors`, `PIC-based sensors`, `Near-sensor edge computing`, `In-sensor computing`이 중요합니다. 이 그림은 이 용어들을 한 장의 기술 지도로 연결합니다.<br>근거: Figure 1 caption 및 이미지 내 레이블</dd>
+          <dt>초보자가 가장 헷갈릴 만한 부분은 무엇인가요?</dt><dd>첫째, `AI-Driven Smart Devices`가 센서 종류라기보다 센서와 AI 처리 기능이 결합된 시스템 방향이라는 점입니다. 둘째, `near-sensor`와 `in-sensor`는 모두 센서 가까운 계산처럼 보이지만 계산 위치가 다릅니다. 셋째, `SERS`, `SEIRA`, `SEF`는 모두 신호 증강과 관련되지만 산란, 흡수, 형광이라는 검출 물리가 다릅니다.<br>근거: Figure 1 caption/DOI 문맥</dd>
+          <dt>이 그림만 보고 어떤 센서가 가장 성능이 좋다고 말할 수 있나요?</dt><dd>말할 수 없습니다. 이 그림에는 민감도, 검출한계, 선택성, 응답시간, 재현성 같은 성능 지표가 없습니다. 원형 배치의 크기나 위치도 성능 순위가 아니라 기술 분류와 개념적 관계를 보여주는 것으로 봐야 합니다.<br>근거: Figure 1이 수치 그래프가 아닌 overview schematic이라는 제공 문맥</dd>
+          <dt>오른쪽의 AI 스마트 디바이스들이 실제로 모두 광센서인가요?</dt><dd>그림의 문맥상 광센서 기술이 AI 스마트 디바이스로 확장되는 사례 범주를 보여주는 것으로 이해할 수 있습니다. 하지만 각 소그림이 정확히 어떤 논문, 어떤 재료, 어떤 회로를 가리키는지는 Figure 1만으로는 알 수 없습니다. 구체적 장치 확인에는 본문과 개별 reference 확인이 필요합니다.<br>근거: Figure 1 caption 및 DOI 문맥</dd>
+          <dt>이 그림의 제목을 한 문장으로 해석하면 어떻게 되나요?</dt><dd>“굴절률, SERS, SEIRA, SEF, 키랄 센서 같은 광학 마이크로시스템 기술들이 AI 처리 구조와 결합하면서 near-sensor, in-sensor, PIC 기반 스마트 광자 디바이스로 진화한다”는 내용입니다.<br>근거: Figure 1 caption, image caption, DOI https://doi.org/10.3390/aisens1010005</dd>
+          </dl>
+  </div>
+<div class="panel rev">
     <div class="pimg"><img class="zoom" src="@fig01" alt="중심부 브레인"><div class="imgcap">중심: Photonic sensors + Artificial intelligence</div></div>
     <div class="ptext">
       <h4><span class="pl">중심</span> 두 기술의 융합</h4>
@@ -28,10 +51,33 @@
       <span class="term" data-k="in-sensor-computing">in-sensor 광자 지능</span>입니다.</p>
       <p>안쪽 두 고리("Photonic sensors", "Artificial intelligence")가 만나, 바깥의 좌→우 화살표를
       따라 <b>단순 감지 → 지능형 감지</b>로 발전한다는 서사를 담고 있습니다.</p>
-    </div>
+</div>
   </div>
 
-  <div class="panel">
+  
+  <div class="evidence-note qa-note" data-qa-source="fig01">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 그림은 그래프인가요, 아니면 개념도인가요?</dt><dd>그래프가 아니라 원형 개념도입니다. x축, y축, 범례, 피크, dip, shift, 시간 변화 같은 정량 데이터는 없습니다. 가운데의 “Photonic sensors”와 “Artificial intelligence”가 결합하고, 바깥쪽에서 기존 광학 마이크로시스템이 AI 기반 스마트 디바이스로 확장되는 흐름을 보여줍니다.<br>근거: Figure 1 캡션 “Optical sensing technologies toward AI-driven smart devices”, DOI 문맥. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>가운데 뇌 그림은 왜 들어가 있나요?</dt><dd>뇌 아이콘은 단순한 장식이라기보다, 광센서가 빛 신호를 얻는 데서 끝나지 않고 AI를 통해 해석·판단까지 수행하는 방향을 상징합니다. 왼쪽 절반은 생물학적 뇌처럼 보이고, 오른쪽 절반은 디지털 와이어프레임처럼 보이므로 인간 지능과 기계 지능의 결합을 암시합니다.<br>근거: Figure 1 중심부 레이블 “Photonic sensors”, “Artificial intelligence”; 본문 Introduction의 AI 기반 해석·자율 판단 설명.</dd>
+          <dt>파란 영역의 “Optical Microsystems”는 무엇을 묶은 말인가요?</dt><dd>파란 영역은 기존 광학 센싱 기술군을 묶습니다. 그림에는 RI-based sensors, SEIRA-based sensors, SERS-based sensors, Chiral sensors, SEF-based sensors가 배치되어 있습니다. 즉 하나의 센서가 아니라, 빛과 물질의 상호작용을 이용해 물리·화학·생물학적 정보를 읽는 여러 방식의 집합입니다.<br>근거: Figure 1 캡션 및 본문 Section 2 “Basic Sensing Technologies”.</dd>
+          <dt>오른쪽 노란 영역의 “AI-Driven Smart Devices”는 무엇을 뜻하나요?</dt><dd>오른쪽은 센서가 수집한 신호를 외부 장비에서만 분석하는 단계를 넘어, 센서 가까이 또는 센서 내부에서 계산과 판단을 수행하는 장치 방향을 나타냅니다. 그림에는 near-sensor edge computing sensors, in-sensor computing, PIC-based sensors가 들어 있습니다.<br>근거: Figure 1 시각 요소; 본문 Introduction의 edge intelligence 및 in-sensor computing 설명.</dd>
+          <dt>RI-based sensor에서 RI는 무엇인가요?</dt><dd>RI는 refractive index, 즉 굴절률입니다. RI 기반 센서는 표면 근처에 분자나 생체표지가 결합하면서 주변 굴절률이 변하고, 그 결과 광 공진 조건이나 파장 위치가 변하는 원리를 이용합니다. 이 그림 자체에는 공진 피크의 이동량이 그려져 있지 않으므로 민감도 수치는 알 수 없습니다.<br>근거: Figure 1 캡션의 RI 약어 정의; 본문 Section 2.1.</dd>
+          <dt>SEIRA, SERS, SEF가 모두 “surface-enhanced”로 시작하는데 같은 기술인가요?</dt><dd>같은 기술은 아닙니다. SEIRA는 적외선 흡수, SERS는 라만 산란, SEF는 형광을 표면 근처에서 증강하는 방식입니다. 초보자는 모두 금속 나노구조의 field enhancement와 관련된다는 점 때문에 헷갈릴 수 있지만, 읽어내는 광 신호의 종류가 다릅니다.<br>근거: Figure 1 캡션의 약어 정의; 본문 Section 2.2, 2.3 및 SEF 설명.</dd>
+          <dt>SERS-based sensors는 이미지에서 어떤 역할을 하나요?</dt><dd>왼쪽 아래의 SERS-based sensors는 분자의 라만 산란 신호를 증강해 화학적 지문을 읽는 계열을 대표합니다. 그림 속 작은 원형 삽화가 특정 데이터를 보여주는 것은 아니며, SERS가 논문에서 다루는 기존 광센싱 기반 기술 중 하나임을 표시합니다.<br>근거: Figure 1 레이블; 본문 Section 2 “Basic Sensing Technologies”.</dd>
+          <dt>SEIRA-based sensors와 SERS-based sensors는 둘 다 분자 진동을 보나요?</dt><dd>넓게 보면 둘 다 분자 진동 정보와 관련 있지만, 방식이 다릅니다. SEIRA는 적외선 흡수 스펙트럼의 진동 흡수 특징을 강화하고, SERS는 라만 산란 주파수 이동과 세기를 강화합니다. 그림만으로는 어떤 분자 피크가 증강되는지, 어느 파장대인지 확정할 수 없습니다.<br>근거: Figure 1의 SEIRA/SERS 레이블; 본문 Section 2.2 및 2.3.</dd>
+          <dt>Chiral sensors는 왜 따로 표시되어 있나요?</dt><dd>Chiral sensors는 분자의 손잡이성, 즉 거울상 이성질체 차이를 광학적으로 구분하는 센서 계열입니다. 다른 항목들이 굴절률, 적외선 흡수, 라만, 형광처럼 신호 종류 중심이라면, chiral sensor는 분자의 비대칭성과 편광 응답을 강조하는 항목으로 볼 수 있습니다.<br>근거: Figure 1 레이블 “Chiral sensors”; 본문 Section 2에서 chiral sensing을 기존 광센싱 기술로 나열.</dd>
+          <dt>SEF-based sensors는 형광 센서와 무엇이 다른가요?</dt><dd>일반 형광 센서는 형광체가 빛을 흡수한 뒤 방출하는 빛을 측정합니다. SEF-based sensor는 금속 나노구조나 표면 근처에서 형광 방출을 더 강하게 만들어 약한 신호를 읽기 쉽게 합니다. 그림만으로는 형광체와 금속 표면 사이 거리, 소광 여부, 최적 간격은 알 수 없습니다.<br>근거: Figure 1 캡션의 SEF 정의; 본문 SEF 설명.</dd>
+          <dt>PIC-based sensors는 왜 오른쪽 스마트 디바이스 쪽에 있나요?</dt><dd>PIC는 photonic integrated circuit, 즉 광집적회로입니다. 여러 광학 구성요소를 칩 위에 통합하면 센서가 더 작고, 반복 생산 가능하며, 전자·AI 연산부와 결합하기 쉬워집니다. 그래서 그림에서는 기존 광센싱 방식과 AI-driven smart devices를 잇는 오른쪽 영역에 배치되어 있습니다.<br>근거: Figure 1 오른쪽 레이블 “PIC-based sensors”; 본문 Introduction의 PIC 기반 소형화·통합 설명.</dd>
+          <dt>Near-sensor edge computing sensors와 in-sensor computing은 같은 말인가요?</dt><dd>완전히 같지는 않습니다. Near-sensor edge computing은 센서 가까운 곳, 예를 들어 같은 모듈이나 근처 칩에서 데이터를 처리하는 개념에 가깝습니다. In-sensor computing은 계산 기능이 센서 하드웨어 자체 안으로 더 깊게 들어가는 방향을 말합니다. 그림에서는 둘을 모두 AI 기반 스마트 디바이스의 하위 흐름으로 보여줍니다.<br>근거: Figure 1 오른쪽 레이블; 본문 Introduction의 edge intelligence 및 in-sensor computing 문맥.</dd>
+          <dt>그림의 화살표는 무엇을 의미하나요?</dt><dd>원형 고리 위의 화살표는 기술 발전의 방향성을 나타냅니다. 왼쪽의 optical microsystems에서 오른쪽의 AI-driven smart devices로 넘어가며, 단순 검출에서 신호 해석·현장 판단·자율 동작으로 기능이 확장된다는 메시지입니다. 다만 화살표가 시간축이나 성능 수치축은 아니므로 “얼마나 빠르게 발전한다”는 정량 정보는 없습니다.<br>근거: Figure 1 원형 화살표; 본문 Introduction에서 conventional optical sensing에서 AI-driven smart devices로 이어지는 논문 구조 설명.</dd>
+          <dt>이 그림에서 “Photonic sensors”와 “Optical sensors”는 같은 뜻인가요?</dt><dd>이 그림에서는 매우 가깝게 쓰입니다. Optical sensor는 빛을 이용해 감지하는 넓은 표현이고, photonic sensor는 빛의 생성·전파·상호작용·검출을 더 공학적 플랫폼 관점에서 부르는 표현에 가깝습니다. 초보자가 둘을 완전히 별개 분야로 이해하면 혼동할 수 있습니다.<br>근거: Figure 1 중심 “Photonic sensors”; 캡션 “Optical sensing technologies”; DOI 본문 전체 문맥.</dd>
+          <dt>이 그림만 보고 어떤 센서가 가장 민감하다고 말할 수 있나요?</dt><dd>말할 수 없습니다. 그림에는 각 센서의 민감도, 검출한계, 동작 파장, 샘플 종류, 신호대잡음비가 없습니다. RI, SERS, SEIRA, SEF 등은 서로 측정 원리와 대상 신호가 달라 단순 순위화도 조심해야 합니다.<br>근거: Figure 1은 정량 그래프가 아닌 개념도; 성능 논의는 이후 본문과 개별 Figure/Reference 문맥 필요.</dd>
+          <dt>이 그림만으로 실제 광이나 전기 신호의 흐름을 알 수 있나요?</dt><dd>큰 방향은 추정할 수 있습니다. 광센서가 빛–물질 상호작용으로 신호를 만들고, PIC나 edge/in-sensor computing이 그 신호를 처리해 AI 판단으로 이어지는 구조입니다. 하지만 레이저, 도파로, 검출기, 전극, ADC, AI 칩 사이의 실제 연결도는 이 그림에 없습니다.<br>근거: Figure 1의 구성 레이블; 본문 Introduction의 센싱-해석-자율 판단 문맥.</dd>
+          <dt>이 그림에서 가장 중요한 핵심 용어는 무엇인가요?</dt><dd>핵심 용어는 Photonic sensors, Artificial intelligence, Optical Microsystems, AI-Driven Smart Devices, RI, SEIRA, SERS, SEF, chiral sensors, PIC, near-sensor edge computing, in-sensor computing입니다. 이 중 초보자가 특히 헷갈릴 만한 것은 “AI가 센서 신호를 나중에 분석하는 것”과 “센서 내부/근처에서 계산하는 것”의 차이입니다. 그림은 바로 그 차이를 기존 광센서에서 스마트 디바이스로 가는 전환으로 압축합니다.<br>근거: Figure 1 내부 레이블 및 캡션 약어 정의; 본문 Introduction과 Section 2.</dd>
+          <dt>이 Figure 1이 논문 전체에서 맡는 역할은 무엇인가요?</dt><dd>Figure 1은 특정 실험 결과보다 논문의 로드맵 역할을 합니다. 왼쪽에는 전통적 광센싱 기술, 오른쪽에는 PIC·edge·in-sensor computing 같은 스마트 장치 방향을 놓고, 가운데에는 photonic sensors와 AI의 융합을 배치했습니다. 따라서 이후 섹션에서 다룰 기술 지형을 한 장에 요약한 그림으로 보는 것이 적절합니다.<br>근거: 본문 Introduction에서 Figure 1을 optical sensor technology landscape로 언급; Figure 1 캡션. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          </dl>
+  </div><div class="panel">
     <div class="pimg"><img class="zoom" src="@fig01" alt="좌측 반원"><div class="imgcap">좌측: Optical Microsystems(파랑)</div></div>
     <div class="ptext">
       <h4><span class="pl">좌</span> Optical Microsystems — 고전 광 센싱 5종</h4>
@@ -43,8 +89,28 @@
         <span class="row"><span class="k">SERS</span> <span class="term" data-k="SERS">표면증강 라만</span> — 금속 나노구조가 비탄성 산란(라만) 신호를 수 자릿수 증폭.</span>
         <span class="row"><span class="k">Chiral</span> <span class="term" data-k="CD">원편광 이색성</span> 등 — 키랄 메타표면이 좌/우 <span class="term" data-k="LCP-RCP">원편광</span> 흡수차를 증폭.</span>
         <span class="row"><span class="k">SEF-based</span> <span class="term" data-k="SEF">표면증강 형광</span> — 플라즈몬 근접장이 <span class="term" data-k="fluorophore">형광단</span> 방출을 증대.</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig01_2">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 그림의 왼쪽 파란 반원은 무엇을 묶어서 보여주나요?</dt><dd>왼쪽 파란 영역은 `Optical Microsystems`로, PIC 기반 집적 센서 이전부터 발전해 온 고전적 광 센싱 계열을 묶어 보여줍니다. 이미지 안에는 `RI-based`, `SEIRA-based`, `SERS-based`, `Chiral`, `SEF-based sensors`가 배치되어 있습니다. 즉 하나의 장치 구조가 아니라, 빛과 물질의 상호작용을 이용하는 대표 감지 방식들의 지도를 그린 것입니다.<br>근거: Figure 1 caption 및 본문 Section 1, Section 2 도입부. DOI: https://doi.org/10.3390/aisens1010005, MDPI 원문 Figure 1 문맥. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 이미지는 그래프인가요, 아니면 모식도인가요?</dt><dd>데이터 그래프가 아니라 개념 모식도입니다. x축, y축, 범례, 피크, dip, 시간 변화, 컨투어 같은 정량 그래프 요소는 없습니다. 대신 원형 배치, 색 영역, 화살표, 센서 아이콘, 용어 레이블로 “고전 광센서 → PIC/AI 결합 → 스마트 디바이스”라는 기술 진화 방향을 시각화합니다.<br>근거: Figure 1 caption은 “Optical sensing technologies toward AI-driven smart devices”라고 설명하며, 본문은 Figure 1을 논문 전체 기술 지형도로 소개합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>왜 왼쪽은 파란색이고 오른쪽은 노란색/주황색으로 나뉘어 있나요?</dt><dd>파란색 왼쪽은 전통적인 `Optical Microsystems`, 오른쪽 노란 영역은 더 집적화된 `AI-driven smart devices` 쪽 기술군을 나타냅니다. 가운데 주황색 고리는 AI와 스마트 디바이스 방향성을 강조하고, 중앙의 `Photonic sensors`와 `Artificial intelligence`는 이 두 흐름이 결합되는 핵심 축으로 보입니다.<br>근거: Figure 1 caption, 본문 Introduction의 “optical microsystems에서 PIC와 AI 기반 smart photonic platforms로 진화” 문맥. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>`RI-based sensors`는 이미지에서 어떤 센싱 원리를 대표하나요?</dt><dd>`RI`는 refractive index, 즉 굴절률입니다. 표적 분자나 바이오마커가 센서 표면에 붙으면 주변 국소 굴절률이 바뀌고, 그 결과 플라즈몬 공명 파장, 세기, 위상 등이 변합니다. 왼쪽 위의 `RI-based sensors` 아이콘은 이런 표면 결합 기반의 label-free 센싱을 대표한다고 볼 수 있습니다.<br>근거: Figure 1 caption의 RI 약어 정의, 본문 Section 2.1 및 Figure 2a 문맥. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>`SEIRA-based sensors`와 `SERS-based sensors`는 둘 다 surface-enhanced인데, 무엇이 다른가요?</dt><dd>둘 다 금속 나노구조나 플라즈몬 구조의 전자기장 증강을 이용하지만, 보는 신호가 다릅니다. `SEIRA`는 적외선 흡수, 특히 분자의 진동 흡수 fingerprint를 키우는 방식이고, `SERS`는 라만 비탄성 산란 신호를 증폭하는 방식입니다. 이미지에서 둘이 따로 적힌 이유는 “표면 증강”이라는 공통점은 있어도 측정하는 광학 현상이 다르기 때문입니다.<br>근거: Figure 1 caption의 SEIRA/SERS 약어 정의, 본문 Section 2.2와 2.3, Figure 2b–c 문맥. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>`RI-based sensors`와 `SEIRA/SERS` 중 어느 쪽이 분자 정체성을 더 직접적으로 알려주나요?</dt><dd>이 그림만 보면 성능 비교 수치는 없지만, 본문 문맥상 RI 센서는 공명 이동으로 결합 여부를 민감하게 볼 수 있는 반면, 분자 고유의 화학 fingerprint를 직접 주는 데는 한계가 있습니다. SEIRA와 SERS는 각각 적외선 흡수나 라만 스펙트럼의 분자 진동 정보를 이용하므로, analyte 식별에 더 직접적인 단서를 줍니다.<br>근거: 본문 Section 2.1, Section 3.2에서 RI 센서의 공명 shift 한계와 SEIRA의 화학 특이성 설명. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>왼쪽의 `Chiral sensors`는 왜 별도 항목으로 들어가 있나요?</dt><dd>`Chiral sensors`는 보통 좌원편광과 우원편광에 대한 반응 차이, 즉 circular dichroism 같은 키랄 광학 응답을 이용합니다. 이미지의 왼쪽 아래 아이콘은 단순 농도 검출이 아니라 분자의 손잡이성, 광학 이성질성 같은 정보를 증폭해 읽는 센서 계열을 가리킵니다.<br>근거: 본문 Section 1과 Section 2 도입부에서 surface plasmon-enhanced chiral spectroscopy를 고전 광센싱 기술 중 하나로 열거. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>`SEF-based sensors`는 SERS와 어떻게 헷갈릴 수 있나요?</dt><dd>둘 다 표면 근처의 플라즈몬 효과로 약한 광 신호를 크게 만들 수 있어서 초보자는 비슷하게 느낄 수 있습니다. 하지만 `SEF`는 fluorescence, 즉 형광 방출을 증강하는 방식이고, `SERS`는 라만 산란을 증강하는 방식입니다. 이미지에서 `SEF-based sensors`가 별도 아이콘으로 배치된 것은 검출 신호의 물리적 출처가 다르기 때문입니다.<br>근거: Figure 1 caption의 SEF 약어 정의, 본문 Section 2의 기본 센싱 기술 분류. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>가운데의 `Photonic sensors`와 `Artificial intelligence`가 겹쳐 보이는 이유는 무엇인가요?</dt><dd>이 그림은 광센서와 AI가 별개의 블록으로 끝나는 것이 아니라, 센서 신호 생성과 해석이 결합되는 방향을 보여줍니다. 광센서는 빛-물질 상호작용으로 스펙트럼, 공명 이동, 산란, 형광 같은 신호를 만들고, AI는 복잡한 패턴을 분류하거나 판단하는 역할을 맡습니다.<br>근거: 본문 Introduction에서 AI가 복잡한 optical spectra의 feature extraction, pattern recognition, real-time control에 쓰인다고 설명. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>그림의 화살표는 무엇의 흐름을 뜻하나요?</dt><dd>정확한 물리적 광 경로라기보다는 기술 발전 방향을 나타내는 화살표로 보는 것이 적절합니다. 왼쪽의 고전 광학 마이크로시스템에서 오른쪽의 PIC, in-sensor computing, near-sensor edge computing으로 확장되고, AI와 결합해 스마트 광자 디바이스로 이동하는 흐름입니다.<br>근거: Figure 1 caption과 본문 Introduction의 “toward AI-driven smart devices”, “from conventional optical sensing techniques to PIC and in-sensor computing” 문맥. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 이미지에서 센서의 실제 역할은 무엇이라고 볼 수 있나요?</dt><dd>왼쪽의 센서들은 빛을 표적 물질과 상호작용시켜 광학 신호 변화를 만드는 역할을 합니다. 예를 들어 RI 센서는 공명 이동, SEIRA는 적외선 흡수 증강, SERS는 라만 산란 증강, chiral 센서는 원편광 응답 차이, SEF는 형광 증강을 이용합니다. 오른쪽의 AI/PIC 쪽은 그 신호를 더 작고 빠르게 처리하고 해석하는 방향을 나타냅니다.<br>근거: Figure 1 및 본문 Section 2.1–2.3, Figure 2 sensing mechanism 문맥. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>`Optical Microsystems`와 `PIC-based sensors`는 같은 말인가요?</dt><dd>같지 않습니다. 이 그림에서는 왼쪽의 `Optical Microsystems`가 비교적 전통적인 free-space 또는 fiber-optic 형식의 광 센싱 기술을 포함하고, 오른쪽의 `PIC-based sensors`는 waveguide, detector, modulator 등을 칩 위에 집적하는 방향을 뜻합니다. 다만 고전 센싱 원리들이 PIC 플랫폼 안으로 흡수될 수 있으므로 완전히 단절된 범주는 아닙니다.<br>근거: 본문 Introduction과 Section 2 도입부. 전통 센서는 bulk/free-space/fiber-optic 형식이 많았고, PIC는 millimeter-scale chip 집적을 가능하게 한다는 설명. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이미지에서 `AI-driven smart devices`는 센서가 스스로 생각한다는 뜻인가요?</dt><dd>문자 그대로 사람처럼 생각한다는 뜻은 아닙니다. 여기서는 센서 또는 센서 가까운 하드웨어가 신호 처리, 패턴 인식, 의사결정 일부를 수행한다는 의미에 가깝습니다. 그림 오른쪽의 `In-sensor computing`과 `Near-sensor edge computing sensors`가 바로 이 점을 시각적으로 강조합니다.<br>근거: 본문 Introduction에서 in-sensor computing은 computational tasks가 sensor hardware에 embedded되는 개념으로 설명됨. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 그림만 보고 각 센서의 민감도나 검출한계를 비교할 수 있나요?</dt><dd>없습니다. 이 이미지는 분류와 기술 흐름을 보여주는 개념도라서 감도, 검출한계, 응답시간, 선택성, 재현성 같은 정량 성능은 제시하지 않습니다. 예를 들어 SERS가 “수 자릿수 증강”될 수 있다는 일반 원리는 본문에서 설명되지만, Figure 1 자체에는 특정 enhancement factor나 실험 조건이 없습니다.<br>근거: Figure 1은 정량 그래프가 아닌 overview figure이며, 성능 지표는 Section 2의 각 기술 설명과 후속 Figure에서 다룸. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 이미지 하나만으로 확정할 수 없는 점은 무엇인가요?</dt><dd>각 아이콘이 어느 특정 논문의 장치 사진인지, 사용된 재료가 금인지 은인지, 검출 대상이 단백질인지 가스인지, 실제 광 경로가 어떻게 설계되는지, AI 모델이 CNN인지 SVM인지 같은 세부사항은 확정할 수 없습니다. 또한 왼쪽 기술들이 오른쪽 기술보다 항상 열등하다는 의미도 아닙니다. 이 그림은 우열표가 아니라 논문 전체의 기술 지도를 압축한 도식입니다.<br>근거: Figure 1 caption은 약어와 전체 방향만 제시하며, 세부 mechanism과 application은 본문 Section 2 이후 및 후속 Figure들에서 설명됨. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          </dl>
+  </div>
+</div>
   </div>
 
   <div class="panel rev">
@@ -58,8 +124,25 @@
         <span class="row"><span class="k">In-sensor computing</span> <span class="term" data-k="in-sensor-computing">센서 내 컴퓨팅</span> — 디지털화 전에 센서 하드웨어가 직접 특징추출/추론.</span>
         <span class="row"><span class="k">Near-sensor edge</span> <span class="term" data-k="NSEC">센서 근접 엣지 컴퓨팅</span> — 센서와 인접한 칩이 <span class="term" data-k="PNN">광자 신경망</span>으로 실시간 추론.</span>
       </div>
-      <p>좌→우 화살표는 "감도는 높지만 부피 큰 고전 센서"가 "소형·저전력·지능형 디바이스"로
+  <div class="evidence-note qa-note" data-qa-source="fig01_3">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 그림의 오른쪽 주황색 반원은 무엇을 뜻하나요?</dt><dd>오른쪽 주황색 반원은 `AI-Driven Smart Devices`를 가리킵니다. 단순히 빛으로 검출만 하는 센서가 아니라, 감지 신호를 해석하고 판단하는 AI 결합형 광자 디바이스 쪽을 나타냅니다. 근거: Figure 1 캡션은 “Optical sensing technologies toward AI-driven smart devices”라고 설명하고, 본문은 광센서가 PIC와 AI를 결합해 자율 해석·응답하는 스마트 포토닉 센서로 발전한다고 설명합니다. 출처: DOI 10.3390/aisens1010005, Figure 1 및 Introduction. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>오른쪽에 보이는 세 가지 하드웨어 범주는 무엇인가요?</dt><dd>이미지 오른쪽에는 `Near-sensor edge computing sensors`, `In-sensor computing`, `PIC-based sensors`가 배치되어 있습니다. 세 항목은 모두 “AI-Driven Smart Devices” 영역 안에 있으며, 광센서가 칩 수준 통합과 센서 근처/센서 내부 연산으로 확장되는 방향을 보여줍니다. 근거: Figure 1의 우측 레이블, 본문 4장 `Photonic Integrated Circuits and In-Sensor Computing`, Figure 8–10 문맥. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5)) ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>`PIC-based sensors`는 일반 광센서와 무엇이 다른가요?</dt><dd>`PIC-based sensors`는 광원, 도파관, 변조기, 검출기 같은 광학 기능을 칩 위에 통합하는 방향입니다. 그림의 오른쪽 아래 칩 모양 아이콘은 이 “광자 집적회로” 성격을 시각화한 것입니다. 단, 이 Figure 1만으로는 실제 칩 재료, 파장대, 검출 한계는 알 수 없습니다. 근거: 본문은 PIC 기반 센서가 광원·도파관·변조기·포토디텍터를 단일 칩에 통합해 소형화와 실시간 검출을 가능하게 한다고 설명합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>`In-sensor computing`은 센서 안에 CPU가 들어간다는 뜻인가요?</dt><dd>꼭 CPU가 들어간다는 뜻은 아닙니다. 그림의 중간 오른쪽 `In-sensor computing`은 센서 하드웨어가 디지털 프로세서로 보내기 전에 특징 추출이나 일부 추론을 수행한다는 개념에 가깝습니다. 초보자가 헷갈리기 쉬운 점은 “센서 내부 연산”이 항상 완전한 독립 AI 칩을 뜻하지는 않는다는 것입니다. 근거: 본문 4.2는 in-sensor computing을 데이터가 완전히 디지털화·전송되기 전에 센서 하드웨어에서 초기 처리 또는 패턴 인식을 수행하는 방식으로 설명합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>`Near-sensor edge computing sensors`는 `In-sensor computing`과 어떻게 다른가요?</dt><dd>`Near-sensor`는 연산이 센서 “안”이라기보다 센서 가까운 칩 또는 인접한 광자/전자 회로에서 일어나는 경우를 가리킵니다. 반면 `In-sensor computing`은 감지 소자 자체 또는 감지 프런트엔드에서 연산 기능이 더 직접적으로 결합된다는 뉘앙스가 있습니다. 근거: 본문은 Figure 10에서 hybrid near-sensor edge computing을 별도로 다루며, AlN 마이크로링 공진기와 Si MZI를 결합해 센서 엣지에서 실시간 저전력 AI를 수행한다고 설명합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>주황색 화살표는 어떤 기술 흐름을 나타내나요?</dt><dd>그림의 좌우 경계에 있는 주황색 화살표는 왼쪽의 전통적 광학 마이크로시스템에서 오른쪽의 AI 기반 스마트 디바이스로 넘어가는 전환을 상징합니다. 실제 시간축이나 성능 수치가 있는 그래프는 아니므로, 화살표를 “정량적 증가율”로 읽으면 안 됩니다. 근거: Figure 1 캡션과 본문 Introduction은 이 그림을 광센서 기술이 AI-driven smart devices로 나아가는 전체 지도로 제시합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>중앙의 `Photonic sensors`와 `Artificial intelligence`가 겹쳐 보이는 이유는 무엇인가요?</dt><dd>중앙의 초록/노랑 영역은 광센서와 AI가 별개 기술이 아니라 결합되는 지점을 강조합니다. 빛–물질 상호작용으로 얻은 스펙트럼, 세기, 공진 이동 같은 신호를 AI가 분류·회귀·판단에 쓰는 구조를 암시합니다. 근거: 본문은 AI가 복잡한 optical spectra에서 subtle feature를 추출하고 실시간 판단을 가능하게 한다고 설명합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>그림 오른쪽의 작은 칩·회로 그림들은 실제 장치 사진인가요, 아니면 개념 아이콘인가요?</dt><dd>Figure 1에서는 개별 장치의 상세 실험 데이터를 보여주기보다, 대표 기술군을 상징하는 삽화로 쓰였습니다. 따라서 그림 안의 칩 모양만 보고 특정 재료, 치수, 성능, 제조 공정을 확정할 수는 없습니다. 근거: Figure 1은 전체 기술 지도를 제시하고, 구체 장치와 성능은 Figure 8–10 및 본문 4장에서 따로 설명됩니다.</dd>
+          <dt>이 그림에는 x축, y축, 피크, dip, shift 같은 그래프 정보가 있나요?</dt><dd>없습니다. 이 이미지는 데이터 그래프가 아니라 원형 개념도입니다. 따라서 피크 위치, 공진 dip, 시간 변화, 컨투어, 혼동행렬 같은 정량 해석은 Figure 1 자체에서는 할 수 없습니다. 그런 정보는 논문 후반의 Figure 9, Figure 10 같은 개별 장치/실험 그림에서 다뤄집니다. 근거: Figure 1 캡션은 기술 지형도를 설명하고, Figure 9에는 gas mixture spectra와 confusion map이 별도로 언급됩니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>오른쪽 영역이 노란 배경과 주황색 내부 링으로 나뉜 이유는 무엇으로 볼 수 있나요?</dt><dd>노란 외곽은 AI-driven smart devices에 포함되는 대표 응용/하드웨어 범주를 담고, 주황색 내부 링은 “AI-Driven Smart Devices”라는 큰 전환 방향을 강조하는 시각 장치로 볼 수 있습니다. 다만 색의 의미가 범례로 명시된 것은 아니므로, 노랑과 주황을 서로 다른 정량 범주나 성능 등급으로 단정하면 안 됩니다. 근거: Figure 1 캡션에는 색상 범례가 없고, 본문은 기술 전환의 개념도로 Figure 1을 사용합니다.</dd>
+          <dt>이 그림에서 초보자가 가장 헷갈릴 수 있는 핵심 용어는 무엇인가요?</dt><dd>`PIC`, `In-sensor computing`, `Near-sensor edge computing`입니다. `PIC`는 단순 PCB가 아니라 빛을 도파·변조·검출하는 광자 집적회로입니다. `In-sensor`는 센서 자체에서 일부 연산이 일어나는 개념이고, `Near-sensor edge`는 센서 가까운 엣지 회로에서 연산하는 개념입니다. 근거: 논문 약어표는 PIC를 photonic integrated circuits로 정의하고, 본문 4.2는 in-sensor computing의 의미를 설명합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5)) ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 그림 하나만으로 확정할 수 없는 것은 무엇인가요?</dt><dd>각 센서의 감도, 검출한계, 동작 파장, 칩 재료, 전력 소모, AI 정확도, 데이터셋 크기, 실제 상용화 수준은 확정할 수 없습니다. Figure 1은 논문 전체의 지도 역할을 하는 요약 도식이기 때문입니다. 근거: 성능 수치와 구체 사례는 Figure 9–10 및 본문 4.2에서 별도로 제시되며, 논문은 여전히 통합 복잡도, 재료 호환성, 데이터 처리 병목을 도전과제로 언급합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          </dl>
+  </div>
+<p>좌→우 화살표는 "감도는 높지만 부피 큰 고전 센서"가 "소형·저전력·지능형 디바이스"로
       넘어가는 <b>기술 진화의 방향</b>을 뜻합니다.</p>
-    </div>
+</div>
   </div>
 </section>

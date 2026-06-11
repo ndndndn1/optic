@@ -16,8 +16,32 @@
   (d)(e)는 두 핵심 단계(특징추출→신경망)입니다.</p>
 
   <div class="figfull"><img class="zoom" src="@fig10" alt="Figure 10 전체"><div class="imgcap">(a) 전자 인-센서 · (b) 광자 인-센서 · (c) 하이브리드 NSEC · (d) 특징추출 · (e) 광자 신경망</div></div>
-
-  <div class="panel">
+  <div class="evidence-note qa-note" data-qa-source="fig10_overview">
+    <h5>Figure 전체 예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>Figure 10에서 말하는 NSEC는 무엇이고, 왜 “near-sensor”라고 부르나요?</dt><dd>NSEC는 센서에서 나온 신호를 멀리 보내기 전에 센서 가까운 칩에서 특징추출과 AI 추론을 수행하는 구조입니다. 그림 (c)에서 사람의 웨어러블/시각/분광/LiDAR/양자 센서 신호가 곧바로 `NSEC chip`으로 들어가고, 오른쪽에는 `Edge AI training and inference`, `Low-latency`, `Low-power consumption`, `Protected privacy`가 표시됩니다. 즉 데이터 전송량과 지연을 줄이려는 edge computing 구조입니다.<br>근거: Figure 10 caption 및 결론부 NSEC 설명, ref. [223], DOI: https://doi.org/10.3390/aisens1010005</dd>
+          <dt>(a)의 전자 인-센서 컴퓨팅과 (b)의 광자 인-센서 컴퓨팅은 무엇이 다르게 그려져 있나요?</dt><dd>(a)는 전자 소자 기반입니다. 왼쪽은 `Memristor/memtransistor array`, 오른쪽은 `Photodetector array`이고, 각각 저항/정전용량 센서 또는 이미지/분광/편광 센서 신호를 다룹니다. 반면 (b)는 `Microring/MZI array`가 중심이며, 광 신호 자체를 마이크로링 또는 MZI 배열에서 연산에 활용하는 구조로 그려져 있습니다.<br>근거: Figure 10(a,b) caption, ref. [223], DOI 문맥.</dd>
+          <dt>(a)에서 파란 글씨의 `Electrical sensing signal`과 `Optical sensing signal`은 왜 나뉘어 있나요?</dt><dd>그림은 센서 출력의 물리적 도메인을 구분합니다. `Electrical sensing signal`은 촉각, 가스, 관성, 바이오센서처럼 저항·정전용량 변화 등 전기량으로 나타나는 신호입니다. `Optical sensing signal`은 이미지 센서, 분광 센서, 편광 센서처럼 빛의 세기·스펙트럼·편광 정보를 전기적 검출 배열로 읽는 신호입니다. 초보자가 헷갈릴 점은 “광학 센서”라도 최종적으로는 포토디텍터에서 전기 신호로 바뀔 수 있다는 것입니다.<br>근거: Figure 10(a) 라벨 및 caption, ref. [223].</dd>
+          <dt>(b)의 마이크로링/MZI 배열은 왜 AI computing 칩으로 표현되나요?</dt><dd>마이크로링과 MZI는 빛의 위상, 간섭, 공진 조건을 조절해 가중합 연산에 해당하는 선형 변환을 구현할 수 있습니다. 그림 (b)의 격자형 광도파로와 링 구조는 광 신호가 칩 내부에서 분배·결합·변조되는 모습을 보여줍니다. 다만 이 그림만으로 링 반경, Q-factor, 삽입손실, 실제 네트워크 크기는 확정할 수 없습니다.<br>근거: Figure 10(b,e) caption의 `Microring/MZI array`, `photonic matrix-vector multiplication`, ref. [223].</dd>
+          <dt>(c)에서 빨간 빛줄기와 여러 색 선은 무엇을 의미하나요?</dt><dd>빨간 빛줄기는 칩 안으로 들어오거나 통과하는 광 입력/광 경로를 시각화한 것으로 볼 수 있고, 여러 색 선은 전기-domain 및 광-domain 신호가 NSEC 칩으로 연결되는 다채널 입력을 나타냅니다. 그림 상단의 식 `y_i = ΣW_ij x_j`는 입력 `x_j`가 가중치 `W_ij`와 곱해져 출력 `y_i`를 만든다는 행렬-벡터 곱 연산을 뜻합니다.<br>근거: Figure 10(c) 라벨 및 caption, ref. [223].</dd>
+          <dt>(c)의 재료 범례 `AlN`, `Si`, `Al`, `SiO2`는 각각 어떤 역할인가요?</dt><dd>범례에서 `AlN`은 분홍색, `Si`는 파란색, `Al`은 노란색, `SiO2`는 연한 청록색으로 표시됩니다. AlN은 Pockels 효과를 이용한 전기광학 변조와 관련되고, Si는 MZI 기반 광 신경망 도파로 플랫폼으로 쓰입니다. Al은 전극, SiO2는 절연/기판 또는 클래딩 역할로 해석할 수 있습니다. 단, 그림만으로 층 두께나 공정 순서는 알 수 없습니다.<br>근거: Figure 10(c,d) 재료 범례 및 caption의 `AlN/Si PIC`, ref. [223].</dd>
+          <dt>(d)의 TENG 센서는 무엇을 감지하나요?</dt><dd>(d-i)의 TENG 센서는 힘 또는 압력을 감지합니다. 그림에 `Force`와 `Release`가 번갈아 표시되고, 접촉/분리 과정에서 전하 분포가 달라지는 모식도가 있습니다. 아래에는 `V ∝ F`가 적혀 있어 힘이 커질수록 전압 신호가 커지는 감지 기전으로 표현됩니다.<br>근거: Figure 10(d-i) 라벨 및 caption의 `TENG force/pressure sensor`, ref. [223].</dd>
+          <dt>(d)의 세 그래프는 각각 무엇을 보여주나요?</dt><dd>(d-iii)는 `TENG output`으로, x축은 `Time (s)`, y축은 `Voltage (V)`이며 약 -0.2~0.2 V 범위의 빠른 펄스형 신호가 반복됩니다. (d-iv)는 `Integration` 후 `V_OC`로, y축이 약 0~20 V까지 올라가는 더 큰 누적형 파형입니다. (d-v)는 `Photonic output`으로, y축은 `V_PD (mV)`이고 약 0~30 mV 범위에서 광검출 출력이 시간에 따라 진동합니다.<br>근거: Figure 10(d-iii~v) 축 라벨 및 caption, ref. [223].</dd>
+          <dt>(d-iii)와 (d-iv)의 파형 차이는 어떤 의미인가요?</dt><dd>(d-iii)의 TENG 원 신호는 짧고 날카로운 양·음 피크가 반복되는 개방/접촉 동작의 직접 출력처럼 보입니다. (d-iv)는 `Open circuit` 및 `Integration`으로 표시되어, 원래의 펄스성 신호가 적분되어 더 큰 전압 진폭의 완만한 반복 파형으로 바뀐 것을 보여줍니다. 이 적분 신호가 이후 광 변조에 쓰입니다.<br>근거: Figure 10(d-iii,iv) 라벨 및 caption의 `TENG output`, `open-circuit voltage`, `integration`, ref. [223].</dd>
+          <dt>(d-v)의 `Photonic output`은 왜 TENG 파형과 비슷하게 시간 변화하나요?</dt><dd>TENG에서 생긴 전기장이 AlN 도파관의 굴절률을 Pockels 효과로 바꾸고, 그 결과 광 출력이 변조되기 때문입니다. 그래서 (d-v)의 `V_PD`는 힘 입력의 시간 패턴을 반영하는 광검출 신호로 나타납니다. 다만 그림만으로 변조 깊이, 잡음, 선형성, 정확한 감도는 확정할 수 없습니다.<br>근거: Figure 10(d-ii~v) 및 caption의 `AlN waveguide TE mode modulation by TENG electric field`, ref. [223].</dd>
+          <dt>(d-ii)의 컬러 컨투어 이미지는 무엇을 나타내나요?</dt><dd>왼쪽의 색상 컨투어는 AlN 도파관의 TE 모드 광장 분포를 나타냅니다. 중앙의 빨강/노랑 영역이 강한 모드 영역이고, 아래 색상 막대는 `Min`에서 `Max`까지 세기를 뜻합니다. 그림에 `1.2 μm`가 표시되어 도파관 폭 또는 모드 영역의 치수 정보를 주지만, 이 이미지 하나만으로 전체 단면 치수는 알 수 없습니다.<br>근거: Figure 10(d-ii) 라벨 및 caption의 `AlN waveguide TE mode`, ref. [223].</dd>
+          <dt>(d)에 적힌 Pockels 효과 식은 어떤 뜻인가요?</dt><dd>식 `n_TE = n_o - (r13/2)n_o^3 E_z`는 z방향 전기장 `E_z`가 TE 모드의 굴절률 `n_TE`를 바꾼다는 뜻입니다. 즉 TENG가 만든 전기장이 AlN 도파관의 굴절률을 변화시키고, 그 변화가 광 위상 또는 세기 변조로 이어집니다. 초보자가 헷갈릴 점은 이것이 열 효과나 흡수 변화가 아니라 전기광학 굴절률 변화라는 점입니다.<br>근거: Figure 10(d-ii) 식 및 caption, ref. [223].</dd>
+          <dt>(d)의 GSG 전극 그림에서 `No induced E field`와 `TENG induced E field`는 왜 비교되나요?</dt><dd>GSG는 ground-signal-ground 전극 구조입니다. 위쪽 그림은 전기장이 유도되지 않은 상태이고, 아래쪽은 TENG 출력으로 전기장이 형성된 상태입니다. 이 전기장이 AlN 도파관에 걸려 Pockels 변조를 일으키므로, 센서 신호가 광 특징추출 신호로 변환됩니다.<br>근거: Figure 10(d-ii) GSG 모식도 및 caption, ref. [223].</dd>
+          <dt>(e)의 `Photonic MVM`은 어떤 연산인가요?</dt><dd>`MVM`은 matrix-vector multiplication, 즉 행렬-벡터 곱입니다. 그림 아래의 행렬식은 4개 입력 `x1~x4`가 가중치 `w11~w44`와 곱해져 출력 `y1~y4`가 되는 구조를 보여줍니다. 이는 신경망의 선형층에 해당합니다.<br>근거: Figure 10(e) 수식 및 caption의 `Si MZI photonic matrix-vector multiplication`, ref. [223].</dd>
+          <dt>(e)의 Ch1~Ch4 색 블록은 무엇을 의미하나요?</dt><dd>`Ch1`, `Ch2`, `Ch3`, `Ch4`는 특징추출 유닛에서 나온 4개 채널 입력을 의미합니다. 각 채널은 MZI 기반 광 회로에서 서로 다른 가중치 경로로 분기되어 선형 결합됩니다. 그림의 빨간 연결선은 완전연결 `4×1` 연산을 시각화합니다.<br>근거: Figure 10(e) 라벨 및 caption, ref. [223].</dd>
+          <dt>(e)에서 `+ReLU`와 `backpropagation`은 광 회로 안에서 모두 수행되나요?</dt><dd>아닙니다. 캡션 문맥에 따르면 광 회로는 주로 MZI 기반 선형 행렬-벡터 곱을 담당하고, 비선형 활성 함수와 역전파는 전자 백엔드에서 in-situ 학습으로 처리됩니다. 그림에 `+ReLU`, `backpropagation`, `In-situ training`이 함께 표시되어 있어 광-전자 하이브리드 학습 구조임을 보여줍니다.<br>근거: Figure 10(e) 및 제공된 body/caption 문맥, ref. [223].</dd>
+          <dt>오른쪽의 `Class 1`부터 `Class 13`까지는 무엇을 분류하는 건가요?</dt><dd>그림 하단에 `Results: 13 Gestures or 7 Gaits`라고 표시되어 있어, 출력 클래스는 제스처 13종 또는 보행 7종 분류 결과와 관련됩니다. 다만 이 Figure 10 하나만으로 각 클래스가 어떤 손동작이나 보행 패턴을 뜻하는지는 알 수 없습니다.<br>근거: Figure 10(e) 하단 라벨 및 caption, ref. [223].</dd>
+          <dt>(c)의 `Future fully-integrated PICs` 박스는 현재 구조와 무엇이 다른가요?</dt><dd>현재 하이브리드 NSEC 시스템은 센서, 광원, 포토디텍터, 특징추출, 신경망이 완전히 하나의 PIC 안에 통합된 상태라기보다 단계별 구성으로 제시됩니다. 오른쪽 박스는 `On-chip lasers`, `On-chip PDs`, `Feature Extraction`, `Neural Networks`를 모두 칩 위에 집적하는 미래형 구조를 나타냅니다.<br>근거: Figure 10(c) 오른쪽 박스 및 caption, ref. [223].</dd>
+          <dt>이 그림에서 초보자가 특히 헷갈릴 핵심 용어는 무엇인가요?</dt><dd>`In-sensor computing`은 센서 내부 또는 센서와 매우 가까운 곳에서 연산하는 개념이고, `near-sensor edge computing`은 센서 바로 옆 edge 칩에서 연산하는 구조입니다. `Photonic MVM`은 빛으로 행렬곱을 수행하는 선형층이고, `Pockels effect`는 전기장에 따른 굴절률 변화입니다. `TENG`는 힘/접촉을 전기 신호로 바꾸는 triboelectric nanogenerator입니다.<br>근거: Figure 10 전체 라벨 및 caption/body 문맥, ref. [223].</dd>
+          <dt>이 이미지 하나만으로 확정할 수 없는 것은 무엇인가요?</dt><dd>실제 칩의 정확한 치수, 마이크로링/MZI 개수, 학습 정확도, 소비전력 수치, 지연시간, 광손실, 데이터셋 구성, 각 클래스의 의미, TENG 센서의 정량 감도는 이 이미지에서 확정할 수 없습니다. 그림은 시스템 개념과 대표 파형, 연산 흐름을 보여주는 overview입니다.<br>근거: Figure 10 caption은 구조와 기능을 설명하지만 정량 성능표는 포함하지 않음, ref. [223], DOI 문맥.</dd>
+          </dl>
+  </div>
+<div class="panel">
     <div class="pimg"><img class="zoom" src="@fig10a" alt="전자 인-센서 칩"><div class="imgcap">(a) 전자 인-센서 컴퓨팅 칩</div></div>
     <div class="ptext">
       <h4><span class="pl">a</span> 전자 집적회로 기반 인-센서 컴퓨팅 (비교군)</h4>
@@ -26,8 +50,30 @@
       이미지·스펙트럼·편광 등 <b>광 신호</b>를 처리합니다. 전자식 인-센서 컴퓨팅의 두 대표 방식입니다.</p>
       <div class="kv">
         <span class="row"><span class="k">의의</span> 광자 방식(b,c)과 대비되는 기존 전자식 인-센서 컴퓨팅의 한계·역할 제시</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig10a">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널은 그래프인가요, 아니면 장치 모식도인가요?</dt><dd>그래프가 아니라 **전자식 인-센서 컴퓨팅의 두 대표 구조를 비교한 모식도**입니다. 따라서 x축, y축, 범례, 피크나 dip 같은 정량 해석 대상은 없습니다. 왼쪽은 멤리스터/멤트랜지스터 어레이, 오른쪽은 광검출기 어레이를 보여줍니다.<br>근거: Figure 10 caption, Ref. [223], DOI: https://doi.org/10.3390/aisens1010005</dd>
+          <dt>왼쪽의 격자처럼 생긴 금색 선 구조는 무엇을 나타내나요?</dt><dd>왼쪽 구조는 **멤리스터 또는 멤트랜지스터 어레이**를 나타냅니다. 금색 가로·세로 배선이 교차하고, 교차점에 소자가 배치된 형태라서 전자식 AI 계산에서 자주 쓰이는 크로스바 어레이를 시각화한 것으로 볼 수 있습니다.<br>근거: 이미지 레이블 “i. Memristor/memtransistor array for AI computing”, Figure 10 caption의 “memristor/memtransistor array”, Ref. [223]</dd>
+          <dt>멤리스터/멤트랜지스터 어레이가 센서와 무슨 관련이 있나요?</dt><dd>이 그림에서는 저항성·용량성 센서에서 나온 **전기적 감지 신호**를 멤리스터/멤트랜지스터 어레이가 AI 계산에 쓰는 구조로 제시합니다. 예시는 촉각, 가스, 관성, 바이오센서입니다. 즉 센서 신호를 멀리 보내기 전에 센서 근처 또는 센서와 결합된 전자 회로에서 처리하려는 방식입니다.<br>근거: 이미지 하단 “Electrical sensing signal: resistive/capacitive sensors...” 및 Figure 10 caption/body 문맥, Ref. [223]</dd>
+          <dt>하단의 파란색 “Electrical sensing signal” 문구가 중요한 이유는 무엇인가요?</dt><dd>이 문구는 왼쪽 어레이가 주로 **전기 신호를 직접 출력하는 센서군**과 연결된다는 점을 강조합니다. 초보자는 모든 센서가 광 신호를 내는 것으로 오해할 수 있지만, 여기서는 촉각·가스·관성·바이오센서처럼 저항이나 정전용량 변화로 감지하는 경우를 말합니다.<br>근거: 이미지 내 텍스트와 Figure 10(a) 설명, DOI 문맥</dd>
+          <dt>오른쪽에 일부 보이는 알록달록한 사각형 배열은 무엇인가요?</dt><dd>오른쪽은 **광검출기 어레이**를 나타냅니다. 색이 다른 작은 사각형들이 픽셀 또는 검출 요소처럼 배열되어 있고, 레이블도 “Photodetector ... for AI computing”으로 보입니다. 이는 이미지, 스펙트럼, 편광 같은 광학 정보를 전자 신호로 받아 AI 계산에 쓰는 전자식 인-센서 컴퓨팅 방식입니다.<br>근거: 이미지 레이블 “ii. Photodetector...” 및 Figure 10 caption의 “photodetector array”, Ref. [223]</dd>
+          <dt>왼쪽 멤리스터 어레이와 오른쪽 광검출기 어레이의 차이는 무엇인가요?</dt><dd>왼쪽은 **전기적 감지 신호**를 처리하는 쪽이고, 오른쪽은 **광학적 감지 신호**를 받아들이는 쪽입니다. 왼쪽 예시는 저항·정전용량 센서이고, 오른쪽 예시는 이미지·스펙트럼·편광 센서입니다. 둘 다 전자식 AI 계산 구조라는 점에서는 같은 비교군입니다.<br>근거: 이미지 하단의 “Electrical sensing signal” 및 오른쪽 “Optical sensing...” 문구, Figure 10 caption</dd>
+          <dt>여기서 “in-sensor computing”은 센서 자체가 계산한다는 뜻인가요?</dt><dd>엄밀히는 센서 신호가 생성되는 지점과 매우 가까운 곳에서 계산을 수행한다는 뜻입니다. 이 패널은 전자식 구현 예시를 보여주지만, 그림 하나만으로 센서 소자와 계산 소자가 완전히 동일한 물리 소자인지, 혹은 센서 옆 회로인지까지는 확정할 수 없습니다.<br>근거: Figure 10 전체 문맥은 hybrid near-sensor edge computing system, Figure 10(a)는 전자 인-센서 컴퓨팅 비교군</dd>
+          <dt>“AI computing”이라고 되어 있는데, 이 그림만 보고 어떤 AI 모델인지 알 수 있나요?</dt><dd>알 수 없습니다. 그림은 멤리스터/멤트랜지스터 어레이와 광검출기 어레이가 AI 계산에 쓰인다는 수준의 개념도입니다. CNN인지, MLP인지, 스파이킹 신경망인지, 행렬-벡터 곱셈 구조인지 같은 구체 모델은 이 패널만으로 확정할 수 없습니다.<br>근거: Figure 10(a) 이미지 레이블은 “for AI computing”까지만 제시, 구체 신경망 구조는 Figure 10(e) 문맥에서 별도 설명</dd>
+          <dt>멤리스터와 멤트랜지스터는 같은 것인가요?</dt><dd>같지는 않습니다. 멤리스터는 보통 두 단자 저항 기억 소자를, 멤트랜지스터는 트랜지스터 구조에 메모리성 또는 가변 전도 특성을 결합한 소자를 가리킵니다. 이 그림에서는 둘을 하나의 전자식 인-센서 컴퓨팅 후보군으로 묶어 제시합니다.<br>근거: 이미지 레이블 “Memristor/memtransistor array”, Figure 10 caption, Ref. [223]</dd>
+          <dt>그림의 금색 막대와 보라색 기둥은 실제 재료를 의미하나요?</dt><dd>이 패널만으로는 확정할 수 없습니다. 금색은 배선, 보라색 기둥은 교차점 소자처럼 보이지만, 실제 금 전극인지, 특정 산화물 멤리스터인지, 2D 재료 기반 멤트랜지스터인지는 이미지에 표시되어 있지 않습니다.<br>근거: Figure 10(a)는 개념 모식도이며 재료명·치수·공정 정보가 패널에 없음</dd>
+          <dt>왼쪽 구조에서 신호는 어느 방향으로 흐르나요?</dt><dd>그림상으로는 여러 입력 패드와 교차 배선이 보이지만, 전류가 왼쪽에서 오른쪽으로 흐르는지, 위에서 아래로 누적되는지 같은 방향은 표시되어 있지 않습니다. 일반적으로 크로스바에서는 행·열 방향 전압과 전류를 이용해 병렬 계산을 할 수 있지만, 이 이미지 하나만으로 구체 회로 동작은 단정할 수 없습니다.<br>근거: 시각 요소에는 화살표나 회로 구동 조건이 없음; Figure 10 caption은 구조명 중심</dd>
+          <dt>오른쪽 광검출기 어레이는 빛을 그대로 계산하나요?</dt><dd>이 패널의 오른쪽은 “광검출기 어레이”이므로, 기본적으로 광 신호를 감지해 전기 신호로 바꾸는 전자식 접근에 가깝습니다. 논문의 Figure 10(b,c)는 이와 대비되는 광자 인-센서 컴퓨팅과 하이브리드 광-전자 NSEC를 다룹니다.<br>근거: Figure 10 caption에서 (a)는 전자 집적회로 기반, (b)는 광자 인-센서 컴퓨팅 칩으로 구분</dd>
+          <dt>왜 이 그림이 ‘비교군’으로 제시되었나요?</dt><dd>Figure 10의 전체 흐름에서 (a)는 기존 전자식 인-센서 컴퓨팅을 보여주고, 이후 (b) 광자 인-센서 컴퓨팅, (c) AlN/Si PIC 기반 하이브리드 near-sensor edge computing과 대비됩니다. 즉 이 패널은 새 시스템의 장점을 설명하기 전, 기존 접근의 대표 형태를 보여주는 역할입니다.<br>근거: 제공된 Figure 10 본문 문맥 및 caption, Ref. [223]</dd>
+          <dt>초보자가 가장 헷갈릴 만한 용어는 무엇인가요?</dt><dd>핵심 용어는 **electronic in-sensor computing**, **memristor/memtransistor array**, **photodetector array**, **electrical sensing signal**, **optical sensing signal**입니다. 특히 “optical sensing signal”이 있다고 해서 전체 계산이 광자 회로에서 이루어진다는 뜻은 아닙니다. 이 패널 (a)는 전자 집적회로 기반 접근을 설명합니다.<br>근거: 이미지 내 레이블과 Figure 10(a) caption</dd>
+          <dt>이 패널만으로 전자식 방식의 성능 한계를 알 수 있나요?</dt><dd>알 수 없습니다. 에너지 효율, 지연 시간, 정확도, 대역폭, 집적도 같은 성능 수치가 전혀 표시되어 있지 않습니다. 다만 Figure 10 전체 문맥상 이 전자식 방식은 이후의 광자/하이브리드 NSEC 시스템과 비교되는 기존 방식입니다.<br>근거: Figure 10(a)는 수치 그래프가 아닌 개념 모식도; 전체 Figure 10 caption/body 문맥</dd>
+          <dt>이미지가 오른쪽에서 잘려 보이는데, 해석에 영향이 있나요?</dt><dd>네. 오른쪽 광검출기 어레이의 전체 레이블과 하단 설명 일부가 잘려 있어, 이 이미지 조각만으로 오른쪽 항목의 세부 문구를 완전히 읽기는 어렵습니다. 다만 제공된 캡션 문맥에 따르면 오른쪽은 광검출기 어레이이며, 이미지·스펙트럼·편광 등의 광 신호 처리를 뜻합니다.<br>근거: 첨부 이미지의 시각적 잘림 + Figure 10 caption의 “photodetector array” 설명</dd>
+          <dt>이 그림에서 확실히 말할 수 있는 것과 없는 것은 무엇인가요?</dt><dd>확실한 것은 Figure 10(a)가 전자식 인-센서 컴퓨팅의 두 예, 즉 멤리스터/멤트랜지스터 어레이와 광검출기 어레이를 비교해 보여준다는 점입니다. 확정할 수 없는 것은 실제 재료, 소자 치수, 회로 배선도, 신호 방향, AI 모델 종류, 성능 수치입니다.<br>근거: 이미지 내 레이블, Figure 10 caption, Ref. [223], DOI 문맥만으로 판단 가능한 범위</dd>
+          </dl>
+  </div>
+</div>
   </div>
 
   <div class="panel">
@@ -39,8 +85,28 @@
       처리합니다. (c)의 하이브리드로 가기 위한 광자 연산 빌딩블록입니다.</p>
       <div class="kv">
         <span class="row"><span class="k">의의</span> 저지연·고대역 광 연산의 가능성(광 행렬연산 엔진)</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig10b">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널은 그래프인가요, 아니면 장치 모식도인가요?</dt><dd>그래프가 아니라 **광자 인-센서 컴퓨팅 칩의 개념 모식도**입니다. 따라서 x축, y축, 피크, dip, 시간 변화, 컨투어 같은 그래프 해석 요소는 없습니다. 대신 칩 위의 **마이크로링/MZI 어레이**, 빨간 광 신호, 파란 도파로 격자, 분자 아이콘, “Optical sensing signal” 레이블을 읽어야 합니다.<br>근거: Figure 10 캡션의 “(b) In-sensor computing with photonic integrated circuits” 및 “Microring/MZI array” 문맥, DOI: https://doi.org/10.3390/aisens1010005; Ref. [223] 문맥. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>그림 제목의 “photonic in-sensor computing chip”은 무슨 뜻인가요?</dt><dd>센서에서 나온 광 신호를 멀리 떨어진 CPU/GPU로 보내기 전에, **광자 칩 내부에서 바로 전처리 또는 AI 연산을 수행하는 구조**를 뜻합니다. 이미지의 칩은 센서 신호를 받는 장치이면서 동시에 계산 회로 역할을 하는 것으로 그려져 있습니다.<br>근거: 본문은 in-sensor computing을 “센서 하드웨어 안에서 feature extraction 또는 neural-network inference를 수행”하는 개념으로 설명합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>칩 위의 동그란 고리들은 무엇인가요?</dt><dd>동그란 고리는 **마이크로링 resonator**를 나타내는 것으로 볼 수 있습니다. 마이크로링은 특정 파장의 빛을 공진시키거나 필터링하고, 센서 신호 변화가 있으면 공진 조건이 달라져 광 세기나 위상 변화를 만들 수 있습니다. 이 패널에서는 개별 링의 스펙트럼 피크 이동을 보여주지는 않고, “마이크로링/MZI 어레이”라는 연산 블록으로 표현합니다.<br>근거: 패널 내부 레이블 “Microring/MZI array for AI computing”; Figure 10 캡션 [223]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>MZI는 이미지에서 어디에 해당하나요?</dt><dd>MZI, 즉 **Mach-Zehnder interferometer**는 보통 빛을 두 경로로 나누고 다시 합쳐 위상 차이를 세기 변화로 바꾸는 구조입니다. 이 작은 패널만 보면 MZI의 두 팔 구조가 명확히 분해되어 보이진 않지만, 파란 도파로 격자와 교차 연결된 광 회로가 마이크로링/MZI 어레이를 상징합니다.<br>근거: 패널 레이블과 Figure 10 캡션의 “Microring/MZI array”; Ref. [223]에서는 Si MZI가 photonic neural-network 연산에 쓰인다고 설명됩니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>빨간색 빛줄기는 무엇을 의미하나요?</dt><dd>빨간색 빛줄기는 칩으로 들어오거나 칩에서 나가는 **광 신호 경로**를 나타냅니다. 왼쪽/아래쪽에서 들어오는 빨간 빔은 센서에서 얻은 optical sensing signal의 입력처럼 보이고, 오른쪽으로 나가는 여러 빨간 빔은 칩 내부 연산 후의 출력 채널처럼 해석할 수 있습니다. 다만 이 패널만으로 입력·출력 포트의 정확한 개수나 방향은 확정할 수 없습니다.<br>근거: 이미지의 “Optical sensing signal” 레이블 및 Figure 10(b)의 photonic in-sensor computing chip 설명. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>검은색과 빨간색의 작은 분자 아이콘은 어떤 역할인가요?</dt><dd>칩 앞쪽 도파로 근처에 그려진 분자 아이콘은 **액체, 기체, 생체분자 같은 분석 대상**을 상징합니다. 이들은 실제 분자 구조식을 정확히 그린 것이 아니라, 분광 센서가 다룰 수 있는 analyte를 직관적으로 표시한 그림 요소로 보는 것이 맞습니다.<br>근거: 패널 하단의 “spectroscopic sensors (liquid, gas, biomolecules)” 문구와 Figure 10(b) 캡션. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>“Optical sensing signal”은 전기 신호와 어떻게 다른가요?</dt><dd>여기서 optical sensing signal은 광의 **파장, 세기, 위상, 스펙트럼 패턴, 시간 지연** 등에 담긴 센서 정보를 뜻합니다. 전자 회로 기반 인-센서 컴퓨팅이 전압/전류 신호를 다루는 것과 달리, 이 패널의 비교군은 빛 자체를 도파로와 간섭계/공진기 어레이로 처리하는 방향을 보여줍니다.<br>근거: Figure 10 캡션에서 (a)는 electronic-integrated circuits, (b)는 photonic integrated circuits로 대비됩니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>왜 하단에 spectroscopic sensors, LiDAR sensors, quantum sensors가 함께 적혀 있나요?</dt><dd>이 칩이 특정 한 종류의 센서만을 뜻하는 것이 아니라, **다양한 광센서 출력**을 광자 회로에서 처리할 수 있다는 범위를 보여주기 위해서입니다. 분광 센서는 파장별 흡수/산란 패턴, LiDAR는 거리·시간-of-flight 관련 광 신호, 양자 센서는 매우 민감한 광/양자 상태 변화를 다룰 수 있습니다. 단, 이 패널 하나만으로 실제로 어떤 센서가 제작·측정되었는지는 알 수 없습니다.<br>근거: 패널 하단 레이블; 본문은 고대역 이미지·스펙트럼 데이터의 전송 병목이 in-sensor/near-sensor computing의 동기라고 설명합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 칩은 센서인가요, AI 가속기인가요?</dt><dd>이 패널에서는 둘의 경계가 흐려진 구조로 제시됩니다. 광 신호를 받아들이는 점에서는 센서 시스템의 일부이고, 마이크로링/MZI 어레이로 신호를 처리한다는 점에서는 **광자 AI 연산 블록**입니다. 그래서 “in-sensor computing”이라는 표현이 붙습니다.<br>근거: 본문 Section 4.2는 센서가 단순 검출기를 넘어 primitive computer처럼 동작한다고 설명합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>“AI computing”은 이 그림에서 구체적으로 어떤 계산을 말하나요?</dt><dd>가장 자연스러운 해석은 **광 행렬-벡터 곱셈, 필터링, 특징 추출, 분류 전 단계의 선형 연산**입니다. MZI 네트워크는 광 신호의 간섭을 이용해 가중합 연산을 구현할 수 있고, 마이크로링은 파장 선택/가중/변조 기능을 맡을 수 있습니다. 하지만 이 패널 자체에는 학습 알고리즘, 신경망 층 수, 정확도는 표시되어 있지 않습니다.<br>근거: 본문은 interferometer network가 optical signal의 multiply-and-accumulate, 즉 analog linear algebra engine으로 작동할 수 있다고 설명합니다. Figure 10(e) 캡션은 Si MZI의 matrix-vector multiplication을 언급합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 패널에서 마이크로링과 MZI가 동시에 필요한 이유는 무엇인가요?</dt><dd>마이크로링은 파장 선택성, 공진 기반 민감도, 소형화에 유리하고, MZI는 위상 조절과 간섭 기반 선형 연산에 유리합니다. 그래서 둘을 어레이로 묶으면 **센서 신호의 광학적 특징 추출과 AI 연산**을 한 칩에서 수행하는 방향을 상상할 수 있습니다. 다만 이 그림은 개념도라 실제 회로가 링과 MZI를 어떤 비율로 배치했는지는 확정할 수 없습니다.<br>근거: 패널 레이블 “Microring/MZI array”; Ref. [223]는 AlN microring feature extraction과 Si MZI neural-network operation을 함께 강조합니다. ([nmlett.org](https://www.nmlett.org/index.php/nml/article/view/2049))</dd>
+          <dt>파란 격자선은 전선인가요, 광 도파로인가요?</dt><dd>이 패널의 문맥에서는 전선이라기보다 **광 도파로 네트워크**로 보는 것이 적절합니다. 광자 집적회로에서는 빛이 금속 배선이 아니라 실리콘, AlN 같은 도파로를 따라 이동합니다. 단, 실제 칩에는 제어 전극도 필요할 수 있지만, 이 작은 패널에서는 전극과 도파로가 분리되어 명확히 표시되어 있지는 않습니다.<br>근거: Figure 10(b)는 photonic integrated circuits이고, Ref. [223]는 AlN/Si waveguide platform을 기반으로 한 NSEC 시스템을 설명합니다. ([nmlett.org](https://www.nmlett.org/index.php/nml/article/view/2049))</dd>
+          <dt>이 그림에서 감지 기전은 무엇인가요?</dt><dd>이 패널만 놓고 보면 감지 기전은 넓게 표현되어 있습니다. 분광 센서라면 analyte가 광 흡수, 굴절률 변화, 산란, Raman/IR fingerprint 등을 바꾸고, 그 변화가 칩에 들어가는 optical sensing signal이 됩니다. 이후 마이크로링/MZI 어레이가 그 광 신호를 계산에 사용합니다. 특정 분자가 어떤 공진 피크를 얼마나 이동시키는지는 이 패널에 없습니다.<br>근거: 리뷰 본문은 RI sensing, SEIRA, SERS 등 다양한 광센서 원리를 앞 절에서 다루고, Figure 10(b)는 이들의 광 신호를 처리하는 photonic in-sensor computing 비교군으로 제시됩니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 패널이 Figure 10의 나머지 패널들과 비교해서 맡는 역할은 무엇인가요?</dt><dd>(b)는 최종 제안 시스템 자체라기보다 **기존/비교군에 가까운 광자 인-센서 컴퓨팅 칩의 개념**입니다. Figure 10 전체에서는 (a)가 전자회로 기반 방식, (b)가 광자회로 기반 방식, (c) 이후가 AlN/Si PIC 기반 하이브리드 near-sensor edge computing으로 이어집니다.<br>근거: 사용자가 제공한 Figure 10 문맥 및 원문 캡션: (a) electronic IC, (b) photonic IC, (c) hybrid photonic-electronic NSEC. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 이미지 하나만으로 확정할 수 없는 정보는 무엇인가요?</dt><dd>실제 파장, 도파로 재료, 링 반지름, MZI 개수, 입력/출력 포트 수, 검출 대상 물질, 측정 정확도, 에너지 소모, 지연시간, 학습 방식은 확정할 수 없습니다. 그림은 “마이크로링/MZI 어레이로 광센서 신호를 AI 연산에 쓴다”는 수준의 개념도입니다. 성능 수치나 실제 구현은 Figure 10 전체와 Ref. [223]의 본문을 봐야 합니다.<br>근거: Figure 10(b) 캡션은 구조 범주만 제시하며, Ref. [223] 초록/하이라이트에서 별도로 NSEC 성능 수치와 AlN/Si 구현을 설명합니다. ([nmlett.org](https://www.nmlett.org/index.php/nml/article/view/2049))</dd>
+          </dl>
+  </div>
+</div>
   </div>
 
   <div class="panel">
@@ -55,8 +121,32 @@
         <span class="row"><span class="k">플랫폼</span> 8인치 SOI 위 <span class="term" data-k="CMOS">CMOS</span> 호환 AlN/Si 이중층 도파관</span>
         <span class="row"><span class="k">구성</span> AlN <span class="term" data-k="MRR">MRR</span>(특징추출) + Si <span class="term" data-k="MZI">MZI</span>(신경망 가중)</span>
         <span class="row"><span class="k">의의</span> 센서 근접에서 광-전자 융합 실시간 엣지 AI</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig10c">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널에서 말하는 NSEC 칩은 센서인가요, 아니면 AI 칩인가요?</dt><dd>둘 중 하나로만 보기 어렵습니다. 그림 중앙의 “NSEC chip”은 센서 신호를 바로 옆에서 받아 특징추출과 광자 신경망 연산으로 넘기는 near-sensor edge computing 칩입니다. 즉 센서 자체라기보다, 웨어러블·MEMS·바이오전기 센서와 광센서에서 나온 신호를 센서 근처에서 처리하는 광-전자 융합 연산 플랫폼으로 그려져 있습니다.<br>근거: Figure 10(c) 캡션의 “AlN/Si PIC 기반 하이브리드 광-전자 near-sensor edge computing”, Ref. [223], DOI: https://doi.org/10.3390/aisens1010005</dd>
+          <dt>왼쪽 사람 그림과 팔에 붙은 밴드는 무엇을 의미하나요?</dt><dd>인체 착용형 센서 입력원을 시각화한 것입니다. 팔 주변의 웨어러블 장치에서 전기영역 신호가 나오고, 동시에 시각·분광·LiDAR 같은 광영역 신호도 칩으로 들어갈 수 있음을 보여줍니다. 사람 자체가 분석 대상이라기보다, 신체 주변에서 생성되는 다중 센서 신호가 NSEC 칩으로 들어간다는 맥락입니다.<br>근거: Figure 10(c) 내부 레이블 “Wearable sensors, MEMS sensors, bioelectrical sensors” 및 “Visual sensors, spectroscopic sensors, LiDAR sensors, quantum sensors”; Fig. 10 캡션, Ref. [223].</dd>
+          <dt>파란색 “Electrical-domain signal”과 빨간색 “Optical-domain signal”은 어떻게 다르나요?</dt><dd>파란색 쪽은 웨어러블, MEMS, 생체전기 센서처럼 전압·전류·전하 형태로 나오는 신호를 뜻합니다. 빨간색 쪽은 이미지 센서, 분광 센서, LiDAR, 양자 센서처럼 빛의 세기·파장·위상·시간 정보를 포함할 수 있는 광 신호를 뜻합니다. 그림은 두 신호군이 같은 NSEC 칩으로 합류하는 구조를 강조합니다.<br>근거: Figure 10(c)의 두 입력 레이블; 결론부 하드웨어 문맥의 “hybrid photonic-electronic near-sensor edge computing”.</dd>
+          <dt>중앙 칩 위의 빨간 빛줄기들은 무엇을 나타내나요?</dt><dd>광 신호 또는 칩 내부 광 경로를 상징하는 요소로 볼 수 있습니다. 특히 이 패널은 AlN/Si PIC 기반 시스템을 보여주므로, 빛이 도파관과 광자 회로를 통해 특징추출 및 연산에 사용된다는 점을 시각적으로 표현합니다. 다만 이 패널만으로 각 빨간 빛줄기가 특정 파장, 출력 포트, 레이저 채널인지까지는 확정할 수 없습니다.<br>근거: Fig. 10(c) 모식도와 Fig. 10(d)(e) 문맥의 “광자 특징추출 유닛”, “Si MZI의 광 행렬-벡터 곱셈”; Ref. [223].</dd>
+          <dt>칩 안의 노란색, 파란색, 초록색, 회색 구조는 각각 무엇인가요?</dt><dd>그림의 범례에 따르면 노란색은 Al, 자홍색은 AlN, 파란색은 Si, 회색 또는 연녹색은 SiO₂입니다. 즉 금속 전극, AlN 광도파관 또는 전기광학 재료, Si 광자 회로, 산화막 기반 플랫폼이 함께 구성된 하이브리드 PIC를 나타냅니다.<br>근거: Figure 10(c) 내부 색상 범례 “AlN, Al, Si, SiO₂”; 캡션의 “AlN/Si PIC”.</dd>
+          <dt>왜 AlN과 Si가 같이 쓰이나요?</dt><dd>이 그림의 문맥에서는 AlN은 전기장에 의해 광 모드를 변조하는 특징추출 쪽에, Si는 MZI 기반 광자 신경망의 가중 연산 쪽에 연결됩니다. 즉 AlN은 센서 전기 신호를 광 신호 변화로 바꾸는 데 유리하고, Si PIC는 집적 광회로와 행렬-벡터 곱셈 구현에 활용되는 구조로 제시됩니다.<br>근거: Fig. 10(d) 캡션의 “TENG 전기장에 의한 AlN 도파관 TE 모드 변조(Pockels)” 및 Fig. 10(e)의 “Si MZI의 광 행렬-벡터 곱셈”; Ref. [223].</dd>
+          <dt>그림 위쪽의 식 `yᵢ = Σwᵢⱼxⱼ`는 무엇을 뜻하나요?</dt><dd>신경망의 선형층 또는 행렬-벡터 곱셈을 뜻합니다. 입력 신호 `xⱼ`에 가중치 `wᵢⱼ`를 곱해 더하면 출력 `yᵢ`가 됩니다. 이 패널에서는 광자 회로가 단순히 빛을 전달하는 것이 아니라, 신경망 연산의 핵심인 가중합을 수행한다는 점을 나타냅니다.<br>근거: Figure 10(c)의 식 표기; Fig. 10(e) 캡션의 “Si MZI의 광 행렬-벡터 곱셈”, “가중치는 전극 전압으로 조정”.</dd>
+          <dt>오른쪽의 “Edge AI training and inference”는 왜 강조되어 있나요?</dt><dd>센서 데이터를 클라우드로 보내기 전에 센서 가까운 곳에서 학습 또는 추론을 수행한다는 의미입니다. 그림에는 저지연, 저전력, 프라이버시 보호가 장점으로 적혀 있습니다. 즉 환자·사용자 데이터나 실시간 환경 데이터를 원격 서버에 계속 보내지 않고, 칩 근처에서 처리하는 방향을 제안합니다.<br>근거: Figure 10(c) 오른쪽 레이블 “Low-latency, Low-power consumption, Protected privacy”; Fig. 10 캡션의 “near-sensor edge computing system”.</dd>
+          <dt>이 그림에서 “near-sensor”는 센서 안에서 계산한다는 뜻인가요?</dt><dd>반드시 “센서 내부”라는 뜻은 아닙니다. 이 패널은 센서에서 나온 전기·광 신호가 바로 근처의 NSEC 칩으로 들어가는 구성을 보여줍니다. 그래서 Fig. 10(a)(b)의 “in-sensor computing”과 비교하면, Fig. 10(c)는 센서와 매우 가까운 엣지 칩에서 계산한다는 의미에 가깝습니다.<br>근거: Fig. 10 전체 캡션의 (a) “인-센서 컴퓨팅” 대비 (c) “near-sensor edge computing”; Ref. [223].</dd>
+          <dt>오른쪽 아래의 “Future fully-integrated PICs” 블록은 현재 구현된 장치인가요?</dt><dd>그림 표현상 미래 비전으로 표시되어 있습니다. 온칩 레이저, 특징추출, 온칩 광검출기, 신경망이 하나의 PIC 안에 완전히 통합되는 방향을 제시하는 부분입니다. 따라서 이 패널만 보고 모든 요소가 현재 하나의 칩에 완전 통합되어 검증되었다고 단정하면 안 됩니다.<br>근거: Figure 10(c) 오른쪽 아래 문구 “Future fully-integrated PICs”; Fig. 10(c) 캡션 및 Ref. [223].</dd>
+          <dt>“On-chip lasers”와 “On-chip PDs”는 각각 어떤 역할인가요?</dt><dd>온칩 레이저는 광자 회로 안으로 넣을 빛을 생성하는 광원이고, 온칩 PDs는 photodetectors, 즉 광 신호를 전기 신호로 읽어내는 검출기입니다. 오른쪽 미래 PIC 블록에서는 레이저에서 나온 빛이 특징추출과 신경망을 거쳐 PD에서 읽히는 흐름을 간단히 그립니다.<br>근거: Figure 10(c)의 “On-chip lasers”, “Feature Extraction”, “Neural Networks”, “On-chip PDs” 블록; Fig. 10(e) 문맥.</dd>
+          <dt>“Feature Extraction”과 “Neural Networks”는 칩 안에서 어떻게 구분되나요?</dt><dd>특징추출은 원시 센서 신호에서 분류나 추론에 유용한 신호 표현을 만드는 단계이고, 신경망은 그 특징을 이용해 가중합과 비선형 처리를 통해 판단을 수행하는 단계입니다. 제공된 문맥에 따르면 Fig. 10(d)는 AlN 기반 광자 특징추출, Fig. 10(e)는 Si MZI 기반 광자 신경망 유닛을 설명합니다.<br>근거: Fig. 10(d)(e) 캡션 문맥; Figure 10(c)의 “Feature Extraction” 및 “Neural Networks” 블록.</dd>
+          <dt>이 그림의 핵심 용어 중 초보자가 헷갈리기 쉬운 것은 무엇인가요?</dt><dd>`NSEC`, `PIC`, `AlN/Si`, `MZI`, `MRR`, `PD`, `Pockels`, `edge AI`가 헷갈리기 쉽습니다. 특히 PIC는 사진 센서가 아니라 photonic integrated circuit, 즉 광집적회로입니다. PD는 probability density가 아니라 photodetector입니다. MZI는 신경망 알고리즘 이름이 아니라 Mach-Zehnder interferometer 기반 광 회로이고, MRR은 microring resonator입니다.<br>근거: Fig. 10(c) 내부 PIC/NSEC 표현과 Fig. 10(b)(d)(e) 캡션 문맥; Ref. [223].</dd>
+          <dt>이 패널만으로 어떤 센서 데이터가 실제로 분류되었는지 알 수 있나요?</dt><dd>알 수 없습니다. 그림에는 웨어러블, MEMS, 생체전기, 시각, 분광, LiDAR, 양자 센서가 예시로 나열되어 있지만, 특정 데이터셋, 정확도, 클래스 수, confusion matrix는 보이지 않습니다. 실제 성능 평가는 이 패널만으로 확정할 수 없습니다.<br>근거: Figure 10(c)는 시스템 개념도이며, 제공 캡션도 “하이브리드 NSEC 시스템”으로 설명함; DOI 문맥상 결론부 하드웨어 비전.</dd>
+          <dt>이 이미지에는 그래프의 x축이나 y축이 있나요?</dt><dd>없습니다. 이 패널은 축이 있는 실험 그래프가 아니라 시스템 모식도입니다. 따라서 피크, dip, 파장 shift, 시간 변화, 컨투어, 혼동행렬 같은 그래프 해석 요소는 이 패널에서는 다룰 수 없습니다. 대신 입력 신호 흐름, 칩 구성 재료, 광-전자 연산 단계, 미래 통합 구조가 해석 대상입니다.<br>근거: Figure 10(c) 시각 요소와 캡션 “Hybrid NSEC system”.</dd>
+          <dt>중앙 칩의 여러 파란 선과 노란 전극 모양은 무엇을 암시하나요?</dt><dd>파란 선은 Si 기반 광 경로나 회로 배선을, 노란 구조는 Al 금속 전극을 나타내는 것으로 해석됩니다. 전극은 광 회로의 위상이나 가중치를 전기적으로 조절하는 데 쓰일 수 있습니다. 다만 패널만으로 각 선이 정확히 어떤 포트, 어떤 MZI 팔, 어떤 전극 번호에 대응하는지는 알 수 없습니다.<br>근거: Figure 10(c) 색상 범례; Fig. 10(e) 캡션의 “가중치는 전극 전압으로 조정”.</dd>
+          <dt>왜 이 시스템이 프라이버시 보호에 유리하다고 하나요?</dt><dd>센서 원자료를 외부 서버로 보내지 않고, 센서 근처의 엣지 칩에서 특징추출과 추론을 할 수 있기 때문입니다. 그림 오른쪽에는 “Protected privacy”가 저지연·저전력과 함께 장점으로 표시되어 있습니다. 다만 실제 프라이버시 수준은 암호화, 데이터 저장 방식, 시스템 아키텍처에 따라 달라지므로 이 패널만으로 보안성을 정량 평가할 수는 없습니다.<br>근거: Figure 10(c) 오른쪽 장점 레이블; Fig. 10 캡션의 edge computing 문맥.</dd>
+          <dt>이 그림에서 “학습(training)”까지 칩에서 모두 광학적으로 수행된다는 뜻인가요?</dt><dd>그렇게 단정하면 안 됩니다. 제공 문맥에 따르면 광자 신경망 유닛은 선형층의 행렬-벡터 곱셈을 담당하고, 비선형 활성과 역전파는 전자 백엔드에서 in-situ 학습으로 처리됩니다. 따라서 “모든 학습이 순수 광학적으로만 수행된다”가 아니라 광자-전자 하이브리드 학습·추론 구조로 이해해야 합니다.<br>근거: Fig. 10(e) 캡션 문맥의 “비선형 활성·역전파는 전자 백엔드에서 in-situ 학습”; Ref. [223].</dd>
+          <dt>이 패널에서 가장 중요한 메시지는 무엇인가요?</dt><dd>전기 센서와 광 센서에서 나온 다양한 신호를 센서 근처의 AlN/Si 광집적 칩으로 받아, 특징추출과 신경망 가중합을 광-전자 방식으로 수행하자는 것입니다. 왼쪽의 인체 착용 센서, 중앙의 NSEC 칩, 오른쪽의 edge AI 및 미래 완전통합 PIC가 하나의 흐름으로 연결되어 있습니다.<br>근거: Figure 10(c) 전체 구성; Fig. 10 캡션 “Hybrid near-sensor edge computing system [223]”; DOI: https://doi.org/10.3390/aisens1010005</dd>
+          </dl>
+  </div>
+</div>
   </div>
 
   <div class="panel">
@@ -75,8 +165,33 @@
         <span class="row"><span class="k">소자</span> TENG 자가전원 센서 + AlN <span class="term" data-k="MRR">마이크로링</span>(<span class="term" data-k="Pockels-effect">Pockels</span>)</span>
         <span class="row"><span class="k">역할</span> TENG=힘 트랜스듀서, AlN MRR=광 적분기/특징추출</span>
         <span class="row"><span class="k">기전</span> 힘→전압→Pockels 굴절률 변조→공명 이동(시간 적분된 광 출력)</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig10d">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널 (d)는 Figure 10 전체에서 어떤 단계인가요?</dt><dd>Figure 10(d)는 NSEC 칩의 **Phase 1, 광자 특징추출 유닛**을 보여줍니다. 힘/압력 입력을 TENG 센서가 전기 신호로 바꾸고, 그 전기장이 AlN 도파관의 굴절률을 포켈스 효과로 변조해 광 출력으로 매핑하는 단계입니다. 근거는 Figure 10 캡션의 “NSEC 칩의 광자 특징추출 유닛: TENG 힘/압력 센서, AlN 도파관 TE 모드 변조, TENG 출력, 개방전압, 광 출력” 문맥과 DOI `10.3390/aisens1010005`입니다.</dd>
+          <dt>왼쪽 위의 Force와 Release 그림은 무엇을 설명하나요?</dt><dd>TENG, 즉 마찰전기 나노발전기의 **접촉-분리 동작**입니다. Force 단계에서는 위아래 층이 눌려 접촉하고, Release 단계에서는 떨어지면서 전하 분포와 전위차가 바뀝니다. 이미지 안의 `V ∝ F` 표시는 출력 전압이 가해진 힘에 비례한다는 의미입니다. 근거는 Figure 10(d)(i) 캡션 문맥의 “TENG force/pressure sensor”와 “출력 전압이 인가력에 비례” 설명입니다.</dd>
+          <dt>TENG 센서의 색깔 범례는 무엇을 뜻하나요?</dt><dd>범례는 네 재료층을 구분합니다. 연한 청록색은 **silicone rubber**, 파란색은 **nitrile**, 올리브색은 **conductive textile**, 연분홍색은 **non-conductive textile**입니다. 이 색 구분은 힘을 전기 신호로 바꾸는 적층 구조를 보여주기 위한 것입니다. 근거는 이미지 내부 범례와 Figure 10(d)(i) 설명입니다.</dd>
+          <dt>초보자가 TENG를 배터리처럼 이해해도 되나요?</dt><dd>완전히 같지는 않습니다. 이 그림의 TENG는 외부 전원을 공급하는 배터리라기보다, 힘/압력의 기계적 입력을 전압 신호로 바꾸는 **자가전원 트랜스듀서**에 가깝습니다. 접촉-분리 운동이 있을 때 전하 분포 변화로 전압이 생깁니다. 근거는 Figure 10(d)(i)의 TENG 힘/압력 센서 문맥과 Figure 10 캡션의 “Hybrid near-sensor edge computing system [223]”입니다.</dd>
+          <dt>오른쪽 위 그래프 iii의 빨간 곡선은 무엇인가요?</dt><dd>`iii. TENG output` 그래프는 TENG에서 나오는 시간영역 전압 신호입니다. y축은 `Voltage (V)`이고, 대략 `-0.2 V`에서 `+0.2 V` 근처까지 빠르게 진동하는 피크들이 반복됩니다. 접촉과 분리 과정에서 양·음 방향의 전압 펄스가 생기는 것으로 해석할 수 있습니다. 근거는 이미지의 iii 그래프 라벨과 Figure 10(d) 캡션의 “TENG output”입니다.</dd>
+          <dt>iii 그래프에서 왜 양의 피크와 음의 피크가 번갈아 보이나요?</dt><dd>TENG의 접촉-분리 과정에서 전하 이동 방향과 전위차가 바뀌기 때문입니다. 그래서 단순한 DC 신호가 아니라, 힘의 반복 입력에 대응하는 교류성 펄스처럼 보입니다. 다만 이 이미지 하나만으로 정확한 접촉 주파수, 하중 크기, 재료별 전하량은 확정할 수 없습니다. 근거는 Figure 10(d)(i, iii)의 TENG 동작 모식도와 출력 그래프입니다.</dd>
+          <dt>iii에서 iv로 내려가는 초록색 “Open circuit” 화살표는 무슨 의미인가요?</dt><dd>TENG 출력이 개방회로 조건에서 전압 형태로 누적 또는 적분되어 `iv. Integration` 그래프의 `V_OC`로 나타난다는 흐름을 표시합니다. 즉 빨간 TENG 원신호가 바로 최종 특징이 아니라, 개방전압 형태의 시간적 축적 신호로 변환됩니다. 근거는 Figure 10(d) 캡션의 “개방전압(적분)” 문맥입니다.</dd>
+          <dt>가운데 그래프 iv의 파란 곡선은 iii와 어떻게 다른가요?</dt><dd>iv는 `V_OC (V)`를 y축으로 하는 적분 신호입니다. iii의 빨간 TENG 출력은 ±0.2 V 수준의 빠른 펄스처럼 보이지만, iv의 파란 곡선은 약 `0-20 V` 범위에서 반복적으로 상승했다가 감소하는 더 큰 전압 스케일의 파형입니다. 그림은 TENG 신호가 개방회로 전압으로 통합되어 광 변조를 구동하는 과정을 보여줍니다. 근거는 iii, iv 그래프의 y축 라벨과 Figure 10(d) 캡션의 “Integration, open-circuit voltage”입니다.</dd>
+          <dt>아래 그래프 v의 청록색 곡선은 무엇을 나타내나요?</dt><dd>`v. Photonic output`은 광 검출기 전압 `V_PD`를 시간에 따라 나타낸 것입니다. y축 단위는 mV이고, x축은 `Time (s)`로 0초부터 약 14초까지 표시되어 있습니다. 출력은 약 10-30 mV 범위에서 반복 피크를 보이며, iv의 전압 적분 신호가 포켈스 효과를 통해 광 출력으로 변환된 결과로 해석됩니다. 근거는 Figure 10(d)(v) 라벨과 캡션의 “GSG 전극장으로 변조된 광 출력”입니다.</dd>
+          <dt>v 그래프의 피크가 시간이 지나며 조금 낮아지는 것처럼 보이는데, 이것을 감쇠라고 단정할 수 있나요?</dt><dd>단정하기는 어렵습니다. v의 청록색 피크들은 초반에 약 30 mV 근처까지 올라가고 후반에는 약간 낮아지는 경향처럼 보이지만, 이 이미지 하나만으로는 입력 힘이 일정했는지, 광원 세기가 안정적이었는지, 회로 조건이 동일했는지 알 수 없습니다. 따라서 “감쇠처럼 보이는 시간 변화”라고 말할 수는 있어도 물리적 감쇠 원인을 확정할 수는 없습니다. 근거는 Figure 10(d)(v)의 시각적 파형과 DOI 문맥입니다.</dd>
+          <dt>오른쪽 세 그래프의 x축은 모두 같은 시간축인가요?</dt><dd>아래 v 그래프에만 `Time (s)`가 명시되어 있고 0-14초 범위가 보입니다. iii와 iv는 같은 오른쪽 열에 정렬되어 있어 같은 시간 흐름을 공유하는 것으로 읽히지만, 이미지 자체에는 iii와 iv의 x축 라벨이 따로 보이지 않습니다. 따라서 “같은 시간영역 비교로 배치된 그래프”라고 해석하는 것이 적절합니다. 근거는 Figure 10(d)(iii-v)의 세로 배열과 v 그래프의 x축 표기입니다.</dd>
+          <dt>가운데 아래의 AlN waveguide 그림에서 빨간색 중심부는 무엇인가요?</dt><dd>`AlN waveguide (TE mode)`의 모드 분포를 나타낸 컨투어입니다. 색상 막대는 `Min`에서 `Max`로 갈수록 파란색에서 빨간색으로 바뀌며, 빨간색 중심부는 TE 모드의 전기장 또는 광 모드 세기가 가장 큰 영역을 뜻합니다. 흰색 박스와 `1.2 μm` 표시는 도파관 코어 폭 또는 주요 치수를 가리키는 것으로 보입니다. 근거는 이미지 내부의 TE mode 컨투어, 색상 막대, Figure 10(d)(ii) 문맥입니다.</dd>
+          <dt>왜 AlN 도파관이 등장하나요?</dt><dd>AlN은 포켈스 효과를 이용해 전기장에 따라 굴절률을 바꿀 수 있는 재료로 사용됩니다. TENG가 만든 전기장이 AlN 도파관의 TE 모드를 변조하고, 이 변조가 광 출력 변화로 나타납니다. 근거는 Figure 10(d)(ii)의 `AlN waveguide`, `Pockels Effect`, 식 `n_TE = n0 - (r13/2)n0^3 E_z`와 캡션의 “TENG 전기장에 의한 AlN 도파관 TE 모드 변조”입니다.</dd>
+          <dt>포켈스 효과 식에서 `E_z`는 무엇인가요?</dt><dd>`E_z`는 z방향 전기장 성분입니다. 그림의 좌표축에도 z와 y가 표시되어 있고, 식은 이 z방향 전기장이 TE 모드 굴절률 `n_TE`를 바꾼다는 것을 보여줍니다. 초보자가 헷갈릴 수 있는 점은 포켈스 효과가 빛을 직접 만드는 현상이 아니라, 전기장으로 광학 굴절률을 바꾸는 현상이라는 점입니다. 근거는 이미지의 식과 Figure 10(d)(ii) 캡션 문맥입니다.</dd>
+          <dt>`No induced E field`와 `TENG induced E field` 그림은 무엇을 비교하나요?</dt><dd>AlN 도파관 주변에 TENG 전기장이 없을 때와 있을 때를 비교합니다. 위쪽은 유도 전기장이 없는 상태이고, 아래쪽은 TENG가 만든 전기장이 아래 방향 화살표로 표시되어 있습니다. 이 전기장이 포켈스 효과를 통해 도파관의 굴절률과 광 전달 특성을 바꿉니다. 근거는 Figure 10(d)(ii)의 두 상태 비교와 캡션의 “TENG 전기장에 의한 AlN 도파관 TE 모드 변조”입니다.</dd>
+          <dt>`G`, `S`, `G` 전극 표기는 무엇인가요?</dt><dd>`GSG`는 일반적으로 ground-signal-ground 전극 배치를 뜻합니다. 그림에서는 가운데 `S` 전극과 양쪽 `G` 전극이 AlN 도파관 근처에 배치되어 전기장을 형성하는 구조로 그려져 있습니다. 다만 이 이미지 하나만으로 전극 폭, 간격, 정확한 RF 설계 조건은 알 수 없습니다. 근거는 Figure 10(d)(ii)의 `G/S/G` 라벨과 캡션의 “GSG 전극장으로 변조된 광 출력” 문맥입니다.</dd>
+          <dt>이 패널에서 “특징추출”이라는 말은 무슨 뜻인가요?</dt><dd>여기서 특징추출은 힘/압력의 원시 기계 신호를 바로 전자 신경망에 넣는 것이 아니라, TENG와 AlN 포토닉 소자를 거쳐 시간 적분된 광 신호 `V_PD`로 바꾸는 과정을 뜻합니다. 즉 힘 → 전압 → 전기장 → 굴절률 변화 → 광 출력이라는 변환 사슬이 특징을 만들어냅니다. 근거는 Figure 10(d) 캡션의 “Phase 1 — 특징추출(TENG)” 및 Figure 10 전체 문맥의 near-sensor edge computing 설명입니다.</dd>
+          <dt>이 그림에서 마이크로링 공진기 자체가 보이나요?</dt><dd>이 패널에는 AlN 도파관의 TE 모드와 GSG 전극 구조는 보이지만, 명확한 링 형태의 공진기 구조는 보이지 않습니다. 제공된 본문 문맥에서는 TENG가 AlN 마이크로링을 구동해 광 적분기로 작동한다고 설명하지만, 이 잘린 패널 이미지만으로 공진기 형상, 반경, 결합 구조는 확인할 수 없습니다. 근거는 Figure 10(d)(ii)의 시각 요소와 제공된 DOI 문맥입니다.</dd>
+          <dt>이 그림만 보고 입력 힘의 크기나 주파수를 알 수 있나요?</dt><dd>정확히 알 수 없습니다. `V ∝ F`라는 관계와 반복 파형은 보이지만, 힘의 단위, 하중 크기, 입력 주파수, 압력 면적은 표시되어 있지 않습니다. 그래프의 시간축은 v에서 0-14초로 보이지만, 힘 입력 조건은 별도로 제시되어야 합니다. 근거는 Figure 10(d) 이미지 내 축과 라벨의 부재입니다.</dd>
+          <dt>이 이미지에서 확정할 수 있는 것과 없는 것은 무엇인가요?</dt><dd>확정할 수 있는 것은 TENG 센서가 힘/압력을 전압으로 바꾸고, 그 전기장이 AlN 도파관을 포켈스 효과로 변조하며, 최종적으로 시간영역 광 출력 `V_PD`가 나온다는 흐름입니다. 확정할 수 없는 것은 실제 입력 힘의 수치, 소자 치수 전체, 공진 파장 이동량, 광원 파장, 마이크로링 Q factor, 전극 간격, 학습 정확도입니다. 근거는 Figure 10(d)의 시각 정보와 Figure 10 캡션/DOI `10.3390/aisens1010005` 문맥입니다.</dd>
+          </dl>
+  </div>
+</div>
   </div>
 
   <div class="panel">
@@ -93,7 +208,32 @@
         <span class="row"><span class="k">소자</span> Si MZI 기반 4×4 <span class="term" data-k="PNN">광자 신경망</span></span>
         <span class="row"><span class="k">역할</span> MZI=광 행렬연산(가중치), 전자 백엔드=비선형·학습</span>
         <span class="row"><span class="k">기전</span> 광 MVM(선형층)+전자 활성/역전파 → 제스처·보행 분류, <span class="term" data-k="VR-AR">VR/AR</span> 응용</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig10e">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 그림은 그래프인가요, 아니면 회로/네트워크 모식도인가요?</dt><dd>x축·y축·범례가 있는 데이터 그래프가 아니라, 센서 근처 칩에서 특징 신호가 광자 신경망으로 들어가 분류되는 흐름을 그린 모식도입니다. 빨간선과 회색선은 시간 변화나 피크가 아니라 뉴런/채널 간 연결을 뜻합니다. 근거: Figure 10e 캡션의 “photonic neural-network unit”, DOI 문맥의 Figure 10 설명. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>왼쪽의 Ch1, Ch2, Ch3, Ch4 색상 블록은 무엇을 의미하나요?</dt><dd>네 개의 입력 특징 채널입니다. 앞 단계인 광자 특징추출 유닛에서 나온 신호가 이 네 채널로 들어오며, 그림에서는 초록·노랑·파랑·빨강으로 구분되어 있습니다. 색 자체가 물리량의 크기나 파장을 나타낸다고는 이 패널만으로 확정할 수 없습니다. 근거: Figure 10e 캡션은 “feature-extracted signals feed into Si MZIs”라고 설명하며, 본문은 Phase 2에서 네 병렬 경로가 MZI 배열로 들어간다고 설명합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>“Photonic MVM”은 정확히 무엇인가요?</dt><dd>Photonic matrix-vector multiplication, 즉 광 영역에서 행렬-벡터 곱셈을 수행한다는 뜻입니다. 그림 아래의 식처럼 입력 벡터 `[x1 x2 x3 x4]`에 가중치 행렬 `[w]`를 곱해 출력 `[y1 y2 y3 y4]`를 만드는 선형층입니다. 근거: Figure 10e 캡션의 “photonic matrix-vector multiplication (linear layer)”, DOI 본문 Phase 2 설명.</dd>
+          <dt>그림 아래의 행렬식 `[W][x]=[y]`는 왜 4×4처럼 보이나요?</dt><dd>입력이 `x1`부터 `x4`까지 네 개이고, 출력도 `y1`부터 `y4`까지 네 개라서 4입력-4출력 선형 변환을 나타냅니다. 그림의 “Fully-connected 4×1” 표기는 시각적으로 각 출력 노드가 네 입력 채널과 완전연결된다는 뜻으로 읽을 수 있습니다. 다만 실제 전체 네트워크의 모든 층 구조는 이 패널만으로 완전히 알 수 없습니다. 근거: Figure 10e의 행렬 표기와 DOI 본문에서 “4 × 4 photonic neural network”라고 설명된 문맥. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>빨간 연결선은 무엇을 보여주나요?</dt><dd>Ch1–Ch4 입력이 오른쪽의 중간 노드들로 모두 연결되는 완전연결 선형층을 보여줍니다. 이 선들이 실제 도파관 배치의 정확한 물리적 경로라기보다는, 광자 MVM에서 입력과 가중치가 결합되는 계산 구조를 도식화한 것으로 보는 것이 안전합니다. 근거: Figure 10e 캡션의 “linear layer” 및 “weights tuned by electrode voltages”.</dd>
+          <dt>회색 연결선이 훨씬 많아 보이는 이유는 무엇인가요?</dt><dd>중간 출력이 여러 클래스 후보로 분류되는 분류기 부분을 강조하기 위해서입니다. 오른쪽에는 Class 1부터 Class 13까지 13개 출력 후보가 있고, 회색선은 이 후보들로 향하는 분류 연결을 나타냅니다. 근거: Figure 10e 이미지의 Class 1–13 레이블과 Figure 10e 캡션/본문의 제스처·보행 분류 문맥.</dd>
+          <dt>오른쪽의 “Class 1”부터 “Class 13”은 무엇을 뜻하나요?</dt><dd>분류 결과의 후보 클래스입니다. 그림 아래에 “Results: 13 Gestures or 7 Gaits”라고 되어 있으므로, 한 응용에서는 13개 제스처, 다른 응용에서는 7개 보행 상태를 분류하는 시스템으로 이해할 수 있습니다. 다만 각 Class 번호가 어떤 구체적 손동작이나 보행 상태인지는 이 패널만으로 알 수 없습니다. 근거: Figure 10e 하단 결과 문구, DOI 본문에서 glove gesture 및 sock gait inference를 언급한 문맥. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>“+ReLU”가 두 군데 보이는데, 광소자가 ReLU를 직접 한다는 뜻인가요?</dt><dd>아닙니다. 캡션 문맥상 광자 MZI 배열은 주로 선형 행렬-벡터 곱셈을 담당하고, ReLU 같은 비선형 활성화는 전자 백엔드에서 수행됩니다. 그림에 “+ReLU”가 붙어 있어도, 이것을 순수 광학 비선형 소자가 구현한다고 단정하면 안 됩니다. 근거: Figure 10e 캡션의 “nonlinear activation and backpropagation occur in the electronic backend”.</dd>
+          <dt>“backpropagation” 화살표는 무엇을 의미하나요?</dt><dd>학습 과정에서 오차를 거꾸로 전파해 가중치를 조정한다는 뜻입니다. 그림에서는 위쪽에서 Photonic MVM 쪽으로 내려오는 화살표로 표시되어, 전자 백엔드가 계산한 학습 신호가 MZI 가중치 조정에 반영되는 흐름을 나타냅니다. 근거: Figure 10e 캡션의 “backpropagation” 및 “in-situ training” 문맥.</dd>
+          <dt>“In-situ training”은 센서가 있는 상태에서 바로 학습한다는 뜻인가요?</dt><dd>큰 방향은 그렇습니다. 별도 오프라인 계산만 하는 것이 아니라, 칩 위 또는 칩과 결합된 전자 백엔드에서 가중치 조정을 수행해 실제 하드웨어 상태를 반영하는 학습을 뜻합니다. 다만 이 그림만으로 학습 데이터 수, 에폭 수, 손실함수, 최적화 알고리즘은 알 수 없습니다. 근거: Figure 10e의 “In-situ training” 표기와 캡션의 전자 백엔드 역전파 설명.</dd>
+          <dt>여기서 MZI는 어떤 역할인가요?</dt><dd>MZI, 즉 Mach–Zehnder interferometer는 광의 위상/간섭을 이용해 가중치가 걸린 합산을 구현하는 광자 회로 요소입니다. 이 패널에서는 Si MZI 배열이 선형층의 가중치 연산, 즉 MVM을 맡습니다. 근거: Figure 10e 캡션의 “Si MZIs for photonic matrix–vector multiplication”; 본문은 MZI가 전극/히터 전압으로 조정된다고 설명합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>가중치 `w11` 같은 값은 어디에 저장되거나 조정되나요?</dt><dd>캡션 문맥에서는 전극 전압으로 조정된다고 되어 있습니다. 본문에서는 Si MZI의 thermo-optic heater 전압을 정밀하게 걸어 광학적 행렬-벡터 곱셈을 구현한다고 설명합니다. 따라서 `w11` 등은 추상적인 신경망 가중치이면서, 하드웨어에서는 MZI의 위상/전달 특성으로 대응됩니다. 근거: Figure 10e 캡션 및 DOI 본문 Phase 2 설명. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>광 신호의 흐름은 왼쪽에서 오른쪽인가요?</dt><dd>도식적으로는 그렇습니다. Ch1–Ch4 특징 입력이 왼쪽의 Photonic MVM 블록으로 들어가고, 중간 노드와 활성화를 거쳐 오른쪽 Class 출력으로 진행합니다. 위쪽의 backpropagation 화살표는 학습 신호의 반대 방향 흐름을 나타냅니다. 근거: Figure 10e의 화살표·연결선 배치와 Figure 10e 캡션.</dd>
+          <dt>이 그림에서 센서 자체는 어디에 있나요?</dt><dd>이 패널에는 TENG 센서나 MRR 특징추출기는 직접 그려져 있지 않고, 그 결과인 Ch1–Ch4 특징 신호부터 보입니다. 센서와 특징추출 단계는 Figure 10d 쪽 문맥에 해당하며, Figure 10e는 Phase 2인 광자 신경망 유닛을 확대해 보여줍니다. 근거: Figure 10 전체 캡션에서 (d)는 feature extraction, (e)는 photonic neural-network unit으로 구분됨. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>“13 Gestures or 7 Gaits”는 같은 네트워크가 동시에 20개를 분류한다는 뜻인가요?</dt><dd>그렇게 보기는 어렵습니다. 문구는 두 응용 사례, 즉 13개 손 제스처 또는 7개 보행 상태를 분류할 수 있음을 나타냅니다. 오른쪽 그림에는 Class 1–13이 그려져 있어 제스처 분류 예시에 더 맞춰진 도식처럼 보입니다. 근거: Figure 10e 하단 문구와 DOI 본문에서 glove gesture inference, sock gait analysis를 따로 설명한 문맥.</dd>
+          <dt>이 패널에서 “Photonic Neural Networks”가 기존 전자 신경망과 다른 핵심은 무엇인가요?</dt><dd>선형 행렬 연산을 전자 디지털 연산 대신 광자 회로, 특히 Si MZI 배열에서 수행한다는 점입니다. 반면 ReLU와 역전파는 전자 백엔드가 맡으므로, 완전한 all-optical neural network라기보다는 하이브리드 광-전자 신경망으로 보는 것이 정확합니다. 근거: Figure 10e 캡션 및 DOI 본문에서 “hybrid photonic–electronic near-sensor edge computing”으로 설명됨. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>초보자가 헷갈리기 쉬운 핵심 용어는 무엇인가요?</dt><dd>`Photonic MVM`은 “광으로 행렬곱을 한다”는 뜻이고, `MZI`는 그 연산을 가능하게 하는 간섭계 소자입니다. `ReLU`는 음수 출력을 0으로 자르는 비선형 활성화 함수이고, `backpropagation`은 학습 알고리즘입니다. `in-situ training`은 실제 하드웨어 상태를 반영해 현장에서 학습/보정한다는 의미에 가깝습니다. 근거: Figure 10e 내부 레이블과 Figure 10e 캡션의 선형층·비선형·역전파 설명.</dd>
+          <dt>이 그림만 보고 정확도나 에너지 소모를 알 수 있나요?</dt><dd>이미지 자체에는 정확도, 지연시간, 에너지 수치가 직접 표시되어 있지 않습니다. 그런 수치는 본문 문맥에서 확인해야 합니다. DOI 본문은 on-chip PNN의 제스처·보행 정확도와 저지연·저에너지 가능성을 따로 설명하지만, Figure 10e 그림만으로는 측정 조건이나 비교 기준까지 확정할 수 없습니다. 근거: DOI 본문 Phase 2 및 성능 설명. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 그림에서 피크, dip, resonance shift 같은 광센서 특성을 읽을 수 있나요?</dt><dd>이 패널 자체에서는 읽을 수 없습니다. 그런 정보는 Figure 10d의 MRR 특징추출이나 TENG-구동 변조 문맥에 더 가깝습니다. Figure 10e는 이미 추출된 Ch1–Ch4 특징을 신경망이 어떻게 분류하는지를 보여주는 단계입니다. 근거: Figure 10 캡션에서 (d)는 feature extraction, (e)는 neural-network unit으로 역할이 분리됨.</dd>
+          <dt>이 이미지 하나만으로 확정할 수 없는 점은 무엇인가요?</dt><dd>각 Class의 실제 라벨, 광 파장, MZI 개수의 실제 레이아웃, 손실·잡음 모델, 학습 데이터셋 크기, 전극 전압 범위, ReLU 회로 구현 방식은 이 패널만으로 확정할 수 없습니다. 이 패널은 구조와 정보 흐름을 보여주는 개념도이며, 세부 수치는 본문과 원 논문 Ref. [223]을 함께 봐야 합니다. 근거: Figure 10e는 모식도이고, Ref. [223]는 Ren et al.의 NSEC 원 논문으로 인용되어 있음. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          </dl>
+  </div>
+</div>
   </div>
 </section>

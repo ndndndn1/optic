@@ -14,8 +14,30 @@
   <b>분자별 진동 지문</b>을 줍니다. 물이 강하게 흡수하는 환경(체액·조직)에서도 작동해 IR이 어려운 곳에서 강점을 가집니다.</p>
 
   <div class="figfull"><img class="zoom" src="@fig05" alt="Figure 5 전체"><div class="imgcap">(a) SEI · (b) 호기 분석 · (c) SERS 미각 · (d) 웨어러블 · (e) SERS 코 · (f) 식물</div></div>
-
-  <div class="panel">
+  <div class="evidence-note qa-note" data-qa-source="fig05_overview">
+    <h5>Figure 전체 예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>Figure 5는 왜 배터리, 호기, 맛, 피부, 식물처럼 서로 다른 장면을 한 그림에 모아 놓았나요?</dt><dd>이 그림의 공통 주제는 “SERS가 분자 지문을 읽는 범용 광센서 플랫폼”이라는 점입니다. (a)는 리튬 음극 SEI, (b)는 호기 VOC, (c)는 와인 향미, (d)는 땀/피부 계면, (e)는 인공 코, (f)는 식물 스트레스 신호분자를 다룹니다. 대상은 다르지만 모두 금/은 나노구조의 핫스팟에서 약한 라만 산란을 증폭해 분자별 스펙트럼을 얻는다는 공통 원리를 공유합니다. 근거는 원문 Figure 5 caption의 “SERS-based sensing applications” 및 각 패널 설명 [154]–[159]입니다. 원문 DOI: https://doi.org/10.3390/aisens1010005</dd>
+          <dt>(a)의 노란 구와 빨간 점, 레이저 화살표는 무엇을 뜻하나요?</dt><dd>노란 구는 금속 나노입자 기반 SERS 증강 구조, 빨간 점 부근은 국소 전자기장이 강한 핫스팟을 나타내는 것으로 볼 수 있습니다. 위쪽의 레이저가 입사하면 입자 사이 또는 입자-표면 사이 나노갭에서 라만 신호가 크게 증폭됩니다. (a)는 이 증강장을 이용해 Cu 위 리튬 음극 계면에서 SEI가 형성되고 성장하며 재구성되는 과정을 깊이별로 읽는 모식도입니다. 근거는 Figure 5(a) caption의 “solid-electrolyte interphase on lithium anodes” [154]와 본문 3.3의 SEI 나노구조/화학 조성 분석 설명입니다.</dd>
+          <dt>(a)에서 SEI formation, SEI further growth, SEI restructuring은 어떤 시간 변화를 보여주나요?</dt><dd>왼쪽에서 오른쪽으로 SEI가 처음 생기고, 더 두꺼워지며, 이후 구조가 재배열되는 순서를 보여줍니다. 아래 확대 그림의 “inner layer”와 “outer layer”는 SEI 내부/외부 층을 구분하고, 보라색·빨간색·초록색 라만 신호 표시는 서로 다른 깊이 또는 층에서 나오는 신호를 암시합니다. 다만 이 overview 이미지만으로 실제 시간 축, 전압 조건, SEI 두께 수치, 반응 속도는 확정할 수 없습니다. 근거: Fig. 5(a), ref. [154].</dd>
+          <dt>(a) 아래의 색깔 스케일 `log(Es/E0)^4`는 무엇을 의미하나요?</dt><dd>SERS에서 라만 증강은 대략 국소 전기장 강화와 강하게 연결됩니다. 그림의 색상 스케일은 입사장 `E0`에 비해 표면 근처 산란장 또는 국소장 `Es`가 얼마나 커지는지를 로그 스케일로 나타낸 것으로 보입니다. 빨간 영역일수록 핫스팟이 강하고, 그 근처 분자의 라만 신호가 더 크게 증폭될 가능성이 큽니다. 근거는 Fig. 2(c)/본문 2.3의 SERS 전자기장 증강 설명과 Fig. 5(a)의 ref. [154] 문맥입니다.</dd>
+          <dt>(b)의 빨간 스펙트럼 그래프에서 x축과 y축은 무엇인가요?</dt><dd>이미지에는 축 라벨이 작게 잘려 있어 명확히 읽히지 않지만, SERS 스펙트럼 관례상 x축은 Raman shift, 보통 `cm^-1`, y축은 Raman intensity입니다. 빨간 선의 여러 피크는 호기 속 BVOC 또는 프로브-분석물 상호작용에서 나온 진동 모드 신호입니다. 피크의 “위치”는 분자 지문, 피크의 “높이/패턴”은 농도나 조성 변화와 관련될 수 있습니다. 단, 이 overview 패널만으로 어느 피크가 어떤 VOC에 해당하는지는 확정할 수 없습니다. 근거: Fig. 5(b), ref. [155].</dd>
+          <dt>(b)의 MBA, MPY, ATP는 코로나바이러스 자체를 붙잡는 항체인가요?</dt><dd>그림만 보면 항체라기보다 Ag 표면에 결합된 SERS probe 분자로 표시되어 있습니다. MBA, MPY, ATP가 각각 다른 화학 작용기를 통해 호기 BVOC와 상호작용하고, 그 결과 “SERS super-profile”이 달라지는 구조입니다. 즉 특정 바이러스 입자를 직접 보는 그림이라기보다, 호기 휘발성 유기화합물 변화 패턴을 화학계량학으로 분류하는 접근에 가깝습니다. 근거: Fig. 5(b)의 “SERS super-profiles to detect BVOC changes”, “Chemometrics analysis”, ref. [155].</dd>
+          <dt>(b)의 `&gt;95% accuracy`는 이 그림만 보고 진단 성능을 그대로 믿어도 되나요?</dt><dd>조심해야 합니다. 그림에는 `&gt;95% accuracy`가 보이지만, 본문에서는 해당 breathalyzer 연구가 COVID-19 스크리닝에서 96.2% sensitivity, 99.9% specificity를 보였다고 소개합니다. 그러나 overview 이미지만으로 표본 수, 검증 코호트, 변이/동반질환 영향, 실제 임상 적용 한계는 알 수 없습니다. 따라서 “이 패널은 고성능 가능성을 보여준다” 정도가 안전합니다. 근거: 본문 3.3의 Figure 5(b) 설명, ref. [155].</dd>
+          <dt>(c)의 “SERS Taster”는 실제로 혀처럼 맛을 느끼는 센서인가요?</dt><dd>생물학적 혀 자체는 아닙니다. 그림은 “Human sensory receptors → Brain processing → Taste recognition” 흐름을 위에 놓고, 아래에서 다중 수용체 SERS 기판과 머신러닝이 그 역할을 모사한다고 보여줍니다. 여러 receptor chemistry가 서로 다른 향미 분자와 비특이적·다중 방식으로 반응하고, SERS super-profile을 ML이 해석해 맛/향 프로파일을 예측하는 구조입니다. 근거: Fig. 5(c), 본문 3.3의 “SERS taster”와 wine aromas multiplex analysis 설명, ref. [156].</dd>
+          <dt>(c)의 여러 색 스펙트럼은 무엇을 비교하는 건가요?</dt><dd>여러 색 선은 서로 다른 샘플, 수용체 조건, 또는 향미 분자 조합에서 나온 SERS 스펙트럼 프로파일을 나타내는 것으로 볼 수 있습니다. 색이 다르면 피크 위치와 세기가 달라지고, 이 차이가 머신러닝 입력 특징이 됩니다. 다만 overview 이미지에는 범례와 축 라벨이 없어 각 색이 어떤 와인/향미/농도에 대응하는지는 확정할 수 없습니다. 근거: Fig. 5(c), ref. [156].</dd>
+          <dt>(c) 오른쪽 막대그래프의 의미는 무엇인가요?</dt><dd>막대그래프는 여러 향미 성분의 농도 또는 예측된 조성을 비교하는 시각 요소로 보입니다. 분자 구조식 옆에 서로 다른 색 막대가 있고, 아래에 “Concentration”이라고 표시되어 있어 SERS+ML로 다중 성분을 정량 또는 반정량한다는 메시지를 줍니다. 하지만 y축 단위, 실제 농도값, 오차막대는 보이지 않으므로 정량 성능을 이 그림만으로 판단하면 안 됩니다. 근거: Fig. 5(c), ref. [156].</dd>
+          <dt>(d)의 웨어러블 센서는 땀을 어떻게 SERS 측정 대상으로 가져오나요?</dt><dd>그림에는 피부 표면, sweat-inducing drug, sweat, analyte, sensor가 함께 표시되어 있습니다. 즉 약물 또는 자극으로 땀을 유도하고, 땀 속 분석물이 유연한 센서/미세유체 구조 쪽으로 이동해 플라즈모닉 메타필름에서 SERS 신호를 내는 흐름입니다. 오른쪽 분해도에는 plasmonic metafilm, hydrogel film, flexible electrodes, breathable polymer film이 층상 구조로 표시되어 있습니다. 근거: Fig. 5(d), 본문 3.3의 stretchable plasmonic metasurface와 continuous sweat sampling 설명, ref. [157].</dd>
+          <dt>(d)의 “plasmonic metafilm”과 “hydrogel film”은 역할이 어떻게 다른가요?</dt><dd>plasmonic metafilm은 라만 신호를 증폭하는 금속 나노/메타표면층이고, hydrogel film은 땀 유도 약물 또는 땀/분석물 전달을 보조하는 부드러운 매질로 해석할 수 있습니다. flexible electrodes는 땀 유도나 구동을 위한 전기적 요소, breathable polymer film은 피부 부착성과 통기성을 위한 기계적 지지층으로 보입니다. 단, 각 층의 재료 조성, 두께, 구동 전압은 이 이미지에서 확정할 수 없습니다. 근거: Fig. 5(d), ref. [157].</dd>
+          <dt>(e)의 “SERS nose”는 (c)의 “SERS taster”와 무엇이 다른가요?</dt><dd>둘 다 다중 반응 패턴을 머신러닝/다변량 분석으로 해석한다는 점은 같습니다. 차이는 (e)가 “인공 코”처럼 여러 self-assembled monolayer, 즉 SAM으로 기능화된 금 표면을 배열해 고차원 지문을 만드는 데 초점을 둔다는 점입니다. 아래쪽 Bare, SAM 1, SAM 2, SAM 3, SAM 8 패널은 같은 분석물이라도 표면 화학이 달라지면 흡착/증강 패턴이 달라짐을 보여줍니다. 근거: Fig. 5(e), 본문 3.3의 artificial nose 및 eight SERS substrates 설명, ref. [158].</dd>
+          <dt>(e)의 3D 그래프에서 x축, y축, z축은 무엇을 뜻하나요?</dt><dd>그림 안에는 `SERS SAM X`, `SERS SAM Y`, `SERS SAM Z`처럼 여러 SAM 기판에서 얻은 SERS 특징을 좌표화한 것으로 보입니다. 왼쪽 스펙트럼에는 Raman shift와 intensity가 표시되어 있고, 오른쪽 3D 공간은 샘플들이 다변량 분석에서 서로 분리되는 모습을 나타냅니다. 다만 축 이름이 실제 PCA 성분인지, 특정 SAM 응답값인지, 다른 임베딩 좌표인지는 이 overview 이미지로 확정할 수 없습니다. 근거: Fig. 5(e), ref. [158].</dd>
+          <dt>(f)의 식물 잎 그림에서 785 nm laser와 SERS signals는 어떤 흐름을 보여주나요?</dt><dd>나노센서가 식물 조직 또는 잎 부근에 존재하고, 785 nm 레이저를 쏘면 식물 신호분자와 결합/근접한 SERS 나노입자에서 라만 스펙트럼이 나오는 흐름입니다. 그림에는 salicylic acid로 보이는 구조, plant signalling molecules, insect biting wounding, cold 4 °C 같은 스트레스 조건이 표시되어 있어 식물 스트레스 반응을 실시간 추적하는 맥락입니다. 근거: Fig. 5(f), 본문 3.3의 plant apoplast 내 SERS nanoprobe 설명, ref. [159].</dd>
+          <dt>(f) 오른쪽 그래프의 x축과 y축은 무엇인가요?</dt><dd>그래프 x축은 `Raman shift (cm^-1)`, y축은 `Normalized intensity`로 표시되어 있습니다. 여러 색 스펙트럼은 control barley, salicylic acid 처리, 감염 또는 주입 조건 등 서로 다른 식물 상태를 비교합니다. 피크 위치는 분자 진동 지문을, 피크 높이 변화는 신호분자 존재량이나 환경 변화에 따른 SERS 응답 차이를 나타낼 수 있습니다. 하지만 각 피크의 정확한 배정은 원 논문 [159]의 상세 스펙트럼 해석이 필요합니다.</dd>
+          <dt>이 그림에서 초보자가 가장 헷갈리기 쉬운 핵심 용어는 무엇인가요?</dt><dd>`SERS`는 라만 분광 자체가 아니라 표면증강 라만입니다. `hotspot`은 온도가 뜨거운 점이 아니라 전자기장이 매우 강한 나노갭입니다. `Raman shift`는 레이저 파장 자체가 아니라 입사광과 산란광의 에너지 차이입니다. `super-profile`은 단일 피크 하나가 아니라 여러 피크와 여러 수용체 응답을 묶은 패턴입니다. `SAM`은 센서 표면의 자기조립 단분자막이고, `SEI`는 배터리 리튬 음극의 고체-전해질 계면층입니다. 근거: Fig. 2(c) SERS 원리, Fig. 5(a–f), refs. [154]–[159].</dd>
+          <dt>이 Figure 5 하나만으로 확정할 수 없는 것은 무엇인가요?</dt><dd>각 패널의 실제 검출한계, 샘플 수, 반복성, 피크 배정, 통계 검증 방식, 장기 안정성, 재현성, 실제 현장 적용 조건은 확정할 수 없습니다. (b)의 진단 정확도, (c)의 맛 예측 성능, (d)의 착용 안정성, (f)의 식물 내 위치별 분자 농도도 overview 이미지에서는 일부만 암시됩니다. 이 그림은 “SERS 응용 지형도”이지, 각 연구의 성능표 전체는 아닙니다. 근거는 원문 Figure 5 caption이 각 사례를 대표 응용으로 묶고 있고, 상세 수치는 각각 [154]–[159] 원 논문 맥락에 의존한다는 점입니다.<br>출처: 원문 PDF/본문 Figure 5 및 SERS 설명, DOI https://doi.org/10.3390/aisens1010005 ; PDF에서 Figure 5 caption과 refs. [154]–[159] 문맥을 확인했습니다.</dd>
+          </dl>
+  </div>
+<div class="panel">
     <div class="pimg"><img class="zoom" src="@fig05a" alt="SEI SERS"><div class="imgcap">(a) <span class="term" data-k="SEI">SEI</span> 분석 (<span class="term" data-k="SHIN">SHIN</span>)</div></div>
     <div class="ptext">
       <h4><span class="pl">a</span> 리튬 음극 고체-전해질 계면(SEI) 분석</h4>
@@ -28,8 +50,28 @@
         <span class="row"><span class="k">광 센서</span> Ag SHIN 기반 깊이분해 플라즈마증강 라만</span>
         <span class="row"><span class="k">센서 역할</span> SHIN 핫스팟(고감도·깊이 선택 라만)</span>
         <span class="row"><span class="k">감지 기전</span> SERS로 SEI 화학·나노구조의 시간적 변화 매핑</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig05a">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널의 핵심 메시지는 무엇인가요?</dt><dd>구리(Cu) 집전체 위 리튬 음극 계면에서 생기는 SEI, 즉 고체-전해질 계면층을 **Ag SHIN 기반 SERS**로 시간·깊이 방향으로 추적한다는 점입니다. 위쪽 모식도는 SEI 형성, 추가 성장, 재구성 단계를 순서대로 보여주고, 아래쪽 도식은 내부층과 외부층에서 나오는 라만 신호가 어떻게 달라지는지를 나타냅니다. 근거는 Figure 5 caption의 “SERS-based sensing applications” 중 (a) “lithium anode SEI nanostructure/chemistry analysis [154]” 및 DOI `10.3390/aisens1010005` 문맥입니다.</dd>
+          <dt>SHIN은 여기서 어떤 센서 역할을 하나요?</dt><dd>SHIN은 shell-isolated nanoparticle로, 이미지에서는 금속 나노입자 코어와 얇은 절연 쉘을 가진 구조로 그려져 있습니다. 레이저가 들어오면 인접한 입자 사이와 Cu 표면 근처에 강한 전자기장 “hotspot”이 생기고, 이곳에서 SEI 분자의 라만 신호가 크게 증폭됩니다. 즉 SHIN은 SEI를 직접 소모하거나 반응시키는 시약이라기보다, 약한 라만 신호를 증폭하는 플라즈모닉 광센서입니다. 근거는 Fig. 5(a) 캡션의 SHIN 기반 SEI 분석 설명과 Fig. 2(c)의 SERS 공통 원리 문맥입니다.</dd>
+          <dt>왼쪽 위의 “Electrolyte”, “Laser”, “hotspot”, “Cu” 표시는 각각 무엇을 뜻하나요?</dt><dd>Electrolyte는 리튬 전지 내 전해질 환경, Laser는 라만 측정을 위한 여기광, hotspot은 SHIN 입자 사이에서 전기장이 강하게 집중되는 영역, Cu는 리튬 음극을 지지하는 구리 집전체를 뜻합니다. 이 구성은 “전해질 속 Cu 표면 근처에서 SEI가 생기는 과정”을 광학적으로 읽어내는 장치 모식도입니다. 근거는 Figure 5(a) 이미지 레이블과 DOI 문맥의 SERS 기반 감지 응용 설명입니다.</dd>
+          <dt>왜 일반 라만이 아니라 SERS가 필요한가요?</dt><dd>SEI는 얇고 복잡한 계면층이라 일반 라만 신호만으로는 분자 정보를 충분히 얻기 어렵습니다. SERS는 은/금 나노구조의 hotspot에서 라만 신호를 수 자릿수 증폭해 분자별 진동 지문을 읽게 해줍니다. 이 패널에서는 SHIN 주변의 hotspot을 이용해 SEI 내부층과 외부층 신호를 분리해 보려는 의도가 나타납니다. 근거는 Fig. 2(c)의 SERS 원리 문맥과 Fig. 5(a)의 SEI 분석 사례 [154]입니다.</dd>
+          <dt>위쪽 네 장면은 시간 변화인가요, 공간 분포인가요?</dt><dd>주로 **시간적 진행 단계**를 나타냅니다. 왼쪽부터 초기 SHIN 배치와 hotspot 형성, SEI formation, SEI further growth, SEI restructuring으로 이어집니다. 동시에 각 단계에서 라만 신호가 SEI 내부층 또는 외부층 어디에서 주로 오는지도 함께 표현되어 있어 시간 변화와 깊이 선택성이 결합된 그림입니다. 근거는 Figure 5(a) 본문 문맥의 “SEI 형성→성장→재구성 4단계” 설명입니다.</dd>
+          <dt>아래 왼쪽의 빨간색 컬러맵은 그래프인가요?</dt><dd>일반적인 x-y 그래프라기보다는 전자기장 증강 분포를 보여주는 시뮬레이션/컬러맵에 가깝습니다. 색 막대는 `log(E_loc/E_0)^4`로 보이며, 검은색에서 노란색/흰색으로 갈수록 국소 전기장 증강이 강하다는 뜻입니다. 가장 밝은 영역은 Au core 사이와 Cu 표면 근처의 좁은 틈, 즉 hotspot입니다. 근거는 이미지 내 컬러바와 Fig. 5(a)의 SHIN hotspot 기반 SERS 문맥입니다.</dd>
+          <dt>컬러맵에서 왜 입자 사이가 밝게 보이나요?</dt><dd>금속 나노입자들이 가까이 있을 때 레이저에 의해 플라즈몬 결합이 생기고, 좁은 틈에 전기장이 집중됩니다. SERS 신호는 전기장 증강에 매우 민감하므로 이 밝은 hotspot이 라만 신호 증폭의 핵심 위치가 됩니다. 근거는 Fig. 2(c)의 SERS 원리와 Fig. 5(a) 이미지의 “hotspot” 레이블입니다.</dd>
+          <dt>아래쪽 결정립 그림의 “Inner layer”와 “Outer layer”는 무엇이 다른가요?</dt><dd>SEI가 단일한 균일 막이 아니라, Cu/Li 표면에 가까운 내부층과 전해질 쪽 외부층으로 구분될 수 있음을 보여줍니다. 내부층은 초기 형성 SEI와 표면 근처 화학종에 더 가깝고, 외부층은 SEI가 성장하면서 추가로 쌓인 영역으로 해석됩니다. 단, 이 이미지 하나만으로 각 층의 정확한 화학 조성까지 확정할 수는 없습니다. 근거는 Figure 5(a)의 “depth-sensitive Raman” 설명과 [154] 문맥입니다.</dd>
+          <dt>“Inner signals”, “Outer signals”는 실제 스펙트럼 피크를 보여주는 건가요?</dt><dd>이 패널 자체에는 구체적인 라만 스펙트럼 피크 위치나 세기 곡선이 나오지 않습니다. 대신 보라색/분홍색/초록색 물결 화살표로 내부층 또는 외부층에서 유래한 라만 신호의 상대적 기원을 개념적으로 나타냅니다. 따라서 어떤 결합의 피크가 몇 cm⁻¹에서 나타나는지는 이 이미지 하나로는 알 수 없습니다. 근거는 Figure 5(a) 이미지 구성과 DOI 논문 내 SERS 응용 개요 문맥입니다.</dd>
+          <dt>이미지의 I, II, III 표기는 무엇을 의미하나요?</dt><dd>그림 안에서는 “excited by I &amp; II”, “by II &amp; III”, “by I &amp; II”처럼 신호 경로 또는 측정 조건을 구분하는 표기로 사용됩니다. 다만 이 패널만으로 I, II, III가 정확히 어떤 위치, 입자, 광학 모드, 또는 측정 단계인지는 확정하기 어렵습니다. 원 논문 [154]의 세부 설명이나 본문을 확인해야 합니다. 근거는 Figure 5(a) 시각 요소와 [154] 인용 문맥입니다.</dd>
+          <dt>SEI restructuring 단계에서는 무엇이 달라지나요?</dt><dd>오른쪽 끝 그림에서는 SEI가 단순히 두꺼워지는 것이 아니라 구조가 재배열되고, 아래쪽에 Li가 더 뚜렷하게 표시됩니다. 또한 신호 색이 초록색으로 바뀌어 이전 성장 단계와 다른 라만 신호 조합이 관찰됨을 암시합니다. 다만 어떤 분자종이 증가하거나 감소했는지는 이 그림만으로 특정할 수 없습니다. 근거는 Figure 5(a)의 “SEI restructuring” 레이블과 단계별 신호 도식입니다.</dd>
+          <dt>이 그림에서 광 흐름과 물질 흐름은 어떻게 구분되나요?</dt><dd>광 흐름은 빨간 레이저와 물결 모양의 라만 신호 화살표로 표시됩니다. 물질 변화는 전해질 속에서 Cu/Li 표면 위에 SEI 층이 생기고 두꺼워지며 재구성되는 형태로 표현됩니다. 즉 레이저는 측정 도구이고, SEI 성장은 배터리 계면에서 일어나는 화학·전기화학적 변화입니다. 근거는 Figure 5(a)의 레이블과 Fig. 5 caption의 SEI 분석 응용 설명입니다.</dd>
+          <dt>이 패널을 보고 “배터리 성능이 좋아졌다”고 말할 수 있나요?</dt><dd>아닙니다. 이 이미지는 SEI의 형성·성장·재구성을 관찰하는 분석 방법을 보여줄 뿐, 용량 유지율, 수명, Coulombic efficiency 같은 전기화학 성능 지표는 제시하지 않습니다. 성능 개선 여부는 별도의 전지 테스트 데이터가 있어야 판단할 수 있습니다. 근거는 Figure 5(a)가 SERS 기반 분석 사례로 제시된다는 DOI `10.3390/aisens1010005`의 Figure 5 문맥입니다.</dd>
+          <dt>초보자가 가장 헷갈릴 만한 용어는 무엇인가요?</dt><dd>“SEI”, “SERS”, “SHIN”, “hotspot”입니다. SEI는 리튬 음극 표면에 생기는 고체-전해질 계면층이고, SERS는 표면증강 라만 산란입니다. SHIN은 절연 쉘을 가진 나노입자 센서이며, hotspot은 라만 신호가 크게 증폭되는 국소 전기장 집중 영역입니다. 특히 hotspot을 온도가 높은 지점으로 오해하면 안 됩니다. 여기서는 주로 광학적 전기장 증강 위치를 뜻합니다. 근거는 Fig. 2(c) SERS 원리와 Figure 5(a) SHIN-SEI 분석 문맥입니다.</dd>
+          <dt>이 이미지 하나만으로 확정할 수 없는 것은 무엇인가요?</dt><dd>SEI의 정확한 화학 조성, 라만 피크 위치, 측정 파장, 시간 간격, 전해질 조성, SHIN의 실제 크기, Au/Ag 코어 여부의 상세 조건, I/II/III의 정확한 정의는 이 패널만으로 확정할 수 없습니다. 이 그림은 원리와 단계별 신호 기원을 설명하는 모식도 성격이 강합니다. 근거는 Figure 5(a) 캡션이 [154] 사례를 요약해 제시하고 있으며, 세부 실험 조건은 원 참고문헌 [154]를 봐야 하는 DOI 문맥입니다.</dd>
+          </dl>
+  </div>
+</div>
   </div>
 
   <div class="panel">
@@ -46,8 +88,33 @@
         <span class="row"><span class="k">광 센서</span> 프로브 기능화 Ag 나노구조(MBA/MPY/ATP)</span>
         <span class="row"><span class="k">센서 역할</span> 핫스팟 + 특이적 프로브-분석물 상호작용</span>
         <span class="row"><span class="k">감지 기전</span> SERS 슈퍼프로파일 + 화학정량 ML → 질병 분류</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig05b">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널에서 실제로 감지하려는 대상은 바이러스 자체인가요, 아니면 다른 분자인가요?</dt><dd>이미지의 표적은 바이러스 입자 자체가 아니라 사람 호기 속 `BVOC`, 즉 breath volatile organic compounds입니다. 그림 왼쪽의 폐 그림과 “Breath volatile organic compounds” 문구가 호기 유래 휘발성 분자를 가리키고, 오른쪽에서는 이 분자들이 SERS 프로브와 상호작용하는 것으로 표현됩니다. 근거: Figure 5(b) 캡션의 “비침습·현장형 SERS 호기 분석기 [155]”, DOI 문맥 `10.3390/aisens1010005`.</dd>
+          <dt>그림 위쪽의 “1. SERS super-profiles to detect BVOC changes”는 무슨 뜻인가요?</dt><dd>하나의 단일 피크만 보는 것이 아니라, 여러 SERS 프로브에서 나온 라만 스펙트럼 패턴 전체를 묶어 `슈퍼프로파일`로 사용한다는 뜻입니다. COVID-19 감염에 따라 호기 BVOC 조성이 달라질 수 있고, 그 변화가 여러 피크 세기의 조합으로 나타난다는 개념입니다. 근거: Figure 5(b) 본문 문맥의 “SERS 슈퍼프로파일로 BVOC 변화 검출”, Ref. [155], DOI `10.3390/aisens1010005`.</dd>
+          <dt>아래쪽 붉은 그래프는 무엇을 나타내나요?</dt><dd>붉은 선은 SERS 라만 스펙트럼으로 해석됩니다. x축과 y축 라벨은 이 잘린 패널에서는 보이지 않지만, SERS 문맥상 x축은 보통 라만 시프트, y축은 산란 세기입니다. 여러 날카로운 피크가 분자 진동 지문 역할을 하며, 이 패턴이 COVID 양성/음성 분류에 쓰입니다. 근거: Figure 5(b) 캡션 및 Fig. 2(c) SERS 원리 설명, DOI `10.3390/aisens1010005`.</dd>
+          <dt>붉은 스펙트럼의 피크가 많다는 것은 왜 중요한가요?</dt><dd>피크가 많다는 것은 호기 성분과 프로브의 상호작용이 다양한 진동 신호로 반영된다는 뜻입니다. 단일 피크보다 여러 피크의 상대 세기와 조합을 쓰면 분류 알고리즘이 더 많은 특징을 학습할 수 있습니다. 다만 이 이미지 하나만으로 각 피크가 어떤 BVOC 또는 결합 진동에 해당하는지는 확정할 수 없습니다. 근거: Figure 5(b)의 “SERS super-profiles” 및 chemometrics 문맥, Ref. [155].</dd>
+          <dt>그래프의 x축 숫자가 보이지 않는데, 피크 위치를 해석해도 되나요?</dt><dd>정확한 피크 위치나 피크 이동을 수치로 해석하면 안 됩니다. 이 패널에서는 축 라벨과 눈금이 생략되어 있어 특정 Raman shift 값, 피크 이동량, 피크 면적을 확인할 수 없습니다. 할 수 있는 해석은 “복수의 날카로운 SERS 피크 패턴이 분류 특징으로 쓰인다”는 수준입니다. 근거: 제공된 Figure 5(b) 이미지와 DOI 문맥.</dd>
+          <dt>그림에 나온 Ag-MBA, Ag-MPY, Ag-ATP는 각각 무엇인가요?</dt><dd>`Ag`는 은 나노구조를 뜻하고, `MBA`, `MPY`, `ATP`는 은 표면에 붙인 서로 다른 프로브 분자입니다. 이 프로브들이 호기 BVOC와 서로 다른 방식으로 상호작용해 SERS 신호 변화를 만듭니다. 초보자는 Ag-MBA를 하나의 분석 대상 분자로 오해할 수 있지만, 여기서는 기능화된 SERS 센서 표면에 가깝습니다. 근거: Figure 5(b) 본문 문맥의 “Ag-MBA, Ag-MPY, Ag-ATP”, Ref. [155].</dd>
+          <dt>왜 은(Ag)이 사용되나요?</dt><dd>SERS에서는 은이나 금 같은 플라즈모닉 나노구조가 국소 전자기장 핫스팟을 만들어 약한 라만 신호를 크게 증폭합니다. 그림의 회색 삼각형 Ag 표지는 각각의 프로브가 은 표면에 결합해 있음을 보여줍니다. 근거: Fig. 2(c) SERS 공통 원리 설명 및 Figure 5(b), DOI `10.3390/aisens1010005`.</dd>
+          <dt>“Specific Probe-Analyte Interactions”는 무엇을 강조하나요?</dt><dd>호기 속 분석물질이 아무 표면에나 무작위로 붙는 것이 아니라, MBA/MPY/ATP 같은 프로브와 선택적인 화학 상호작용을 한다는 점을 강조합니다. 그림의 점선은 프로브와 BVOC 분자 사이의 상호작용을 시각화한 것입니다. 근거: Figure 5(b) 내부 레이블 및 Ref. [155] 문맥.</dd>
+          <dt>그림 속 분자 구조와 색깔은 어떤 의미인가요?</dt><dd>분홍색, 보라색, 초록색으로 그려진 프로브 분자는 서로 다른 표면 기능기를 나타내며, 위쪽의 다양한 BVOC 구조와 점선으로 연결되어 있습니다. 색은 각각 MBA, MPY, ATP 계열 프로브를 구분하기 위한 시각적 코드로 보입니다. 다만 이 패널만으로 각 색이 정확히 어떤 반응 선택성을 갖는지는 확정할 수 없습니다. 근거: Figure 5(b) 이미지 레이블 Ag-MBA/MPY/ATP 및 DOI 문맥.</dd>
+          <dt>“Chemometrics analysis”는 단순히 스펙트럼을 눈으로 비교한다는 뜻인가요?</dt><dd>아닙니다. Chemometrics는 스펙트럼에서 얻은 다변량 데이터를 통계·머신러닝 방식으로 분석하는 접근입니다. 이 그림에서는 붉은 SERS 피크 패턴을 입력으로 삼아 COVID-positive와 COVID-negative를 분류하는 단계로 표현되어 있습니다. 근거: Figure 5(b)의 “Chemometrics analysis for rapid prediction”, Ref. [155].</dd>
+          <dt>그림의 “&gt;95% accuracy”는 민감도와 특이도를 뜻하나요?</dt><dd>이미지 안에는 “&gt;95% accuracy”라고만 보이며, 제공 문맥에서는 민감도 96.2%, 특이도 99.9%가 언급됩니다. 정확도, 민감도, 특이도는 서로 다른 지표이므로 혼동하면 안 됩니다. 이 패널만 보면 정확도 문구만 확인 가능하고, 민감도·특이도 수치는 본문 문맥에 의존합니다. 근거: Figure 5(b) 이미지 및 제공 본문 문맥, Ref. [155].</dd>
+          <dt>COVID-positive와 COVID-negative 그림은 실제 진단 결과를 직접 보여주는 건가요?</dt><dd>아래 왼쪽의 COVID-positive/negative 표시는 SERS 스펙트럼을 chemometrics로 분류한 결과를 개념적으로 보여주는 모식도입니다. 실제 임상 혼동행렬, 표본 수, false positive/false negative 개수는 이 이미지에 제시되어 있지 않습니다. 근거: Figure 5(b) 캡션 “SERS 호기 분석기” 및 DOI 문맥.</dd>
+          <dt>이 센서는 왜 비침습적이라고 하나요?</dt><dd>혈액이나 조직을 채취하지 않고 숨에 포함된 휘발성 유기화합물을 분석하기 때문입니다. 그림 왼쪽의 사람 폐와 호기 BVOC 레이블이 샘플 소스가 숨이라는 점을 직접 보여줍니다. 근거: Figure 5(b) 캡션의 “비침습·현장형 SERS 호기 분석기 [155]”.</dd>
+          <dt>이 이미지에서 광센서 역할을 하는 부분은 어디인가요?</dt><dd>센서의 핵심은 Ag 나노구조와 그 위의 MBA/MPY/ATP 프로브입니다. Ag 핫스팟이 라만 신호를 증폭하고, 프로브-분석물 상호작용이 분자 조성 차이를 SERS 스펙트럼 차이로 바꿉니다. 근거: Fig. 2(c) SERS 원리와 Figure 5(b) Ag-MBA/MPY/ATP 구성, DOI 문맥.</dd>
+          <dt>이 그림에서 빛의 경로나 레이저 조사 방향이 보이나요?</dt><dd>보이지 않습니다. SERS 측정에는 일반적으로 레이저 조사와 라만 산란 검출이 필요하지만, 이 패널은 광학계보다 화학 프로브와 분류 흐름을 강조한 개념도입니다. 따라서 레이저 파장, 검출기, 광 경로는 이 이미지 하나로 알 수 없습니다. 근거: Figure 5(b) 이미지 및 Fig. 5 캡션 문맥.</dd>
+          <dt>이 센서가 COVID-19에만 특이적인가요?</dt><dd>이 그림은 COVID 양성/음성 분류 예시를 보여주지만, SERS 원리 자체는 특정 질병 전용이 아닙니다. 호기 BVOC 패턴이 다른 질병, 식이, 환경, 개인 차이에 의해서도 달라질 수 있으므로 실제 특이성은 연구 설계와 검증 데이터에 달려 있습니다. 근거: Figure 5(b) Ref. [155] COVID 호기 분석기 문맥 및 SERS 응용 Figure 5 전체 캡션.</dd>
+          <dt>“BVOC 변화”가 보이면 곧바로 감염 원인을 알 수 있나요?</dt><dd>그렇지 않습니다. BVOC 변화는 질병 상태와 상관될 수 있는 간접 지표입니다. 이 그림은 SERS 패턴과 chemometrics로 COVID 상태를 예측한다는 흐름을 보여주지만, 어떤 대사 경로가 어떤 피크를 만들었는지는 이 패널만으로 확정할 수 없습니다. 근거: Figure 5(b) 본문 문맥, Ref. [155].</dd>
+          <dt>이 그림에서 혼동행렬이나 ROC 곡선을 확인할 수 있나요?</dt><dd>확인할 수 없습니다. COVID-positive/negative 분류 아이콘과 “&gt;95% accuracy” 문구는 있지만, TP, FP, TN, FN 값이나 ROC-AUC는 표시되어 있지 않습니다. 따라서 분류 성능의 세부 평가는 원 논문 Ref. [155] 또는 본문 수치가 필요합니다. 근거: Figure 5(b) 이미지와 제공 문맥.</dd>
+          <dt>초보자가 가장 헷갈리기 쉬운 용어는 무엇인가요?</dt><dd>`SERS super-profile`, `BVOC`, `chemometrics`, `Ag-MBA/MPY/ATP`가 핵심입니다. 특히 super-profile은 하나의 분자 피크가 아니라 다중 프로브에서 얻은 전체 SERS 패턴이고, chemometrics는 그 패턴을 통계적으로 분류하는 분석 단계입니다. 근거: Figure 5(b) 내부 레이블 및 Figure 5 캡션, DOI `10.3390/aisens1010005`.</dd>
+          <dt>이 이미지 하나만으로 확정할 수 없는 중요한 정보는 무엇인가요?</dt><dd>샘플 수, 환자군 구성, 레이저 파장, 스펙트럼 전처리 방법, ML 알고리즘 종류, 피크별 분자 배정, 실제 축 단위, 임상 검증 범위는 알 수 없습니다. 이미지가 보여주는 것은 “호기 BVOC → 기능화 Ag SERS 프로브 → 붉은 스펙트럼 슈퍼프로파일 → chemometrics 분류”라는 개념적 워크플로입니다. 근거: Figure 5(b) 패널과 제공된 Ref. [155] 요약 문맥.</dd>
+          </dl>
+  </div>
+</div>
   </div>
 
   <div class="panel">
@@ -64,8 +131,30 @@
         <span class="row"><span class="k">광 센서</span> 다중수용체 SERS 기판(SERS taster)</span>
         <span class="row"><span class="k">센서 역할</span> 다양한 수용체 화학으로 다중화된 핫스팟</span>
         <span class="row"><span class="k">감지 기전</span> SERS 슈퍼프로파일 + 화학정량 ML → 향 다중 분석</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig05c">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널의 위쪽 “Human Sensory Receptors → Brain Processing → Taste Recognition” 흐름은 아래 SERS 장치와 어떤 대응 관계인가요?</dt><dd>위쪽은 사람의 미각·후각 인식 과정을 비유로 보여줍니다. 혀나 코의 감각수용체가 여러 자극을 받아들이고, 뇌가 패턴을 처리한 뒤 레몬·허브·과일 같은 맛/향으로 인식하는 구조입니다. 아래쪽의 `Multi-Receptor SERS Taster → Super-Profiles → Machine Learning → Multiplexing`은 이를 인공적으로 모방한 광자 혀입니다. 여러 수용체가 있는 SERS 기판이 향 분자를 받아들이고, 라만 스펙트럼 패턴을 머신러닝이 해석해 성분 농도로 변환합니다.<br>근거: Figure 5(c) 캡션 “와인 향 다중 프로파일링 [156]”, DOI: https://doi.org/10.3390/aisens1010005</dd>
+          <dt>“Multi-Receptor SERS Taster”에서 여러 색 점들은 무엇을 뜻하나요?</dt><dd>손가락 위 칩에 그려진 여러 색 점은 서로 다른 수용체 화학 또는 표면 기능화를 가진 감지 영역으로 해석됩니다. 특정 분자 하나만 잡는 단일 수용체가 아니라, 여러 비공유 상호작용을 통해 향 분자 조합에 대해 서로 다른 SERS 응답을 만들도록 설계된 구조입니다.<br>근거: Figure 5(c) 본문 문맥의 “여러 비공유 수용체 화학을 SERS에 통합”, ref. [156], DOI 문맥</dd>
+          <dt>이 장치는 왜 “전자 혀”가 아니라 “광자 혀” 또는 SERS 미각센서라고 부르나요?</dt><dd>핵심 신호가 전기저항이나 전류가 아니라 빛으로 얻는 라만 산란 신호이기 때문입니다. SERS는 금속 나노구조의 플라즈몬 핫스팟에서 약한 라만 신호를 크게 증폭해 분자별 진동 지문을 얻습니다. 그래서 이 패널의 장치는 향 분자를 광학적으로 읽는 다중수용체 SERS 센서입니다.<br>근거: Figure 2(c)의 SERS 공통 원리 설명 및 Figure 5(c) 캡션, DOI 문맥</dd>
+          <dt>왼쪽 위의 회색 삽입 이미지는 무엇을 보여주나요?</dt><dd>회색 삽입 이미지는 SERS 기판 표면의 미세/나노 구조를 보여주는 현미경 이미지로 보입니다. 스케일 바가 `1 μm`로 표시되어 있어, 광학적으로 라만 신호를 증폭하는 나노구조 표면 또는 집합체의 형태를 제시하는 역할을 합니다. 다만 이 패널만으로 금인지 은인지, 정확한 입자 크기 분포나 제조법은 확정할 수 없습니다.<br>근거: Figure 5(c) SERS 미각센서 패널 및 SERS 핫스팟 원리, DOI 문맥</dd>
+          <dt>분홍색 빛이 센서 칩을 향해 들어가는 그림은 어떤 의미인가요?</dt><dd>SERS 측정에서 레이저가 시료와 플라즈모닉 기판에 조사되는 상황을 나타냅니다. 향 분자가 수용체가 있는 금속 나노구조 근처에 위치하면, 국소 전자기장 증강 때문에 라만 산란이 커지고, 그 결과 분자별 스펙트럼 패턴을 얻을 수 있습니다.<br>근거: Figure 2(c)의 SERS 원리, Figure 5(c) 응용 패널, DOI 문맥</dd>
+          <dt>가운데의 여러 색 곡선 “Super-Profiles” 그래프는 무엇을 나타내나요?</dt><dd>여러 색 곡선은 서로 다른 와인 향 성분 조합 또는 농도 조건에서 얻은 SERS 라만 스펙트럼 패턴으로 볼 수 있습니다. 보통 SERS 스펙트럼의 x축은 라만 shift, y축은 신호 세기입니다. 이 그림에서는 축 숫자와 단위가 생략되어 있으므로 정확한 피크 위치나 세기값은 읽을 수 없지만, 색마다 피크 높이와 형태가 달라 다중 향 정보를 담고 있음을 보여줍니다.<br>근거: Figure 5(c) 캡션 “와인 향 다중 프로파일링 [156]”, Figure 2(c) SERS 원리, DOI 문맥</dd>
+          <dt>색깔별 스펙트럼의 피크가 서로 다른 높이로 보이는 이유는 무엇인가요?</dt><dd>향 분자 조합과 수용체 표면의 상호작용이 달라지면 특정 라만 진동 모드의 세기가 달라집니다. 따라서 같은 SERS 기판이라도 시료 조성이나 농도에 따라 피크 높이와 전체 패턴이 변합니다. 이 패널은 단일 피크 하나보다 여러 피크의 조합, 즉 “슈퍼프로파일”을 분석 대상으로 삼는다는 점을 강조합니다.<br>근거: Figure 5(c) “Super-Profiles → Machine Learning” 흐름, ref. [156], DOI 문맥</dd>
+          <dt>이 스펙트럼에서 특정 피크가 어떤 분자에 해당하는지 바로 알 수 있나요?</dt><dd>이 이미지 하나만으로는 어렵습니다. 분자 구조 그림과 스펙트럼이 함께 제시되어 있지만, 피크 위치, 라만 shift 값, 피크 배정표가 없기 때문에 특정 피크를 특정 결합 진동이나 특정 향 성분에 직접 연결할 수는 없습니다. 원 논문 [156]의 상세 스펙트럼과 피크 assignment가 필요합니다.<br>근거: Figure 5(c) 축·수치 생략, 캡션의 ref. [156], DOI 문맥</dd>
+          <dt>가운데 아래의 신경망 그림은 왜 들어가 있나요?</dt><dd>여러 수용체에서 얻은 SERS 스펙트럼은 사람이 눈으로 단순 비교하기에는 고차원 데이터입니다. 그래서 신경망 또는 머신러닝 모델이 여러 피크와 색별 패턴을 입력으로 받아 향 성분의 종류와 농도를 추정하는 과정을 나타냅니다. 위쪽의 “Brain Processing”과 대응되는 인공 데이터 처리 단계입니다.<br>근거: Figure 5(c)의 “Super-Profiles → Machine Learning → Multiplexing” 흐름, ref. [156], DOI 문맥</dd>
+          <dt>오른쪽 막대그래프의 x축과 y축은 무엇인가요?</dt><dd>x축은 그림 위에 그려진 여러 향 분자 또는 분석 대상 성분을 뜻하는 것으로 보입니다. y축은 아래에 `Concentration`이라고 표시되어 있으므로 각 성분의 추정 농도입니다. 다만 막대 색의 정확한 범례, 농도 단위, 보정 방식은 이 패널에 표시되어 있지 않아 확정할 수 없습니다.<br>근거: Figure 5(c) 오른쪽 “Concentration” 막대그래프, 캡션 ref. [156], DOI 문맥</dd>
+          <dt>막대그래프에서 가운데 초록 막대가 가장 높은 것은 어떤 의미인가요?</dt><dd>이 모식도 수준에서는 가운데 분자 성분이 다른 성분보다 더 높은 농도로 추정되었다는 메시지를 전달합니다. 그러나 실제 데이터값, 오차막대, 반복 측정 수가 없기 때문에 정량적으로 몇 배 높은지 또는 통계적으로 유의한지는 판단할 수 없습니다.<br>근거: Figure 5(c)의 막대그래프 시각 요소 및 ref. [156] 문맥</dd>
+          <dt>오른쪽의 분자 구조들은 무엇을 의미하나요?</dt><dd>와인 향을 구성하는 휘발성 유기분자 후보들을 상징합니다. 그림에는 고리형 terpene류처럼 보이는 구조와 황 함유 분자처럼 보이는 구조가 함께 제시되어, SERS taster가 단일 성분이 아니라 여러 향 분자를 동시에 구분·정량하려는 목적임을 보여줍니다. 정확한 화합물명은 이 패널만으로 단정할 수 없습니다.<br>근거: Figure 5(c) “와인 향 다중 프로파일링 [156]”, DOI 문맥</dd>
+          <dt>이 센서는 특정 분자에만 선택적인 항체나 효소를 쓰는 방식인가요?</dt><dd>이 패널의 설명은 그런 방식보다는 `receptor-agnostic` 또는 다중 비특이 수용체 방식에 가깝습니다. 여러 수용체가 각 분자에 대해 완벽히 특이적으로 결합하는 것이 아니라, 다양한 상호작용 패턴을 만들고 그 패턴을 머신러닝이 해석합니다. 초보자가 헷갈릴 수 있는 점은 “수용체”라는 말이 반드시 생물학적 항체 같은 고특이 결합체를 뜻하지는 않는다는 것입니다.<br>근거: Figure 5(c) 본문 문맥 “특정 표적 수용체 없이도 복합 향을 정량”, ref. [156], DOI 문맥</dd>
+          <dt>SERS 신호가 왜 와인 향 분석에 유리한가요?</dt><dd>향 분자는 복합 혼합물이고 농도도 낮을 수 있습니다. SERS는 금/은 나노구조 핫스팟에서 라만 신호를 크게 증폭해 분자별 진동 지문을 얻을 수 있으므로, 여러 성분이 섞인 시료를 패턴 기반으로 분석하는 데 적합합니다. 이 패널은 그 장점을 “Super-Profiles”와 “Multiplexing”으로 표현합니다.<br>근거: Figure 2(c)의 SERS 원리, Figure 5(c) 캡션 및 ref. [156], DOI 문맥</dd>
+          <dt>이 그림에서 “Multiplexing”은 단순히 여러 번 측정한다는 뜻인가요?</dt><dd>아닙니다. 여기서 multiplexing은 여러 향 성분을 하나의 다중수용체 SERS 플랫폼에서 동시에 또는 통합적으로 분석한다는 의미에 가깝습니다. 오른쪽 막대그래프처럼 서로 다른 분자별 농도를 한 번의 프로파일 분석 결과로 제시하는 것이 핵심입니다.<br>근거: Figure 5(c)의 “Machine Learning → Multiplexing” 및 “Concentration” 그래프, ref. [156], DOI 문맥</dd>
+          <dt>이 이미지 하나만 보고 실제 센서 성능을 평가할 수 있나요?</dt><dd>성능을 정량 평가하기에는 정보가 부족합니다. 검출한계, 선형 범위, 재현성, 선택성, 와인 종류별 검증, 머신러닝 정확도, 혼동행렬, 외부 검증 데이터 여부가 패널에 없습니다. 이 이미지는 원리와 분석 흐름을 보여주는 모식도이며, 성능 판단은 원 논문 [156]의 본문 데이터가 필요합니다.<br>근거: Figure 5(c) 캡션 “와인 향 다중 프로파일링 [156]”, DOI 문맥</dd>
+          <dt>이 패널에서 가장 중요한 핵심 용어는 무엇인가요?</dt><dd>핵심 용어는 `SERS`, `Multi-Receptor`, `Super-Profiles`, `Machine Learning`, `Multiplexing`입니다. SERS는 증강 라만 분광, Multi-Receptor는 여러 표면 화학을 가진 감지 영역, Super-Profiles는 여러 수용체 응답이 합쳐진 고차원 스펙트럼 패턴, Machine Learning은 패턴 해석기, Multiplexing은 여러 향 성분의 동시 분석을 뜻합니다.<br>근거: Figure 5(c) 내부 레이블과 Figure 2(c) SERS 원리 설명, DOI 문맥</dd>
+          </dl>
+  </div>
+</div>
   </div>
 
   <div class="panel">
@@ -81,8 +170,29 @@
         <span class="row"><span class="k">광 센서</span> 신축성 SERS-활성 플라즈모닉 메타표면 + 마이크로유체</span>
         <span class="row"><span class="k">센서 역할</span> 신축 메타필름의 핫스팟</span>
         <span class="row"><span class="k">감지 기전</span> 땀 연속 채취 → SERS 지문 → 비침습 실시간 모니터링</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig05d">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널에서 센서가 실제로 피부의 무엇을 측정하나요?</dt><dd>그림의 변수는 `Sweat` 안에 있는 `Analyte`, 즉 땀으로 배출된 분자입니다. 피부 안쪽에서 땀이 올라오고, 그 안의 분석물이 패치의 플라즈모닉 메타필름 쪽으로 이동해 SERS 신호로 읽히는 구도입니다. 근거는 Figure 5 캡션의 “wearable plasmonic-metasurface sensor [157]”와 본문 설명의 “epidermal sweat에서 analyte를 수확해 Raman fingerprint로 실시간 분자 프로파일링” 문맥입니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>위쪽의 `Excitation`과 `SERS` 화살표는 무엇을 의미하나요?</dt><dd>`Excitation`은 센서 표면에 쏘는 레이저 여기광이고, `SERS`는 그 결과로 증강되어 나오는 라만 산란 신호입니다. 즉 이 장치는 전기 신호만 읽는 패치가 아니라, 땀 분자의 진동 지문을 광학적으로 읽는 SERS 웨어러블입니다. 근거: 이 패널은 Figure 5의 SERS 응용 중 하나이며, Figure 2(c)가 SERS 기반 감지 메커니즘으로 제시되어 있습니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>오른쪽 확대도에서 `Plasmonic metafilm`이 가장 중요한 이유는 무엇인가요?</dt><dd>SERS에서는 금속 나노구조 주변의 국소 전자기장, 즉 핫스팟이 라만 신호를 크게 키웁니다. 그림에서 맨 위쪽 원형 금속 패턴이 있는 얇은 층이 `Plasmonic metafilm`로 표시되어 있어, 땀 속 분자가 이 근처에 도달했을 때 분자별 라만 지문을 증강하는 핵심 감지층으로 해석됩니다. 근거: 본문은 이 사례를 “flexible SERS-active metasurface”와 “continuous sweat sampling”의 결합으로 설명합니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>`Hydrogel film (contains sweat-inducing drug)`는 왜 들어가 있나요?</dt><dd>이 하이드로겔막은 단순 접착층이 아니라 발한 유도 약물을 포함하는 층으로 그려져 있습니다. 즉 사용자가 격렬히 운동하지 않아도 피부 표면에서 땀을 유도하고, 그 땀을 센서 쪽으로 공급하려는 설계입니다. 다만 그림만으로는 어떤 약물인지, 방출 속도나 투여량은 확정할 수 없습니다. 근거: 패널 내부 레이블과 Figure 5(d)의 웨어러블 땀 SERS 센서 문맥, 참고문헌 [157]입니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>`Flexible electrodes`는 SERS 신호를 읽는 전극인가요?</dt><dd>그렇게 단정하면 안 됩니다. 그림의 주된 분자 판독은 `Excitation`과 `SERS`로 표시된 광학 경로입니다. `Flexible electrodes`는 하이드로겔의 발한 유도 약물과 함께 배치되어 있으므로 발한 유도, 패치 구동, 또는 보조 전기 자극에 관여하는 구성요소로 보는 것이 자연스럽습니다. 하지만 이 패널 하나만으로 전극의 정확한 역할, 전압, 회로 방식은 알 수 없습니다. 근거: 본문은 SERS-active metasurface와 compliant microfluidic system의 통합을 강조합니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>`Breathable polymer film`은 감지 성능과 어떤 관련이 있나요?</dt><dd>맨 아래의 통기성 고분자막은 피부에 붙는 웨어러블 패치가 장시간 착용될 수 있게 하는 기계적·착용성 층으로 보입니다. 분자 지문을 직접 만드는 층은 플라즈모닉 메타필름이지만, 피부 표면에서 안정적으로 땀을 모으려면 패치가 부드럽고 통기성이 있어야 합니다. 근거: 본문은 기존 SERS 기판의 강성이 부드럽고 움직이는 생체 표면에서 문제이며, 이를 해결하기 위해 skin-conformable 플랫폼이 필요하다고 설명합니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>그림 왼쪽의 파란색·빨간색 점들은 각각 무엇인가요?</dt><dd>파란색 점은 `Sweat`, 빨간색 점은 `Analyte`로 표시되어 있습니다. 중요한 점은 센서가 “땀 자체”를 측정한다기보다 땀에 섞여 나온 특정 분자들의 라만 지문을 읽는다는 것입니다. 초보자가 흔히 `sweat = analyte`로 생각하지만, 이 그림에서는 땀이 운반 매질이고 analyte가 분석 대상입니다. 근거: 패널 레이블과 본문 “sweat에서 analyte를 직접 수확한다”는 설명입니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>오른쪽 확대도에 원형 금속 패턴이 여러 개 보이는 이유는 무엇인가요?</dt><dd>원형 금속 패턴들은 플라즈모닉 메타표면의 반복 단위 또는 SERS 활성 영역으로 볼 수 있습니다. 이런 주기적·나노구조화된 금속 패턴은 국소 전자기장을 집중시켜 라만 신호를 증강하는 데 쓰입니다. 다만 이 이미지 해상도와 캡션만으로 정확한 지름, 주기, 금속 재료, 공진 파장은 확정할 수 없습니다. 근거: Figure 5(d)는 wearable plasmonic-metasurface sensor로 분류되고, 참고문헌 [157]의 제목도 “plasmonic-metasurface sensor”입니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>아래쪽 사진과 SEM 이미지는 왜 같이 들어가 있나요?</dt><dd>위쪽은 작동 원리 모식도이고, 아래쪽은 실제 패치 또는 메타표면 구조를 보여 주는 증거 이미지입니다. 특히 SEM처럼 보이는 흑백 이미지는 나노패턴 배열과 변형된 구조가 실제로 존재함을 보여 주며, 신축 상태에서도 SERS 핫스팟 구조가 유지되는지를 뒷받침하는 역할을 합니다. 다만 이 패널만으로 정량적인 신축률이나 신호 감소율은 읽을 수 없습니다. 근거: Figure 5(d)와 본문에서 stretchable plasmonic metasurface sensor라고 설명합니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>이 장치가 “웨어러블”인 핵심 설계 포인트는 무엇인가요?</dt><dd>단순히 작다는 것보다, 피부 표면에 맞게 휘고 움직일 수 있는 구조라는 점이 핵심입니다. 그림에는 `Flexible electrodes`, `Breathable polymer film`, 얇은 메타필름, 하이드로겔막이 함께 그려져 있어 딱딱한 실험실용 SERS 기판을 피부 부착형 패치로 바꾼 설계를 보여 줍니다. 근거: 본문은 기존 SERS 기판의 강성이 웨어러블 적용의 문제이며, 이를 유연하고 skin-conformable한 SERS 플랫폼으로 해결한다고 설명합니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>이 센서는 혈액을 뽑는 방식인가요?</dt><dd>아닙니다. 그림에는 피부 표면, 땀 유도 약물, 땀, 분석물이 표시되어 있고, 본문도 “noninvasive”와 “epidermal sweat” 문맥으로 설명합니다. 따라서 이 패널의 의도는 혈액 채취가 아니라 피부 표면의 땀을 이용한 비침습 분자 감지입니다. 근거: 참고문헌 [157]의 제목은 “noninvasive and universal molecular fingerprint detection on biointerfaces”이고, Figure 5(d) 캡션은 웨어러블 플라즈모닉 메타표면 센서입니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>여기서 `metafilm`, `metasurface`, `SERS substrate`는 같은 뜻인가요?</dt><dd>완전히 같은 말은 아닙니다. `Metasurface`는 빛과 상호작용하도록 설계된 인공 표면 구조를 뜻하고, `metafilm`은 그 구조가 얇은 필름 형태로 구현된 층을 가리키는 그림 속 표현입니다. `SERS substrate`는 라만 신호를 증강하는 기판이라는 기능적 표현입니다. 이 패널에서는 플라즈모닉 메타필름이 SERS-active metasurface 역할을 하는 것으로 연결됩니다. 근거: 본문은 “flexible SERS-active metasurface”와 “stretchable plasmonic metasurface sensor”라고 설명합니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>이 그림에서 시간 변화나 실시간 모니터링을 직접 볼 수 있나요?</dt><dd>직접적인 시간축 그래프는 없습니다. x축, y축, 피크 이동, 시간에 따른 농도 변화 같은 정량 데이터는 이 패널에 표시되지 않습니다. 다만 모식도와 본문 문맥상 땀을 연속 채취하고 SERS 지문을 읽어 실시간 분자 프로파일링을 목표로 하는 장치임을 알 수 있습니다. 근거: 본문은 “continuous sweat sampling”과 “real-time molecular profiling”을 언급하지만, 이 패널 자체는 장치 구조 중심입니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>이 이미지에서 어떤 분자를 검출했는지는 알 수 있나요?</dt><dd>이 패널만으로는 특정 분자 이름을 확정할 수 없습니다. 그림에는 `Analyte`라는 일반 표기만 있고, 스펙트럼 피크나 분자명 라벨은 없습니다. 따라서 포도당, 젖산, 요산, 약물, 대사체 중 무엇을 검출했는지는 원 논문 [157]의 세부 실험이나 스펙트럼을 봐야 합니다. 근거: Figure 5 캡션은 응용 사례 수준에서 “wearable plasmonic-metasurface sensor”라고만 제시합니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>초보자가 이 그림에서 가장 헷갈리기 쉬운 포인트는 무엇인가요?</dt><dd>첫째, 전극이 보인다고 해서 전기화학 센서라고 단정하면 안 됩니다. 핵심 판독은 SERS 광학 신호입니다. 둘째, 땀은 분석 대상 그 자체라기보다 분석물을 운반하는 매질입니다. 셋째, 아래 SEM 이미지는 예쁜 표면 사진이 아니라 플라즈모닉 핫스팟을 만들 나노구조가 실제로 구현됐다는 구조적 근거입니다. 근거: Figure 5는 SERS-based sensing applications이고, 본문은 flexible SERS-active metasurface와 sweat sampling의 결합으로 이 사례를 설명합니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          <dt>이 이미지 하나만으로 확정할 수 없는 정보는 무엇인가요?</dt><dd>검출 분자 종류, SERS 피크 위치, 검출한계, 레이저 파장, 금속 재료, 나노패턴 치수, 신축률에 따른 감도 변화, 전극 구동 조건, 실제 인체 착용 시간은 이 패널만으로 확정할 수 없습니다. 이 그림은 “피부 위에서 땀을 유도·채취하고 플라즈모닉 메타표면으로 SERS 지문을 읽는 웨어러블 구조”를 보여 주는 장치 개념 패널입니다. 근거: 원 리뷰의 Figure 5 캡션과 본문은 응용 개요를 제공하고, 세부 정량값은 참고문헌 [157]의 원 연구 문맥에 속합니다. ([doi.org](https://doi.org/10.3390/aisens1010005))</dd>
+          </dl>
+  </div>
+</div>
   </div>
 
   <div class="panel">
@@ -98,8 +208,34 @@
         <span class="row"><span class="k">광 센서</span> 8종 SAM 기능화 Au 나노필러 SERS 어레이</span>
         <span class="row"><span class="k">센서 역할</span> SAM별로 화학적 선택성이 다른 핫스팟 어레이</span>
         <span class="row"><span class="k">감지 기전</span> 다채널 SERS 지문 + 다변량 분석 → 고차원 식별</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig05e">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널은 왜 ‘SERS 코’라고 부르나요?</dt><dd>아래쪽의 `Bare`, `SAM 1`, `SAM 2`, `SAM 3`, `SAM 8` 패널처럼 같은 시료라도 표면 코팅에 따라 서로 다른 분자가 핫스팟 근처에 모입니다. 사람 코가 여러 수용체의 조합 신호로 냄새를 구분하듯, 여기서는 8종 SAM 기능화 Au 나노필러가 만든 SERS 패턴 조합으로 시료를 구별합니다. 근거: Figure 5(e), 캡션의 “high-dimensional fingerprinting SERS nose [158]”, DOI: 10.3390/aisens1010005.</dd>
+          <dt>왼쪽 위의 `Au (111) plane`과 `SAM` 그림은 무엇을 보여주나요?</dt><dd>금 원자 표면, 특히 Au(111) 결정면 위에 자기조립 단분자막, 즉 SAM이 정렬되어 붙은 구조를 보여줍니다. SAM은 분석물이 금 표면의 SERS 핫스팟에 얼마나 가까이 오고 어떤 분자가 더 잘 머무는지를 바꾸는 화학적 필터 역할을 합니다. 근거: Figure 5(e) 내부 레이블 `Self-assembled monolayer (SAM)`, `Au (111) plane`; Figure 5 캡션 및 [158] 문맥.</dd>
+          <dt>아래쪽 `Bare`와 `SAM 1~8`의 차이는 무엇인가요?</dt><dd>`Bare`는 SAM이 없는 금 표면이고, `SAM 1~8`은 서로 다른 SAM으로 기능화된 표면입니다. 그림에서 같은 분석물 모양들이 패널마다 다른 위치와 밀도로 그려진 것은, 각 SAM이 분석물에 대해 다른 친화성을 가져 SERS 활성 영역에 들어오는 분자 조합이 달라진다는 뜻입니다. 근거: Figure 5(e) 내부 패널 및 범례; DOI Figure 5(e) 문맥.</dd>
+          <dt>그림 아래 범례의 “Analytes in SERS-active region”은 왜 중요하나요?</dt><dd>SERS 신호는 금 나노구조의 전자기 핫스팟 근처에 있는 분자에서 강하게 나옵니다. 그림의 빨간 빛나는 영역에 들어간 분석물만 강한 라만 지문을 만들 수 있으므로, 단순히 시료 안에 있는 분자 전체가 아니라 “핫스팟에 접근한 분자”가 측정 신호를 좌우합니다. 근거: Figure 5(e) 범례; 공통 원리 Figure 2(c)의 SERS 설명.</dd>
+          <dt>가운데 위 그래프의 x축 `Raman shift`는 무엇을 의미하나요?</dt><dd>x축 `Raman shift`는 입사광과 산란광의 에너지 차이를 나타내며, 분자의 진동 모드에 대응합니다. 즉 피크 위치가 다르면 서로 다른 결합이나 분자 구조 정보를 반영할 수 있습니다. 이 패널에서는 여러 SAM 조건에서 얻은 라만 스펙트럼이 겹쳐 있어, 시료별·SAM별 지문 차이를 비교하는 용도로 보입니다. 근거: Figure 5(e) 그래프 축 `Raman shift`; Figure 2(c) SERS 원리 문맥.</dd>
+          <dt>그래프의 y축 `Intensity`는 어떤 정보인가요?</dt><dd>y축 `Intensity`는 해당 라만 이동 위치에서 검출된 산란 신호 세기입니다. 특정 피크가 더 높으면 그 진동 모드에 해당하는 신호가 더 강하게 검출된 것입니다. 다만 이 이미지 하나만으로는 세기가 농도 차이 때문인지, SAM 친화도 때문인지, 핫스팟 접근성 때문인지 단독으로 확정할 수 없습니다. 근거: Figure 5(e) 그래프 축 `Intensity`; DOI Figure 5(e) 및 Figure 2(c) SERS 문맥.</dd>
+          <dt>그래프에 여러 색의 선이 겹쳐 있는 이유는 무엇인가요?</dt><dd>여러 SAM 또는 시료 조건에서 얻은 SERS 스펙트럼을 한 그래프에 겹쳐 놓은 것으로 해석됩니다. 색이 다른 선들은 피크 위치와 세기 패턴이 조금씩 달라, 단일 피크 하나보다 전체 스펙트럼 조합이 분류 정보가 된다는 점을 보여줍니다. 근거: Figure 5(e)의 다색 스펙트럼 및 `SAM 1~8, Bare` 레이블; 캡션의 “high-dimensional fingerprinting”.</dd>
+          <dt>이 그래프에서 특정 피크 하나만 보고 물질을 식별하나요?</dt><dd>이 패널의 의도는 특정 피크 하나가 아니라 여러 라만 피크와 8개 SAM 채널의 조합을 사용하는 것입니다. 오른쪽의 `Multivariate analysis`와 위쪽의 `Machine Learning` 흐름이 전체 패턴 기반 분류를 강조합니다. 근거: Figure 5(e) 내부 `Label-free SERS fingerprinting`, `Multivariate analysis`; Figure 5 캡션 [158].</dd>
+          <dt>오른쪽 3D 플롯의 `SAM X`, `SAM Y`, `SAM Z` 축은 실제 공간 좌표인가요?</dt><dd>실제 물리적 x-y-z 위치라기보다, 서로 다른 SAM 채널에서 얻은 신호 특징을 축으로 삼은 다변량 분석 공간으로 보는 것이 자연스럽습니다. `Sample I`와 `Sample II`가 서로 다른 영역에 모이는 그림은 SERS 지문 조합으로 시료군이 분리될 수 있음을 나타냅니다. 근거: Figure 5(e) 오른쪽 `SAM X/Y/Z`, `Multivariate analysis`; DOI Figure 5(e) 문맥.</dd>
+          <dt>`Sample I`과 `Sample II`가 떨어져 보이는 것은 무엇을 의미하나요?</dt><dd>두 시료가 8종 SAM-SERS 패턴에서 서로 다른 특징을 가져 다변량 공간에서 분리된다는 뜻입니다. 이는 표적별 수용체 없이도 복합 시료를 분류할 수 있다는 메시지와 연결됩니다. 다만 실제 분류 정확도나 통계적 유의성은 이 그림만으로 알 수 없습니다. 근거: Figure 5(e) 오른쪽 군집 그림; 캡션 [158].</dd>
+          <dt>`Label-free SERS fingerprinting`은 무슨 뜻인가요?</dt><dd>분석물에 형광 염료나 라벨을 붙이지 않고, 분자 자체의 라만 진동 신호를 지문처럼 사용한다는 뜻입니다. 그림에서 시료가 SAM 기능화 금 나노필러 위에 올라가고 바로 스펙트럼으로 이어지는 흐름이 그 의미를 보여줍니다. 근거: Figure 5(e) 중앙 레이블 `Label-free SERS fingerprinting`; Figure 2(c) SERS 원리 문맥.</dd>
+          <dt>왜 8종 SAM을 쓰나요? 하나의 SAM으로는 부족한가요?</dt><dd>하나의 SAM은 특정 화학적 친화성만 제공하므로 복합 시료를 충분히 구분하기 어려울 수 있습니다. 8종 SAM을 쓰면 분석물 종류와 SAM 종류의 조합이 늘어나 고차원 지문이 형성됩니다. 이미지의 `SAM 1`, `SAM 2`, `SAM 3`, `...`, `SAM 8` 배열이 이 다채널 전략을 나타냅니다. 근거: Figure 5(e) 하단 SAM 배열; 캡션의 “high-dimensional fingerprinting SERS nose [158]”.</dd>
+          <dt>아래 패널에서 분석물 모양이 여러 색과 형태로 그려진 이유는 무엇인가요?</dt><dd>별, 초승달, 삼각형 같은 모양은 서로 다른 분석물 또는 분자군을 상징합니다. 각 SAM 표면에서 어떤 분석물이 SERS 활성 영역에 더 많이 들어오는지가 달라져, 같은 혼합물도 SAM별로 다른 신호 조합을 만들 수 있음을 나타냅니다. 근거: Figure 5(e) 하단 분석물 도식 및 범례.</dd>
+          <dt>`SERS (SAM X)`, `SERS (SAM Y)`, `SERS (SAM Z)`는 무슨 차이인가요?</dt><dd>같은 시료를 서로 다른 SAM 표면에서 측정한 SERS 채널을 의미합니다. 그림에서는 빨강, 초록, 파랑으로 표시해 SAM 종류에 따라 스펙트럼 지문이 달라짐을 강조합니다. 근거: Figure 5(e) 상단의 `SERS (SAM X/Y/Z)` 레이블; [158] 문맥.</dd>
+          <dt>이 센서에서 금 나노필러의 역할은 무엇인가요?</dt><dd>금 나노필러는 국소 플라즈몬 공명과 핫스팟을 만들어 약한 라만 산란을 증폭하는 SERS 기판 역할을 합니다. SAM은 그 금 표면 위에 붙어 분석물 접근성을 조절하고, 금 나노구조는 광학 신호 증폭을 담당합니다. 근거: Figure 5(e) 내부 `SAM functionalized Au-nanopillar substrates`; Figure 2(c)의 SERS 공통 원리.</dd>
+          <dt>이 방식은 항체나 효소처럼 특정 수용체가 필요한 센서인가요?</dt><dd>이 그림의 핵심은 표적 하나에 특이적인 생체수용체보다, 여러 SAM의 비특이적·차등적 상호작용 패턴을 이용한다는 점입니다. 그래서 “수용체 무관” 또는 “패턴 인식형” 센서에 가깝습니다. 다만 SAM 자체는 표면 화학 선택성을 제공하므로 아무 기능도 없는 표면이라는 뜻은 아닙니다. 근거: Figure 5(e) SAM 어레이 및 `Multivariate analysis`; DOI Figure 5(e) [158] 문맥.</dd>
+          <dt>초보자가 `SAM`을 분석물로 착각할 수 있나요?</dt><dd>그럴 수 있습니다. 이 그림에서 SAM은 검출 대상이 아니라 금 표면에 미리 형성된 코팅층입니다. 실제 검출 대상은 별, 초승달, 삼각형 등으로 표시된 분석물이며, SAM은 이들이 핫스팟 근처에 모이는 방식을 바꾸는 표면 기능층입니다. 근거: Figure 5(e) 범례의 `Self-assembled monolayer`와 `Analytes`.</dd>
+          <dt>`Machine Learning`은 어디에 쓰이나요?</dt><dd>각 SAM 채널에서 얻은 여러 SERS 스펙트럼을 입력 특징으로 사용해 시료를 분류하는 단계로 보입니다. 그림 오른쪽의 다변량 분석 결과와 `Sample I`, `Sample II` 분리가 그 용도를 시각화합니다. 어떤 알고리즘을 썼는지는 이 이미지와 제공 캡션만으로는 확정할 수 없습니다. 근거: Figure 5(e) 상단 `Machine Learning`, 오른쪽 `Multivariate analysis`; 캡션 [158].</dd>
+          <dt>이 이미지에서 실제 피크 위치나 라만 이동값을 읽을 수 있나요?</dt><dd>어렵습니다. 그래프에 `Raman shift`와 `Intensity` 축은 보이지만 눈금값과 단위가 명확히 보이지 않습니다. 따라서 “어느 cm^-1 피크가 증가했다” 같은 정량 해석은 이 패널만으로 하면 안 됩니다. 근거: Figure 5(e) 삽입 그래프의 축 표시는 보이나 수치 눈금은 판독 불가.</dd>
+          <dt>이 그림만으로 센서의 검출한계나 정확도를 알 수 있나요?</dt><dd>알 수 없습니다. 그림은 원리와 워크플로를 보여주는 모식도에 가깝고, 검출한계, 반복성, 분류 정확도, 혼동행렬, 데이터 수 등은 표시되어 있지 않습니다. 그런 정보는 원 논문 [158]의 본문이나 보조자료를 확인해야 합니다. 근거: Figure 5(e)와 캡션은 응용 사례 요약만 제공; DOI: 10.3390/aisens1010005.</dd>
+          <dt>이 패널이 Figure 5의 다른 SERS 응용들과 연결되는 점은 무엇인가요?</dt><dd>Figure 5 전체는 SERS 기반 센싱 응용을 묶어 보여주며, (e)는 그중 SAM 기능화 어레이와 머신러닝을 결합한 고차원 지문 센서 사례입니다. 공통 기반은 금·은 나노구조 핫스팟이 라만 신호를 증폭해 분자 진동 지문을 제공한다는 SERS 원리입니다. 근거: Figure 5 캡션의 SERS-based sensing applications; Figure 2(c) SERS 원리; [158].</dd>
+          </dl>
+  </div>
+</div>
   </div>
 
   <div class="panel">
@@ -116,7 +252,27 @@
         <span class="row"><span class="k">광 센서</span> 아포플라스트 도입형 SERS 나노프로브(AgNS)</span>
         <span class="row"><span class="k">센서 역할</span> 나노프로브 핫스팟(생체 내 SERS)</span>
         <span class="row"><span class="k">감지 기전</span> 신호분자 흡착 → SERS 지문 변화 → 스트레스 마커 in situ 추적</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig05f">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널 (f)는 한 문장으로 무엇을 보여 주나요?</dt><dd>식물 잎 내부, 특히 세포외 공간인 아포플라스트에 `AgNS@PDDA` SERS 나노프로브를 넣고 `785 nm laser`로 라만 신호를 읽어 식물 스트레스 신호분자, 예를 들면 살리실산(SA) 변화를 실시간으로 추적하는 개념도입니다. 근거는 Figure 5 캡션의 “SERS-based sensing applications” 중 `(f) 식물 스트레스 신호분자 실시간 모니터링 [159]` 및 DOI `10.3390/aisens1010005` 문맥입니다.</dd>
+          <dt>왼쪽 위의 흰 구형 입자, 보라색 입자, 파란 입자는 각각 무엇인가요?</dt><dd>그림 레이블상 흰 구형 입자는 `Silica nanoparticle`, 보라색 입자는 은 나노구조인 `AgNS`, 파란 입자는 `AgNS@PDDA`입니다. 즉 실리카 나노입자를 기반으로 은 나노구조를 만들고, 여기에 `PDDA`라는 고분자 코팅을 더해 식물 내부에서 SERS 나노프로브로 쓰는 흐름을 보여 줍니다. 근거는 패널 내 레이블과 Figure 5(f) 캡션의 식물 SERS 나노프로브 설명, reference `[159]`입니다.</dd>
+          <dt>`AgNS@PDDA`에서 `@`는 무슨 뜻인가요?</dt><dd>보통 나노재료 표기에서 `A@B`는 A가 B로 코팅되었거나 B가 표면에 결합된 구조를 뜻합니다. 여기서는 `AgNS` 표면에 `PDDA`가 붙은 나노프로브로 읽는 것이 자연스럽습니다. 다만 이 이미지만으로 PDDA 두께, 결합 방식, 표면전하 값까지는 확정할 수 없습니다. 근거는 그림의 `AgNS → PDDA → AgNS@PDDA` 합성 화살표와 DOI `10.3390/aisens1010005`의 Figure 5(f) 문맥입니다.</dd>
+          <dt>왜 은 나노구조가 필요한가요?</dt><dd>SERS에서는 은이나 금 나노구조 주변의 플라즈몬 핫스팟이 약한 라만 산란을 크게 증폭합니다. 그래서 식물 신호분자처럼 농도가 낮고 주변 배경이 복잡한 대상도 진동 지문 형태로 감지할 수 있습니다. 근거는 제공된 본문 문맥의 Fig. 2(c) SERS 원리와 Figure 5(f) 응용 사례입니다.</dd>
+          <dt>그림 속 `785 nm laser`는 어떤 역할인가요?</dt><dd>785 nm 레이저는 잎에 도입된 SERS 나노프로브를 조사해 라만 산란 신호를 발생시키는 광원입니다. 그림에서는 레이저가 잎 표면으로 들어가고, 그 지점에서 `SERS signals`가 나오는 것으로 표시되어 있습니다. 근거는 패널 중앙의 `785 nm laser` 레이블과 Figure 5(f) 캡션 문맥입니다.</dd>
+          <dt>잎 그림 주변의 `Insect biting wound`, `Cold 4°C`는 왜 표시되어 있나요?</dt><dd>이들은 식물에 가해지는 스트레스 자극을 뜻합니다. 곤충에 의한 손상이나 저온 스트레스가 발생하면 식물 내부의 신호분자 조성이 변하고, SERS 나노프로브가 그 변화를 라만 스펙트럼 변화로 읽는다는 메시지입니다. 근거는 패널 내 자극 레이블과 캡션의 “식물 스트레스 신호분자 실시간 모니터링 [159]”입니다.</dd>
+          <dt>오른쪽 그래프의 x축과 y축은 무엇을 의미하나요?</dt><dd>x축은 `Raman shift (cm⁻¹)`로, 분자의 진동 모드에 해당하는 라만 이동값입니다. y축은 `Norm. intensity`, 즉 정규화된 SERS 신호 세기입니다. 따라서 특정 x축 위치의 피크가 커지거나 작아지는 것은 해당 진동 지문을 가진 분자 신호가 달라졌다는 뜻으로 해석됩니다. 근거는 오른쪽 그래프 축 레이블과 DOI Figure 5(f) 문맥입니다.</dd>
+          <dt>그래프의 네 가지 선은 각각 무엇을 비교하나요?</dt><dd>위에서부터 초록색은 `Infected barley`, 파란색은 `SA 10 uM injected into barley`, 주황색은 `Control barley`, 검은색은 `SA 10 uM (in vitro)`로 보입니다. 즉 감염된 보리, 살리실산을 주입한 보리, 대조 보리, 시험관 내 살리실산 기준 스펙트럼을 비교합니다. 근거는 그래프 오른쪽의 각 선 레이블과 Figure 5(f), reference `[159]`입니다.</dd>
+          <dt>그래프 중앙의 세로 점선 `1,035`는 왜 중요해 보이나요?</dt><dd>세로 점선은 `1035 cm⁻¹` 부근의 라만 피크 위치를 강조합니다. 검은색 `SA 10 uM (in vitro)`와 파란색 `SA 10 uM injected into barley`, 초록색 `Infected barley`에서 이 부근 신호가 비교 대상으로 제시되어 있어, 살리실산 또는 스트레스 관련 신호분자 지표 피크로 쓰였을 가능성이 큽니다. 다만 이 이미지 하나만으로 1035 cm⁻¹ 피크가 오직 SA만의 고유 피크라고 확정할 수는 없습니다. 근거는 그래프의 점선 표기와 Figure 5(f) 캡션, `[159]` 문맥입니다.</dd>
+          <dt>대조 보리와 감염 보리의 스펙트럼은 무엇이 달라 보이나요?</dt><dd>대조 보리 주황색 선은 상대적으로 약한 피크를 보이는 반면, 감염 보리 초록색 선은 특정 라만 이동 영역에서 더 뚜렷한 피크가 나타납니다. 특히 800 cm⁻¹ 부근과 1035 cm⁻¹ 부근의 신호가 비교 포인트로 보입니다. 이는 스트레스 상태에서 신호분자 조성이 달라졌음을 SERS로 읽을 수 있다는 메시지입니다. 근거는 오른쪽 스펙트럼 비교와 Figure 5(f) 캡션의 실시간 모니터링 응용 설명입니다.</dd>
+          <dt>`SA 10 uM injected into barley`와 `SA 10 uM (in vitro)`를 같이 보여 주는 이유는 무엇인가요?</dt><dd>시험관 내 SA 기준 신호와 실제 보리 내부에 SA를 주입했을 때의 신호를 비교해, 식물 조직 안에서도 SA 관련 SERS 지문을 읽을 수 있음을 보여 주려는 구성입니다. 하지만 식물 내부에서는 배경분자, 흡착 상태, 조직 산란 때문에 피크 모양과 세기가 시험관 조건과 완전히 같지는 않을 수 있습니다. 근거는 그래프 레이블과 Figure 5(f), reference `[159]`입니다.</dd>
+          <dt>초보자가 `SERS signals`를 형광 신호처럼 오해할 수 있나요?</dt><dd>그럴 수 있습니다. 하지만 여기서의 신호는 형광 세기가 아니라 라만 이동 위치별 진동 지문입니다. 그래서 단순히 “밝다/어둡다”가 아니라 `400-1600 cm⁻¹` 범위에서 어느 피크가 나타나는지가 중요합니다. 근거는 그래프 축 `Raman shift (cm⁻¹)`와 제공된 Fig. 2(c) SERS 원리 문맥입니다.</dd>
+          <dt>이 그림에서 센서의 핵심 역할은 무엇인가요?</dt><dd>센서는 잎 자체가 아니라 잎 안에 도입된 `AgNS@PDDA` 나노프로브입니다. 이 나노프로브 표면이나 근처에 식물 신호분자가 오면 은 나노구조의 핫스팟에서 라만 신호가 증폭되고, 그 스펙트럼 변화로 스트레스 상태를 추적합니다. 근거는 패널의 나노프로브 합성 모식도, 잎에 조사되는 785 nm 레이저, Figure 5(f) 캡션입니다.</dd>
+          <dt>이 이미지만 보고 식물에 손상을 주지 않는 완전 비침습 센서라고 말할 수 있나요?</dt><dd>단정하기 어렵습니다. 그림에는 나노프로브가 식물 잎의 세포외 공간에 도입되는 것으로 설명되어 있어, 측정 광학 과정은 현장형·실시간에 가깝지만 나노프로브 도입 과정이 완전히 비침습인지 여부는 이 패널만으로 확정할 수 없습니다. 근거는 Figure 5(f) 모식도와 제공된 본문 문맥입니다.</dd>
+          <dt>이 이미지에서 확정할 수 없는 정보는 무엇인가요?</dt><dd>나노프로브의 정확한 크기, PDDA 코팅 두께, 검출한계, 시간 응답, 식물 생장 영향, 1035 cm⁻¹ 피크의 완전한 분자 배정, 실제 현장 반복성은 이 패널만으로 알 수 없습니다. 이 그림은 원리와 대표 스펙트럼 비교를 보여 주는 응용 패널입니다. 근거는 Figure 5 전체 캡션의 응용 사례 나열 형식과 reference `[159]`, DOI `10.3390/aisens1010005` 문맥입니다.</dd>
+          </dl>
+  </div>
+</div>
   </div>
 </section>

@@ -16,8 +16,32 @@
     <img class="zoom" src="@fig02" alt="Figure 2 전체">
     <div class="imgcap">(a) RI · (b) SEIRA · (c) SERS · (d) Chiral · (e) SEF — 각 패널은 모식도와 그래프로 구성</div>
   </div>
-
-  <!-- a -->
+  <div class="evidence-note qa-note" data-qa-source="fig02_overview">
+    <h5>Figure 전체 예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>(a)의 검은 곡선과 빨간 곡선은 왜 오른쪽으로 이동해 있나요?</dt><dd>(a)는 RI sensing, 즉 굴절률 변화 감지입니다. 작은 센서 표면 주변 굴절률이 `n`에서 `n + Δn`으로 변하면 플라즈몬 공명 조건이 바뀌고, 그래프의 공명 피크가 파장축 `λ`에서 오른쪽으로 이동합니다. 그림의 `Δλ` 화살표가 바로 이 공명 파장 이동량입니다.<br>근거: Figure 2(a) 캡션과 본문 2.1. 논문은 표적 결합이 국소 RI를 바꾸고 그 결과 공명 파장, 진폭, 위상이 변한다고 설명합니다. RI sensitivity는 `Δλ/Δn` 문맥으로 제시됩니다 [22-29]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(a)의 y축이 Intensity인데, RI 센서는 세기 변화를 보는 건가요, 파장 이동을 보는 건가요?</dt><dd>이 그림에서는 주된 메시지가 피크의 “세기 크기”보다 “피크 위치 이동”입니다. y축은 광 응답의 세기이고 x축은 파장 `λ`인데, 검은 피크와 빨간 피크의 최대점이 달라지며 `Δλ`가 생깁니다. 실제 RI 센서는 파장 이동뿐 아니라 진폭이나 위상 변화도 추적할 수 있지만, 이 패널은 파장 이동을 대표적으로 그렸습니다.<br>근거: Figure 2(a), 본문 2.1. 공명 파장, 진폭, 위상 변화가 모두 신호가 될 수 있다고 설명하지만, 식에서는 `Δλ`와 `Δn`의 관계를 강조합니다 [27-29]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(a)의 노란 막대와 회색 받침은 무엇을 뜻하나요?</dt><dd>회색 받침은 플라즈몬 센서 기판 또는 나노구조 표면, 노란 막대는 표면에 놓인 감지층이나 결합된 물질을 단순화한 모식도로 볼 수 있습니다. 왼쪽은 주변 굴절률 `n`, 오른쪽은 분석물 결합 등으로 `n + Δn`이 된 상태입니다. 다만 이 그림만으로는 실제 재료가 금인지, 항체인지, 박막인지 확정할 수 없습니다.<br>근거: Figure 2(a), 본문 2.1. 표면 기능화, 항체·압타머·분자각인체 같은 생체인식층, 표적 결합에 따른 국소 RI 변화가 설명됩니다 [27]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(b) SEIRA 그래프에서 빨간 곡선에 두 개의 dip이 생기는 이유는 무엇인가요?</dt><dd>빨간 곡선은 안테나가 있을 때의 강화된 적외선 흡수 응답을 나타내며, `Amide I`, `Amide II` 위치에서 단백질 진동 흡수 지문이 나타납니다. 그래서 넓은 플라즈몬 배경 위에 특정 분자 진동 모드가 dip처럼 보입니다.<br>근거: Figure 2(b), 본문 2.2. SEIRA는 분자의 진동 fingerprint를 플라즈몬 나노안테나 hot spot에서 강화한다고 설명하며, 성능 지표 EF도 제시됩니다 [7,30-35]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(b)의 “protein fingerprint”는 단백질 전체 모양을 보는 건가요?</dt><dd>아닙니다. 여기서 fingerprint는 현미경 이미지 같은 형태가 아니라, 단백질 분자의 진동 모드가 만드는 스펙트럼 패턴입니다. 그림의 `Amide I`, `Amide II`는 단백질에서 자주 쓰이는 적외선 진동 밴드 예시입니다.<br>근거: Figure 2(b), 본문 2.2. 적외선 분광은 생화학 분자의 고유 진동 fingerprint를 포착한다고 설명됩니다 [30-32]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(b)의 빨간 선 “with antennas”와 작은 검은/회색 신호는 무엇이 다른가요?</dt><dd>안테나가 없으면 단백질 흡수 신호가 작아 잘 보이지 않지만, 플라즈몬 나노안테나가 입사광을 hot spot에 집중시키면 같은 분자 진동 신호가 크게 강화됩니다. 그래서 빨간 곡선은 배경 공명과 강화된 흡수 특징을 함께 보여줍니다.<br>근거: Figure 2(b), 본문 2.2. 논문은 IR 분자의 흡수 단면적이 작아 민감도가 낮고, 플라즈몬 나노안테나가 전자기장을 집중시켜 SEIRA를 가능하게 한다고 설명합니다 [33-35,7]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(c) SERS에서 x축이 파장 `λ`가 아니라 Raman Shift `cm⁻¹`인 이유는 무엇인가요?</dt><dd>SERS는 공명 파장 이동을 보는 RI 센서가 아니라, 레이저가 분자와 비탄성 산란한 뒤 에너지가 얼마나 바뀌었는지를 봅니다. 그래서 x축은 검출된 빛의 절대 파장이 아니라 입사 레이저 대비 주파수 차이, 즉 Raman shift입니다.<br>근거: Figure 2(c), 본문 2.3. Raman은 분자 진동·회전 모드를 비탄성 산란의 frequency shift와 intensity로 읽는다고 설명됩니다 [36-38]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(c)의 가장 큰 뾰족한 피크는 무엇을 의미하나요?</dt><dd>특정 Raman shift에서 분자의 진동 모드가 강하게 산란된다는 뜻입니다. 그림 속 금속 구/기판 근처의 분자가 플라즈몬 hot spot에 놓이면 산란 세기가 크게 증폭되어 날카로운 피크가 잘 보입니다. 단, 이 그림만으로는 그 피크가 어떤 결합 진동인지, 어떤 분자인지 확정할 수 없습니다.<br>근거: Figure 2(c), 본문 2.3. SERS는 금·은 나노구조 hot spot의 전자기장 강화와 화학적 강화로 Raman 신호를 크게 증폭한다고 설명됩니다 [39-41]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(c)의 위쪽 모식도에서 초록색 파와 주황색 파는 각각 무엇인가요?</dt><dd>초록색은 incident laser, 즉 입사 레이저이고, 주황색은 Raman scattering, 즉 분자에서 산란되어 나오는 라만광입니다. 가운데 질소가 표시된 고리형 분자는 분석 대상 분자 예시이고, 아래의 metal sphere는 플라즈몬 강화 표면을 나타냅니다.<br>근거: Figure 2(c), 본문 2.3. 논문은 단색광 조사 후 분자가 shifted frequency의 산란광을 내며, 금속 나노구조가 이를 강화한다고 설명합니다 [36-41]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>SEIRA와 SERS는 둘 다 분자 fingerprint를 본다는데, 그림상 차이는 무엇인가요?</dt><dd>SEIRA 패널 (b)는 적외선 흡수 스펙트럼에서 amide band 같은 흡수 dip을 강조하고, SERS 패널 (c)는 레이저 산란 후 Raman shift 축에서 여러 날카로운 피크를 보여줍니다. 즉 SEIRA는 “흡수”, SERS는 “비탄성 산란” 기반입니다.<br>근거: Figure 2(b,c), 본문 2.2-2.3. 논문은 IR은 molecular vibrational fingerprint의 흡수, Raman은 shifted scattered light의 세기를 측정한다고 구분합니다 [30-41]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(d)의 LCP와 RCP는 무엇이고, 왜 키랄 센싱에 필요하나요?</dt><dd>LCP는 left circularly polarized light, RCP는 right circularly polarized light입니다. 키랄 분자는 왼손/오른손 원편광과 다르게 상호작용하므로, 두 편광에 대한 흡수 또는 산란 차이를 이용해 chirality를 읽습니다. 그림의 y축 `CD`는 circular dichroism 신호를 뜻합니다.<br>근거: Figure 2(d), 본문 2.4. 전통적 ORD/CD spectroscopy가 분자 chirality를 탐지하는 기술로 소개되고, 나노포토닉스가 약한 CD 신호를 증폭한다고 설명됩니다 [42-44]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(d)의 파란 곡선과 빨간 곡선이 위아래로 반대인 이유는 무엇인가요?</dt><dd>파란 곡선은 right-handed molecules, 빨간 곡선은 left-handed molecules로 표시되어 있습니다. 서로 거울상인 enantiomer는 원편광에 대한 응답 부호가 반대로 나타날 수 있어 CD 스펙트럼도 양/음 방향으로 대칭적인 형태를 보입니다.<br>근거: Figure 2(d), 본문 2.4. 논문은 chiral compound가 두 enantiomer로 존재하며, 이를 구분하는 능력이 중요하다고 설명합니다 [42-44]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(d)의 검은 점선 “Chiral sample alone”은 왜 거의 평평한가요?</dt><dd>분자만 있을 때의 키랄 광학 신호가 약하다는 점을 보여줍니다. 금속 나노입자 또는 키랄/플라즈몬 구조가 주변 광장을 강화하면 파란색·빨간색처럼 CD 신호가 더 크게 나타납니다.<br>근거: Figure 2(d), 본문 2.4. 많은 키랄 분자의 helical pitch가 가시광 파장보다 작아 기존 CD/ORD가 작은 시료 부피에서 약하다고 설명합니다. 나노포토닉 구조는 optical chirality와 CD 응답을 증폭할 수 있습니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(d)의 분자 그림에 Br, H, D 같은 원자가 보이는데, 이 그림은 특정 분자를 말하나요?</dt><dd>키랄 중심을 설명하기 위한 예시 모식도로 보는 것이 안전합니다. Br, H, D처럼 서로 다른 치환기가 붙은 구조는 왼손성과 오른손성을 직관적으로 보여주지만, 이 Figure 2 caption만으로 특정 실험 분자나 농도를 확정할 수는 없습니다.<br>근거: Figure 2(d), 본문 2.4. 본문은 특정 분자 실험값보다 chiral molecule과 enantiomer의 일반 원리를 설명합니다 [42-44]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(e) SEF 그래프에서 검은 선이 빨간 선보다 높은 이유는 무엇인가요?</dt><dd>검은 선은 `with Plasmons`, 빨간 선은 `without Plasmons`입니다. 금속 나노입자의 국소 표면 플라즈몬이 근처 형광체의 여기율과 방출 확률을 높이면 fluorescence intensity가 커집니다. 그래서 같은 파장 범위에서 검은 피크가 더 큽니다.<br>근거: Figure 2(e), 본문 2.5. 논문은 금속 나노구조가 국소 전자기장을 강화해 excitation rate를 높이고, optical states 밀도 증가로 emission probability와 quantum yield를 높일 수 있다고 설명합니다 [45-47]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>(e)의 초록색 물결 화살표와 파란색 물결 화살표는 각각 무엇인가요?</dt><dd>파란색 물결은 incident laser, 즉 형광체를 여기시키는 빛이고, 초록색 물결은 fluorescence, 즉 여기된 분자가 방출하는 형광입니다. 노란 빛을 띠는 nanoparticle 주변 영역은 플라즈몬에 의해 강화된 국소장으로 해석할 수 있습니다.<br>근거: Figure 2(e), 본문 2.5. SEF는 금속 나노입자의 localized surface plasmon resonance가 주변 전자기장을 강화해 형광 신호를 키우는 방식으로 설명됩니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>SEF에서는 금속 나노입자에 가까우면 무조건 형광이 세지나요?</dt><dd>이 그림은 “플라즈몬이 있으면 형광이 강화될 수 있다”는 개념도이지, 거리 의존성까지 보여주지는 않습니다. 실제로는 형광체와 금속이 너무 가까우면 비복사 에너지 전달이나 quenching이 생길 수 있으므로 최적 거리가 중요합니다. 이 Figure 2만으로 그 거리는 알 수 없습니다.<br>근거: Figure 2(e), 본문 2.5는 close proximity에서 SEF를 활용한다고 설명하지만, 이 개요 그림과 캡션은 거리 최적화나 quenching 조건을 정량화하지 않습니다 [45-47]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>다섯 패널의 y축이 모두 같은 물리량인가요?</dt><dd>아닙니다. (a), (b), (c)는 모두 `Intensity`라고 되어 있지만 의미가 다릅니다. (a)는 공명 산란/투과/반사 같은 광 응답 세기, (b)는 적외선 흡수 강화 응답, (c)는 Raman 산란 세기입니다. (d)는 `CD`, (e)는 `FL Intensity`로 별도 물리량입니다.<br>근거: Figure 2 전체 캡션과 본문 2.1-2.5. 논문은 RI, SEIRA, SERS, chiral, SEF를 서로 다른 sensing mechanism으로 나누어 설명합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 그림에서 공통으로 반복되는 핵심 용어는 무엇인가요?</dt><dd>핵심은 `plasmon`, `hot spot`, `fingerprint`, `resonance`, `enhancement`입니다. RI는 공명 이동, SEIRA와 SERS는 분자 진동 fingerprint 강화, chiral sensing은 CD 강화, SEF는 형광 강화로 연결됩니다. 초보자가 헷갈리기 쉬운 점은 “모든 패널이 같은 스펙트럼을 보는 것”이 아니라, 같은 플라즈몬 기반 증폭을 서로 다른 신호 방식에 적용한다는 점입니다.<br>근거: Figure 2 caption, 본문 2.1-2.5. 논문은 conventional optical sensing techniques로 RI, SEIRA, SERS, chiral, SEF를 차례로 소개하고, 각 원리를 Figure 2에 연결합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 Figure 2 하나만 보고 확정할 수 없는 정보는 무엇인가요?</dt><dd>정확한 금속 종류, 나노입자 크기, 안테나 형상, 실제 파장값, Raman peak assignment, SEIRA enhancement factor, SEF 거리 조건, 시료 농도, 검출한 실제 바이오마커는 알 수 없습니다. 이 그림은 정량 데이터가 아니라 다섯 감지 기전의 개념도입니다.<br>근거: Figure 2 caption은 “Mechanisms of photonic sensing”으로만 제시되며, 본문 2.1-2.5도 원리와 대표 성능 개념을 설명합니다. 구체 응용과 실험 사례는 이후 Figure 3-5 등에서 별도로 다룹니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          </dl>
+  </div>
+<!-- a -->
   <div class="panel">
     <div class="pimg"><img class="zoom" src="@fig02a" alt="RI sensing 패널"><div class="imgcap">(a) RI sensing</div></div>
     <div class="ptext">
@@ -33,8 +57,31 @@
         <span class="row"><span class="k">광 센서</span> 플라즈모닉 금속 나노구조(나노디스크 등) 어레이</span>
         <span class="row"><span class="k">센서 역할</span> 표면의 <span class="term" data-k="LSPR">국소 표면 플라즈몬 공명</span>(공명 파장이 굴절률에 민감)</span>
         <span class="row"><span class="k">감지 기전</span> 결합→국소 RI 상승→공명 적색이동 Δλ. 감도 <span class="term" data-k="Sensitivity">S=Δλ/Δn</span>, 성능지수 <span class="term" data-k="FoM">FoM=S/<span class="term" data-k="FWHM">FWHM</span></span></span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig02a">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널에서 x축 `λ`와 y축 `Intensity`는 각각 무엇을 뜻하나요?</dt><dd>x축 `λ`는 빛의 파장, y축 `Intensity`는 그 파장에서 측정되는 광 신호 세기입니다. 즉 이 그래프는 센서가 파장별로 얼마나 강한 광 응답을 보이는지 보여줍니다. 근거: Figure 2(a) 캡션은 RI-based sensing mechanism이며, 본문 Sec. 2.1은 굴절률 변화가 플라즈몬 공명 파장, 진폭, 위상 변화를 만든다고 설명합니다. DOI: https://doi.org/10.3390/aisens1010005, Figure 2 및 Sec. 2.1. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>검은 곡선과 붉은 곡선은 무엇이 다른 상태인가요?</dt><dd>검은 곡선은 주변 굴절률이 `n`일 때의 공명 스펙트럼, 붉은 곡선은 표면 근처 굴절률이 `n + Δn`으로 바뀐 뒤의 공명 스펙트럼으로 해석됩니다. 그림 속 왼쪽 모식도에는 `n`, 오른쪽 모식도에는 `n + Δn`이 표시되어 있고, 그래프에서도 두 색의 피크 위치가 달라집니다. 근거: Figure 2(a) 캡션, 본문 Sec. 2.1의 “표적 결합 → 국소 RI 변화 → 공명 파장 이동” 문맥 및 ref. [27]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>붉은 피크가 오른쪽으로 이동한 것은 어떤 의미인가요?</dt><dd>오른쪽 이동은 공명 파장이 더 긴 파장 쪽으로 이동했다는 뜻입니다. 이를 보통 적색이동(red shift)이라고 부릅니다. 이 그림에서는 굴절률이 `n`에서 `n + Δn`으로 증가하면서 피크가 `Δλ`만큼 오른쪽으로 이동한 것으로 표현되어 있습니다. 근거: Figure 2(a) 시각 요소, 본문 Sec. 2.1의 `Δn`과 `Δλ` 관계 및 식 (1). ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>그래프 위의 `Δλ` 화살표는 무엇을 재는 표시인가요?</dt><dd>`Δλ`는 검은 곡선의 공명 피크 위치와 붉은 곡선의 공명 피크 위치 사이의 파장 차이입니다. RI 센싱에서는 이 피크 이동량을 읽어서 표면 근처 굴절률 변화 `Δn`을 추정합니다. 근거: 본문 Sec. 2.1은 RI sensitivity를 `Δλ/Δn` 관계로 정의하고, `Δn`이 굴절률 변화, `Δλ`가 대응하는 공명 파장 이동이라고 설명합니다. DOI 문맥: 식 (1), ref. [28]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>오른쪽 작은 모식도에서 노란 구조 위에 덧씌워진 것처럼 보이는 테두리는 무엇인가요?</dt><dd>그림만 보면 구체적인 분자 종류는 알 수 없지만, 센서 표면에 무언가가 결합하거나 주변 매질이 바뀌어 국소 굴절률이 증가한 상태를 상징하는 표시로 볼 수 있습니다. 본문은 항체, 압타머, 분자인식층 같은 표면 기능화가 표적을 포획하고, 그 결합이 국소 RI를 바꾼다고 설명합니다. 근거: Figure 2(a), 본문 Sec. 2.1, ref. [27]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>노란 막대는 센서인가요, 아니면 분석 대상인가요?</dt><dd>노란 막대는 분석 대상이라기보다 플라즈몬 공명을 일으키는 금속 나노구조, 즉 센서의 활성 부분으로 보는 것이 자연스럽습니다. 본문은 금속-유전체 계면에 전자기장을 가두는 surface plasmon을 RI 센싱의 핵심으로 설명합니다. 다만 이 패널 하나만으로 노란 구조가 금 나노막대인지, 나노디스크인지, 나노안테나인지는 확정할 수 없습니다. 근거: Figure 2(a), Sec. 2.1, refs. [22–24]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 센서는 빛의 세기 변화를 보는 건가요, 파장 이동을 보는 건가요?</dt><dd>이 패널의 핵심은 세기 자체보다 피크 위치의 이동입니다. y축이 `Intensity`라서 스펙트럼 세기를 그리고 있지만, 그림 중앙의 `Δλ` 표시가 강조하듯 굴절률 변화는 공명 파장 이동으로 읽힙니다. 본문도 공명 파장, 진폭, 위상 변화를 언급하지만, Figure 2(a)는 특히 wavelength shift를 도식화합니다. 근거: Figure 2(a), Sec. 2.1, 식 (1). ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>초보자가 `Δn`과 `Δλ`를 헷갈릴 수 있는데, 둘은 어떻게 다른가요?</dt><dd>`Δn`은 원인에 가까운 값, 즉 표면 근처 굴절률 변화입니다. `Δλ`는 그 결과로 측정되는 공명 파장 이동입니다. 센서가 직접 보여주는 것은 보통 스펙트럼의 피크 이동 `Δλ`이고, 이를 통해 `Δn` 또는 표적 결합 정도를 추정합니다. 근거: 본문 Sec. 2.1의 sensitivity 정의 `S_RI = Δλ/Δn`, ref. [28]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 그림에서 감도는 어떻게 정의되나요?</dt><dd>본문 문맥상 RI 감도는 굴절률 변화당 공명 파장 이동량, 즉 `S_RI = Δλ/Δn`입니다. 그림에서는 `Δλ`와 `Δn`이 모두 표시되어 있으므로 감도 개념을 직관적으로 보여줍니다. 다만 축 눈금이 없기 때문에 이 이미지 하나만으로 실제 감도 값, 예를 들어 nm/RIU 같은 수치는 계산할 수 없습니다. 근거: Sec. 2.1, 식 (1), ref. [28]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>피크 폭이 중요한가요? 그림에는 FWHM이 표시되어 있지 않은데요.</dt><dd>중요합니다. 본문은 성능지수 FoM이 감도를 공명선폭, 보통 FWHM으로 정규화한다고 설명합니다. 따라서 같은 `Δλ`라도 피크가 좁을수록 작은 이동을 더 정밀하게 구분할 수 있습니다. 하지만 이 패널에는 FWHM 표시나 수치가 없으므로 FoM을 계산할 수는 없습니다. 근거: Sec. 2.1, 식 (2), ref. [29]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>그래프의 붉은 피크가 검은 피크보다 약간 높아 보이는데, 이것도 중요한 신호인가요?</dt><dd>가능성은 있지만 이 패널에서는 핵심으로 단정하기 어렵습니다. 본문은 굴절률 변화가 공명 파장뿐 아니라 진폭이나 위상도 바꿀 수 있다고 설명합니다. 그러나 그림에는 `Δλ`만 명시되어 있으므로, 이 패널의 주된 메시지는 진폭 증가가 아니라 피크 위치 이동입니다. 근거: Figure 2(a), Sec. 2.1의 resonance wavelength/amplitude/phase 변화 문맥. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>표적 분자가 결합하면 왜 공명 파장이 이동하나요?</dt><dd>플라즈몬 공명은 금속 나노구조 주변의 유전체 환경에 민감합니다. 표적이 표면에 붙거나 주변 매질이 바뀌면 금속-유전체 계면 근처의 국소 굴절률이 변하고, 그 결과 공명 조건이 바뀌어 피크 파장이 이동합니다. 근거: Sec. 2.1은 surface plasmon이 금속-유전체 계면에 전자기장을 가두기 때문에 RI 변화에 민감하다고 설명합니다. refs. [22–24], [27]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 방식은 표지(label)가 필요한 센싱인가요?</dt><dd>본문 문맥에서는 label-free 검출로 설명됩니다. 즉 형광표지나 라만 태그를 붙이지 않아도, 표적 결합으로 인한 굴절률 변화만으로 신호를 얻는 방식입니다. 다만 실제 선택성을 얻기 위해 표면에 항체, 압타머 같은 인식층을 붙일 수 있습니다. 근거: Sec. 2.1의 noninvasive, label-free detection 및 surface functionalization 설명. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 그림만 보고 어떤 물질을 검출하는 센서인지 알 수 있나요?</dt><dd>알 수 없습니다. 그림은 특정 바이오마커나 화학물질 검출 사례가 아니라 RI 센싱의 일반 원리를 보여주는 패널입니다. 본문은 생물학, 화학, 기체 샘플에서 표적을 포획할 수 있다고 넓게 설명하지만, Figure 2(a) 자체에는 분석물 이름, 농도, 용액 조건이 없습니다. 근거: Figure 2 캡션은 “Mechanisms of photonic sensing”이며, Sec. 2.1은 일반 메커니즘 설명입니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 그림에서 시간 변화나 결합 속도까지 읽을 수 있나요?</dt><dd>직접 읽을 수는 없습니다. 본문은 신호 변화를 추적하면 분자 상호작용의 kinetic information, binding affinity, reaction dynamics를 얻을 수 있다고 설명하지만, 이 패널은 시간축이 아니라 파장축 스펙트럼입니다. 시간에 따른 센서그램은 별도 데이터가 있어야 합니다. 근거: Sec. 2.1의 kinetic information 문맥, Figure 2(a)의 x축 `λ`. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 패널이 Figure 2의 다른 패널들과 구별되는 핵심 용어는 무엇인가요?</dt><dd>핵심 용어는 `RI sensing`, `n`, `n + Δn`, `λ`, `Intensity`, `Δλ`입니다. Figure 2 전체는 RI, SEIRA, SERS, chiral, SEF의 다섯 광센싱 메커니즘을 비교하는 그림이고, 이 중 (a)는 굴절률 변화가 공명 파장 이동으로 바뀌는 원리를 담당합니다. 근거: Figure 2 캡션과 Sec. 2.1. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 이미지 하나만으로 확정할 수 없는 정보는 무엇인가요?</dt><dd>노란 나노구조의 정확한 재료와 형상, 실제 파장 범위, 세기 단위, 굴절률 변화량, 감도 수치, FoM, 검출한 표적 분자, 실험인지 시뮬레이션인지 여부는 이 패널만으로 확정할 수 없습니다. 이 이미지는 정량 데이터라기보다 RI 기반 플라즈몬 센싱 원리를 설명하는 개념도입니다. 근거: Figure 2(a) 캡션은 메커니즘 설명이며, 정량 조건은 패널에 제시되어 있지 않습니다. DOI: https://doi.org/10.3390/aisens1010005.</dd>
+          </dl>
+  </div>
+  
+</div>
   </div>
 
   <!-- b -->
@@ -53,8 +100,30 @@
         <span class="row"><span class="k">광 센서</span> 플라즈모닉 IR 나노안테나/<span class="term" data-k="metasurface">메타표면</span></span>
         <span class="row"><span class="k">센서 역할</span> 안테나 주변 <span class="term" data-k="hot-spot">핫스팟</span>의 강한 근접장</span>
         <span class="row"><span class="k">감지 기전</span> 핫스팟이 분자 진동 흡수를 증폭(증강인자 <span class="term" data-k="EF">EF</span>), Amide I/II 등 <span class="term" data-k="MIR">중적외선</span> 지문 검출</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig02b">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널은 무엇을 보여 주나요?</dt><dd>Figure 2(b)는 SEIRA, 즉 surface-enhanced infrared absorption 기반 감지 원리를 설명하는 모식도입니다. 단백질의 약한 적외선 진동 지문이 플라즈모닉 나노안테나와 결합하면 훨씬 큰 스펙트럼 변화로 나타난다는 점을 보여 줍니다. 근거: PDF Figure 2 caption은 (b)를 “SEIRA-based sensing mechanism”으로 설명하고, 본문 2.2절은 나노안테나가 약한 진동 특징 검출을 가능하게 한다고 설명합니다 [7].</dd>
+          <dt>x축의 `λ`는 무엇인가요?</dt><dd>`λ`는 파장입니다. 오른쪽으로 갈수록 파장이 길어진다는 뜻입니다. 보통 적외선 분광에서는 파장 대신 파수(cm⁻¹)를 쓰기도 하는데, 파수와 파장은 반비례합니다. 따라서 이 그림처럼 파장축으로 그리면 더 낮은 파수의 진동 밴드가 오른쪽에 위치할 수 있습니다.</dd>
+          <dt>y축의 `Intensity`는 무엇을 의미하나요?</dt><dd>검출되는 광학 신호 세기를 뜻합니다. 여기서는 단백질 고유의 약한 적외선 흡수 신호와, 안테나가 있을 때 증강되어 나타나는 신호를 비교하는 축입니다. 다만 눈금과 단위가 없으므로 절대 세기, 흡광도 값, 검출한계는 이 패널만으로 읽을 수 없습니다.</dd>
+          <dt>빨간 곡선과 검은 곡선의 차이는 무엇인가요?</dt><dd>빨간 곡선은 “With antennas”, 즉 나노안테나가 있을 때의 SEIRA 신호를 나타냅니다. 검은 곡선은 안테나 없이 관찰되는 단백질 fingerprint 신호를 뜻하며, 훨씬 작게 그려져 있습니다. 그림의 핵심은 안테나가 단백질의 약한 IR fingerprint를 크게 증강한다는 비교입니다. 근거: 본문 2.2절의 hot spot 및 SEIRA enhancement factor 설명.</dd>
+          <dt>빨간 곡선의 큰 봉우리는 전부 단백질 신호인가요?</dt><dd>아닙니다. 빨간 곡선의 넓은 배경 봉우리는 주로 플라즈모닉 안테나의 광학 공명과 관련된 증강 배경으로 보는 것이 적절합니다. 그 위에 Amide I, Amide II 위치에서 분자 진동과 결합한 특징적인 꺾임이나 dip이 나타납니다. 즉 “큰 빨간 신호 전체 = 단백질 흡수”라고 단정하면 안 됩니다.</dd>
+          <dt>Amide I와 Amide II는 무엇인가요?</dt><dd>둘 다 단백질 peptide backbone의 대표적인 적외선 진동 밴드입니다. Amide I는 주로 C=O stretching과 관련되고, Amide II는 주로 N-H bending 및 C-N stretching 성분을 포함합니다. 일반적으로 Amide I는 약 1600-1700 cm⁻¹, Amide II는 약 1510-1580 cm⁻¹ 부근에 나타납니다. 이 그림은 단백질 fingerprint의 대표 밴드로 두 위치를 표시한 것입니다.</dd>
+          <dt>왜 Amide I는 주황색, Amide II는 파란색 점선으로 표시되어 있나요?</dt><dd>두 밴드의 위치를 시각적으로 구분하기 위한 색상 코드입니다. 주황색 점선은 Amide I 위치, 파란색 점선은 Amide II 위치를 가리킵니다. 색 자체가 물리적으로 다른 빛을 의미한다기보다, 서로 다른 단백질 진동 밴드를 구분하는 그래픽 표기입니다.</dd>
+          <dt>Amide I와 Amide II 위치에서 왜 빨간 곡선이 아래로 꺼져 보이나요?</dt><dd>SEIRA에서는 안테나의 넓은 공명 스펙트럼과 분자의 좁은 진동 흡수선이 결합하면서 peak, dip, 비대칭적인 Fano-like line shape이 나타날 수 있습니다. 이 그림에서는 단백질의 Amide I/II 흡수 위치에서 빨간 곡선이 움푹 패인 형태로 그려져, 분자 진동 fingerprint가 증강된 공명 배경 위에 새겨진다는 점을 강조합니다.</dd>
+          <dt>검은 곡선의 작은 봉우리들은 무엇을 의미하나요?</dt><dd>안테나 없이 측정한 단백질의 원래 IR fingerprint가 매우 약하다는 것을 보여 줍니다. 작은 봉우리들이 Amide I/II 위치 근처에 있지만, 빨간 곡선과 비교하면 신호가 바닥에 가까울 정도로 작습니다. 본문 2.2절도 기존 IR 방법은 분자의 흡수 단면적이 작아 민감도가 낮다고 설명합니다 [33-35].</dd>
+          <dt>오른쪽 위의 작은 그림은 무엇인가요?</dt><dd>단백질이 나노안테나 또는 플라즈모닉 구조 근처에 놓여 있는 상황을 단순화한 모식도입니다. 단백질이 안테나의 전자기 hot spot 근처에 있으면 국소 전기장이 커지고, 그 결과 단백질의 진동 흡수 신호가 강화됩니다. 근거: 본문 2.2절의 “incident radiation을 nanoscale hot spots로 집중”한다는 설명.</dd>
+          <dt>안테나는 정확히 어떤 역할을 하나요?</dt><dd>안테나는 입사 적외선을 나노스케일 영역에 모아 국소 전자기장을 크게 만듭니다. 단백질이 그 hot spot 안에 있으면 원래 약한 vibrational absorption이 더 크게 검출됩니다. 논문은 SEIRA 성능을 EF = I_SEIRA N_ref / (I_ref N_SEIRA)로 설명하며, 이 값이 안테나의 optical gain과 hot spot에 들어간 분자 비율을 함께 반영한다고 설명합니다.</dd>
+          <dt>이 그림에서 단백질의 종류를 알 수 있나요?</dt><dd>알 수 없습니다. “Protein”과 Amide I/II 표시는 단백질 계열 분자가 있다는 일반적 예시입니다. 특정 단백질 이름, 농도, 구조, 2차 구조 비율, 결합 친화도는 이 패널만으로 추론할 수 없습니다.</dd>
+          <dt>이 그림으로 SEIRA가 정량 분석도 가능하다고 말할 수 있나요?</dt><dd>원리는 가능하지만, 이 패널만으로 정량 성능을 말할 수는 없습니다. 정량 분석에는 보정 곡선, 농도별 스펙트럼, 잡음, 재현성, EF, 검출한계가 필요합니다. 이 패널은 정량 결과가 아니라 “안테나가 있으면 fingerprint가 증강된다”는 메커니즘 설명입니다.</dd>
+          <dt>이 패널에서 검출 물질이 표지(label)를 붙인 단백질인가요?</dt><dd>그림과 본문 맥락상 표지 없이 단백질의 고유 적외선 진동 fingerprint를 읽는 label-free 방식으로 이해하는 것이 적절합니다. 본문 2.2절은 IR spectroscopy의 chemical specificity, label-free, noninvasive, real-time measurement capability를 언급합니다 [30-32].</dd>
+          <dt>이 그림에서 가장 중요한 한 문장 요약은 무엇인가요?</dt><dd>단백질의 Amide I/II 적외선 fingerprint는 원래 매우 약하지만, 플라즈모닉 나노안테나의 hot spot에 놓이면 SEIRA 효과로 크게 증강되어 더 쉽게 검출된다. 근거: PDF Figure 2(b), 본문 2.2절, 원 논문 DOI [10.3390/aisens1010005](https://doi.org/10.3390/aisens1010005), 관련 참고문헌 [7], [30-35].</dd>
+          </dl>
+  </div>
+  
+  
+</div>
   </div>
 
   <!-- c -->
@@ -72,8 +141,26 @@
         <span class="row"><span class="k">광 센서</span> Ag/Au 나노구조 SERS 기판(핫스팟)</span>
         <span class="row"><span class="k">센서 역할</span> 비탄성(라만) 산란광을 증폭하는 플라즈모닉 근접장</span>
         <span class="row"><span class="k">감지 기전</span> 전자기적·화학적 증강으로 <span class="term" data-k="SERS">I_SERS∝|E·E|²</span>, 진동 지문 봉우리 측정</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig02c">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널에서 실제 “센서” 역할을 하는 것은 무엇인가요?</dt><dd>그림의 노란색 `Metal sphere`가 센서의 핵심 역할을 합니다. 분자 자체가 센서라기보다, 금속 나노구조가 입사 레이저와 라만 산란광 주변의 전기장을 키워 약한 라만 신호를 증폭합니다. 근거: Figure 2(c) 캡션은 SERS 기전이며, 본문 2.3은 Ag/Au 금속 나노구조가 hot spot으로 작동한다고 설명합니다 [39–41], DOI 문맥: https://doi.org/10.3390/aisens1010005.</dd>
+          <dt>초록색 물결과 주황색 물결은 각각 무엇을 뜻하나요?</dt><dd>초록색 물결은 `Incident laser`, 즉 분자를 때리는 입사 레이저입니다. 주황색 물결은 `Raman scattering`, 즉 분자 진동 정보가 실린 비탄성 산란광입니다. 근거: Figure 2(c)의 레이블과 본문 2.3의 “레이저/단색광을 조사하면 shifted frequency의 산란광을 측정한다”는 설명입니다 [36–38]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>x축 `Raman Shift (cm⁻¹)`는 파장인가요?</dt><dd>아닙니다. x축은 산란광의 절대 파장이라기보다, 입사 레이저에 비해 산란광 주파수가 얼마나 이동했는지를 파수 단위 `cm⁻¹`로 나타낸 값입니다. 그래서 같은 분자는 레이저 파장이 달라도 유사한 진동 지문 피크 위치를 보일 수 있습니다. 근거: 본문 2.3은 Raman spectroscopy가 shifted frequency와 intensity를 측정해 분자 구조와 결합 정보를 준다고 설명합니다 [36–38]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>y축 `Intensity`는 무엇의 세기인가요?</dt><dd>y축은 라만 산란 신호의 세기입니다. SERS에서는 금속 나노구조가 이 세기를 크게 키우기 때문에, 일반 라만보다 훨씬 약한 농도나 적은 분자 수에서도 피크가 보일 수 있습니다. 근거: 본문 2.3은 SERS가 라만 신호를 여러 자릿수 증폭한다고 설명하고, SERS intensity 식을 제시합니다 [39–41], 식 (4). ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>그래프의 검은 선에서 여러 개의 뾰족한 피크는 무엇을 의미하나요?</dt><dd>각 피크는 분자의 특정 진동 모드에 해당하는 라만 지문입니다. 예를 들어 가운데의 매우 큰 피크는 해당 분자에서 특히 강하게 산란되는 진동 모드가 있음을 뜻하지만, 이 그림만으로 정확한 결합 이름이나 피크 위치를 숫자로 읽을 수는 없습니다. 근거: Figure 2(c)의 라만 스펙트럼 모식도와 본문 2.3의 “vibrational and rotational modes” 설명 [36–38]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>가장 높은 가운데 피크가 가장 많은 분자를 뜻하나요?</dt><dd>반드시 그렇지는 않습니다. 피크 세기는 농도뿐 아니라 금속 표면과의 거리, 분자의 배향, hot spot 위치, 레이저 조건, 라만 산란 단면적에 영향을 받습니다. 따라서 이 패널만 보고 “가운데 피크 성분이 가장 많다”고 단정하면 안 됩니다. 근거: 본문 2.3은 전자기적 증강과 화학적 증강이 함께 SERS 세기를 좌우한다고 설명합니다 [39–41]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>그림 속 육각형 고리와 N 표시는 무엇인가요?</dt><dd>질소가 포함된 방향족 분자, 즉 피리딘처럼 보이는 예시 분자를 그린 것으로 해석할 수 있습니다. 다만 Figure 2(c) 캡션은 단순히 SERS 기전만 말하므로, 이 패널 하나만으로 실제 분석 대상 분자가 피리딘이라고 확정할 수는 없습니다. 근거: Figure 2(c) 캡션은 “SERS-based sensing mechanism”이고, 본문 3.3은 역사적으로 피리딘의 라만 세기 증가가 SERS 관찰과 관련된다고 설명합니다. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>`Metal sphere`가 하나만 있어도 SERS가 강하게 일어나나요?</dt><dd>그림은 원리를 단순화한 모식도입니다. 실제 강한 SERS는 단일 매끈한 구보다 거친 금속 표면, 나노입자 사이 좁은 간격, 나노갭 같은 hot spot에서 훨씬 강해지는 경우가 많습니다. 근거: 본문 2.3은 금속 나노구조, 보통 은 또는 금 나노입자가 hot spot을 형성한다고 설명합니다 [39–41]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 그림에서 “표면증강”은 어디에서 일어나나요?</dt><dd>분자가 금속 구 표면 가까이에 놓인 바로 그 영역에서 일어납니다. 금속 표면 근처의 국소 전기장이 커지고, 경우에 따라 금속과 흡착 분자 사이 전하 전달도 라만 신호를 키웁니다. 근거: 본문 2.3의 electromagnetic enhancement 및 chemical enhancement 설명, 식 (4) 문맥 [39–41]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>SERS와 일반 라만 산란은 그림에서 어떻게 구별되나요?</dt><dd>일반 라만은 주황색 산란광 자체가 매우 약하지만, 이 그림에서는 금속 구가 있어서 산란 신호가 증폭된다는 점이 다릅니다. 아래 그래프의 날카로운 피크들은 “분자 지문은 유지하면서 세기를 키운다”는 SERS의 장점을 보여주는 장치입니다. 근거: 본문 2.3은 spontaneous Raman scattering이 약하고 Rayleigh scattering에 묻히기 쉬우며, SERS가 이를 극복한다고 설명합니다 [36–41]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 그래프에 피크 shift나 시간 변화가 보이나요?</dt><dd>이 패널에는 시간축이나 전후 비교 곡선이 없어서 피크가 이동했는지, 시간이 지나며 변했는지는 알 수 없습니다. x축은 시간이나 파장이 아니라 Raman shift이고, 검은 스펙트럼 한 개만 제시되어 있습니다. 근거: Figure 2(c)의 단일 스펙트럼 모식도와 Figure 2 전체 캡션. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 이미지에서 농도, 검출한계, enhancement factor를 알 수 있나요?</dt><dd>알 수 없습니다. 그래프 축에 수치 눈금이 없고, 시료 농도·레이저 파장·금속 재료·입자 크기·분자 수 정보도 없습니다. 본문은 SERS intensity와 EF 개념을 다루지만, Figure 2(c)는 정량 데이터가 아니라 기전 설명용 모식도입니다. 근거: Figure 2 캡션, 본문 2.3 식 (4) 문맥 [39–41]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          <dt>이 그림이 말하는 핵심 용어는 무엇이며, 초보자가 가장 헷갈릴 점은 무엇인가요?</dt><dd>핵심 용어는 `SERS`, `Raman scattering`, `Raman shift`, `Metal sphere`, `Intensity`, `hot spot`입니다. 초보자는 Raman shift를 산란광 세기나 시간 변화로 오해하거나, 금속 구가 분석 대상 분자라고 착각할 수 있습니다. 여기서는 금속 구가 증강 기판이고, 피크 위치는 분자의 진동 지문, 피크 세기는 증강된 산란 신호입니다. 근거: Figure 2(c) 레이블과 본문 2.3의 SERS 기전 설명 [36–41]. ([mdpi.com](https://www.mdpi.com/3042-5999/1/1/5))</dd>
+          </dl>
+  </div>
+</div>
   </div>
 
   <!-- d -->
@@ -93,8 +180,29 @@
         <span class="row"><span class="k">광 센서</span> 키랄 플라즈모닉 <span class="term" data-k="metasurface">메타표면</span>/나노입자</span>
         <span class="row"><span class="k">센서 역할</span> 좌/우 원편광을 다르게 다루는 키랄 근접장(초키랄장)</span>
         <span class="row"><span class="k">감지 기전</span> LCP·RCP 흡광차(CD)의 부호·세기로 키랄성 판별, 신호 최대 6자릿수 증강</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig02d">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널에서 실제 센서 역할을 하는 것은 무엇인가요?</dt><dd>그림 아래쪽의 금색 **Nanoparticle**가 센서 증강 구조로 그려져 있습니다. 키랄 분자 자체의 CD 신호는 매우 약하지만, 금속 나노입자의 플라즈몬 근접장이 좌원편광(LCP)과 우원편광(RCP)에 대한 반응 차이를 키워 주는 역할을 합니다.<br>근거: Figure 2 caption의 “(d) Chiral sensing”, DOI `10.3390/aisens1010005`의 photonic sensing mechanism 문맥.</dd>
+          <dt>LCP와 RCP 화살표는 무엇을 뜻하나요?</dt><dd>LCP는 **left circularly polarized light**, RCP는 **right circularly polarized light**입니다. 그림에서는 두 원편광이 키랄 분자와 나노입자 쪽으로 입사하는 것으로 표현되어 있습니다. 핵심은 키랄 물질 또는 키랄 근접장이 두 원편광을 똑같이 흡수하지 않는다는 점입니다.<br>근거: Figure 2(d) 내부 레이블 LCP/RCP 및 Figure 2 caption의 chiral sensing 문맥.</dd>
+          <dt>오른쪽 그래프의 x축 λ는 무엇인가요?</dt><dd>x축의 `λ`는 **파장**입니다. 즉, CD 신호가 빛의 파장에 따라 어떻게 달라지는지를 보여주는 그래프입니다. 특정 파장 부근에서 파란 곡선은 양의 피크, 빨간 곡선은 음의 dip처럼 나타납니다.<br>근거: Figure 2(d) 그래프 축 표기 및 DOI 문맥의 photonic sensing mechanism 설명.</dd>
+          <dt>y축의 CD는 정확히 무엇을 측정한 값인가요?</dt><dd>CD는 **circular dichroism**, 즉 좌원편광과 우원편광에 대한 흡수 차이를 뜻합니다. 보통 키랄 분자가 LCP와 RCP를 다르게 흡수할 때 생기는 신호입니다. 이 그림에서는 CD의 부호가 분자의 handedness를 구별하는 신호로 제시되어 있습니다.<br>근거: Figure 2(d)의 y축 `CD`, LCP/RCP 표기, Figure 2 caption.</dd>
+          <dt>파란색 곡선과 빨간색 곡선은 무엇이 다른가요?</dt><dd>파란색 곡선은 그림에 표시된 **Right-handed molecules**에 대응하며 양의 CD 피크를 보입니다. 빨간색 곡선은 **Left-handed molecules**에 대응하며 음의 CD dip을 보입니다. 두 곡선은 거의 거울상처럼 보이므로, 같은 파장 영역에서 CD 부호가 반대로 나타난다는 점을 강조합니다.<br>근거: Figure 2(d) 내부 레이블 “Right-handed molecules”, “Left-handed molecules”.</dd>
+          <dt>점선 “Chiral sample alone”은 왜 거의 0 근처에 있나요?</dt><dd>점선은 나노입자 증강 없이 **키랄 시료만 있을 때의 CD 신호**를 나타내는 것으로 해석됩니다. 거의 0에 가까운 수평선으로 그려진 이유는, 일반적인 키랄 분자의 자연 CD 신호가 매우 약하다는 점을 시각적으로 강조하기 위해서입니다.<br>근거: Figure 2(d)의 점선 레이블 “Chiral sample alone” 및 제공된 본문 문맥.</dd>
+          <dt>그래프의 피크와 dip은 어떤 의미인가요?</dt><dd>파란색 양의 피크는 특정 파장에서 right-handed molecule의 CD가 크게 양수로 증강된다는 뜻입니다. 빨간색 음의 dip은 left-handed molecule이 같은 영역에서 반대 부호의 CD를 보인다는 뜻입니다. 즉, 피크 위치와 부호가 키랄성 판별에 쓰입니다.<br>근거: Figure 2(d)의 CD-λ 그래프와 Figure 2 caption.</dd>
+          <dt>이 그림에서 분자의 농도나 양도 알 수 있나요?</dt><dd>이 패널만으로는 알 수 없습니다. y축 CD의 절대 단위, 눈금, 농도 조건이 표시되어 있지 않기 때문입니다. 그림은 정량 분석보다는 “나노입자가 키랄 CD 신호를 증강해 handedness를 구별한다”는 기전 설명에 가깝습니다.<br>근거: Figure 2(d)에는 축 눈금·단위·농도 정보가 없음; DOI Figure 2의 mechanism schematic 문맥.</dd>
+          <dt>파란색 피크와 빨간색 dip의 위치가 완전히 같은 파장이라고 확정할 수 있나요?</dt><dd>그림상으로는 거의 같은 파장 영역에서 반대 부호로 보이지만, 정확히 동일한 파장인지는 확정할 수 없습니다. 축 눈금과 실제 실험 데이터가 없기 때문에 정밀한 peak position이나 shift는 읽을 수 없습니다.<br>근거: Figure 2(d) 그래프는 개념도이며 x축 숫자와 단위 눈금이 없음.</dd>
+          <dt>금 나노입자가 직접 키랄한 구조인가요?</dt><dd>이 그림만으로는 나노입자 자체가 키랄 구조인지 확정할 수 없습니다. 단순한 구형 금 나노입자처럼 그려져 있지만, 제공 문맥에서는 나노입자가 키랄 근접장 또는 플라즈몬 증강을 통해 약한 키랄 신호를 키우는 역할로 설명됩니다.<br>근거: Figure 2(d)의 “Nanoparticle” 레이블 및 제공된 DOI 문맥.</dd>
+          <dt>초보자가 LCP/RCP와 left-handed/right-handed molecule을 혼동할 수 있는 지점은 무엇인가요?</dt><dd>LCP/RCP는 **빛의 편광 상태**이고, left-handed/right-handed molecule은 **분자의 거울상 구조 또는 handedness**입니다. 둘 다 left/right라는 표현을 쓰지만 같은 개념이 아닙니다. CD는 두 원편광에 대한 반응 차이를 이용해 분자의 handedness를 판별하는 신호입니다.<br>근거: Figure 2(d)의 LCP/RCP 레이블과 right-/left-handed molecules 레이블.</dd>
+          <dt>그림 왼쪽의 C, H, Br, I 같은 원자 표시는 왜 중요한가요?</dt><dd>사면체 중심 탄소 주변에 서로 다른 치환기가 붙은 키랄 분자를 나타내기 위한 시각 요소입니다. 이런 분자는 거울상 이성질체를 가질 수 있고, 그 차이가 CD 부호 차이로 나타납니다. 다만 이 그림만으로 실제 분석 대상 분자의 정확한 화학식은 확정할 수 없습니다.<br>근거: Figure 2(d)의 분자 모식도 및 chiral sensing caption.</dd>
+          <dt>이 센싱 방식은 굴절률 센싱이나 SERS와 무엇이 다른가요?</dt><dd>이 패널의 측정량은 산란 세기나 라만 피크가 아니라 **CD**, 즉 LCP/RCP 흡수 차이입니다. 같은 Figure 2 안의 다른 패널들이 RI, SEIRA, SERS, SEF 기전을 보여주는 반면, (d)는 키랄 분자의 handedness를 구별하는 원편광 이색성 기반 기전입니다.<br>근거: Figure 2 caption: “(a) RI-based, (b) SEIRA-based, (c) SERS-based, (d) Chiral, (e) SEF-based sensing mechanism.”</dd>
+          <dt>CD 신호의 부호만 보면 분자가 왼손형인지 오른손형인지 항상 결정할 수 있나요?</dt><dd>이 개념도에서는 파란색 양의 CD가 right-handed, 빨간색 음의 CD가 left-handed로 표시되어 있습니다. 하지만 실제 실험에서는 CD 부호 convention, 파장 영역, 분자 배향, 나노구조 설계에 따라 해석이 달라질 수 있으므로, 이 그림 하나만으로 보편 규칙처럼 일반화하면 안 됩니다.<br>근거: Figure 2(d)는 개념도이며 CD 부호 정의와 실험 조건을 제시하지 않음.</dd>
+          <dt>이 그림에서 “신호 최대 6자릿수 증강”을 직접 읽을 수 있나요?</dt><dd>직접 읽을 수는 없습니다. 점선과 실선의 차이가 증강을 암시하지만, y축 눈금이 없어서 몇 배 증강인지 계산할 수 없습니다. “수 자릿수 증강”은 제공된 본문 문맥에 따른 설명이지, 이 패널 자체에서 정량적으로 산출되는 값은 아닙니다.<br>근거: Figure 2(d)에는 CD 축 눈금이 없음; 제공된 DOI 문맥의 플라즈모닉 증강 설명.</dd>
+          <dt>이 패널만으로 확정할 수 없는 정보는 무엇인가요?</dt><dd>정확한 나노입자 재료, 크기, 형상, 분자 종류, 농도, CD 단위, peak wavelength, 실험 장치 구성, 실제 증강 배율은 확정할 수 없습니다. 이 이미지는 Figure 2의 “photonic sensing mechanisms” 중 chiral sensing 원리를 설명하는 개념 패널입니다.<br>근거: Figure 2(d) 및 Figure 2 caption, DOI `10.3390/aisens1010005`.</dd>
+          </dl>
+  </div>
+</div>
   </div>
 
   <!-- e -->
@@ -113,7 +221,28 @@
         <span class="row"><span class="k">광 센서</span> 귀금속 나노입자(구·막대·<span class="term" data-k="bowtie-antenna">보타이</span> 등)</span>
         <span class="row"><span class="k">센서 역할</span> 형광단 근처의 플라즈모닉 근접장 + 광학상태밀도 증가</span>
         <span class="row"><span class="k">감지 기전</span> 여기율↑·<span class="term" data-k="quantum-yield">양자수율</span>↑로 형광 방출 증폭(최대 수천 배)</span>
-      </div>
-    </div>
+</div>
+  <div class="evidence-note qa-note" data-qa-source="fig02e">
+    <h5>예상 질문과 답변</h5>
+          <dl class="qa-list">
+          <dt>이 패널에서 SEF가 무엇을 뜻하나요?</dt><dd>SEF는 `Surface-Enhanced Fluorescence`, 즉 표면증강 형광입니다. 그림에서는 금 나노입자 근처에서 형광 신호가 커지는 상황을 보여줍니다. 근거는 Figure 2 캡션의 “(e) SEF-based sensing mechanism” 및 DOI `10.3390/aisens1010005` 문맥입니다.</dd>
+          <dt>그래프의 x축 λ는 무엇인가요?</dt><dd>λ는 파장입니다. 그래프는 특정 파장에서 형광 세기(`FL Intensity`)가 어떻게 분포하는지를 보여줍니다. 다만 축 눈금이나 단위가 없어서 정확한 파장값, 예를 들어 몇 nm에서 피크가 나는지는 이 이미지 하나만으로 알 수 없습니다. 근거: Figure 2e의 SEF 그래프와 Figure 2 캡션.</dd>
+          <dt>y축의 `FL Intensity`는 어떤 신호인가요?</dt><dd>`FL Intensity`는 형광 세기입니다. 형광단이 빛을 흡수한 뒤 방출하는 빛의 세기를 의미하며, 이 그림에서는 플라즈몬이 있을 때 형광 세기가 크게 증가함을 보여줍니다. 근거: Figure 2e 이미지의 y축 표기 및 SEF 기반 센싱 문맥, DOI `10.3390/aisens1010005`.</dd>
+          <dt>검은 선과 빨간 선은 무엇을 비교하나요?</dt><dd>검은 선은 `with Plasmons`, 빨간 선은 `without Plasmons`입니다. 즉 플라즈몬 효과가 있는 경우와 없는 경우의 형광 스펙트럼을 비교합니다. 검은 곡선의 피크가 훨씬 크므로, 플라즈몬이 형광을 증강한다는 메시지를 줍니다. 근거: 이미지 안 범례와 Figure 2e 캡션.</dd>
+          <dt>검은 곡선의 피크가 빨간 곡선보다 큰 이유는 무엇인가요?</dt><dd>금속 나노입자의 국소 표면 플라즈몬 공명, 즉 LSPR이 형광단 주변의 전기장을 강화해 여기율과 방출 효율을 높이기 때문입니다. 그래서 같은 형광단이라도 플라즈몬 근처에서는 더 강한 형광을 낼 수 있습니다. 근거: Figure 2 전체가 “Mechanisms of photonic sensing”을 다루며, (e)가 SEF 기반 센싱 기전으로 제시된 DOI 문맥입니다.</dd>
+          <dt>이 그래프에서 피크 위치가 이동했다고 볼 수 있나요?</dt><dd>조심해야 합니다. 그림상 검은 곡선과 빨간 곡선의 피크는 비슷한 λ 근처에 그려져 있고, 핵심 차이는 피크 위치 이동이 아니라 세기 증가입니다. 축 눈금이 없기 때문에 작은 wavelength shift가 있는지 여부는 확정할 수 없습니다. 근거: Figure 2e 그래프의 시각 요소와 캡션 “SEF”.</dd>
+          <dt>빨간 곡선도 피크가 있는데, 플라즈몬이 없어도 형광은 생기나요?</dt><dd>네. 빨간 곡선은 플라즈몬이 없어도 형광단 자체가 형광을 낼 수 있음을 나타냅니다. 다만 플라즈몬이 없으면 신호가 작고, 플라즈몬이 있으면 같은 종류의 형광 신호가 훨씬 증강되는 것으로 그려져 있습니다. 근거: 이미지 범례 `without Plasmons`와 Figure 2e SEF 문맥.</dd>
+          <dt>이 그림에서 센서 역할을 하는 것은 무엇인가요?</dt><dd>왼쪽 모식도에 보이는 금색 나노입자가 핵심 센서 구조로 해석됩니다. 이 나노입자가 입사 레이저와 상호작용해 플라즈몬 근접장을 만들고, 그 근처의 형광 방출을 키우는 역할을 합니다. 근거: Figure 2가 광 센싱 기전을 “모식도 + 그래프”로 보여주는 문맥 및 Figure 2e SEF 패널.</dd>
+          <dt>청록색 물결과 초록색 물결은 각각 무엇인가요?</dt><dd>이미지 왼쪽 일부에 보이는 청록색 표기는 입사 레이저(`Incident laser`), 초록색 표기는 형광(`Fluorescence`)으로 해석됩니다. 즉 레이저가 나노입자와 형광단을 여기하고, 그 결과 형광 방출이 생기는 흐름입니다. 다만 첨부 이미지는 왼쪽 일부가 잘려 있어 전체 레이블은 완전히 보이지 않습니다. 근거: 제공된 Figure 2e 설명과 이미지의 부분 레이블.</dd>
+          <dt>초보자가 `with Plasmons`를 “형광 물질이 더 많다”는 뜻으로 오해해도 되나요?</dt><dd>그렇게 보면 안 됩니다. 이 비교의 변수는 형광단 양이 아니라 플라즈몬 존재 여부입니다. 검은 곡선이 큰 것은 분석물이 더 많아서라기보다 플라즈모닉 나노구조가 신호를 증폭했기 때문으로 읽어야 합니다. 근거: 이미지 범례와 Figure 2 캡션의 SEF-based sensing mechanism.</dd>
+          <dt>SEF와 SERS는 같은 원리인가요?</dt><dd>둘 다 금속 나노구조의 플라즈몬 증강을 이용하지만, 측정 신호가 다릅니다. SEF는 형광 세기 증가를 보는 것이고, SERS는 라만 산란 신호 증강을 보는 것입니다. 이 이미지는 y축이 `FL Intensity`이므로 SEF 패널입니다. 근거: Figure 2 캡션에서 (c)는 SERS, (e)는 SEF로 구분되어 있음.</dd>
+          <dt>이 이미지에서 “감지”는 구체적으로 어떻게 이루어지나요?</dt><dd>분석물 또는 형광 표지가 플라즈모닉 나노입자 근처에 있을 때 형광이 커지고, 그 형광 세기 변화를 읽어 검출하는 방식으로 이해할 수 있습니다. 하지만 어떤 분석물인지, 형광단 종류가 무엇인지, 결합 반응이 있는지는 이 패널만으로는 알 수 없습니다. 근거: Figure 2e SEF 기반 센싱 기전 및 DOI 문맥.</dd>
+          <dt>플라즈몬이 있으면 항상 형광이 증가하나요?</dt><dd>이 그림은 증가하는 경우를 강조하지만, 실제 SEF에서는 형광단과 금속 표면 사이 거리가 너무 가까우면 소광(quenching)이 일어날 수 있습니다. 이 패널에는 거리, spacer, 분자 배치가 표시되어 있지 않으므로 “항상 증가”라고 일반화할 수는 없습니다. 근거: Figure 2e는 개념도이며, 축·거리·재료 조건을 제공하지 않음.</dd>
+          <dt>그래프에서 검은 곡선의 오른쪽 꼬리가 긴 이유는 무엇을 의미하나요?</dt><dd>형광 방출 스펙트럼이 특정 파장에서 최대가 된 뒤 긴 파장 쪽으로 완만히 감소하는 형태를 단순화해 그린 것으로 볼 수 있습니다. 다만 실제 스펙트럼의 비대칭성, 선폭, 수명 변화까지 이 이미지로 정량 판단할 수는 없습니다. 근거: Figure 2e 그래프 형태와 축 눈금 부재.</dd>
+          <dt>이 그림만으로 형광 증강 배율을 알 수 있나요?</dt><dd>알 수 없습니다. 검은 피크가 빨간 피크보다 몇 배 큰지는 시각적으로는 “훨씬 크다” 정도만 말할 수 있고, y축 눈금이 없어서 정확한 enhancement factor는 계산할 수 없습니다. 근거: Figure 2e 그래프에 수치 축과 단위가 없음.</dd>
+          <dt>이 패널의 핵심 메시지는 무엇인가요?</dt><dd>플라즈몬이 있는 금속 나노구조 근처에서는 형광 신호가 크게 증강되어 저농도 분석물 검출에 유리하다는 것입니다. 이미지의 검은 곡선과 빨간 곡선 비교가 이 메시지를 직접 보여줍니다. 근거: Figure 2 캡션 “Mechanisms of photonic sensing” 중 (e) SEF-based sensing mechanism, DOI `10.3390/aisens1010005`.</dd>
+          </dl>
+  </div>
+</div>
   </div>
 </section>

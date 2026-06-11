@@ -96,6 +96,7 @@
       h += '<div class="tf-section"><h5>관련 용어</h5><p class="tf-rel">' +
         t.related.map(function (r) { return '<a data-jump="' + esc(r) + '">' + esc(r) + '</a>'; }).join(", ") + '</p></div>';
     }
+    h += '<div class="tf-section"><h5>근거 기준</h5><p class="tf-source">이 용어 풀이는 기반 PDF <i>Technology Landscape Review of In-Sensor Photonic Intelligence</i>, 본문 Figure 1-11 해설, 원 논문 DOI <a href="https://doi.org/10.3390/aisens1010005" target="_blank" rel="noopener">10.3390/aisens1010005</a>, 그리고 연결된 reference 번호의 문맥을 기준으로 작성되었습니다.</p></div>';
     h += '<div class="tf-hint">ESC 또는 바깥 클릭으로 닫기</div>';
     return h;
   }
