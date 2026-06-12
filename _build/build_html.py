@@ -9,6 +9,8 @@ ASSETS = BUILD / "assets"
 CONTENT = BUILD / "content"
 PANELS = BUILD / "panels"
 OUT = ROOT / "optic_review1_figures.html"
+THEME = ROOT / "theme.png"
+FAVORITES = ROOT / "optic_review1_qa_favorites.json"
 
 shell = (ASSETS / "shell.html").read_text(encoding="utf-8")
 style = (ASSETS / "style.css").read_text(encoding="utf-8")
@@ -89,10 +91,30 @@ else:
 terms_js = ("const TERMS=" + json.dumps(term["terms"], ensure_ascii=False) +
             ";\nconst TALIAS=" + json.dumps(term["alias"], ensure_ascii=False) + ";")
 
+theme_uri = ""
+if THEME.exists():
+    theme_uri = "data:image/png;base64," + base64.b64encode(THEME.read_bytes()).decode("ascii")
+else:
+    print("NOTE: theme.png not found; CNU theme footer image disabled")
+
+favorites_data = {"version": 1, "favorites": []}
+if FAVORITES.exists():
+    try:
+        loaded_favorites = json.loads(FAVORITES.read_text(encoding="utf-8"))
+        if loaded_favorites.get("version") == 1 and isinstance(loaded_favorites.get("favorites"), list):
+            favorites_data = loaded_favorites
+        else:
+            print("WARN favorites JSON ignored: expected version 1 with favorites list")
+    except Exception as e:
+        print("WARN favorites JSON ignored:", e)
+favorites_js = "const INITIAL_FAVORITES=" + json.dumps(favorites_data, ensure_ascii=False) + ";"
+
 html = (shell.replace("{{STYLE}}", style)
              .replace("{{CONTENT}}", content)
              .replace("{{TERMS}}", terms_js)
-             .replace("{{APP}}", app))
+             .replace("{{FAVORITES}}", favorites_js)
+             .replace("{{APP}}", app)
+             .replace("{{THEME_IMAGE}}", theme_uri))
 
 OUT.write_text(html, encoding="utf-8")
 print("WROTE", OUT, round(len(html.encode("utf-8"))/1024/1024, 2), "MB",

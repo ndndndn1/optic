@@ -186,6 +186,183 @@
   }, { rootMargin: "-15% 0px -75% 0px", threshold: 0 });
   secs.forEach(function (s) { obs.observe(s); });
 
+  // ===================== THEME TOGGLE =====================
+  var themeToggle = document.getElementById("theme-toggle");
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      var on = document.body.classList.toggle("cnu-theme");
+      themeToggle.setAttribute("aria-pressed", on ? "true" : "false");
+      themeToggle.title = "테마";
+    });
+  }
+
+  // ===================== Q&A FAVORITES (JSON-only state) =====================
+  var favOpen = document.getElementById("fav-open");
+  var favCount = document.getElementById("fav-count");
+  var favExport = document.getElementById("fav-export");
+  var favImportBtn = document.getElementById("fav-import-btn");
+  var favImport = document.getElementById("fav-import");
+  var favModal = document.getElementById("fav-modal");
+  var favList = document.getElementById("fav-list");
+  var favExportModal = document.getElementById("fav-export-modal");
+  var favImportModal = document.getElementById("fav-import-modal");
+  var favClear = document.getElementById("fav-clear");
+  var qaIndex = {};
+  var favs = {};
+  var initialFavorites = (typeof INITIAL_FAVORITES !== "undefined") ? INITIAL_FAVORITES : { version: 1, favorites: [] };
+
+  function textWithoutStar(dt) {
+    var c = dt.cloneNode(true);
+    Array.prototype.forEach.call(c.querySelectorAll(".qa-star"), function (b) { b.remove(); });
+    return c.textContent.replace(/\s+/g, " ").trim();
+  }
+  function knownFavoriteIds(ids) {
+    var out = {};
+    (ids || []).forEach(function (id) { if (qaIndex[id]) out[id] = true; });
+    return out;
+  }
+  function favoriteIds() { return Object.keys(favs).filter(function (id) { return favs[id] && qaIndex[id]; }).sort(); }
+  function updateFavoriteUi() {
+    var ids = favoriteIds();
+    if (favCount) favCount.textContent = String(ids.length);
+    Array.prototype.forEach.call(document.querySelectorAll(".qa-star[data-qa-id]"), function (btn) {
+      var on = !!favs[btn.getAttribute("data-qa-id")];
+      btn.classList.toggle("on", on);
+      btn.setAttribute("aria-pressed", on ? "true" : "false");
+      btn.title = on ? "즐겨찾기 해제" : "즐겨찾기 추가";
+      btn.textContent = on ? "★" : "☆";
+    });
+    renderFavorites();
+  }
+  function initQaFavorites() {
+    Array.prototype.forEach.call(document.querySelectorAll(".qa-note"), function (note) {
+      var source = note.getAttribute("data-qa-source") || "qa";
+      var section = note.closest("section.fig");
+      var figure = section ? ((section.querySelector(".fig-num") || {}).textContent || "") : "";
+      var title = section ? ((section.querySelector(".fig-title") || {}).textContent || "") : "";
+      Array.prototype.forEach.call(note.querySelectorAll(".qa-list dt"), function (dt, i) {
+        if (dt.getAttribute("data-qa-id")) return;
+        var dd = dt.nextElementSibling && dt.nextElementSibling.tagName.toLowerCase() === "dd" ? dt.nextElementSibling : null;
+        var id = source + ":q" + (i + 1);
+        dt.setAttribute("data-qa-id", id);
+        if (dd) dd.setAttribute("data-qa-id", id);
+        qaIndex[id] = { id: id, source: source, figure: figure, title: title, dt: dt, dd: dd };
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "qa-star";
+        btn.setAttribute("data-qa-id", id);
+        btn.setAttribute("aria-label", "즐겨찾기 추가");
+        btn.setAttribute("aria-pressed", "false");
+        btn.textContent = "☆";
+        dt.insertBefore(btn, dt.firstChild);
+      });
+    });
+    updateFavoriteUi();
+  }
+  function renderFavorites() {
+    if (!favList) return;
+    var ids = favoriteIds();
+    if (!ids.length) {
+      favList.innerHTML = '<div class="fav-empty">아직 즐겨찾기한 Q&A가 없습니다.</div>';
+      return;
+    }
+    favList.innerHTML = "";
+    ids.forEach(function (id) {
+      var item = qaIndex[id];
+      if (!item) return;
+      var box = document.createElement("div");
+      box.className = "fav-item";
+      var src = document.createElement("div");
+      src.className = "fav-src";
+      src.textContent = [item.figure, item.title, item.source].filter(Boolean).join(" · ");
+      var q = document.createElement("div");
+      q.className = "fav-q";
+      q.textContent = textWithoutStar(item.dt);
+      var a = document.createElement("div");
+      a.className = "fav-a";
+      a.innerHTML = item.dd ? item.dd.innerHTML : "";
+      box.appendChild(src);
+      box.appendChild(q);
+      box.appendChild(a);
+      favList.appendChild(box);
+    });
+  }
+  function openFavorites() {
+    if (!favModal) return;
+    renderFavorites();
+    favModal.classList.add("show");
+    favModal.setAttribute("aria-hidden", "false");
+  }
+  function closeFavorites() {
+    if (!favModal) return;
+    favModal.classList.remove("show");
+    favModal.setAttribute("aria-hidden", "true");
+  }
+  function exportFavorites() {
+    var data = { version: 1, favorites: favoriteIds(), updatedAt: new Date().toISOString() };
+    var blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "optic_review1_qa_favorites.json";
+    document.body.appendChild(a);
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 0);
+  }
+  function importFavoriteJson(data) {
+    if (!data || data.version !== 1 || !Array.isArray(data.favorites)) throw new Error("지원하지 않는 JSON 형식입니다.");
+    favs = knownFavoriteIds(data.favorites);
+    updateFavoriteUi();
+  }
+  function openImportPicker() { if (favImport) favImport.click(); }
+  function autoLoadFavoriteJson() {
+    if (!/^https?:$/.test(window.location.protocol)) return;
+    fetch("optic_review1_qa_favorites.json", { cache: "no-store" })
+      .then(function (res) { if (!res.ok) return null; return res.json(); })
+      .then(function (data) { if (data) importFavoriteJson(data); })
+      .catch(function () {});
+  }
+
+  initQaFavorites();
+  try { importFavoriteJson(initialFavorites); } catch (e) {}
+  autoLoadFavoriteJson();
+  document.addEventListener("click", function (e) {
+    var star = e.target.closest(".qa-star[data-qa-id]");
+    if (!star) return;
+    e.preventDefault();
+    e.stopPropagation();
+    var id = star.getAttribute("data-qa-id");
+    if (favs[id]) delete favs[id]; else favs[id] = true;
+    updateFavoriteUi();
+  });
+  if (favOpen) favOpen.addEventListener("click", openFavorites);
+  if (favExport) favExport.addEventListener("click", exportFavorites);
+  if (favExportModal) favExportModal.addEventListener("click", exportFavorites);
+  if (favImportBtn) favImportBtn.addEventListener("click", openImportPicker);
+  if (favImportModal) favImportModal.addEventListener("click", openImportPicker);
+  if (favClear) favClear.addEventListener("click", function () { favs = {}; updateFavoriteUi(); });
+  if (favImport) favImport.addEventListener("change", function () {
+    var file = favImport.files && favImport.files[0];
+    if (!file) return;
+    var reader = new FileReader();
+    reader.onload = function () {
+      try { importFavoriteJson(JSON.parse(String(reader.result || ""))); }
+      catch (err) { alert(err.message || "JSON을 읽을 수 없습니다."); }
+      favImport.value = "";
+    };
+    reader.readAsText(file, "utf-8");
+  });
+  if (favModal) {
+    favModal.addEventListener("click", function (e) {
+      if (e.target === favModal || e.target.closest(".fav-close")) closeFavorites();
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && favModal.classList.contains("show")) {
+        e.preventDefault(); e.stopImmediatePropagation(); closeFavorites();
+      }
+    }, true);
+  }
+  // =================== END Q&A FAVORITES ===================
+
   // ===================== PRESENTATION (발표) MODE =====================
   var deck = document.getElementById("deck");
   var pop = document.getElementById("pop");
@@ -284,8 +461,20 @@
       head.innerHTML = '<span class="pop-badge">' + (label ? "패널 (" + esc(label) + ")" : "상세") +
         '</span><span class="pop-count">' + (popIdx + 1) + " / " + popPanels.length + "</span>";
       popInner.appendChild(head);
-      var pimg = panel.querySelector(".pimg"); if (pimg) popInner.appendChild(pimg.cloneNode(true));
-      var ptext = panel.querySelector(".ptext"); if (ptext) popInner.appendChild(ptext.cloneNode(true));
+      var fit = document.createElement("div"); fit.className = "pop-fit";
+      var pimg = panel.querySelector(".pimg"); if (pimg) fit.appendChild(pimg.cloneNode(true));
+      var qaWrap = document.createElement("div"); qaWrap.className = "pop-qa-focus";
+      var ptext = panel.querySelector(".ptext");
+      if (ptext) {
+        var ptextClone = ptext.cloneNode(true);
+        var qaNotes = Array.prototype.slice.call(ptextClone.querySelectorAll(".qa-note"));
+        qaNotes.forEach(function (note) { qaWrap.appendChild(note); });
+        var summary = document.createElement("div"); summary.className = "pop-summary";
+        summary.appendChild(ptextClone);
+        fit.appendChild(summary);
+      }
+      popInner.appendChild(fit);
+      if (qaWrap.childNodes.length) popInner.appendChild(qaWrap);
       pop.scrollTop = 0;
     }
     // ←/→ within the detail popup: flip between panel cards of the figure;
